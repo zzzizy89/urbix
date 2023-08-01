@@ -22,7 +22,8 @@
                      <input id="imagen" class="form-control-file" type="file" name="imagen">
                 </div>
 
-                <button class="btn btn-success" type="submit">Guardar</button>
+                <button class="btn btn-success" type="submit">Actualizar</button>
+                <a href="<?=base_url('listar');?>" class="btn btn-info" >Cancelar</a>
 
              </form>
 

@@ -1,6 +1,7 @@
 <?=$cabecera;?>
     formulario de crear
 
+
      <div class="card">
         <div class="card-body">
             <h5 class="card-title">Ingresar datos del Teclado</h5>
@@ -10,7 +11,7 @@
 
                  <div class="form-group">
                      <label for="nombre">Nombre:</label>
-                     <input id="nombre" class="form-control" type="text" name="nombre">
+                     <input id="nombre" value="<?=old('nombre')?>" class="form-control" type="text" name="nombre">
                 </div>
 
                 <div class="form-group">
@@ -19,6 +20,7 @@
                 </div>
 
                 <button class="btn btn-success" type="submit">Guardar</button>
+                <a href="<?=base_url('listar');?>" class="btn btn-info" >Cancelar</a>
 
              </form>
 

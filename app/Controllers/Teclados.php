@@ -29,6 +29,21 @@ class Teclados extends Controller{
 
         $teclado = new Teclado();
 
+        $validacion = $this->validate([
+            'nombre' => 'required|min_length[3]|max_length[255]',
+            'imagen' => [
+                'uploaded[imagen]',
+                'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+                'max_size[imagen,4096]',
+            ],
+        ]);
+
+        if(!$validacion){
+            $session = session();
+            $session->setFlashdata('mensaje', 'Verifique la información del formulario');
+            return redirect()->back()->withInput();
+        }
+
         if($imagen=$this->request->getFile('imagen')){
             $nuevoNombre = $imagen->getRandomName();
             $imagen->move('../public/uploads', $nuevoNombre);
@@ -80,6 +95,19 @@ class Teclados extends Controller{
         ];
         $id=$this->request->getVar('id');
 
+
+        $validacion = $this->validate([
+            'nombre' => 'required|min_length[3]|max_length[255]',
+          
+        ]);
+
+        if(!$validacion){
+            $session = session();
+            $session->setFlashdata('mensaje', 'Verifique la información del formulario');
+            return redirect()->back()->withInput();
+        }
+
+
         $teclado->update($id,$datos);
 
         $validacion = $this->validate([
@@ -108,7 +136,7 @@ class Teclados extends Controller{
 
         }
         return $this->response->redirect(site_url('/listar'));
-        /*minuto 1:44:30*/
+       
     }
     
     
