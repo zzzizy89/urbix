@@ -20,14 +20,15 @@
 
 <body>
 
+
+
 	<header class="header">
 		<a href="#" class="logo">KeyTech</a>
 		<div class="bx bx-menu" id="menu-icon"></div>
 		<nav class="navbar">
 			<a href="#home" class="active">Home</a>
 			<a href="#about">About</a>
-			<a href="#projects">Projects</a>
-			<a href="#skills">Skills</a>
+			<a href="#projects">Catalogo</a>
 			<a href="#contact">Contact</a>
             <a href="#contact">Users</a>
 			<span class="active-nav"></span>
@@ -42,7 +43,7 @@
 			</div>
 			
 		</div>
-        
+
         <div class="home-img">
 
         <img src="img/teclado.png" width= 500rem; height= 500rem; alt="kit.png">
@@ -69,6 +70,7 @@
 			<p>Hola 👋!, soy un estudiante apasionado de la programación y la seguridad informática. Me enfoco en el desarrollo web, especialmente en el front-end. Disfruto creando interfaces atractivas y funcionales utilizando HTML, CSS y JavaScript. También me interesa mucho la seguridad informática y me mantengo actualizado en esta área en constante evolución. Mi objetivo es convertirme en un desarrollador web competente y seguro. Estoy emocionado por lo que el futuro me depara en esta industria y sigo aprendiendo y creciendo en el desarrollo web, con enfoque en el front-end.
 		    </p>
 		</div>
+
 	</section>
 
 	<section class="projects" id="projects">
@@ -98,66 +100,6 @@
 		</div>
 	</section>
 	
-
-	<section class="skills" id="skills">
-		<h2 class="heading">My <span>Skills</span></h2>
-		<div class="skills-row">
-			<div class="skills-column">
-				<h3 class="title">Coding Skills</h3>
-				<div class="skills-box">
-					<div class="skills-content">
-						<div class="progress">
-							<h3>HTML <span>90%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>CSS <span>85%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>JavaScript <span>60%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>PHP <span>87%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-				<div class="skills-column">
-				<h3 class="title">Professional Skills</h3>
-				<div class="skills-box">
-					<div class="skills-content">
-						<div class="progress">
-							<h3>Web Design<span>90%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>Web development<span>72%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>Graphic Design <span>77%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-
-						<div class="progress">
-							<h3>SEO Marketing <span>60%</span></h3>
-							<div class="bar"><span></span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</section>
 
 	<section class="contact" id="contact">
 		<h2 class="heading">Contact <span>Me!</span></h2>
@@ -198,7 +140,7 @@
 
 	<footer class="footer">
 		<div class="footer-text">
-		<p>Copyright &copy; 2023 by TiagoComba.code | All rights Reserved.</p>
+		<p>Copyright &copy; 2023 by KeyTech | All rights Reserved.</p>
 	</div>
 	<div class="footer-iconTop">
 		<a href="#"><i class='bx bx-up-arrow-alt'></i></a>
@@ -211,5 +153,7 @@
 
 
 	<script src="js/script.js"></script>
+
+
 </body>
 </html>
