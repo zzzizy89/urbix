@@ -74,7 +74,7 @@ class Teclados extends Controller{
 
     public function editar($id=null){
 
-        print_r($id);
+
 
         $teclado = new Teclado();
         $datos['teclado'] = $teclado->where('id',$id)->first();
@@ -137,6 +137,10 @@ class Teclados extends Controller{
         }
         return $this->response->redirect(site_url('/listar'));
        
+    }
+
+    public function inicio(){
+        return view('inicio/vista');
     }
     
     
