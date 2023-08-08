@@ -267,6 +267,7 @@
     }
     
     .about-content{
+        width: 80rem;
         text-align: center;
     }
     
@@ -282,102 +283,47 @@
         margin: 2rem 0 3rem;
     }
 
- 
-    
-    .projects{
+    .catalogo{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         min-height: auto;
-        padding-bottom: 5rem;
+        padding-bottom: 6rem;
         font-size: 3.5rem;
     }
-    
-    .projects .projects-row{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5rem;
+   
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        padding: 20px;
     }
     
-    .projects-row .projects-column{
-        flex: 1 1 40rem;
+    .product {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s;
     }
     
-    .projects-column .title{
-        position: relative;
-        display: inline-block;
-        font-size: 2.5rem;
-        margin: 0 0 1.5rem 2 rem;
-    
+    .product img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
     
-    .projects-column .projects-box{
-        position: relative;
-        border-left: .2rem solid var(--main-color);
+    .product:hover {
+        transform: scale(1.05);
     }
     
-    .projects-box .projects-content{
-        position: relative;
-        padding-left: 2rem;
-    }
     
-    .projects-box .projects-content::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 2rem;
-        height: 2rem;
-        background: var(--main-color);
-        border-radius: 50%;
-        left: -1.1rem;
-    }
     
-    .projects-content .content{
-        position: relative;
-        padding: 1.5rem;
-        border: .2rem solid var(--main-color);
-        border-radius: .6rem;
-        margin-bottom: 2rem;
-        overflow: hidden;
+   
     
-    }
-    
-    .projects-content .content::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: var(--second-bg-color);
-        z-index: -1;
-        transition: .5s;
-    }
-    
-    .projects-content .content:hover::before{
-        width: 100%;
-    
-    }
-    
-    .projects-content .content .year{
-        font-size: 1.5rem;
-        color: var(--main-color);
-        padding-bottom: .5rem;
-    }
-    
-    .projects-content .content .year i{
-        padding-right: .5rem;
-    }
-    
-    .projects-content .content h3{
-        font-size: 2rem;
-    }
-    
-    .projects-content .content p{
-        font-size: 1.6rem;
-        padding-top: .5rem;
-    }
     
     .skills{
         min-height: auto;

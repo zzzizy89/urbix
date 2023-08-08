@@ -54,3 +54,4 @@ $routes->get('eliminar/(:num)', 'Teclados::eliminar/$1');
 $routes->get('editar/(:num)', 'Teclados::editar/$1');
 $routes->post('actualizar', 'Teclados::actualizar');
 $routes->get('inicio', 'Teclados::inicio');
+$routes->get('about', 'Teclados::about');

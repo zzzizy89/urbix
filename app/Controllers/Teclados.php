@@ -140,7 +140,13 @@ class Teclados extends Controller{
     }
 
     public function inicio(){
+
         return view('inicio/vista');
+    }
+
+    public function about(){
+
+        return view('inicio/about');
     }
     
     
