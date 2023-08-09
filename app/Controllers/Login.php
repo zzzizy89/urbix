@@ -10,36 +10,40 @@ class Login extends BaseController
     {
         echo view('common/header');
         return view('login');
-
     }
-    public function do_login(){
 
+    public function do_login()
+    {
         $userModel = new UserModel();
 
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
 
-       $result =  $userModel->where('email',$email)->first();
+        $result = $userModel->where('email', $email)->first();
 
-      if ($result !== null && $result->id > 0){
-
-        if (password_verify($password,$result->password)){
-
-            $this->session->set("user",$result);
-
-            return redirect()->to('/dashboard');
-
-        } else{
-            echo 'invalid email or password';
-        }
-    }else
-        {
-
-            echo 'invalid email or password';
+        if ($result !== null && $result->id > 0) {
+            if (password_verify($password, $result->password)) {
+                if ($email === 'tiagocomba@gmail.com' || $email === 'ezequielmonteverde@gmail.com') {
+                    $this->session->set("user", $result);
+                    return redirect()->to('/admin');
+                } else {
+                    $this->session->set("user", $result);
+                    return redirect()->to('/dashboard');
+                }
+            } else {
+                echo 'Invalid email or password';
+            }
+        } else {
+            echo 'Invalid email or password';
         }
     }
-    public function logout(){
+
+    public function logout()
+    {
         session_destroy();
     }
-    
 }
+
+
+
+
