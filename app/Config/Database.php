@@ -29,7 +29,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'crud',
+        'database' => 'codeigniter4',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
