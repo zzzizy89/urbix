@@ -31,6 +31,13 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->get('/login', 'Login::index');
+$routes->get('/register', 'Register::index');
+$routes->get('/dashboard', 'Dashboard::index');
+
+$routes->post('/login', 'Login::do_login');
+$routes->post('/register', 'Register::do_register');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
@@ -53,3 +60,5 @@ $routes->post('guardar', 'Teclados::guardar');
 $routes->get('eliminar/(:num)', 'Teclados::eliminar/$1');
 $routes->get('editar/(:num)', 'Teclados::editar/$1');
 $routes->post('actualizar', 'Teclados::actualizar');
+$routes->get('inicio', 'Teclados::inicio');
+$routes->get('about', 'Teclados::about');
