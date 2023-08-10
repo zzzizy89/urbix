@@ -14,7 +14,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
 
-        return view('teclados/listar', $datos); 
+        return view('crud/listar', $datos); 
     }
 
     public function crear(){
@@ -22,7 +22,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
     
-        return view('teclados/crear', $datos); 
+        return view('crud/crear', $datos); 
     }
 
     public function guardar(){
@@ -74,7 +74,7 @@ class Teclados extends Controller{
 
     public function editar($id=null){
 
-        print_r($id);
+
 
         $teclado = new Teclado();
         $datos['teclado'] = $teclado->where('id',$id)->first();
@@ -82,7 +82,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
 
-        return view('teclados/editar', $datos);
+        return view('crud/editar', $datos);
 
     }
 
@@ -137,6 +137,16 @@ class Teclados extends Controller{
         }
         return $this->response->redirect(site_url('/listar'));
        
+    }
+
+    public function inicio(){
+
+        return view('inicio/vista');
+    }
+
+    public function about(){
+
+        return view('inicio/about');
     }
     
     
