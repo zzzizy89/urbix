@@ -1,1 +1,0 @@
-&copy; All right reserved.
