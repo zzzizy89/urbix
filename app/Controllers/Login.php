@@ -9,7 +9,7 @@ class Login extends BaseController
     public function index()
     {
         echo view('common/header');
-        return view('login');
+        return view('users/login');
     }
 
     public function do_login()
@@ -25,7 +25,7 @@ class Login extends BaseController
             if (password_verify($password, $result->password)) {
                 if ($email === 'tiagocomba@gmail.com' || $email === 'ezequielmonteverde@gmail.com') {
                     $this->session->set("user", $result);
-                    return redirect()->to('/admin');
+                    return redirect()->to('/listar');
                 } else {
                     $this->session->set("user", $result);
                     return redirect()->to('/dashboard');
@@ -43,7 +43,5 @@ class Login extends BaseController
         session_destroy();
     }
 }
-
-
 
 
