@@ -13,26 +13,37 @@ class Register extends BaseController
     }
     
     public function do_register()
+{
+    $userModel = new UserModel();
+
+    $name = $this->request->getPost('name');
+    $email = $this->request->getPost('email');
+    $password = $this->request->getPost('password');
+    
+    // Verificar si el correo electrónico ya está registrado
+    if ($userModel->isEmailTaken($email)) {
+        echo "El correo electrónico ya está registrado.";
+        return;
+    }
+    
+    $password = password_hash($password, PASSWORD_BCRYPT);
+
+    $data = ['name' => $name, 'email' => $email, 'password' => $password];
+
+    $ra = $userModel->insert($data);
+
+    if ($ra)
+    {   
+        echo "Usuario registrado exitosamente!";
+    }
+    else
     {
-        $userModel = new UserModel();
-
-        $name = $this->request->getPost('name');
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
-        
-        $password = password_hash($password,PASSWORD_BCRYPT);
-
-        $data = ['name' => $name, 'email' => $email, 'password' => $password];
-
-        $ra = $userModel->insert($data);
-
-        if ($ra)
-        {   
-            echo "User Registered Successfully!";
-        }
-        else
-        {
-            echo "Error during registration";
-        }
+        echo "Error durante el registro";
     }
 }
+}
+
+
+
+
+
