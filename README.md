@@ -1,54 +1,45 @@
-# CodeIgniter 4 Framework
+# KeyTech - Catálogo de Teclados
 
-## What is CodeIgniter?
+KeyTech es una plataforma de catálogo de teclados que ofrece a los usuarios la posibilidad de explorar una amplia variedad de teclados, iniciar sesión, registrarse como clientes o administradores, y realizar compras utilizando PayPal. Este proyecto está desarrollado utilizando tecnologías web modernas para brindar una experiencia fluida y segura a los usuarios.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Características
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- Explora una amplia gama de teclados disponibles.
+- Inicia sesión o regístrate como cliente para acceder a funciones adicionales.
+- Funcionalidad de administrador para gestionar productos y usuarios.
+- Realiza compras seguras utilizando PayPal.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Tecnologías Utilizadas
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: PHP
+- Base de Datos: MySQL
+- Servidor Local: XAMPP
+- Integración de Pagos: PayPal API
 
-## Important Change with index.php
+## Creadores
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+KeyTech ha sido creado por:
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+- Tiago Comba
+- Ezequiel Monteverde
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## Instalación y Uso
 
-## Repository Management
+1. Clona este repositorio en tu máquina local.
+2. Configura la base de datos utilizando MySQL y XAMPP.
+3. Abre el archivo `config.php` y ajusta las configuraciones de conexión a la base de datos.
+4. Ejecuta la aplicación utilizando un servidor web compatible con PHP.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Contribuciones
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+Si deseas contribuir a KeyTech, ¡nos encantaría recibir tus aportes! Siéntete libre de crear un fork del repositorio y enviar tus pull requests.
 
-## Contributing
+## Licencia
 
-We welcome contributions from the community.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+---
 
-## Server Requirements
+¡Esperamos que disfrutes utilizando KeyTech! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros.
 
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
