@@ -33,7 +33,7 @@
 						<nav class="navbar">
 								<a href="#home" class="active">Inicio</a>
 								<a href="#acerca">Acerca</a>
-								<a href="#catalogo">Catalogo</a>
+								<a href = "<?=base_url('catalogo')?>">Catalogo</a>
 								<a href="#contacto">Contacto</a>
 								<a href="<?=base_url('login')?>">Iniciar Sesion</a>
 								<span class="active-nav"></span>
