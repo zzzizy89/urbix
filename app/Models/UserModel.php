@@ -23,4 +23,11 @@ class UserModel extends Model
     protected $validationRules = [];
     protected $validationMessages = [];
     protected $skipValidation = false;
+    
+    public function isEmailTaken($email)
+{
+    return $this->where('email', $email)->countAllResults() > 0;
 }
+
+}
+
