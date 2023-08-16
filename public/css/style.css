@@ -23,17 +23,17 @@
                             --bg-color: #000000;
                             --second-bg-color: #808080;
                             --text-color: #ededed;
-                            --main-color: #FF8000;
+                            --main-color: #00b8fc;
                 }
                 
                 html {
-                            font-size: 62.5%;
+                            font-size: 62.5%; 
                             overflow-x: hidden;
                 }
                 
                 body {
-                            background: var(--bg-color);
-                            color: var(--text-color);
+                    
+                    color: var(--text-color);
                 }
                 
                 .header {
@@ -42,7 +42,7 @@
                             left: 0;
                             width: 100%;
                             padding: 2rem 9%;
-                            background: var(--main-color);
+                            background: #00000063;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
@@ -94,12 +94,13 @@
                 }
                 
                 .home {
-                            display: flex;
-                            align-items: center;
-                            padding: 0 9%;
-                            background-image: url('img/bd.jpg');
-                            background-size: cover;
-                            background-position: right center;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 9%;
+                    background-image: url('../img/productos/ww.png');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
                 
                 .home-content {

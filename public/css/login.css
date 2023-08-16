@@ -9,7 +9,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 :root {
-			--color-primary: #cc1919;
+			--color-primary: #ffffff;
 }
 
 * {
@@ -23,7 +23,10 @@
 body {
 			min-height: 100vh;
 			width: 100%;
-			background-color: #000000;
+			background-image: url('../img/productos/black.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -34,49 +37,14 @@ body {
 			position: relative;
 			width: 380px;
 			height: 420px;
-			background-color: #121212;
 			border-radius: 10px;
 			overflow: hidden;
-}
-
-.box:before {
-			content: '';
-			position: absolute;
-			top: -50%;
-			left: -50%;
-			width: 380px;
-			height: 420px;
-			transform-origin: bottom right;
-			background-image: linear-gradient(0deg, transparent, var(--color-primary), var(--color-primary));
-			animation: animacion 6s linear infinite;
-}
-
-.box:after {
-			content: '';
-			position: absolute;
-			top: -50%;
-			left: -50%;
-			width: 380px;
-			height: 420px;
-			transform-origin: bottom right;
-			background-image: linear-gradient(0deg, transparent, var(--color-primary), var(--color-primary));
-			animation: animacion 6s linear infinite;
-			animation-delay: 3s;
-}
-
-@keyframes animacion {
-			0% {
-						transform: rotate(0deg);
-			}
-			100% {
-						transform: rotate(360deg);
-			}
 }
 
 .form {
 			position: absolute;
 			inset: 2px;
-			background-color: #121212;
+			background-color: #12121298;
 			border-radius: 10px;
 			padding: 30px;
 			display: flex;
@@ -110,7 +78,7 @@ h2 {
 			height: 100%;
 			padding: 10px 30px;
 			outline: none;
-			background-color: #121212;
+			background-color: #12121273;
 			border: none;
 			border-bottom: 1px solid var(--color-primary);
 			color: var(--color-primary);
@@ -121,7 +89,7 @@ h2 {
 .form-label input:focus {
 			border-radius: 10px;
 			background-color: var(--color-primary);
-			color: white;
+			color: rgb(0, 0, 0);
 }
 
 .links {
