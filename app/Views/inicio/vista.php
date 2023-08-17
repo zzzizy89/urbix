@@ -23,6 +23,7 @@
 
 		<body>
 
+
 				<!-- Navbar section start here -->
 
 				<header class="header">
@@ -206,6 +207,7 @@
 						</form>
 
 				</section>
+
 
 				<!-- Contact section ends here -->
 
