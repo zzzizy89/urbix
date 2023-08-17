@@ -27,6 +27,8 @@ class Email extends BaseController
         if (! $email->send())
         {
             echo "no se ah podido enviar el correo";    
+        }else{
+            echo "correo enviado exitosamente";
         }
     }
         
