@@ -34,10 +34,11 @@
 						<nav class="navbar">
 								<a href="#home" class="active">Inicio</a>
 								<a href="#acerca">Acerca</a>
-								<a href = "<?=base_url('catalogo')?>">Catalogo</a>
+								<a href="#catalogo">Catalogo</a>
 								<a href="#contacto">Contacto</a>
-								<a href="<?=base_url('login')?>">Iniciar Sesion</a>
+								<a href="<?=base_url('login')?>">Cuenta</a>
 								<span class="active-nav"></span>
+								
 						</nav>
 
 				</header>
@@ -60,11 +61,6 @@
 
 						</div>
 
-						<div class="home-img">
-
-								<img src="img/productos/teclado.png" width=5 00rem; height=5 00rem; alt="kit.png">
-
-						</div>
 
 						<div class="home-sci">
 
@@ -125,7 +121,7 @@
 
 								<div class="product">
 
-										<img src="img/productos/gris.png" alt="Teclado 2">
+										<img src="img/productos/neg.png" alt="Teclado 2">
 
 								</div>
 
@@ -134,6 +130,24 @@
 										<img src="img/productos/yellow.png" alt="Teclado 3">
 
 								</div>
+								<div class="product">
+
+										<img src="img/productos/rosa.png" alt="Teclado 4">
+
+								</div>
+
+								<div class="product">
+
+										<img src="img/productos/negro.png" alt="Teclado 5">
+
+								</div>
+
+								<div class="product">
+
+										<img src="img/productos/gris.png" alt="Teclado 6">
+
+								</div>
+
 
 								<div class="btn-box btns">
 
@@ -208,6 +222,7 @@
 
 				</section>
 
+				
 
 				<!-- Contact section ends here -->
 
@@ -250,6 +265,7 @@
 						    });
 						
 				</script>
+				
 
 				<!-- Scripts section ends here -->
 		</body>

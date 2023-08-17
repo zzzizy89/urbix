@@ -1,76 +1,287 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,800");
+
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
+:root {
+  --bg-color: #000000;
+  --second-bg-color: #808080;
+  --text-color: #ededed;
+  --main-color: #00b8fc;
+}
+
 
 body {
-  background-color: #343a40;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	font-family: 'Martel Sans', sans-serif;
+}
+
+h1 {
+	font-size: 5.25vmin;
+	text-align: center;
+	color: white;
+}
+p {
+	font-size: max(10pt, 2.5vmin);
+	line-height: 1.4;
+	color: #ffffff;
+	margin-bottom: 1.5rem;
+}
+
+.wrap {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	width: 85vmin;
+	height: 25em;
+	margin: 2rem auto;
+	border: 8px solid;
+	transition: .3s ease-in-out;
+	position: relative;
+	overflow: hidden;
+}
+.overlay {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 1rem .75rem;
+	background: #000000;
+	transition: .4s ease-in-out;
+	z-index: 1;
+}
+.overlay-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 15vmin;
+	height: 100%;
+	padding: .5rem 0 0 .5rem;
+	border: 3px solid;
+	border-image: 
+    	linear-gradient(
+      	to bottom, 
+      	#00b8fc 5%,
+      	#00b8fc,
+      	#00b8fc 95%
+    	) 0 0 0 100%;
+	transition: .3s ease-in-out .2s;
+	z-index: 1;
+}
+.image-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	background-image: url("../img/productos/w.png");
+	background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+	transition: .3s ease-in-out;
+	/* border: 1px solid green; */
+}
+
+.inset {
+	max-width: 50%;
+	margin: 0.25em 1em 1em 0;
+	border-radius: 0.25em;
+	float: left;
+}
+
+.dots {
+	position: absolute;
+	bottom: 1rem;
+	right: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 55px;
+	height: 4vmin;
+	transition: .3s ease-in-out .3s;
+}
+.dot {
+	width: 14px;
+	height: 14px;
+	background: rgb(0, 174, 255);
+	border: 1px solid indigo;
+	border-radius: 50%;
+	transition: .3s ease-in-out .3s;
+}
+
+.text {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60vmin;
+	height: 100%;
+	padding: 3vmin 4vmin;
+	background: #414040;
+	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / .4);
+	overflow-y: scroll;
+}
+
+.wrap:hover .overlay
+ {
+	transform: translateX(-60vmin);
+}
+.wrap:hover .image-content {
+	width: 30vmin;
+}
+.wrap:hover .overlay-content {
+	border: none;
+	transition-delay: .2s;
+	transform: translateX(60vmin);
+}
+.wrap:hover .dots {
+	transform: translateX(1rem);
+}
+.wrap:hover .dots .dot {
+	background: white;
+}
+
+
+.btn-box {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  width: 32.5rem;
+  height: 5rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  user-select: none;
-}
-
-.card {
-  border-radius: 10px;
-  filter: drop-shadow(0 5px 10px 0 #ffffff);
-  width: 800px;
-  height: 450px;
-  background-color: #ffffff;
-  padding: 20px;
-  position: relative;
-  z-index: 0;
+  width: 15rem;
+  height: 100%;
+  background: var(--bg-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--text-color);
+  z-index: 1;
   overflow: hidden;
-  transition: 0.6s ease-in;
 }
 
-.card::before {
-  content: "";
+.btn-box .btn::before {
+  content: '';
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
   z-index: -1;
-  top: -15px;
-  right: -15px;
-  background: #7952b3;
-  height:220px;
-  width: 25px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 100% 50%;
-  transition: transform 0.25s ease-out;
+  transition: .5s;
 }
 
-.card:hover::before{
-    transition-delay:0.2s ;
-
-  transform: scale(40);
+.btn-box .btn:hover::before {
+  width: 100%;
 }
 
-.card:hover{
-    color: #ffffff;
-
+.btn-box.btns {
+  display: inline-block;
+  width: 15rem;
 }
 
-.card p{
-    padding: 10px 0;
+.btn-box.btns a::before {
+  background: var(--second-bg-color);
 }
 
 
-
-input[type="submit"] {
-    background-color: var(--color-primary);
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .5s;
+/* Animations and timing delays */
+.animate {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+  animation-fill-mode: backwards;
+}
+/* Pop In */
+.pop { animation-name: pop; }
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
 }
 
-input[type="submit"]:hover {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+/* Slide In */
+.slide { animation-name: slide; }
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(4em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
+
+/* Slide Left */
+.slide-left { animation-name: slide-left; }
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-up {animation-name: slide-up;}
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+.delay-5 {
+  animation-delay: 1.5s;
+}
+.delay-6 {
+  animation-delay: 1.8s;
+}
+.delay-7 {
+  animation-delay: 2.1s;
+}
+.delay-8 {
+  animation-delay: 2.4s;
+}
+
+
