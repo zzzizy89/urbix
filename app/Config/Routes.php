@@ -67,3 +67,5 @@ $routes->get('inicio', 'Teclados::inicio');
 $routes->get('about', 'Teclados::about');
 $routes->get('catalogo', 'catalogo::shop');
 $routes->get('completado', 'catalogo::completado');
+$routes->get('form_email', 'Email::index');
+$routes->post('enviar_email', 'Email::enviar_email');
