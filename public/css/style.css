@@ -23,8 +23,66 @@
                             --bg-color: #000000;
                             --second-bg-color: #808080;
                             --text-color: #ededed;
-                            --main-color: #00b8fc;
+                            --main-color: #D30303;
+                            --fd-color: #00b8fc;
+                            --forge-color: #8D1212;
+
                 }
+
+                @font-face {
+                    font-family: "NoorgeKarlos-Outline";
+                    src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+                  }
+              
+              @font-face {
+                    font-family: "NoorgeKarlos-Regular";
+                    src: url("../fonts/NoorgeKarlos-Regular.ttf") format("truetype");
+                  }
+              
+              @font-face {
+                    font-family: "Minio";
+                    src: url("../fonts/Minio.ttf") format("truetype");
+                  }
+                  
+              @font-face {
+                    font-family: "Nevolasty-Light";
+                    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+                  }
+              
+              @font-face {
+                    font-family: "RONDOS";
+                    src: url("../fonts/RONDOS.otf") format("truetype");
+                  }  
+
+                  @font-face {
+                    font-family: "TheModernChaos";
+                    src: url("../fonts/TheModernChaos.ttf") format("truetype");
+                  }  
+
+                  @font-face {
+                    font-family: "DistortionDosAnalogue";
+                    src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+                  }  
+
+                  @font-face {
+                    font-family: "BylanderItalic";
+                    src: url("../fonts/BylanderItalic.otf") format("truetype");
+                  }  
+
+                  @font-face {
+                    font-family: "Blastimo";
+                    src: url("../fonts/Blastimo.ttf") format("truetype");
+                  }    
+
+                  @font-face {
+                    font-family: "BigCityVibes";
+                    src: url("../fonts/BigCityVibes.otf") format("truetype");
+                  }  
+                  
+                  @font-face {
+                    font-family: "SPEEDRACE";
+                    src: url("../fonts/SPEEDRACE.ttf") format("truetype");
+                  }  
                 
                 html {
                             font-size: 62.5%; 
@@ -58,6 +116,7 @@
                             position: relative;
                             font-size: 2.5rem;
                             color: var(--text-color);
+                            font-family: "Nevolasty-Light";
                             text-decoration: none;
                             font-weight: 600;
                 }
@@ -67,8 +126,9 @@
                 }
                 
                 .navbar a {
+                    font-family: "Nevolasty-Light";
                             font-size: 1.7rem;
-                            color: var(--text-color);
+                            color: var(--forge-color);
                             text-decoration: none;
                             font-weight: 500;
                             margin-left: 35px;
@@ -113,24 +173,37 @@
                 }
                 
                 .home-content h1 {
+                    font-family: "DistortionDosAnalogue";   
+                    color: var(--text-color);
                             position: relative;
                             display: inline-block;
                             font-size: 5.6rem;
                             font-weight: 700;
                             line-height: 1.3;
                 }
+
+                .home-content h1 span {
+                    font-family: "DistortionDosAnalogue";   
+                    color: var(--main-color);
+                    position: relative;
+                    display: inline-block;
+                    font-size: 5.6rem;
+                    font-weight: 700;
+                    line-height: 1.3;
+                }
                 
                 .home-content .text-animate {
                             position: relative;
-                            width: 35rem;
+                            width: 45rem;
                 }
                 
                 .home-content .text-animate h3 {
+                    font-family: "Nevolasty-Light";
                             font-size: 3.2rem;
                             font-weight: 700;
                             color: transparent;
-                            -webkit-text-stroke: .7px var(--main-color);
-                            background-image: linear-gradient(var(--main-color), var(--main-color));
+                            -webkit-text-stroke: .7px var(--forge-color);
+                            background-image: linear-gradient(var(--forge-color), var(--forge-color));
                             background-repeat: no-repeat;
                             -webkit-background-clip: text;
                             background-position: -34.9rem 0;
@@ -230,7 +303,16 @@
                             font-size: 5rem;
                             margin-bottom: 3rem;
                             text-align: center;
+                            font-family: "BigCityVibes";
                 }
+
+                .heading span {
+                    position: relative;
+                    font-size: 5rem;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                    font-family: "BigCityVibes";
+        }
                 
                 span {
                             color: var(--main-color);
@@ -249,7 +331,7 @@
                 .about-img img {
                             width: 90%;
                             border-radius: 50%;
-                            border: .2rem solid var(--main-color);
+                            border: .2rem solid;
                 }
                 
                 .about-img .circle-spin {
@@ -260,8 +342,8 @@
                             width: 100%;
                             height: 100%;
                             border-radius: 50%;
-                            border-top: .2rem solid var(--bg-color);
-                            border-bottom: .2rem solid var(--bg-color);
+                            border-top: .2rem solid var(--forge-color);
+                            border-bottom: .2rem solid var(--forge-color);
                             border-left: .2rem solid var(--main-color);
                             border-right: .2rem solid var(--main-color);
                             animation: aboutSpinner 8s linear infinite;
@@ -277,16 +359,20 @@
                             display: inline-block;
                             font-size: 2.6rem;
                 }
-                
+
+            
+        
                 .about-content p {
+                    font-family: "Nevolasty-Light";
+                    color: var(--second-bg-color);
                             position: relative;
-                            font-size: 1.6rem;
+                            font-size: 1.8rem;
                             margin: 2rem 0 3rem;
                 }
                 
                 .catalogo {
                             display: flex;
-                            background: var(--main-color);
+                            background: var(--forge-color);
                             justify-content: center;
                             align-items: center;
                             flex-direction: column;
@@ -296,11 +382,21 @@
                 }
 
                 .catalogo h2 {
-                    color: #000000;
+                    position: relative;
+                    font-size: 5rem;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                    font-family: "BigCityVibes";
+                    color: var(--bg-color);
                 }
                 
                 .catalogo span {
-                    color: #ffffff;
+                    position: relative;
+                    font-size: 5rem;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                    font-family: "BigCityVibes";
+                    color: var(--text-color);
                 }
                 .grid-container {
                             display: grid;
@@ -644,7 +740,7 @@
                             0%,
                             10%,
                             100% {
-                                        background-position: -34.9rem 0;
+                                        background-position: -44.9rem 0;
                             }
                             65%,
                             85% {
