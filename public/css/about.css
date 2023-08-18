@@ -10,31 +10,73 @@
   --bg-color: #000000;
   --second-bg-color: #808080;
   --text-color: #ededed;
-  --main-color: #00b8fc;
+  --main-color: #D30303;
+ --fd-color: #00b8fc;
+   --forge-color: #8D1212;
 }
 
+@font-face {
+	font-family: "NoorgeKarlos-Outline";
+	src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+  }
 
-body {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-	margin: 0;
-	padding: 0;
-	background: #000000;
-	font-family: 'Martel Sans', sans-serif;
-}
+@font-face {
+	font-family: "NoorgeKarlos-Regular";
+	src: url("../fonts/NoorgeKarlos-Regular.ttf") format("truetype");
+  }
+
+@font-face {
+	font-family: "Minio";
+	src: url("../fonts/Minio.ttf") format("truetype");
+  }
+  
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+  }
+
+@font-face {
+	font-family: "RONDOS";
+	src: url("../fonts/RONDOS.otf") format("truetype");
+  }  
+
+  @font-face {
+	font-family: "TheModernChaos";
+	src: url("../fonts/TheModernChaos.ttf") format("truetype");
+  }  
+
+  @font-face {
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+  }  
+
+  @font-face {
+	font-family: "BylanderItalic";
+	src: url("../fonts/BylanderItalic.otf") format("truetype");
+  }  
+
+  @font-face {
+	font-family: "Blastimo";
+	src: url("../fonts/Blastimo.ttf") format("truetype");
+  }    
+
+  @font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+  }  
+  
+  @font-face {
+	font-family: "SPEEDRACE";
+	src: url("../fonts/SPEEDRACE.ttf") format("truetype");
+  }  
 
 h1 {
+	font-family: "TheModernChaos";
 	font-size: 5.25vmin;
 	text-align: center;
-	color: white;
+	color: #D30303;
 }
-p {
-	font-size: max(10pt, 2.5vmin);
-	line-height: 1.4;
-	color: #ffffff;
-	margin-bottom: 1.5rem;
-}
+
 
 .wrap {
 	display: flex;
@@ -47,6 +89,7 @@ p {
 	transition: .3s ease-in-out;
 	position: relative;
 	overflow: hidden;
+	border-image: linear-gradient(-50deg, #000000, #000000, #000000, #000000, #000000, #000000, #000000) 1;
 }
 .overlay {
 	position: relative;
@@ -69,9 +112,9 @@ p {
 	border-image: 
     	linear-gradient(
       	to bottom, 
-      	#00b8fc 5%,
-      	#00b8fc,
-      	#00b8fc 95%
+      	#D30303 5%,
+      	#D30303,
+      	#D30303 95%
     	) 0 0 0 100%;
 	transition: .3s ease-in-out .2s;
 	z-index: 1;
@@ -112,8 +155,8 @@ p {
 .dot {
 	width: 14px;
 	height: 14px;
-	background: rgb(0, 174, 255);
-	border: 1px solid indigo;
+	background: #D30303;
+	border: 1px solid rgb(255, 255, 255);
 	border-radius: 50%;
 	transition: .3s ease-in-out .3s;
 }
@@ -128,6 +171,22 @@ p {
 	background: #414040;
 	box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / .4);
 	overflow-y: scroll;
+}
+
+.text p {
+	font-family: "NoorgeKarlos-Regular";
+	font-size: 1.5vmin;
+	color: #ededed;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+.text p span {
+	font-family: "NoorgeKarlos-Regular";
+	font-size: 1.5vmin;
+	color: var(--main-color);
+	line-height: 1.5;
+	text-align: justify;
 }
 
 .wrap:hover .overlay
