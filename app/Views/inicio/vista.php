@@ -17,6 +17,7 @@
 				<meta name="viewport" content="width=devide-width,initial-scale=1.0">
 				<title>KeyTech</title>
 				<link rel="stylesheet" href="css/style.css">
+				<link rel="stylesheet" href="css/about.css">
 				<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 		</head>
@@ -51,7 +52,7 @@
 
 						<div class="home-content">
 
-								<h1>Bienvenido👋, a <span>KeyTech</span></h1>
+								<h1>Bienvenido a <span>KeyTech 👋</span></h1>
 
 								<div class="text-animate">
 
@@ -80,26 +81,34 @@
 
 						<h2 class="heading">Sobre <span>Nosotros</span></h2>
 
-						<div class="about-img">
 
-								<img src="img/logo/lg.png" alt="logo.png">
-								<span class="circle-spin"></span>
+						<div class="wrap animate pop">
+		<div class="overlay">
+			<div class="overlay-content animate slide-left delay-2">
+				<h1 class="animate slide-left pop delay-4">KeyTech</h1>
+				
+			</div>
+			<div class="image-content animate slide delay-5"></div>
+					<div class="dots animate">
+						<div class="dot animate slide-up delay-6"></div>
+						<div class="dot animate slide-up delay-7"></div>
+						<div class="dot animate slide-up delay-8"></div>
+					</div>
+		</div>
+			<div class="text">
+				<p><img class="inset" src="img/productos/rojo.png" alt="Keytech" />En <span>KeyTech</span>, no solo vendemos productos, creamos <span>experiencias</span>. 
+				Nuestro compromiso con la <span>calidad</span> y la <span>satisfacción</span> del cliente nos ha permitido ganar la <span>confianza</span> y <span>lealtad</span> de innumerables entusiastas de la tecnología y gamers <span>apasionados</span>. 
+				Ofrecemos una amplia gama de teclados, desde los mecánicos de respuesta táctil hasta los suaves y silenciosos de membrana, garantizando que cada usuario encuentre la opción perfecta para su <span>estilo</span> y <span>preferencias</span>.
+				Lo que nos <span>distingue</span> es nuestra dedicación implacable a la <span>excelencia</span>. Trabajamos incansablemente para mantenernos a la vanguardia de las últimas <span>tendencias</span> y avances <span>tecnológicos</span> en el mundo de los teclados. 
+				Nuestro <span>compromiso</span> con la <span>innovación</span> y la <span>calidad</span> nos ha permitido ganar la posición privilegiada de ser el <span>número</span> uno en el mercado.
+				Ya sea que busques mejorar tu experiencia de juego, optimizar tu flujo de trabajo o simplemente desees un teclado que se adapte a tu estilo, en KeyTech encontrarás soluciones que superarán tus expectativas. 
+				<span>Únete a nosotros</span> en nuestra misión de definir el futuro de los teclados y descubre por qué somos la elección preferida de quienes buscan lo mejor.
 
-						</div>
+<span>KeyTech: donde la tecnología y la comodidad se encuentran para ofrecerte una experiencia de teclado excepcional.</span></p>
+			</div>
+	</div>
 
-						<div class="about-content">
 
-								<h3><span>Somos Lideres en lo nuestro!</span></h3>
-								<p>Bienvenidos a KeyTech, tu destino definitivo para todo lo relacionado con teclados.<br> Somos líderes en el mercado de la comercialización de teclados mecánicos, membranas, repuestos y más.<br> Nuestra pasión por la tecnología y la innovación nos ha llevado a la cima de la industria, donde hemos establecido un estándar inigualable de excelencia.
-								</p>
-
-								<div class="btn-box btns">
-
-										<a href="<?=base_url('about')?>"><button type="submit" class="btn">Ver mas!</button></a>
-
-								</div>
-
-						</div>
 
 				</section>
 
@@ -164,23 +173,23 @@
 				<!-- Contact section start here -->
 
 				<section class="contact" id="contacto">
+						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
 
 						<h2 class="heading"><span>Consultas</span></h2>
-
-						<form action="#">
+					
 
 								<div class="input-box">
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Nombre Completo" required>
-												<span class="focus"></span>
+										<input type="text" name= "nombrecom"class="form-control" id="nombrecom" placeholder="Nombre Completo" required/>												
+										<span class="focus"></span>
 
 										</div>
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Dirrecion de Correo" required>
+												<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
 												<span class="focus"></span>
 
 										</div>
@@ -191,15 +200,15 @@
 
 										<div class="input-field">
 
-												<input type="number" placeholder="Numero de Telefono" required>
+												<input type="number"  name="numtel" class="form-control" id="numtel" placeholder="Numero de Telefono" required>
 												<span class="focus"></span>
 
 										</div>
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Asunto del Correo" required>
-												<span class="focus"></span>
+										<input type="text" name= "asuntoco"class="form-control" id="asuntoco" placeholder="Asunto del Correo" required/>
+												<span class="focus"></span> 
 
 										</div>
 
@@ -207,7 +216,7 @@
 
 								<div class="textarea-field">
 
-										<textarea name="" id="" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
+										<textarea name="mensaje1" id="mensaje1" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
 										<span class="focus"></span>
 
 								</div>
