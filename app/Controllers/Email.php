@@ -4,6 +4,12 @@ namespace App\Controllers;
 
 class Email extends BaseController
 {
+    protected $request; // Propiedad para almacenar la instancia de Request
+
+    public function __construct()
+    {
+        $this->request = service('request'); // Inicializa la instancia de Request
+    }
     public function index()
     {
         
