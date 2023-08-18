@@ -149,23 +149,23 @@
 				<!-- Contact section start here -->
 
 				<section class="contact" id="contacto">
+						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
 
 						<h2 class="heading"><span>Consultas</span></h2>
-
-						<form action="#">
+					
 
 								<div class="input-box">
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Nombre Completo" required>
-												<span class="focus"></span>
+										<input type="text" name= "nombrecom"class="form-control" id="nombrecom" placeholder="Nombre Completo" required/>												
+										<span class="focus"></span>
 
 										</div>
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Dirrecion de Correo" required>
+												<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
 												<span class="focus"></span>
 
 										</div>
@@ -176,15 +176,15 @@
 
 										<div class="input-field">
 
-												<input type="number" placeholder="Numero de Telefono" required>
+												<input type="number"  name="numtel" class="form-control" id="numtel" placeholder="Numero de Telefono" required>
 												<span class="focus"></span>
 
 										</div>
 
 										<div class="input-field">
 
-												<input type="text" placeholder="Asunto del Correo" required>
-												<span class="focus"></span>
+										<input type="text" name= "asuntoco"class="form-control" id="asuntoco" placeholder="Asunto del Correo" required/>
+												<span class="focus"></span> 
 
 										</div>
 
@@ -192,7 +192,7 @@
 
 								<div class="textarea-field">
 
-										<textarea name="" id="" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
+										<textarea name="mensaje1" id="mensaje1" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
 										<span class="focus"></span>
 
 								</div>
