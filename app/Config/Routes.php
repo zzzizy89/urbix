@@ -34,6 +34,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Login::index');
 $routes->get('/register', 'Register::index');
 $routes->get('/dashboard', 'Dashboard::index');
+$routes->get('/home', 'Dashboard::home');
+$routes->get('/logout', 'Dashboard::logout');
 
 $routes->post('/login', 'Login::do_login');
 $routes->post('/register', 'Register::do_register');

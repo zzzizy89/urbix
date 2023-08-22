@@ -135,6 +135,15 @@
                             transition: .3s;
                 }
 
+                .navbar span {
+                  font-family: "Nevolasty-Light";
+                  font-size: 1.7rem;
+                  text-decoration: none;
+                  font-weight: 500;
+                  margin-left: 35px;
+                  transition: .3s;
+                }
+
                 .navbar a img {
                         
                    text-align: center;
