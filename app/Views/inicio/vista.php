@@ -260,7 +260,7 @@
 
 				<!-- Scripts section start here -->
 
-				<script src="js/script.js"></script>
+				<script src="../js/script.js"></script>
 
 				<script>
 						document.getElementById('catalogButton').addEventListener('click', function() {
