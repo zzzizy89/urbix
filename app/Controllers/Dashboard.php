@@ -8,12 +8,14 @@ class Dashboard extends BaseController
 {
     public function index()
     {
-        if(session('user')->id <1){
+        $user = session('user');
+    
+        if (!$user || $user->id < 1) {
             return redirect()->to('login');
+        } else {
+            return view('users/dashboard');
         }
-        return view('users/dashboard');
-    } 
-
+    }
     public function home()
     {
         return view('users/home');
