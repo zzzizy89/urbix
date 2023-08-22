@@ -33,13 +33,15 @@ class Register extends BaseController
     $ra = $userModel->insert($data);
 
     if ($ra)
-    {   
-        echo "Usuario registrado exitosamente!";
-    }
-    else
-    {
-        echo "Error durante el registro";
-    }
+{   
+    $this->session->setFlashdata('success', 'Usuario registrado exitosamente!');
+}
+else
+{
+    $this->session->setFlashdata('error', 'Error durante el registro');
+}
+
+    return redirect()->to('login');
 }
 }
 

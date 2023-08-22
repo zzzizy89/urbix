@@ -21,6 +21,16 @@
 		<body>
 
 
+		
+		<div class="alert">
+    <?php if (session()->has('success')) : ?>
+        <div class="alert-success"><?= session('success') ?></div>
+    <?php endif ?>
+    <?php if (session()->has('error')) : ?>
+        <div class="alert-error"><?= session('error') ?></div>
+    <?php endif ?>
+</div>
+
 				<div class="box">
 						<form method="post" action="<?= base_url(" login ");?>" class="form">
 								<h2>Iniciar Sesión</h2>

@@ -39,7 +39,7 @@
 								<a href="#contacto">Contacto</a>
 								<?php
         if (isset($_SESSION['user'])) {
-            echo '<span class="user-name">' . $_SESSION['user']->name . '</span>';
+			echo '<span class="user-name"><a href="' . base_url('dashboard') . '">' . $_SESSION['user']->name . '</a></span>';
             echo '<a href="' . base_url('logout') . '">Logout</a>';
         } else {
             echo '<a href="' . base_url('login') . '">Cuenta</a>';
