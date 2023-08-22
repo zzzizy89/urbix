@@ -174,7 +174,7 @@
 
 				<section class="contact" id="contacto">
 						
-
+<form>
 						<h2 class="heading"><span>Consultas</span></h2>
 					
 
@@ -227,7 +227,7 @@
 
 								</div>
 
-			
+</form>
 
 				</section>
 
