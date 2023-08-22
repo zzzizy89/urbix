@@ -98,7 +98,7 @@
 					</div>
 		</div>
 			<div class="text">
-				<p><img class="inset" src="img/productos/rojo.png" alt="Keytech" />En <span>KeyTech</span>, no solo vendemos productos, creamos <span>experiencias</span>. 
+				<p><img class="inset" src="../img/productos/rojo.png" alt="Keytech" />En <span>KeyTech</span>, no solo vendemos productos, creamos <span>experiencias</span>. 
 				Nuestro compromiso con la <span>calidad</span> y la <span>satisfacción</span> del cliente nos ha permitido ganar la <span>confianza</span> y <span>lealtad</span> de innumerables entusiastas de la tecnología y gamers <span>apasionados</span>. 
 				Ofrecemos una amplia gama de teclados, desde los mecánicos de respuesta táctil hasta los suaves y silenciosos de membrana, garantizando que cada usuario encuentre la opción perfecta para su <span>estilo</span> y <span>preferencias</span>.
 				Lo que nos <span>distingue</span> es nuestra dedicación implacable a la <span>excelencia</span>. Trabajamos incansablemente para mantenernos a la vanguardia de las últimas <span>tendencias</span> y avances <span>tecnológicos</span> en el mundo de los teclados. 

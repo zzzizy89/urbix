@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pace JS | Preloader</title>
+    <title>KeyTech</title>
     <link rel="stylesheet" href="css/intro.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/pace.js"></script>
