@@ -173,7 +173,7 @@
 				<!-- Contact section start here -->
 
 				<section class="contact" id="contacto">
-						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
+						
 
 						<h2 class="heading"><span>Consultas</span></h2>
 					
@@ -227,7 +227,7 @@
 
 								</div>
 
-						</form>
+			
 
 				</section>
 
