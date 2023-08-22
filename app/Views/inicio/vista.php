@@ -18,6 +18,8 @@
 				<title>KeyTech</title>
 				<link rel="stylesheet" href="css/style.css">
 				<link rel="stylesheet" href="css/about.css">
+				<link rel="stylesheet" href="../css/style.css">
+				<link rel="stylesheet" href="../css/about.css">
 				<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 		</head>
@@ -124,36 +126,37 @@
 
 								<div class="product">
 
-										<img src="img/productos/blue.png" alt="Teclado 1">
+										<img src="../img/productos/blue.png" alt="Teclado 1">
+										
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/neg.png" alt="Teclado 2">
+										<img src="../img/productos/neg.png" alt="Teclado 2">
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/yellow.png" alt="Teclado 3">
+										<img src="../img/productos/yellow.png" alt="Teclado 3">
 
 								</div>
 								<div class="product">
 
-										<img src="img/productos/rosa.png" alt="Teclado 4">
-
-								</div>
-
-								<div class="product">
-
-										<img src="img/productos/negro.png" alt="Teclado 5">
+										<img src="../img/productos/rosa.png" alt="Teclado 4">
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/gris.png" alt="Teclado 6">
+										<img src="../img/productos/negro.png" alt="Teclado 5">
+
+								</div>
+
+								<div class="product">
+
+										<img src="../img/productos/gris.png" alt="Teclado 6">
 
 								</div>
 
@@ -273,6 +276,10 @@
 						       
 						    });
 						
+				</script>
+
+				<script>
+					
 				</script>
 				
 
