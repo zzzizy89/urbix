@@ -1,114 +1,52 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pace JS | Preloader</title>
     <link rel="stylesheet" href="css/intro.css">
-    
-    <title>Intro</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 </head>
 <body>
-  
-  <div class="loader">
-        <div class="img">
-              <img src="img/intro/1.jpg" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/2.jpg" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/3.png" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/4.jpg" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/5.png" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/6.png" alt="">
-        </div>
-        <div class="img">
-              <img src="img/intro/7.jpg" alt="">
-        </div>
-  </div>
-  
-  <div class="overlay">
-        <div class="col">
-              <h2><div>One enterprise</div></h2>
-              <h2><div>Top Global</div></h2>
-              <h2><div>We won't let you down</div></h2>
-        </div>
-        <div class="col">
-              <h2><div><span>click</span> anywhere to continue</div></h2>
-        </div>
-  </div>
-  
-  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-      <script>
-            gsap.from("h2 div", 1.5, {
-                  yPercent: 100,
-                  ease: "power4.inOut",
-                  stagger: {
-                        amount: 0.5,
-                  },
-            });
+        <h1 class="title">KEYTECH</h1>
 
-            gsap.to("h2", 1.5, {
-                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                  ease: "power4.inOut",
-                  stagger: {
-                        amount: 0.5,
-                  },
-            });
+        <div id="preloader">
+            <div class="p">LOADING</div>
+        </div>
 
-            document.addEventListener("DOMContentLoaded", function () {
-                        let overlay = document.querySelector(".overlay"); 
-                        overlay.addEventListener("click", function () {
-                        gsap.to("h2 div", 1.5, {
-                              yPercent: -100,
-                              ease: "power4.inOut",
-                              stagger: {
-                                    amount: 0.5,
-                              },
-                        });
-                        gsap.to("h2", 1.5, {
-                              clipPath: "polygon(0 85%, 100% 85%, 100% 100%, 0 100%)",
-                              ease: "power4.inOut",
-                              stagger: {
-                                    amount: 0.5,
-                              },
-                        }, 
-                        0
-                        );
-                        gsap.to(".overlay", 2, {
-                              clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                              ease: "power4.inOut",
-                        });
-                        gsap.to(".img", 2, {
-                              clipPath: "polygon(0 100%, 100% 100%, 100% 0%, 0% 0%)",
-                              ease: "power4.inOut",
-                              stagger: {
-                                    amount: 1.5,
-                              },
-                        });
-                        gsap.to(".loader", 2, {
-                              clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-                              ease: "power4.inOut",
-                              delay: 2,
-                        });
-                        setTimeout(function () {
+        <script>
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: 1.8,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+            setTimeout(function () {
     // Genera la URL absoluta utilizando site_url()
     var absoluteUrl = "<?php echo site_url('inicio'); ?>";
     
     // Redirige a la URL absoluta
     window.location.href = absoluteUrl;
 }, 3000);
+       });
 
-                  });
-            });
       </script>
-    
+
 </body>
 </html>
