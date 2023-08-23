@@ -13,12 +13,23 @@
 				<meta charset="UTF-8">
 				<meta http-equiv="X-UA-Compatible" contable="IE=edge">
 				<meta name="viewport" content="width=device-width, initial-scale:1.0">
-				<link rel="stylesheet" href="style.css">
+				<link rel="stylesheet" href="css/login.css">
+				<link rel="stylesheet" href="../css/login.css">
 				<title>Login</title>
 
 		</head>
 		<body>
 
+
+		
+		<div class="alert">
+    <?php if (session()->has('success')) : ?>
+        <div class="alert-success"><?= session('success') ?></div>
+    <?php endif ?>
+    <?php if (session()->has('error')) : ?>
+        <div class="alert-error"><?= session('error') ?></div>
+    <?php endif ?>
+</div>
 
 				<div class="box">
 						<form method="post" action="<?= base_url(" login ");?>" class="form">

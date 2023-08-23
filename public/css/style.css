@@ -135,6 +135,26 @@
                             transition: .3s;
                 }
 
+                .navbar span {
+                  font-family: "Nevolasty-Light";
+                  font-size: 1.7rem;
+                  text-decoration: none;
+                  font-weight: 500;
+                  margin-left: 35px;
+                  transition: .3s;
+                }
+
+                .navbar span a {
+                  font-family: "Nevolasty-Light";
+                          font-size: 1.7rem;
+                          color: var(--main-color);
+                          text-decoration: none;
+                          font-weight: 500;
+                          margin-left: 35px;
+                          transition: .3s;
+              }
+           
+
                 .navbar a img {
                         
                    text-align: center;
@@ -431,7 +451,7 @@
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
-                            min-height: 800px;
+                            min-height: 950px;
                             padding-bottom: 7rem;
                 }
                 

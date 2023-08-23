@@ -33,6 +33,32 @@ body {
 			flex-wrap: nowrap;
 }
 
+/* Estilo para el contenedor de la alerta */
+.alert {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Asegura que la alerta esté por encima de otros elementos */
+}
+
+/* Estilo para los mensajes de éxito */
+.alert-success {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+
+/* Estilo para los mensajes de error */
+.alert-error {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+
 .box {
 			position: relative;
 			width: 380px;

@@ -18,6 +18,8 @@
 				<title>KeyTech</title>
 				<link rel="stylesheet" href="css/style.css">
 				<link rel="stylesheet" href="css/about.css">
+				<link rel="stylesheet" href="../css/style.css">
+				<link rel="stylesheet" href="../css/about.css">
 				<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 		</head>
@@ -96,7 +98,7 @@
 					</div>
 		</div>
 			<div class="text">
-				<p><img class="inset" src="img/productos/rojo.png" alt="Keytech" />En <span>KeyTech</span>, no solo vendemos productos, creamos <span>experiencias</span>. 
+				<p><img class="inset" src="../img/productos/rojo.png" alt="Keytech" />En <span>KeyTech</span>, no solo vendemos productos, creamos <span>experiencias</span>. 
 				Nuestro compromiso con la <span>calidad</span> y la <span>satisfacción</span> del cliente nos ha permitido ganar la <span>confianza</span> y <span>lealtad</span> de innumerables entusiastas de la tecnología y gamers <span>apasionados</span>. 
 				Ofrecemos una amplia gama de teclados, desde los mecánicos de respuesta táctil hasta los suaves y silenciosos de membrana, garantizando que cada usuario encuentre la opción perfecta para su <span>estilo</span> y <span>preferencias</span>.
 				Lo que nos <span>distingue</span> es nuestra dedicación implacable a la <span>excelencia</span>. Trabajamos incansablemente para mantenernos a la vanguardia de las últimas <span>tendencias</span> y avances <span>tecnológicos</span> en el mundo de los teclados. 
@@ -124,36 +126,37 @@
 
 								<div class="product">
 
-										<img src="img/productos/blue.png" alt="Teclado 1">
+										<img src="../img/productos/blue.png" alt="Teclado 1">
+										
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/neg.png" alt="Teclado 2">
+										<img src="../img/productos/neg.png" alt="Teclado 2">
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/yellow.png" alt="Teclado 3">
+										<img src="../img/productos/yellow.png" alt="Teclado 3">
 
 								</div>
 								<div class="product">
 
-										<img src="img/productos/rosa.png" alt="Teclado 4">
-
-								</div>
-
-								<div class="product">
-
-										<img src="img/productos/negro.png" alt="Teclado 5">
+										<img src="../img/productos/rosa.png" alt="Teclado 4">
 
 								</div>
 
 								<div class="product">
 
-										<img src="img/productos/gris.png" alt="Teclado 6">
+										<img src="../img/productos/negro.png" alt="Teclado 5">
+
+								</div>
+
+								<div class="product">
+
+										<img src="../img/productos/gris.png" alt="Teclado 6">
 
 								</div>
 
@@ -173,8 +176,8 @@
 				<!-- Contact section start here -->
 
 				<section class="contact" id="contacto">
-						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
-
+						
+<form>
 						<h2 class="heading"><span>Consultas</span></h2>
 					
 
@@ -227,7 +230,7 @@
 
 								</div>
 
-						</form>
+</form>
 
 				</section>
 
@@ -257,7 +260,7 @@
 
 				<!-- Scripts section start here -->
 
-				<script src="js/script.js"></script>
+				<script src="../js/script.js"></script>
 
 				<script>
 						document.getElementById('catalogButton').addEventListener('click', function() {
@@ -273,6 +276,10 @@
 						       
 						    });
 						
+				</script>
+
+				<script>
+					
 				</script>
 				
 
