@@ -15,71 +15,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   
-    <style>
-        /* Agrega tus estilos personalizados aquí */
-        .menu-container {
-            position: relative;
-        }
 
-        .menu-btn {
-            cursor: pointer;
-        }
-
-        .pattern {
-            position: absolute;
-            top: 0;
-            right: 0;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
-        .menu-container:hover .pattern {
-            opacity: 1;
-        }
-
-        .expand-btn {
-            display: none;
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: black;
-            color: white;
-            padding: 8px 12px;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .menu-container:hover .expand-btn {
-            display: block;
-        }
-
-        .menu-content {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background-color: black;
-            color: white;
-            width: 150px;
-            border: 1px solid white;
-            display: none;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .menu-container:hover .menu-content {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .menu-item {
-            padding: 10px;
-            border-bottom: 1px solid white;
-            text-align: right;
-        }
-    </style>
     <title>Landing Page-KeyTech</title>
 </head>
 <body>
@@ -87,20 +23,21 @@
 <div class="container">
     <nav>
         <div class="nav-1">
-            <p class="logo">WA</p>
+        <span><a href="#home" class="active"><p class="logo">K.X</p></a></span>
             <p class="title">history <br />Keyboard</p>
         </div>
         <div class="nav-2">
-           <p class="menu-btn">menu</p>
-           <a href="#home" class="active">Inicio</a>
+           <span><p class="menu-btn">|menu|</p></span>
+                            
 								<a href="#acerca">Acerca</a>
 								<a href="#catalogo">Catalogo</a>
 								<a href="#contacto">Contacto</a>
-								<a href="<?=base_url('login')?>">Cuenta</a>
+								
            <p class="pattern">x</p>
         </div>
         <div class="nav-3">
-            <p class="intro">intro</p>
+            <span><p class="intro">|intro|</p></span>
+            <a href="<?=base_url('login')?>">Cuenta</a>
             <p class="pattern-2">xx</p>
         </div>
     </nav>
@@ -108,14 +45,14 @@
     <div class="content-wrapper">
         <div class="col-1 col">
             <div class="header">
-                <h1>KeyTech <br>industries.</h1>
+                <h1>Kronos <span>X</span> <br>industries.</h1>
                 <div class="numbers">
                     <br><p>05 / 1904</p>
                     <div class="hr"></div>
                     <p>01 / 1989</p>
                 </div>
                 <div class="hero-img">
-                    <img src="./assets/beige.png" alt="">
+                    <img src="https://media.giphy.com/media/l3nWgXCpQpMUOrkoo/giphy.gif" alt="">
                 </div>
                 <div class="hero-img-info">
                     <p><span>Foundation:</span> 2015</p>
@@ -136,7 +73,7 @@
             </div>
             <div class="p-img">
                 <div class="p-img-wrap">
-                    <img src="./assets/grey.png" alt="">
+                    <img src="./assets/07.jpeg" alt="">
                 </div>
                 <div class="p-img-border"></div>
             </div>

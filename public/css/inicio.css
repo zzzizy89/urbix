@@ -9,6 +9,8 @@
     --color-secondary: #eae6ca;
     --text-primary: #4c4c45;
     --text-secondary: #d9d99b;
+    --text-terciary: #131312;
+    
 }
 
 @font-face {
@@ -39,12 +41,17 @@
     src: url("../fonts/Nevolasty-Light.otf") format("truetype");
   }
 
+  @font-face {
+    font-family: "NoorgeKarlos-Outline";
+    src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+  }
+
 html,
 body {
     width: 100%;
     height: 100%;
     background: #000;
-    font-family: "Arame-Thin";
+    font-family: "Mars Model";
 }
 
 p{
@@ -66,6 +73,8 @@ nav {
     gap: 0.25em;
     padding: 0.25em 0 0 0;
     background: #000;
+    font-family: "Nevolasty-Light";
+    color: rgb(0, 0, 0);
 }
 
 nav > div {
@@ -82,12 +91,45 @@ nav > div {
     flex: 3;
 }
 
+.nav-1 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.nav-1 span {
+    font-family: "FormulaCondensed";
+    font-size: 2rem;
+}
+
 .nav-2 {
     flex: 2;
 }
 
+.nav-2 span{
+    font-family:"FormulaCondensed";
+    font-size: 2rem;
+
+}
+
+.nav-2 a {
+    font-family: "Nevolasty-Light";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
 .nav-3 {
     flex: 1;
+}
+
+.nav-3 a {
+    font-family: "Nevolasty-Light";
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.nav-3 span {
+    font-family: "FormulaCondensed";
+    font-size: 2rem;
 }
 
 .content-wrapper {
@@ -102,7 +144,7 @@ nav > div {
 
 .content-wrapper .col {
     border-radius: 10px;
-    background: var(--color-primary);
+    background: var(--text-primary);
     padding: 10em 5em;
 }
 
@@ -147,8 +189,13 @@ img {
     
 }
 
+.col-1 h1 span {
+    font-family: "NoorgeKarlos-Outline";
+    color: #d9d99b;
+}
+
 .col-1 p  {
-    color: var(--text-primary);
+    color: var(--text-terciary);
 }
 
 .col-1 p span {
@@ -182,8 +229,8 @@ img {
 }
 
 .cta .cta-btn{
-    background: #000;
-    color: #fff;
+    background: var(--text-terciary);
+    color: var(--color-secondary);
     padding: 1.5em;
     border-radius: 10px;
     display: flex;

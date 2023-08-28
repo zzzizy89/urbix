@@ -13,10 +13,10 @@
 <div class="container">
     <div class="hero-image-wrapper wrapper">
         <div class="bg-img">
-            <img src="img/productos/w.png"  alt="">
+            <img src="./assets/002.jpg"  alt="">
         </div>
         <div class="front-img">
-            <img src="img/productos/ww.png"  alt="">
+            <img src="./assets/002.jpg"  alt="">
         </div>
     </div>
     <div class="content-wrapper wrapper">
