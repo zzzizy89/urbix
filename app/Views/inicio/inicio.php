@@ -14,7 +14,9 @@
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
 
     <title>Landing Page-KeyTech</title>
 </head>
@@ -27,6 +29,7 @@
             <p class="title">history <br />Keyboard</p>
         </div>
         <div class="nav-2">
+       
            <span><p class="menu-btn">|menu|</p></span>
                             
 								<a href="#acerca">Acerca</a>
@@ -61,7 +64,7 @@
                 </div>
                 <div class="cta">
                     <div class="cta-btn">
-                        <h3>next Product <ion-icon name="arrow-forward-sharp"></ion-icon></h3>
+                        <h3>next generation <ion-icon name="arrow-forward-sharp"></ion-icon></h3>
                     </div>
                 </div>
             </div>
@@ -69,24 +72,24 @@
         <div class="col-2 col">
             <div class="p-info">
                 <p>1929 / 1954</p>
-                <p>110x150.7cm</p>
             </div>
             <div class="p-img">
                 <div class="p-img-wrap">
-                    <img src="./assets/07.jpeg" alt="">
+                    <img src="./assets/art.jpg" alt="">
                 </div>
                 <div class="p-img-border"></div>
             </div>
             <div class="img">
                 <div class="img-data">
                     <div class="img-name">
+                        <br>
                         <p>the persistence <br />of memory</p>
                     </div>
                     <div class="img-info">
-                        <p>date: 2018</p>
-                        <p>style: minimalist</p>
-                        <p>genre: symbolic painting</p>
-                        <p>media: oil, canvas</p>
+                        <p><span>date:</span> 2018</p>
+                        <p><span>style:</span> minimalist</p>
+                        <p><span>genre:</span> symbolic painting</p>
+                        <p><span>media:</span> oil, canvas</p>
                     </div>
                 </div>
                 <div class="hr">
@@ -96,14 +99,14 @@
                     </div>
                 </div>
                 <div class="carousel">
-                    <div class="arrow">
-                        <ion-icon name="chevron-back-sharp"></ion-icon>
-                    </div>
-                    <p>168</p>
-                    <div class="arrow">
-                    <ion-icon name="chevron-forward-sharp"></ion-icon>
-                    </div>
-                </div>
+    <div class="arrow">
+        <i> → $300.000</i> 
+    </div>
+    <p>phrase</p>
+    <div class="arrow">
+    <i> → Well done is better than well said</i> 
+    </div>
+</div>
             </div>
         </div>
     </div>

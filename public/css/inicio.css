@@ -46,6 +46,25 @@
     src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
   }
 
+  @font-face {
+    font-family: "BigCityVibes";
+    src: url("../fonts/BigCityVibes.otf") format("truetype");
+  } 
+
+  @font-face {
+    font-family: "AQUATIC";
+    src: url("../fonts/AQUATIC.ttf") format("truetype");
+  }  
+  @font-face {
+    font-family: "Barbarian";
+    src: url("../fonts/Barbarian.ttf") format("truetype");
+  }  
+  @font-face {
+    font-family: "DeathMohaw";
+    src: url("../fonts/DeathMohaw.otf") format("truetype");
+  }  
+  
+
 html,
 body {
     width: 100%;
@@ -111,10 +130,25 @@ nav > div {
 
 }
 
+
+
 .nav-2 a {
     font-family: "Nevolasty-Light";
     text-decoration: none;
     color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px; /* Agregado para hacer redondeado */
+    background-color: var(--color-secondary); /* Ajusta el color de fondo según tu estilo */
+    color: var(--text-color); /* Ajusta el color del texto según tu estilo */
+    text-decoration: none;
+    margin: 0 5px; /* Añade un margen entre las etiquetas a */
+    transition: background-color 0.3s, color 0.3s; /* Agregado para una transición suave */
+}
+
+.nav-2 a:hover {
+    background-color: var(--color-primary); /* Ajusta el color de fondo en hover según tu estilo */
+    color: white; /* Cambia el color del texto en hover */
 }
 
 .nav-3 {
@@ -125,6 +159,19 @@ nav > div {
     font-family: "Nevolasty-Light";
     text-decoration: none;
     color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px; /* Agregado para hacer redondeado */
+    background-color: var(--color-secondary); /* Ajusta el color de fondo según tu estilo */
+    color: var(--text-color); /* Ajusta el color del texto según tu estilo */
+    text-decoration: none;
+    margin: 0 5px; /* Añade un margen entre las etiquetas a */
+    transition: background-color 0.3s, color 0.3s; /* Agregado para una transición suave */
+}
+
+.nav-3 a:hover {
+    background-color: var(--color-primary); /* Ajusta el color de fondo en hover según tu estilo */
+    color: white; /* Cambia el color del texto en hover */
 }
 
 .nav-3 span {
@@ -202,6 +249,11 @@ img {
     color: var(--text-secondary);
 }
 
+.col-2 p span {
+    color: var(--text-secondary);
+}
+
+
 .numbers {
     width: 100%;
     display: flex;
@@ -238,7 +290,7 @@ img {
 }
 
 .cta-btn h3 {
-    font-family: "Mars Model";
+    font-family: "AQUATIC";
     font-size: 40px;
     text-transform: uppercase;
     line-height: 1;
@@ -277,6 +329,7 @@ h3 ion-icon{
 }
 
 .p-info {
+  
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -331,8 +384,13 @@ p#amount {
     font-size: 12px;
     padding: 1em;
     border-radius: 10px;
-    background: #000;
     color: #fff;
+    display: flex;
+    background: #000;  
+}
+
+.arrow i {
+    font-family: "Arame-Thin";
 }
 
 .marquee {
