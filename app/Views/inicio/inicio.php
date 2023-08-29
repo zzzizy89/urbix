@@ -55,7 +55,7 @@
                     <p>01 / 1989</p>
                 </div>
                 <div class="hero-img">
-                    <img src="https://media.giphy.com/media/l3nWgXCpQpMUOrkoo/giphy.gif" alt="">
+                    <img src="./assets/beige.png" alt="">
                 </div>
                 <div class="hero-img-info">
                     <p><span>Foundation:</span> 2015</p>
@@ -75,7 +75,7 @@
             </div>
             <div class="p-img">
                 <div class="p-img-wrap">
-                    <img src="./assets/art.jpg" alt="">
+                    <img src="./assets/ss.jpg" alt="">
                 </div>
                 <div class="p-img-border"></div>
             </div>

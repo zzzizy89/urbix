@@ -7,9 +7,10 @@
 :root {
     --color-primary: #8a6642;
     --color-secondary: #eae6ca;
-    --text-primary: #4c4c45;
+    --text-primary: #111111;
+    --text-asd: #a01212;
     --text-secondary: #d9d99b;
-    --text-terciary: #131312;
+    --text-terciary: #a01212;
     
 }
 
@@ -101,7 +102,7 @@ nav > div {
     justify-content: space-between;
     align-items: center;
     padding: 1em 2em;
-    background: var(--color-secondary);
+    background: var(--text-terciary);
     color: var(--text-color);
     border-radius: 20px;
 }
@@ -189,7 +190,13 @@ nav > div {
     background: #000;
 }
 
-.content-wrapper .col {
+.content-wrapper .col-1 {
+    border-radius: 10px;
+    background: #0c0c0c;
+    padding: 10em 5em;
+}
+
+.content-wrapper .col-2 {
     border-radius: 10px;
     background: var(--text-primary);
     padding: 10em 5em;
@@ -203,6 +210,7 @@ nav > div {
 }
 
 .col-2 {
+    
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -233,6 +241,7 @@ img {
     font-size: 100px;
     text-transform: uppercase;
     line-height: 0.8;
+    color: var(--text-asd);
     
 }
 
@@ -254,6 +263,8 @@ img {
 }
 
 
+
+
 .numbers {
     width: 100%;
     display: flex;
@@ -272,7 +283,7 @@ img {
 .numbers .hr{
     flex: 5;
     width: 100%;
-    height: 2px;
+    height: 5px;
     background: #ececec;
 }
 

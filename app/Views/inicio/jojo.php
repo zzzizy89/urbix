@@ -29,6 +29,7 @@
 					<div class="img-3 img"></div>
 					<div class="img-4 img"></div>
 				</div>
+				
 				<div class="header">
 					<h1 class="ml12">gorgeoushe</h1>
 				</div>

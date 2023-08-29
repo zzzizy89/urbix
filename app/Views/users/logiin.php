@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="design">
-            <img src="./assets/child.jpg" alt="">
+            <img src="./assets/ss.jpg" alt="">
         </div>
         <div class="login">
             <h3 class="title">User Login</h3>
