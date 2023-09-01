@@ -340,7 +340,7 @@ h3 ion-icon{
 }
 
 .p-info {
-  
+    color: #d9d99b;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -365,6 +365,7 @@ h3 ion-icon{
     font-size: 12px;
     line-height: 1.5;
     text-align: right;
+    color: #fff;
 
 }
 
@@ -375,10 +376,15 @@ h3 ion-icon{
 }
 
 .price {
+   color: #d9d99b;
    width: 100%;
    display: flex;
    justify-content: space-between;
    align-items: flex-start; 
+}
+
+.phrase {
+    color: #d9d99b;
 }
 
 p#amount {

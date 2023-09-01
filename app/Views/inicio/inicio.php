@@ -102,7 +102,10 @@
     <div class="arrow">
         <i> → $300.000</i> 
     </div>
+    <div class="phrase">
     <p>phrase</p>
+    </div>
+   
     <div class="arrow">
     <i> → Well done is better than well said</i> 
     </div>
