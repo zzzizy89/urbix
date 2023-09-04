@@ -48,14 +48,15 @@
     <div class="content-wrapper">
         <div class="col-1 col">
             <div class="header">
-                <h1>Kronos <span>X</span> <br>industries.</h1>
+                <h1>Luiggi</h1>
+                <br>
                 <div class="numbers">
                     <br><p>05 / 1904</p>
                     <div class="hr"></div>
                     <p>01 / 1989</p>
                 </div>
                 <div class="hero-img">
-                    <img src="./assets/beige.png" alt="">
+                    <img src="https://media.giphy.com/media/UGrpkMXipFWQ06IHIM/giphy.gif" alt="">
                 </div>
                 <div class="hero-img-info">
                     <p><span>Foundation:</span> 2015</p>
@@ -75,7 +76,7 @@
             </div>
             <div class="p-img">
                 <div class="p-img-wrap">
-                    <img src="./assets/ss.jpg" alt="">
+                    <img src="./assets/prueba.png" alt="">
                 </div>
                 <div class="p-img-border"></div>
             </div>
@@ -122,7 +123,60 @@
             you can't download the experience &nbsp;   
         </span>
     </div>
-   
+
+    <section class="catalogo" id="catalogo">
+
+<h2 class="" heading>Nuestro <span>Catalogo</span></h2>
+
+<div class="grid-container">
+
+        <div class="product">
+
+                <img src="./img/productos/blue.png" alt="Teclado 1">
+                
+
+        </div>
+
+        <div class="product">
+
+                <img src="./img/productos/neg.png" alt="Teclado 2">
+
+        </div>
+
+        <div class="product">
+
+                <img src="./img/productos/yellow.png" alt="Teclado 3">
+
+        </div>
+        <div class="product">
+
+                <img src="./img/productos/rosa.png" alt="Teclado 4">
+
+        </div>
+
+        <div class="product">
+
+                <img src="./img/productos/negro.png" alt="Teclado 5">
+
+        </div>
+
+        <div class="product">
+
+                <img src="./img/productos/gris.png" alt="Teclado 6">
+
+        </div>
+
+
+        <div class="btn-box btns">
+
+                <button type="submit" class="btn" id="catalogButton">Catalogo</button>
+
+        </div>
+
+</div>
+
+</section>
+<script src="js/script.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
