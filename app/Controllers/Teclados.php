@@ -1,20 +1,34 @@
 <?php 
 namespace App\Controllers;
-
+use App\Models\UserModel;
 use CodeIgniter\Controller;
 use App\Models\teclado;
 class Teclados extends Controller{
 
     public function index(){
 
-        $teclado = new Teclado();
-
-        $datos['teclados'] = $teclado->orderBy('id', 'ASC')->findAll();
-
-        $datos['cabecera'] = view('templates/cabecera');
-        $datos['pie'] = view('templates/piepagina');
-
-        return view('crud/listar', $datos); 
+        $user = session('user');
+    
+        if (!$user || $user->id < 1) {
+            // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
+            return redirect()->to('/login');
+        }
+    
+        // El usuario ha iniciado sesión, verificar su rol
+        $rol = $user->rol; 
+    
+        if ($rol == 1) {
+            // Si el usuario tiene rol 1, cargar la vista listar
+            $teclado = new Teclado();
+            $datos['teclados'] = $teclado->orderBy('id', 'ASC')->findAll();
+            $datos['cabecera'] = view('templates/cabecera');
+            $datos['pie'] = view('templates/piepagina');
+    
+            return view('crud/listar', $datos);
+        } else {
+            // Si el usuario no tiene rol 1, redirigir a la página dashboard
+            return redirect()->to('/dashboard');
+        }
     }
 
     public function crear(){
