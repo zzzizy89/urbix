@@ -7,14 +7,14 @@ class Home extends BaseController
     public function index()
     {
         
-        return view('inicio/intro2');
+        return view('main/animation/intro2');
         
     }
 
     public function inicio()
     {
         
-        return view('inicio/luigi');
+        return view('main/primary/home');
         
     }
     public function inicio2()
