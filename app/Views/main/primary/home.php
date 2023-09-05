@@ -51,11 +51,6 @@
         </div>
         </section>
        
-
-
-
-    
-			
 			<div class="overlay" id="catalogo">
 				<div class="images">
 					<div class="img img-1"></div>
@@ -68,8 +63,85 @@
 					<div class="img img-8"></div>
 				</div>
 			</div>
-	
+           
 
+
+            <section class="contact" id="contacto">
+						
+                        <form>
+                                                <h2 class="heading"><span>Consultas</span></h2>
+                                            
+                        
+                                                        <div class="input-box">
+                        
+                                                                <div class="input-field">
+                        
+                                                                <input type="text" name= "nombrecom"class="form-control" id="nombrecom" placeholder="Nombre Completo" required/>												
+                                                                <span class="focus"></span>
+                        
+                                                                </div>
+                        
+                                                                <div class="input-field">
+                        
+                                                                        <input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
+                                                                        <span class="focus"></span>
+                        
+                                                                </div>
+                        
+                                                        </div>
+                        
+                                                        <div class="input-box">
+                        
+                                                                <div class="input-field">
+                        
+                                                                        <input type="number"  name="numtel" class="form-control" id="numtel" placeholder="Numero de Telefono" required>
+                                                                        <span class="focus"></span>
+                        
+                                                                </div>
+                        
+                                                                <div class="input-field">
+                        
+                                                                <input type="text" name= "asuntoco"class="form-control" id="asuntoco" placeholder="Asunto del Correo" required/>
+                                                                        <span class="focus"></span> 
+                        
+                                                                </div>
+                        
+                                                        </div>
+                        
+                                                        <div class="textarea-field">
+                        
+                                                                <textarea name="mensaje1" id="mensaje1" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
+                                                                <span class="focus"></span>
+                        
+                                                        </div>
+                        
+                                                        <div class="btn-box btns">
+                        
+                                                                <button type="submit" class="btn" id="contactButton">Enviar</button>
+                        
+                                                        </div>
+                        
+                        </form>
+                        
+                                        </section>
+                        
+            
+
+
+
+            <footer>
+            <div class="marquee">
+        <span>
+            &nbsp; discuss your ideas &nbsp; / &nbsp; unexpected time &nbsp; /
+            &nbsp; spatial experiencies &nbsp; / &nbsp; best specialists &nbsp; /
+            &nbsp; impulse &nbsp; / &nbsp;  independent online store &nbsp; / &nbsp; 
+            you can't download the experience &nbsp;   
+        </span>
+    </div>
+            </footer>
+         
+         
+    <script src="assets/js/script-marquee.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="../assets/js/script.js"></script>
         <script>
