@@ -1,0 +1,62 @@
+INFO - 2023-08-29 22:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:34:06 --> unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693347656_11f4087818a517cc0d8d.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('16')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:34:24 --> unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693347656_11f4087818a517cc0d8d.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('16')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:34:33 --> unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693347656_11f4087818a517cc0d8d.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('16')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:34:37 --> unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693347656_11f4087818a517cc0d8d.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('16')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:35:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:35:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:36:15 --> unlink(../public/uploads/1693348000_a483a77452853cedba16.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693348000_a483a77452853cedba16.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693348000_a483a77452853cedba16.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('17')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-29 22:36:18 --> unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory
+in APPPATH\Controllers\Teclados.php on line 67.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(../public/uploads/1693347656_11f4087818a517cc0d8d.jpg): No such file or directory', 'C:\\xampp\\htdocs\\KeyTech\\app\\Controllers\\Teclados.php', 67)
+ 2 APPPATH\Controllers\Teclados.php(67): unlink('../public/uploads/1693347656_11f4087818a517cc0d8d.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Teclados->eliminar('16')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teclados))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-29 22:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-29 22:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
