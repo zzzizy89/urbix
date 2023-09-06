@@ -12,7 +12,7 @@
     <body>
     
     <header class="header">
-						<a href="#" class="logo">Luiggi</a>
+						<a href="#" class="logo">urbix</a>
 						<!-- Para animacion JS -->
 						<div class="bx bx-menu" id="menu-icon"></div>
 
@@ -28,8 +28,30 @@
 
 				</header>
                 
-                
-                <section id="home"> 
+         <section class="home" id="home">
+         <div class="home-content">
+
+<h3>Welcome-Welcome-Welcome</h3>
+<h2>FILMS89.STUDIO.</h2>
+<h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
+<h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
+</div>
+
+<div class="btn-box btns">
+                        
+                        <button type="submit" class="btn-1">→WATCH SOME REEL</button>
+
+                </div>
+         </section>
+         https://dribbble.com/shots/22457103-Design-Studio-Films87
+
+					
+
+						
+
+		
+
+                <section  id=""> 
         <div class="smooth-scroll-wrapper">
             <div class="content">
                 <div class="container">

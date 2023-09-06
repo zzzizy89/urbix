@@ -79,8 +79,18 @@
     font-family: "adelia";
     src: url("../fonts/adelia.ttf") format("truetype");
   }  
+
+  @font-face {
+    font-family: "Headshots";
+    src: url("../fonts/Headshots.otf") format("truetype");
+  }  
+
+  @font-face {
+    font-family: "adelia";
+    src: url("../fonts/adelia.ttf") format("truetype");
+  }  
   
-  
+
 
 html,
 body {
@@ -91,6 +101,9 @@ body {
     overflow-x: hidden;
     font-family: "MonumentExtended", Arial, Helvetica, sans-serif;
     background: #0f0f0f;
+   
+   
+    
 }
 
 .header {
@@ -98,8 +111,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 1%;
-    background: #fff;
+    padding: 0.5rem 1%;
+    background: #0E0D0D;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -166,9 +179,83 @@ text-align: center;
 
       
 section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
+  min-height: 100vh;
 }
+
+.home {
+display: flex;
+align-items: center;
+background-image: url("../img/primary/fondo3.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+.home-content {
+max-width: 1000rem;
+position: relative;
+height: 750px; /* Ajusta la altura según tus necesidades */
+}
+
+.home-content h2 {
+  font-family: "Headshots";
+  color: var(--text-color);
+  position: absolute;
+  padding: 0 1rem;
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1;
+  bottom: 0;
+  letter-spacing: 0.1em;
+}
+
+.home-content h6 {
+  position: relative;
+  top: 105%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  white-space: nowrap;
+  color: #808080;
+}
+
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+
+.btn-box .btn-1 {
+  background: #0000005d;
+  color: #ededed;
+  border: .2rem solid var(--text-color);
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 60%;
+  border-radius: 50px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  z-index: 1;
+  overflow: hidden;
+  font-family: "Arame-Thin";
+}
+.home .btn-box {
+  position: absolute;
+  bottom: 6.5rem;
+  right: 11rem;
+  width: 15rem;
+  height: 5rem;
+
+}
+
+
+
 .container {
     max-width: 600px;
     margin: 200px auto;
