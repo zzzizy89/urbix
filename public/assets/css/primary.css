@@ -201,11 +201,11 @@ height: 750px; /* Ajusta la altura según tus necesidades */
   font-family: "Headshots";
   color: var(--text-color);
   position: absolute;
-  padding: 0 1rem;
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 1;
   bottom: 0;
+  left: 2rem;
   letter-spacing: 0.1em;
 }
 
@@ -244,6 +244,19 @@ height: 750px; /* Ajusta la altura según tus necesidades */
   z-index: 1;
   overflow: hidden;
   font-family: "Arame-Thin";
+
+}
+.btn-1 span{
+  animation: marquee 4s linear infinite;
+  display: inline-block;
+}
+@keyframes  marquee {
+  from {
+      transform: translateX(-100%);
+  }
+  to {
+      transform: translateX(100%);
+  }
 }
 .home .btn-box {
   position: absolute;

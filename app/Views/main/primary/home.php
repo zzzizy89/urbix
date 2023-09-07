@@ -39,7 +39,7 @@
 
 <div class="btn-box btns">
                         
-                        <button type="submit" class="btn-1">→WATCH SOME REEL</button>
+                        <button type="submit" class="btn-1"><span>→WATCH SOME REEL</span></button>
 
                 </div>
          </section>
