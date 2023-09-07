@@ -37,13 +37,36 @@
 <h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
 </div>
 
+
+
+<div class="container-2">
+    <input type="button" value="HiteMe">
+    <div class="box">
+        <div class="card" id="front">Front</div>
+        <div class="card" id="back">Back</div>
+        <div class="card" id="left">Left</div>
+        <div class="card" id="right">Right</div>
+        <div class="card" id="top">Top</div>
+        <div class="card" id="bottom">Bottom</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 <div class="btn-box btns">
                         
-                        <button type="submit" class="btn-1"><span>→WATCH SOME REEL</span></button>
+                        <button type="submit" class="btn-1"><span>→ WATCH SOME REEL</span></button>
 
                 </div>
+           
          </section>
-         https://dribbble.com/shots/22457103-Design-Studio-Films87
+ 
 
 					
 
