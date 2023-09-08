@@ -32,7 +32,7 @@
          <div class="home-content">
 
 <h3>Welcome-Welcome-Welcome</h3>
-<h2>FILMS89.STUDIO.</h2>
+<h2>URBIX89.STUDIO</h2>
 <h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
 <h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
 </div>
@@ -43,12 +43,12 @@ https://dribbble.com/shots/22505875-ITYPE-PRO-Ecommerce-Website
 <div class="container-2">
     <input type="button" value="HiteMe">
     <div class="box">
-        <div class="card" id="front">Front</div>
-        <div class="card" id="back">Back</div>
-        <div class="card" id="left">Left</div>
-        <div class="card" id="right">Right</div>
-        <div class="card" id="top">Top</div>
-        <div class="card" id="bottom">Bottom</div>
+        <div class="card" id="front">Fresh</div>
+        <div class="card" id="back">independent</div>
+        <div class="card" id="left">Store</div>
+        <div class="card" id="right">Online</div>
+        <div class="card" id="top">Best</div>
+        <div class="card" id="bottom">Enterprise</div>
     </div>
 </div>
 

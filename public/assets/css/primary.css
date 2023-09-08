@@ -309,14 +309,17 @@ height: 750px; /* Ajusta la altura según tus necesidades */
   padding: 100px 0;
   color: white;
   background: black;
-  border: 2px solid white;
+  font-family: "Nevolasty-Light";
   font-size: 32px;
   box-sizing: border-box;
   position: absolute;
   transition: all 1s;
 }
+
+
 #front {
   transform: translateZ(125px);
+
 }
 #back {
   transform: translateZ(-125px);
