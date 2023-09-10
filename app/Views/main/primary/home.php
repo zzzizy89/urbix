@@ -17,12 +17,13 @@
 						<div class="bx bx-menu" id="menu-icon"></div>
 
 						<nav class="navbar">
-								<a href="#home" class="active">Inicio</a>
-								<a href="#acerca">Acerca</a>
-								<a href="#catalogo">Catalogo</a>
-								<a href="#contacto">Contacto</a>
-								<a href="<?=base_url('login')?>">Cuenta</a>
-								<span class="active-nav"></span>
+								<a href="#home" class="hover-this"><span>Inicio</span></a>
+								<a href="#acerca" class="hover-this"><span>Acerca</span></a>
+								<a href="#catalogo" class="hover-this"><span>Catalogo</span></a>
+								<a href="#contacto" class="hover-this"><span>Contacto</span></a>
+								<a href="<?=base_url('login')?> "class="hover-this"><span>Cuenta</span></a>
+								<span class="active-nav" ></span>
+                                <div class="cursor"></div>
 								
 						</nav>
 
@@ -62,8 +63,8 @@ esto es una prueba de commits
 
 
 <div class="btn-box btns">
-                        
-                        <button type="submit" class="btn-1"><span>→ WATCH SOME REEL</span></button>
+
+                        <button type="submit" class="btn-1"><span>→WATCH SOME REEL</span></button>
 
                 </div>
            
@@ -212,5 +213,40 @@ esto es una prueba de commits
             requestAnimationFrame(raf);
             window.addEventListener("scroll", scrollProgress);
         </script>
+        <script>
+
+(function () {
+
+      const link = document.querySelectorAll('nav > .hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+
+})();
+
+</script>
+
     </body>
 </html>
