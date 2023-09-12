@@ -7,15 +7,7 @@
         <link rel="stylesheet" href="assets/css/primary.css">
         <link rel="stylesheet" href="../assets/css/primary.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <style>
-      #modelViewer {
-    width: 500px;
-    height: 500px;
-    margin-left: 90rem; /* Ajusta el valor según sea necesario para mover el objeto hacia la izquierda */
-    position: absolute; /* Esto probablemente debería ser "relative" o "absolute" en lugar de "center" */
-}
-
-    </style>
+   
 
     </head>
     <body>
@@ -45,20 +37,12 @@
 
 
 <h2>URBIX89.STUDIO</h2>
-<h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
-<h6>discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store-you can't download the experience-discuss your ideas-unexpected time-spatial experiencies-best specialists-impulse- independent online store</h6>
+
+
 </div>
 
 
-<model-viewer 
-id="modelViewer" 
-alt="compu" 
-src="./assets/model/compu.glb" 
-camera-controls 
-camera-orbit="65 deg 55 deg 2.5m"
-auto-rotate>
 
-</model-viewer>
          </section>
  
 
@@ -238,9 +222,7 @@ auto-rotate>
 })();
 
 </script>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
 
 
 
