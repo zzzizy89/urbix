@@ -241,7 +241,7 @@ section {
 .home {
 display: flex;
 align-items: center;
-background-image: url("../img/primary/office1.jpg");
+background-image: url("../img/primary/dark.jpg");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -255,7 +255,7 @@ height: 750px; /* Ajusta la altura según tus necesidades */
 
 .home-content h2 {
   font-family: "Headshots";
-  color: var(--text-color);
+  color: var(--main-color);
   position: absolute;
   font-size: 5.6rem;
   font-weight: 700;
@@ -263,6 +263,22 @@ height: 750px; /* Ajusta la altura según tus necesidades */
   bottom: 0;
   left: 2rem;
   letter-spacing: 0.1em;
+  display: block;
+  white-space: nowrap;
+  width: 14ch;
+  border-right: 4px solid;
+  animation: typing 2s steps(14),
+  blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+
+@keyframes typing {
+  from { width: 0;}
+}
+
+@keyframes blink{
+  50% {border-color: transparent;}
 }
 
 .home-content h6 {
@@ -274,185 +290,6 @@ height: 750px; /* Ajusta la altura según tus necesidades */
   justify-content: space-between;
   white-space: nowrap;
   color: #6d6d6d;
-}
-
-.btn-box {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 34.5rem;
-  height: 5rem;
-
-}
-
-.btn-box .btn-1 {
-  background: #0000005d;
-  color: #ededed;
-  border: .1rem solid var(--text-color);
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 25rem;
-  height: 60%;
-  border-radius: 50px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  z-index: 1;
-  overflow: hidden;
-  transition: background 0.5s ease; /* Agregamos una transición para el cambio de fondo */
-}
-
-
-.btn-1 span {
-  animation: marquee 4s linear infinite;
-  display: inline-block;
-  font-family: "Nevolasty-Light";
-}
-
-.home .btn-box {
-  position: absolute;
-  bottom: 6.5rem;
-  right: 11rem;
-  width: 15rem;
-  height: 5rem;
-}
-
-.container-2 {
-  height: 60vh;
-  width: 30vw;
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(80%, -50%);
-  perspective: 1000px;
-}
-
-.box {
-  height: 250px;
-  width: 250px;
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  transform-style: preserve-3d;
-  animation: animate 5s infinite;
-  /* transform: rotate(-90deg); */
-}
-
-
-@keyframes animate {
-  0% {
-    transform: rotateX(45deg) rotateY(-45deg);
-  }
-  25% {
-    transform: rotateX(-45deg) rotateY(-45deg);
-  }
-  50% {
-    transform: rotateX(45deg) rotateY(45deg);
-  }
-  75% {
-    transform: rotateX(-45deg) rotateY(45deg);
-  }
-  100% {
-    transform: rotateX(45deg) rotateY(-45deg);
-  }
-}
-
-.card {
-  height: 250px;
-  width: 250px;
-  text-align: center;
-  padding: 100px 0;
-  color: white;
-  background: black;
-  font-family: "Nevolasty-Light";
-  font-size: 32px;
-  box-sizing: border-box;
-  position: absolute;
-  transition: all 1s;
-  opacity: 0; /* Ocultar las imágenes por defecto */
-}
-
-
-#front {
-  transform: translateZ(125px);
-
-}
-#back {
-  transform: translateZ(-125px);
-}
-#left {
-  right: 125px;
-  transform: rotateY(-90deg);
-}
-#right {
-  left: 125px;
-  transform: rotateY(90deg);
-}
-#top {
-  bottom: 125px;
-  transform: rotateX(90deg);
-}
-#bottom {
-  top: 125px;
-  transform: rotateX(-90deg);
-}
-
-input {
-  height: 50px;
-  width: 100px;
-  background: pink;
-  /* border: none; */
-  font-size: 22px;
-  cursor: pointer;
-  position: absolute;
-  top: -100px;
-  left: 175px;
-  background: #0000005d;
-  color: #ededed;
-  border: .1rem solid var(--text-color);
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 25rem;
-  height: 60%;
-  border-radius: 50px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  z-index: 1;
-  overflow: hidden;
-  transition: background 0.5s ease; /* Agregamos una transición para el cambio de fondo */
-
-}
-
-
-
-input:focus~ .box #front {
-  transform: translateZ(180px) rotateY(360deg);
-  opacity: 1; /* Mostrar la imagen frontal */
-}
-input:focus~ .box #back {
-  transform: translateZ(-180px) rotateY(360deg);
-  opacity: 1;
-}
-input:focus~ .box #left {
-  right: 180px;
-  opacity: 1;
-}
-input:focus~ .box #right {
-  left: 180px ;
-  opacity: 1;
-}
-input:focus~ .box #top {
-  bottom: 180px;
-  opacity: 1;
-}
-input:focus~ .box #bottom {
-  top: 180px;
-  opacity: 1;
 }
 
 
