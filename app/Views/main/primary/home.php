@@ -40,54 +40,91 @@
 
 
 </div>
-
+<div class="scroll-down"></div>
 
 
          </section>
  
-
+<section class="acerca" id="acerca">
+<div class="wrapper">
+      <figure class="card">
+        <img
+          src="../assets/img/primary/women.jpg"
+          width="640"
+          height="640"
+          alt=""
+        />
+        <figcaption>
+          <blockquote>
+            We shape our tools and then the tools shape us.
+          </blockquote>
+          <cite> "In our company, we lead the way."</cite>
+          <p class="credit">
+            <strong>Urbix -</strong>
+            <a href="https://www.logitechg.com/es-ar" target="_blank">Logitech</a>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+   
+</section>
 					
-
-						
-
+      
+		
 		
 
-                <section  id=""> 
-        <div class="smooth-scroll-wrapper">
-            <div class="content">
-                <div class="container">
-                    <div class="image-container">
-                        <h2 class="text text-dark">
-                            <span class="parallax-title">
-                            we are the best in the details
-                            </span>
-                        </h2>
-                    </div>
+<section class="catalogo" id="catalogo">
 
-                    <h2 class="text">
-                        <span class="parallax-title">
-                        we are the best in the details
-                        </span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        </section>
-       
-			<div class="overlay" id="catalogo">
-				<div class="images">
-					<div class="img img-1"></div>
-					<div class="img img-2"></div>
-					<div class="img img-3"></div>
-					<div class="img img-4"></div>
-					<div class="img img-5"></div>
-					<div class="img img-6"></div>
-					<div class="img img-7"></div>
-					<div class="img img-8"></div>
-				</div>
-			</div>
-           
+						<h2 class="" heading>Nuestro <span>Catalogo</span></h2>
 
+						<div class="grid-container">
+
+								<div class="product">
+
+										<img src="../assets/img/productos/blue.png" alt="Teclado 1">
+										
+
+								</div>
+
+								<div class="product">
+
+										<img src="../assets/img/productos/neg.png" alt="Teclado 2">
+
+								</div>
+
+								<div class="product">
+
+										<img src="../assets/img/productos/yellow.png" alt="Teclado 3">
+
+								</div>
+								<div class="product">
+
+										<img src="../assets/img/productos/rosa.png" alt="Teclado 4">
+
+								</div>
+
+								<div class="product">
+
+										<img src="../assets/img/productos/negro.png" alt="Teclado 5">
+
+								</div>
+
+								<div class="product">
+
+										<img src="../assets/img/productos/gris.png" alt="Teclado 6">
+
+								</div>
+
+
+								<div class="btn-box btns">
+
+										<button type="submit" class="btn" id="catalogButton">Catalogo</button>
+
+								</div>
+
+						</div>
+
+				</section>
 
             <section class="contact" id="contacto">
 						
