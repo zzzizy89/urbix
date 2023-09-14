@@ -23,4 +23,11 @@ class Home extends BaseController
         return view('inicio/vista');
         
     }
+
+    public function catalogo()
+    {
+        
+        return view('main/primary/catalogo');
+        
+    }
 }

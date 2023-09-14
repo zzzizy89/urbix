@@ -7,6 +7,16 @@
         <link rel="stylesheet" href="assets/css/primary.css">
         <link rel="stylesheet" href="../assets/css/primary.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="../assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <script src="assets/js/wow.min.js"></script>
+      <script src="../assets/js/wow.min.js"></script>
+      <script src="../assets/js/t.min.js"></script>
+      <script src="assets/js/t.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
    
 
     </head>
@@ -18,10 +28,10 @@
 						<div class="bx bx-menu" id="menu-icon"></div>
 
 						<nav class="navbar">
-								<a href="#home" class="hover-this"><span>Inicio</span></a>
-								<a href="#acerca" class="hover-this"><span>Acerca</span></a>
-								<a href="#catalogo" class="hover-this"><span>Catalogo</span></a>
-								<a href="#contacto" class="hover-this"><span>Contacto</span></a>
+								<a href="#home" class="hover-this"><span>home</span></a>
+								<a href="#acerca" class="hover-this"><span>about</span></a>
+								<a href="<?=base_url('catalogo')?> " class="hover-this"><span>catalogue</span></a>
+								<a href="#contacto" class="hover-this"><span>contact</span></a>
 								<a href="<?=base_url('login')?> "class="hover-this"><span>Cuenta</span></a>
 								<span class="active-nav" ></span>
                                 <div class="cursor"></div>
@@ -46,144 +56,59 @@
          </section>
  
 <section class="acerca" id="acerca">
-<div class="wrapper">
-      <figure class="card">
-        <img
-          src="../assets/img/primary/women.jpg"
-          width="640"
-          height="640"
-          alt=""
-        />
-        <figcaption>
-          <blockquote>
-            We shape our tools and then the tools shape us.
-          </blockquote>
-          <cite> "In our company, we lead the way."</cite>
-          <p class="credit">
-            <strong>Urbix -</strong>
-            <a href="https://www.logitechg.com/es-ar" target="_blank">Logitech</a>
-          </p>
-        </figcaption>
-      </figure>
-    </div>
+<div class="container-fluid">
+                  <br><br><br>
+
+                  <h6>who we are?</h6>
+
+                  <div class="vertical"></div>
+                  <br>
+
+                  <div class="whitespace"></div>
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-8"></div>
+
+                        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-7"></div>
+
+                        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-1"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-1"></div>
+
+                        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+            </div>
    
 </section>
 					
       
-		
-		
 
-<section class="catalogo" id="catalogo">
-
-						<h2 class="" heading>Nuestro <span>Catalogo</span></h2>
-
-						<div class="grid-container">
-
-								<div class="product">
-
-										<img src="../assets/img/productos/blue.png" alt="Teclado 1">
-										
-
-								</div>
-
-								<div class="product">
-
-										<img src="../assets/img/productos/neg.png" alt="Teclado 2">
-
-								</div>
-
-								<div class="product">
-
-										<img src="../assets/img/productos/yellow.png" alt="Teclado 3">
-
-								</div>
-								<div class="product">
-
-										<img src="../assets/img/productos/rosa.png" alt="Teclado 4">
-
-								</div>
-
-								<div class="product">
-
-										<img src="../assets/img/productos/negro.png" alt="Teclado 5">
-
-								</div>
-
-								<div class="product">
-
-										<img src="../assets/img/productos/gris.png" alt="Teclado 6">
-
-								</div>
-
-
-								<div class="btn-box btns">
-
-										<button type="submit" class="btn" id="catalogButton">Catalogo</button>
-
-								</div>
-
-						</div>
-
-				</section>
-
-            <section class="contact" id="contacto">
-						
-                        <form>
-                                                <h2 class="heading"><span>Consultas</span></h2>
-                                            
-                        
-                                                        <div class="input-box">
-                        
-                                                                <div class="input-field">
-                        
-                                                                <input type="text" name= "nombrecom"class="form-control" id="nombrecom" placeholder="Nombre Completo" required/>												
-                                                                <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                                <div class="input-field">
-                        
-                                                                        <input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
-                                                                        <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                        </div>
-                        
-                                                        <div class="input-box">
-                        
-                                                                <div class="input-field">
-                        
-                                                                        <input type="number"  name="numtel" class="form-control" id="numtel" placeholder="Numero de Telefono" required>
-                                                                        <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                                <div class="input-field">
-                        
-                                                                <input type="text" name= "asuntoco"class="form-control" id="asuntoco" placeholder="Asunto del Correo" required/>
-                                                                        <span class="focus"></span> 
-                        
-                                                                </div>
-                        
-                                                        </div>
-                        
-                                                        <div class="textarea-field">
-                        
-                                                                <textarea name="mensaje1" id="mensaje1" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
-                                                                <span class="focus"></span>
-                        
-                                                        </div>
-                        
-                                                        <div class="btn-box btns">
-                        
-                                                                <button type="submit" class="btn" id="contactButton">Enviar</button>
-                        
-                                                        </div>
-                        
-                        </form>
-                        
-                                        </section>
+           
                         
             
 
@@ -262,7 +187,50 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+// navigation starts here
+
+$("#toggle").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+$("#resize ul li a").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+$(".close-btn").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+// navigation ends here
+
+// nav animation
+
+TweenMax.from("#brand", 1, {
+      delay: 0.4,
+      y: 10,
+      opacity: 0,
+      ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom("#menu li a", 1, {
+      delay: 0.4,
+      opacity: 0,
+      ease: Expo.easeInOut
+}, 0.1);
+
+// nav animation ends
+
+new WOW().init();
+
+</script>
 
 
     </body>
