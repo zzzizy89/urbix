@@ -11,14 +11,14 @@ class Dashboard extends BaseController
         $user = session('user');
     
         if (!$user || $user->id < 1) {
-            return redirect()->to('login');
+            return redirect()->to('/login');
         } else {
-            return view('users/dashboard');
+            return view('main/form/dashboard');
         }
     }
     public function home()
     {
-        return view('users/home');
+        return view('main/form/home');
     }
 
 public function logout()

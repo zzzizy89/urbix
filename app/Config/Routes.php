@@ -42,6 +42,7 @@ $routes->post('upload-profile-image', 'Dashboard::uploadProfileImage'); // Ruta 
 $routes->post('/login', 'Login::do_login');
 $routes->post('/register', 'Register::do_register');
 $routes->get('catalogo', 'home::catalogo');
+$routes->get('contact', 'home::contact');
 
 /*
  * --------------------------------------------------------------------

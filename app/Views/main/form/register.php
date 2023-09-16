@@ -23,6 +23,7 @@
 
 				<div class="box">
 						<form method="post" action="<?= base_url(" register ");?>" class="form">
+						<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?> ">X</a></div>
 								<h2>Registrarse</h2>
 								<div class="form-inputs">
 										<div class="form-label">

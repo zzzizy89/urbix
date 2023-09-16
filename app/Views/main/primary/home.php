@@ -31,7 +31,7 @@
 								<a href="#home" class="hover-this"><span>home</span></a>
 								<a href="#acerca" class="hover-this"><span>about</span></a>
 								<a href="<?=base_url('catalogo')?> " class="hover-this"><span>catalogue</span></a>
-								<a href="#contacto" class="hover-this"><span>contact</span></a>
+								<a href="<?=base_url('contact')?> " class="hover-this"><span>contact</span></a>
 								<a href="<?=base_url('login')?> "class="hover-this"><span>Cuenta</span></a>
 								<span class="active-nav" ></span>
                                 <div class="cursor"></div>

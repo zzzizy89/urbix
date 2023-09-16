@@ -31,4 +31,12 @@ class Home extends BaseController
         return view('main/primary/catalogo');
         
     }
+
+    public function contact()
+    {
+        
+        return view('main/primary/contact');
+        
+    }
 }
+

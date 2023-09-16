@@ -14,7 +14,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
 
-        return view('crud/listar', $datos); 
+        return view('main/crud/listar', $datos); 
     }
 
     public function crear(){
