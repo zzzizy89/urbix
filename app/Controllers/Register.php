@@ -9,7 +9,7 @@ class Register extends BaseController
     public function index()
     {
    
-        return view('users/register');
+        return view('main/form/register');
     }
     
     public function do_register()

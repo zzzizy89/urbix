@@ -17,10 +17,11 @@ class Home extends BaseController
         return view('main/primary/home');
         
     }
-    public function inicio2()
+
+    public function form()
     {
         
-        return view('inicio/vista');
+        return view('main/form/login');
         
     }
 
