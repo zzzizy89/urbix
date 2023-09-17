@@ -1,0 +1,103 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto Mono" !important;
+    background: #0D1117!important;
+    color: #f5f5dc !important;
+}
+
+
+#contact-form {
+    margin: 5% 1.4%;
+}
+
+#contact-form ul {
+    list-style: none;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+#contact-form li {
+    padding: 10px;
+}
+
+#contact-form li:last-of-type {
+    border-bottom: none;
+}
+
+#contact-form label {
+    display: block;
+    font-size: .8em;
+    color: #999;
+    padding-left: 5px;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    resize: vertical;
+    background: transparent;
+    color: #fff;
+    font-weight: bolder;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: none;
+}
+
+.textarea {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.send {
+    margin-left: 50px;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    background: transparent;
+    color: #dfdfdf;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.send:hover {
+    background: #dfdfdf;
+    color: #101010;
+}
+
+@media(max-width: 768px) {
+    #contact-form {
+          margin: 5% -8%;
+          width: 98%;
+    }
+}
+.hero-content {
+    margin-left: 0; /* Establece el margen izquierdo a 0 para alinear a la izquierda */
+    position: relative;
+}
+
+.hero-content p {
+    font-weight: 300;
+    line-height: 36px;
+    color: grey;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.hero-content h6 {
+    text-align: left;
+}
+@media(max-width: 768px) {
+    .hero-content {
+          padding-top: 50px;
+          width: 96%;
+          margin: 0 auto;
+    }
+}

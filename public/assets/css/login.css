@@ -12,6 +12,75 @@
 			--color-primary: #ffffff;
 }
 
+@font-face {
+    font-family: "Mars Model";
+    src: url("../fonts/MarsModel.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Arame-Thin";
+    src: url("../fonts/Arame-Thin.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "MonumentExtended";
+    src: url("../fonts/MonumentExtended.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "BasementGrotesque";
+    src: url("../fonts/BasementGrotesque.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "FormulaCondensed";
+    src: url("../fonts/FormulaCondensed.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Nevolasty-Light";
+    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "NoorgeKarlos-Outline";
+    src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "BigCityVibes";
+    src: url("../fonts/BigCityVibes.otf") format("truetype");
+  } 
+
+  @font-face {
+    font-family: "AQUATIC";
+    src: url("../fonts/AQUATIC.ttf") format("truetype");
+  }  
+  @font-face {
+    font-family: "Barbarian";
+    src: url("../fonts/Barbarian.ttf") format("truetype");
+  }  
+
+  @font-face {
+    font-family: "DeathMohaw";
+    src: url("../fonts/DeathMohaw.otf") format("truetype");
+  }  
+ 
+  @font-face {
+    font-family: "adelia";
+    src: url("../fonts/adelia.ttf") format("truetype");
+  }  
+
+  @font-face {
+    font-family: "Headshots";
+    src: url("../fonts/Headshots.otf") format("truetype");
+  }  
+
+  @font-face {
+    font-family: "SnowWhite";
+    src: url("../fonts/SnowWhite.ttf") format("truetype");
+  }  
+
 * {
 			padding: 0;
 			margin: 0;
@@ -23,7 +92,7 @@
 body {
 			min-height: 100vh;
 			width: 100%;
-			background-image: url('../img/productos/black.jpg');
+			background: black;
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -57,7 +126,31 @@ body {
     border: 1px solid #ebccd1;
     color: #a94442;
 }
-
+.close-button {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #ff0000; /* Color de fondo de la cruz */
+	color: #fff; /* Color del texto de la cruz */
+	font-size: 10px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 20; /* Asegúrate de que esté por encima del formulario */
+  }
+  .close-button a {
+	text-decoration: none;
+	color: #fff;
+  }
+  
+  .close-button:hover {
+	background-color: #ff5555; /* Cambia el color de fondo al pasar el mouse */
+  }
 
 .box {
 			position: relative;
@@ -70,7 +163,7 @@ body {
 .form {
 			position: absolute;
 			inset: 2px;
-			background-color: #12121298;
+			background-color: #fff;
 			border-radius: 10px;
 			padding: 30px;
 			display: flex;
@@ -82,9 +175,11 @@ body {
 h2 {
 			font-size: 32px;
 			font-weight: 900;
-			color: var(--color-primary);
+			color: #000;
 			letter-spacing: 2.5px;
 			text-align: center;
+			font-family: "Nevolasty-Light";
+			
 }
 
 .form-inputs {
@@ -110,6 +205,7 @@ h2 {
 			color: var(--color-primary);
 			font-size: 16px;
 			transition: .5s;
+			font-family: "Arame-Thin";
 }
 
 .form-label input:focus {
@@ -128,14 +224,16 @@ h2 {
 			text-decoration: none;
 			color: #777;
 			transition: .5s;
+			font-family: "Arame-Thin";
+			
 }
 
 .links a:first-child:hover {
-			color: var(--color-primary);
+			color: red;
 }
 
 .links a:nth-child(2) {
-			color: var(--color-primary);
+			color: #000;
 }
 
 input[type="submit"] {
@@ -144,10 +242,11 @@ input[type="submit"] {
 			border-radius: 10px;
 			cursor: pointer;
 			transition: .5s;
+			font-family: "Arame-Thin";
 }
 
 input[type="submit"]:hover {
-			background-color: transparent;
-			color: var(--color-primary);
-			border: 1px solid var(--color-primary);
+			background-color: #000;
+			color: #fff;
+			
 }
