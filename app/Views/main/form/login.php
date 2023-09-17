@@ -13,8 +13,8 @@
 				<meta charset="UTF-8">
 				<meta http-equiv="X-UA-Compatible" contable="IE=edge">
 				<meta name="viewport" content="width=device-width, initial-scale:1.0">
-				<link rel="stylesheet" href="css/login.css">
-				<link rel="stylesheet" href="../css/login.css">
+				<link rel="stylesheet" href="assets/css/login.css">
+				<link rel="stylesheet" href="../assets/css/login.css">
 				<title>Login</title>
 
 		</head>
@@ -33,6 +33,7 @@
 
 				<div class="box">
 						<form method="post" action="<?= base_url(" login ");?>" class="form">
+						<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?> ">X</a></div>
 								<h2>Iniciar Sesión</h2>
 								<div class="form-inputs">
 										<div class="form-label">
