@@ -7,123 +7,108 @@
         <link rel="stylesheet" href="assets/css/primary.css">
         <link rel="stylesheet" href="../assets/css/primary.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="../assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <script src="assets/js/wow.min.js"></script>
+      <script src="../assets/js/wow.min.js"></script>
+      <script src="../assets/js/t.min.js"></script>
+      <script src="assets/js/t.min.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+   
 
     </head>
     <body>
     
     <header class="header">
-						<a href="#" class="logo">Luiggi</a>
+						<a href="#" class="logo">urbix</a>
 						<!-- Para animacion JS -->
 						<div class="bx bx-menu" id="menu-icon"></div>
 
 						<nav class="navbar">
-								<a href="#home" class="active">Inicio</a>
-								<a href="#acerca">Acerca</a>
-								<a href="#catalogo">Catalogo</a>
-								<a href="#contacto">Contacto</a>
-								<a href="<?=base_url('login')?>">Cuenta</a>
-								<span class="active-nav"></span>
+								<a href="#home" class="hover-this"><span>home</span></a>
+								<a href="#acerca" class="hover-this"><span>about</span></a>
+								<a href="<?=base_url('catalogo')?> " class="hover-this"><span>catalogue</span></a>
+								<a href="<?=base_url('contact')?> " class="hover-this"><span>contact</span></a>
+								<a href="<?=base_url('login')?> "class="hover-this"><span>Cuenta</span></a>
+								<span class="active-nav" ></span>
+                                <div class="cursor"></div>
 								
 						</nav>
 
 				</header>
-                
-                
-                <section id="home"> 
-        <div class="smooth-scroll-wrapper">
-            <div class="content">
-                <div class="container">
-                    <div class="image-container">
-                        <h2 class="text text-dark">
-                            <span class="parallax-title">
-                            we are the best in the details
-                            </span>
-                        </h2>
-                    </div>
 
-                    <h2 class="text">
-                        <span class="parallax-title">
-                        we are the best in the details
-                        </span>
-                    </h2>
-                </div>
+
+                
+         <section class="home" id="home">
+         <div class="home-content">
+
+
+<h2>URBIX89.STUDIO</h2>
+
+
+</div>
+<div class="scroll-down"></div>
+
+
+         </section>
+ 
+<section class="acerca" id="acerca">
+<div class="container-fluid">
+                  <br><br><br>
+
+                  <h6>who we are?</h6>
+
+                  <div class="vertical"></div>
+                  <br>
+
+                  <div class="whitespace"></div>
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-8"></div>
+
+                        <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-7"></div>
+
+                        <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-1"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-1"></div>
+
+                        <div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
             </div>
-        </div>
-        </section>
-       
-			<div class="overlay" id="catalogo">
-				<div class="images">
-					<div class="img img-1"></div>
-					<div class="img img-2"></div>
-					<div class="img img-3"></div>
-					<div class="img img-4"></div>
-					<div class="img img-5"></div>
-					<div class="img img-6"></div>
-					<div class="img img-7"></div>
-					<div class="img img-8"></div>
-				</div>
-			</div>
+   
+</section>
+					
+      
+
            
-
-
-            <section class="contact" id="contacto">
-						
-                        <form>
-                                                <h2 class="heading"><span>Consultas</span></h2>
-                                            
-                        
-                                                        <div class="input-box">
-                        
-                                                                <div class="input-field">
-                        
-                                                                <input type="text" name= "nombrecom"class="form-control" id="nombrecom" placeholder="Nombre Completo" required/>												
-                                                                <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                                <div class="input-field">
-                        
-                                                                        <input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
-                                                                        <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                        </div>
-                        
-                                                        <div class="input-box">
-                        
-                                                                <div class="input-field">
-                        
-                                                                        <input type="number"  name="numtel" class="form-control" id="numtel" placeholder="Numero de Telefono" required>
-                                                                        <span class="focus"></span>
-                        
-                                                                </div>
-                        
-                                                                <div class="input-field">
-                        
-                                                                <input type="text" name= "asuntoco"class="form-control" id="asuntoco" placeholder="Asunto del Correo" required/>
-                                                                        <span class="focus"></span> 
-                        
-                                                                </div>
-                        
-                                                        </div>
-                        
-                                                        <div class="textarea-field">
-                        
-                                                                <textarea name="mensaje1" id="mensaje1" cols="30" rows="10" placeholder="Su Mensaje" required></textarea>
-                                                                <span class="focus"></span>
-                        
-                                                        </div>
-                        
-                                                        <div class="btn-box btns">
-                        
-                                                                <button type="submit" class="btn" id="contactButton">Enviar</button>
-                        
-                                                        </div>
-                        
-                        </form>
-                        
-                                        </section>
                         
             
 
@@ -165,5 +150,88 @@
             requestAnimationFrame(raf);
             window.addEventListener("scroll", scrollProgress);
         </script>
+        <script>
+
+(function () {
+
+      const link = document.querySelectorAll('nav > .hover-this');
+      const cursor = document.querySelector('.cursor');
+
+      const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+
+            move = 25,
+            xMove = x / width * (move * 2) - move,
+            yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+      };
+
+      const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+      };
+
+      link.forEach(b => b.addEventListener('mousemove', animateit));
+      link.forEach(b => b.addEventListener('mouseleave', animateit));
+      window.addEventListener('mousemove', editCursor);
+
+})();
+
+</script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+// navigation starts here
+
+$("#toggle").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+$("#resize ul li a").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+$(".close-btn").click(function() {
+      $(this).toggleClass('on');
+      $("#resize").toggleClass("active");
+});
+
+// navigation ends here
+
+// nav animation
+
+TweenMax.from("#brand", 1, {
+      delay: 0.4,
+      y: 10,
+      opacity: 0,
+      ease: Expo.easeInOut
+})
+
+TweenMax.staggerFrom("#menu li a", 1, {
+      delay: 0.4,
+      opacity: 0,
+      ease: Expo.easeInOut
+}, 0.1);
+
+// nav animation ends
+
+new WOW().init();
+
+</script>
+
+
     </body>
 </html>
