@@ -179,6 +179,8 @@
 
 				<!-- Contact section start here -->
 
+				<!-- Contact section start here -->
+
 				<section class="contact" id="contacto">
 						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
 
@@ -195,10 +197,11 @@
 										</div>
 
 										<div class="input-field">
-
-												<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
-												<span class="focus"></span>
-
+    <input  class="form-control" required readonly value="<?= session('user')->email ?>">
+    <span class="focus"></span>
+    <div class="col-md-6">
+    </div>
+</div>
 										</div>
 
 								</div>
