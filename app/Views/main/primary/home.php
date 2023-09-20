@@ -45,6 +45,7 @@
 		<!-- Sección de inicio -->
 		<section class="home" id="home">
 			<div class="home-content">
+				<img src="../assets/img/primary/Gastly.png" alt="">
 				<h2>URBIX89.STUDIO</h2>
 			</div>
 			<div class="scroll-down"></div>
