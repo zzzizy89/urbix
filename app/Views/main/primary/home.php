@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Parallax Text On Scroll</title>
-		<link rel="website icon" type="png" href="../assets/img/primary/urbix.png">
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>">
 
 		<!-- Estilos CSS -->
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/primary.css');?>">
@@ -15,6 +15,7 @@
 		<!-- Bibliotecas y scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 		<script src="<?php echo base_url('assets/js/wow.min.js');?>"></script>
 		<script src="<?php echo base_url('assets/js/t.min.js');?>"></script>
 
@@ -29,11 +30,12 @@
 			<div class="bx bx-menu" id="menu-icon"></div>
 
 			<nav class="navbar">
-				<a href="#home" class="hover-this"><span>home</span></a>
-				<a href="#acerca" class="hover-this"><span>about</span></a>
-				<a href="<?=base_url('catalogo')?> " class="hover-this"><span>catalogue</span></a>
-				<a href="<?=base_url('contact')?> " class="hover-this"><span>contact</span></a>
-				<a href="<?=base_url('login')?> " class="hover-this"><span>Cuenta</span></a>
+				<a href="#home" class="hover-this"><span data-english="home" data-spanish="inicio">home</span></a>
+				<a href="#acerca" class="hover-this"><span data-english="about" data-spanish="acerca">about</span></a>
+				<a href="<?=base_url('catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
+				<a href="<?=base_url('contact')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
+				<a href="<?=base_url('login')?> " class="hover-this"><span data-english="account" data-spanish="cuenta">account</span></a>
+				<button id="toggleLanguageButton"> <i class="fas fa-arrow-down"></i></button>
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
 			</nav>
@@ -52,30 +54,30 @@
 		<section class="acerca" id="acerca">
 			<div class="container-fluid">
 				<br><br><br>
-				<h6>who we are?</h6>
+				<h6 data-english="who we are?" data-spanish="Quienes Somos?">who we are?</h6>
 				<div class="vertical"></div>
 				<br>
 				<div class="whitespace"></div>
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-8"></div>
-					<div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-4 project project1 wow fadeInUp"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-6 project project2 wow fadeInUp"></div>
 					<div class="col-lg-6"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-7"></div>
-					<div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-4 project project3 wow fadeInUp"></div>
 					<div class="col-lg-1"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-1"></div>
-					<div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-5 project project4 wow fadeInUp"></div>
 					<div class="col-lg-6"></div>
 				</div>
 				<div class="whitespace"></div>
@@ -192,6 +194,35 @@
 			        // Inicialización de la biblioteca WOW.js
 			        new WOW().init();
 			
+		</script>
+		<script>
+			// Obtén una referencia al botón y al contenido que deseas traducir
+const toggleLanguageButton = document.getElementById('toggleLanguageButton');
+const translatableElements = document.querySelectorAll('[data-english][data-spanish]');
+
+// Variable para rastrear el idioma actual
+let currentLanguage = 'english';
+
+// Función para cambiar el idioma
+function toggleLanguage() {
+  if (currentLanguage === 'english') {
+    // Cambia a español
+    translatableElements.forEach(element => {
+      element.textContent = element.getAttribute('data-spanish');
+    });
+    currentLanguage = 'spanish';
+  } else {
+    // Cambia a inglés
+    translatableElements.forEach(element => {
+      element.textContent = element.getAttribute('data-english');
+    });
+    currentLanguage = 'english';
+  }
+}
+
+// Agrega un controlador de eventos al botón para cambiar el idioma al hacer clic
+toggleLanguageButton.addEventListener('click', toggleLanguage);
+
 		</script>
 	</body>
 </html>
