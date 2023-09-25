@@ -5,21 +5,18 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Parallax Text On Scroll</title>
+		<link rel="website icon" type="png" href="../assets/img/primary/urbix.png">
 
 		<!-- Estilos CSS -->
-		<link rel="stylesheet" href="assets/css/primary.css">
-		<link rel="stylesheet" href="../assets/css/primary.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/primary.css');?>">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
 
 		<!-- Bibliotecas y scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<script src="assets/js/wow.min.js"></script>
-		<script src="../assets/js/wow.min.js"></script>
-		<script src="../assets/js/t.min.js"></script>
-		<script src="assets/js/t.min.js"></script>
+		<script src="<?php echo base_url('assets/js/wow.min.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/t.min.js');?>"></script>
 
 		<!-- Fuentes -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -45,8 +42,8 @@
 		<!-- Sección de inicio -->
 		<section class="home" id="home">
 			<div class="home-content">
-				<img src="../assets/img/primary/Gastly.png" alt="">
-				<h2>URBIX89.STUDIO</h2>
+				<img src="<?php echo base_url('assets/img/primary/urbix.png');?>" alt="" class="floating-image">
+			
 			</div>
 			<div class="scroll-down"></div>
 		</section>
@@ -98,9 +95,8 @@
 		</footer>
 
 		<!-- Scripts adicionales -->
-		<script src="assets/js/script-marquee.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="../assets/js/script.js"></script>
+		<script src="<?php echo base_url('assets/js/script-marquee.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/script.js');?>"></script>
 
 		<!-- Script para parallax -->
 		<script>
