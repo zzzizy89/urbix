@@ -100,10 +100,13 @@ body {
     min-height: 2000px;
     overflow-x: hidden;
     font-family: "MonumentExtended", Arial, Helvetica, sans-serif;
-    background: #0f0f0f;
-   
-   
-    
+    background: #fff;
+    color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 nav {
@@ -181,7 +184,7 @@ span {
     background: #00000063;
 }
 
-.logo {
+.logo span{
     position: relative;
     font-size: 2.5rem;
     color: var(--second-bg-color);
@@ -452,23 +455,42 @@ h6 {
   height: 500px;
 }
 
+.col-lg-8 p,
+.col-lg-6 p,
+.col-lg-7 p {
+  font-family: "Arame-Thin";
+  font-size: 74px;
+  padding-left: 100px;
+  color: #333; 
+  margin-bottom: 10px; 
+}
+
+.col-lg-6 p {
+  font-size: 76px; 
+  color: #FF5733;
+  font-family: "Arame-Thin";
+  margin-bottom: 10px; 
+}
+
 .project1 {
   background: url(../img/primary/women2.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 .project1::after {
-  content: "Trusted brand.";
+  content: "001010.";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
   color: #000000;
   display: block;
   top: 8%;
-  left: -50%;
+  left: -20%;
   right: 0;
   bottom: 0;
 }
+
+
 
 .project2 {
   background: url(../img/primary/women.jpg) no-repeat 50% 50%;
@@ -476,14 +498,14 @@ h6 {
 }
 
 .project2::after {
-  content: "Innovators.";
+  content: "#%!@&%$#";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
-  color: #000000;
+  color: #000;
   display: block;
   top: 70%;
-  left: 110%;
+  left: 90%;
   right: 0;
   bottom: 0;
 }
@@ -494,14 +516,14 @@ h6 {
 }
 
 .project3::after {
-  content: "Market leaders.";
+  content: "010101";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
   color: #000;
   display: block;
   top: 60%;
-  left: -40%;
+  left: -20%;
   right: 0;
   bottom: 0;
 }
@@ -512,14 +534,14 @@ h6 {
 }
 
 .project4::after {
-  content: "Superior quality.";
+  content: "/(#$)#!&%";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
   color: #000;
   display: block;
   top: 10%;
-  left: 90%;
+  left: 70%;
   right: 0;
   bottom: 0;
 }

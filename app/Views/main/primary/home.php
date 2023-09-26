@@ -25,7 +25,7 @@
 	<body>
 		<!-- Cabecera -->
 		<header class="header">
-			<a href="#" class="logo">urbix</a>
+			<a href="<?=base_url('intro')?> " class="logo"><span>urbix</span></a>
 			<!-- Para animación JS -->
 			<div class="bx bx-menu" id="menu-icon"></div>
 
@@ -35,7 +35,8 @@
 				<a href="<?=base_url('catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
 				<a href="<?=base_url('contact')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
 				<a href="<?=base_url('login')?> " class="hover-this"><span data-english="account" data-spanish="cuenta">account</span></a>
-				<button id="toggleLanguageButton"> <i class="fas fa-arrow-down"></i></button>
+				<button id="toggleLanguageButton" data-english="EN" data-spanish="ES">EN</button>
+				<button id="modoToggle">MM</button>
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
 			</nav>
@@ -60,17 +61,17 @@
 				<div class="whitespace"></div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-8"></div>
+					<div class="col-lg-8"><p data-english="Trusted Brand." data-spanish="Marca de Confianza.">Trusted Brand.</p></div>
 					<div class="col-lg-4 project project1 wow fadeInUp"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-6 project project2 wow fadeInUp"></div>
-					<div class="col-lg-6"></div>
+					<div class="col-lg-6"><p data-english="Innovators." data-spanish="Innovadores.">Innovators.</p></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-7"></div>
+					<div class="col-lg-7"><p data-english="Market leaders." data-spanish="Lideres del Mercado.">Market leaders.</p></div>
 					<div class="col-lg-4 project project3 wow fadeInUp"></div>
 					<div class="col-lg-1"></div>
 				</div>
@@ -78,7 +79,7 @@
 				<div class="row">
 					<div class="col-lg-1"></div>
 					<div class="col-lg-5 project project4 wow fadeInUp"></div>
-					<div class="col-lg-6"></div>
+					<div class="col-lg-6"><p data-english="Superior quality." data-spanish="Calidad Superior.">Superior quality.</p></div>
 				</div>
 				<div class="whitespace"></div>
 			</div>
@@ -223,6 +224,28 @@ function toggleLanguage() {
 // Agrega un controlador de eventos al botón para cambiar el idioma al hacer clic
 toggleLanguageButton.addEventListener('click', toggleLanguage);
 
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+    const modoToggle = document.getElementById("modoToggle");
+    const body = document.body;
+
+    // Verificar si el usuario ya tiene un modo seleccionado
+    if (localStorage.getItem("modo") === "oscuro") {
+        body.classList.add("dark-mode");
+    }
+
+    modoToggle.addEventListener("click", function () {
+        // Alternar entre los modos claro y oscuro
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("modo", "claro");
+        } else {
+            body.classList.add("dark-mode");
+            localStorage.setItem("modo", "oscuro");
+        }
+    });
+});
 		</script>
 	</body>
 </html>
