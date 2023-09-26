@@ -18,6 +18,7 @@
     --fd-color: #00b8fc;
     --forge-color: #8D1212;
 
+
 }
 
 
@@ -207,6 +208,10 @@ font-family: "Arame-Thin";
     transition: .3s;
 }
 
+.navbar button {
+  outline: none;
+}
+
 .navbar span {
 font-family: "Nevolasty-Light";
 font-size: 1.7rem;
@@ -259,7 +264,7 @@ width: 100%;
   justify-content: center;
   text-align: center;
   width: 100%; 
-  background-image: url(../img/primary/home.jpeg);
+  background-image: url(../img/gh.jpg);
  background-size: cover;
 }
 
@@ -467,13 +472,13 @@ h6 {
 
 .col-lg-6 p {
   font-size: 76px; 
-  color: #FF5733;
+  color: #333;
   font-family: "Arame-Thin";
   margin-bottom: 10px; 
 }
 
 .project1 {
-  background: url(../img/primary/women2.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/teclado.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -482,7 +487,7 @@ h6 {
   font-family: "Arame-Thin";
   font-size: 46px;
   position: relative;
-  color: #000000;
+  color: #ff0000;
   display: block;
   top: 8%;
   left: -20%;
@@ -493,7 +498,7 @@ h6 {
 
 
 .project2 {
-  background: url(../img/primary/women.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/mic.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -502,7 +507,7 @@ h6 {
   font-family: "Arame-Thin";
   font-size: 46px;
   position: relative;
-  color: #000;
+  color: #ff0000;
   display: block;
   top: 70%;
   left: 90%;
@@ -511,7 +516,7 @@ h6 {
 }
 
 .project3 {
-  background: url(../img/primary/women3.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/mouse.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -520,7 +525,7 @@ h6 {
   font-family: "Arame-Thin";
   font-size: 46px;
   position: relative;
-  color: #000;
+  color: #ff0000;
   display: block;
   top: 60%;
   left: -20%;
@@ -529,7 +534,7 @@ h6 {
 }
 
 .project4 {
-  background: url(../img/primary/women4.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/headphones.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
@@ -538,7 +543,7 @@ h6 {
   font-family: "Arame-Thin";
   font-size: 46px;
   position: relative;
-  color: #000;
+  color: #ff0000;
   display: block;
   top: 10%;
   left: 70%;

@@ -35,11 +35,12 @@
 				<a href="<?=base_url('catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
 				<a href="<?=base_url('contact')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
 				<a href="<?=base_url('login')?> " class="hover-this"><span data-english="account" data-spanish="cuenta">account</span></a>
-				<button id="toggleLanguageButton" data-english="EN" data-spanish="ES">EN</button>
-				<button id="modoToggle">MM</button>
+				<a href="#" id="toggleLanguageButton"><span>🌍</span></a>
+				<a href="#" id="modoToggle"><span>🌗</span></a>
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
 			</nav>
+		
 		</header>
 
 		<!-- Sección de inicio -->
@@ -62,7 +63,7 @@
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-8"><p data-english="Trusted Brand." data-spanish="Marca de Confianza.">Trusted Brand.</p></div>
-					<div class="col-lg-4 project project1 wow fadeInUp"></div>
+					<div class="col-lg-4 project project1 wow fadeInUp"  id="project1"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
@@ -247,5 +248,30 @@ toggleLanguageButton.addEventListener('click', toggleLanguage);
     });
 });
 		</script>
+		<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener los enlaces por sus IDs
+  const toggleLanguageButton = document.getElementById("toggleLanguageButton");
+  const modoToggle = document.getElementById("modoToggle");
+
+  // Agregar un evento click a cada enlace
+  toggleLanguageButton.addEventListener("click", function(event) {
+    // Evitar la acción de navegación predeterminada
+    event.preventDefault();
+    
+    // Aquí puedes agregar el código para cambiar el idioma
+    // por ejemplo: cambiar el idioma de la página
+  });
+
+  modoToggle.addEventListener("click", function(event) {
+    // Evitar la acción de navegación predeterminada
+    event.preventDefault();
+    
+    // Aquí puedes agregar el código para cambiar el modo claro/oscuro
+    // por ejemplo: cambiar el estilo de la página
+  });
+});
+</script>
+	
 	</body>
 </html>
