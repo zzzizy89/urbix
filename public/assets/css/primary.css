@@ -18,6 +18,7 @@
     --fd-color: #00b8fc;
     --forge-color: #8D1212;
 
+
 }
 
 
@@ -100,10 +101,13 @@ body {
     min-height: 2000px;
     overflow-x: hidden;
     font-family: "MonumentExtended", Arial, Helvetica, sans-serif;
-    background: #0f0f0f;
-   
-   
-    
+    background: #fff;
+    color: black;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 nav {
@@ -181,7 +185,7 @@ span {
     background: #00000063;
 }
 
-.logo {
+.logo span{
     position: relative;
     font-size: 2.5rem;
     color: var(--second-bg-color);
@@ -202,6 +206,10 @@ font-family: "Arame-Thin";
     font-weight: 600;
     margin-left: 35px;
     transition: .3s;
+}
+
+.navbar button {
+  outline: none;
 }
 
 .navbar span {
@@ -249,13 +257,15 @@ width: 100%;
 .home-content {
   max-width: 100%;
   position: relative;
-  height: 750px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%; 
+  background-image: url(../img/primary/tower.jpg);
+ background-size: cover;
 }
 
 .home-content img {
@@ -263,6 +273,24 @@ width: 100%;
   width: 300px;
   position: relative;
   align-items: center;
+}
+
+.floating-image {
+  position: absolute; /* Coloca la imagen en posición absoluta dentro del contenedor */
+  animation: floatAnimation 3s ease-in-out infinite; /* Aplica la animación con un bucle infinito */
+
+  /* Ajusta el margen superior e inferior para controlar el rango de movimiento vertical */
+  margin-top: -20px; /* Ajusta según tus necesidades */
+  margin-bottom: -20px; /* Ajusta según tus necesidades */
+}
+
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0); /* Posición inicial y final: no se mueve */
+  }
+  50% {
+    transform: translateY(-20px); /* Posición media: sube 20px */
+  }
 }
 
 .home-content h2 {
@@ -432,74 +460,93 @@ h6 {
   height: 500px;
 }
 
+.col-lg-8 p,
+.col-lg-6 p,
+.col-lg-7 p {
+  font-family: "Arame-Thin";
+  font-size: 74px;
+  padding-left: 100px;
+  color: #333; 
+  margin-bottom: 10px; 
+}
+
+.col-lg-6 p {
+  font-size: 76px; 
+  color: #333;
+  font-family: "Arame-Thin";
+  margin-bottom: 10px; 
+}
+
 .project1 {
-  background: url(../img/primary/women2.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/teclado.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 .project1::after {
-  content: "Trusted brand.";
+  content: "001010.";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
-  color: #000000;
+  color: #ff0000;
   display: block;
   top: 8%;
-  left: -50%;
+  left: -20%;
   right: 0;
   bottom: 0;
 }
 
+
+
 .project2 {
-  background: url(../img/primary/women.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/mic.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 .project2::after {
-  content: "Innovators.";
+  content: "#%!@&%$#";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
-  color: #000000;
+  color: #ff0000;
   display: block;
   top: 70%;
-  left: 110%;
+  left: 90%;
   right: 0;
   bottom: 0;
 }
 
 .project3 {
-  background: url(../img/primary/women3.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/mouse.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 .project3::after {
-  content: "Market leaders.";
+  content: "010101";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
-  color: #000;
+  color: #ff0000;
   display: block;
   top: 60%;
-  left: -40%;
+  left: -20%;
   right: 0;
   bottom: 0;
 }
 
 .project4 {
-  background: url(../img/primary/women4.jpg) no-repeat 50% 50%;
+  background: url(../img/primary/headphones.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
 
 .project4::after {
-  content: "Superior quality.";
+  content: "/(#$)#!&%";
   font-family: "Arame-Thin";
-  font-size: 76px;
+  font-size: 46px;
   position: relative;
-  color: #000;
+  color: #ff0000;
   display: block;
   top: 10%;
-  left: 90%;
+  left: 70%;
   right: 0;
   bottom: 0;
 }

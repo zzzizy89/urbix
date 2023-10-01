@@ -13,7 +13,7 @@ class Dashboard extends BaseController
         if (!$user || $user->id < 1) {
             return redirect()->to('login');
         } else {
-            return view('users/dashboard');
+            return view('main/form/dashboard');
         }
     }
     public function home()

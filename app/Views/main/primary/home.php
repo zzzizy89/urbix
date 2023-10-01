@@ -5,21 +5,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Parallax Text On Scroll</title>
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>">
 
 		<!-- Estilos CSS -->
-		<link rel="stylesheet" href="assets/css/primary.css">
-		<link rel="stylesheet" href="../assets/css/primary.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/primary.css');?>">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="../assets/css/animate.css">
-		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
 
 		<!-- Bibliotecas y scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-		<script src="assets/js/wow.min.js"></script>
-		<script src="../assets/js/wow.min.js"></script>
-		<script src="../assets/js/t.min.js"></script>
-		<script src="assets/js/t.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+		<script src="<?php echo base_url('assets/js/wow.min.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/t.min.js');?>"></script>
 
 		<!-- Fuentes -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -27,26 +25,29 @@
 	<body>
 		<!-- Cabecera -->
 		<header class="header">
-			<a href="#" class="logo">urbix</a>
+			<a href="<?=base_url('intro')?> " class="logo"><span>urbix</span></a>
 			<!-- Para animación JS -->
 			<div class="bx bx-menu" id="menu-icon"></div>
 
 			<nav class="navbar">
-				<a href="#home" class="hover-this"><span>home</span></a>
-				<a href="#acerca" class="hover-this"><span>about</span></a>
-				<a href="<?=base_url('catalogo')?> " class="hover-this"><span>catalogue</span></a>
-				<a href="<?=base_url('contact')?> " class="hover-this"><span>contact</span></a>
-				<a href="<?=base_url('login')?> " class="hover-this"><span>Cuenta</span></a>
+				<a href="#home" class="hover-this"><span data-english="home" data-spanish="inicio">home</span></a>
+				<a href="#acerca" class="hover-this"><span data-english="about" data-spanish="acerca">about</span></a>
+				<a href="<?=base_url('catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
+				<a href="<?=base_url('contact')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
+				<a href="<?=base_url('login')?> " class="hover-this"><span data-english="account" data-spanish="cuenta">account</span></a>
+				<a href="#" id="toggleLanguageButton"><span>🌍</span></a>
+				<a href="#" id="modoToggle"><span>🌗</span></a>
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
 			</nav>
+		
 		</header>
 
 		<!-- Sección de inicio -->
 		<section class="home" id="home">
 			<div class="home-content">
-				<img src="../assets/img/primary/Gastly.png" alt="">
-				<h2>URBIX89.STUDIO</h2>
+				<img src="<?php echo base_url('assets/img/primary/urbix.png');?>" alt="" class="floating-image">
+			
 			</div>
 			<div class="scroll-down"></div>
 		</section>
@@ -55,31 +56,31 @@
 		<section class="acerca" id="acerca">
 			<div class="container-fluid">
 				<br><br><br>
-				<h6>who we are?</h6>
+				<h6 data-english="who we are?" data-spanish="Quienes Somos?">who we are?</h6>
 				<div class="vertical"></div>
 				<br>
 				<div class="whitespace"></div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-8"></div>
-					<div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-8"><p data-english="Trusted Brand." data-spanish="Marca de Confianza.">Trusted Brand.</p></div>
+					<div class="col-lg-4 project project1 wow fadeInUp"  id="project1"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project.html'"></div>
-					<div class="col-lg-6"></div>
+					<div class="col-lg-6 project project2 wow fadeInUp"></div>
+					<div class="col-lg-6"><p data-english="Innovators." data-spanish="Innovadores.">Innovators.</p></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
-					<div class="col-lg-7"></div>
-					<div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project.html'"></div>
+					<div class="col-lg-7"><p data-english="Market leaders." data-spanish="Lideres del Mercado.">Market leaders.</p></div>
+					<div class="col-lg-4 project project3 wow fadeInUp"></div>
 					<div class="col-lg-1"></div>
 				</div>
 				<div class="whitespace"></div>
 				<div class="row">
 					<div class="col-lg-1"></div>
-					<div class="col-lg-5 project project4 wow fadeInUp" onclick="location.href='project.html'"></div>
-					<div class="col-lg-6"></div>
+					<div class="col-lg-5 project project4 wow fadeInUp"></div>
+					<div class="col-lg-6"><p data-english="Superior quality." data-spanish="Calidad Superior.">Superior quality.</p></div>
 				</div>
 				<div class="whitespace"></div>
 			</div>
@@ -98,9 +99,8 @@
 		</footer>
 
 		<!-- Scripts adicionales -->
-		<script src="assets/js/script-marquee.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script src="../assets/js/script.js"></script>
+		<script src="<?php echo base_url('assets/js/script-marquee.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/script.js');?>"></script>
 
 		<!-- Script para parallax -->
 		<script>
@@ -197,5 +197,81 @@
 			        new WOW().init();
 			
 		</script>
+		<script>
+			// Obtén una referencia al botón y al contenido que deseas traducir
+const toggleLanguageButton = document.getElementById('toggleLanguageButton');
+const translatableElements = document.querySelectorAll('[data-english][data-spanish]');
+
+// Variable para rastrear el idioma actual
+let currentLanguage = 'english';
+
+// Función para cambiar el idioma
+function toggleLanguage() {
+  if (currentLanguage === 'english') {
+    // Cambia a español
+    translatableElements.forEach(element => {
+      element.textContent = element.getAttribute('data-spanish');
+    });
+    currentLanguage = 'spanish';
+  } else {
+    // Cambia a inglés
+    translatableElements.forEach(element => {
+      element.textContent = element.getAttribute('data-english');
+    });
+    currentLanguage = 'english';
+  }
+}
+
+// Agrega un controlador de eventos al botón para cambiar el idioma al hacer clic
+toggleLanguageButton.addEventListener('click', toggleLanguage);
+
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+    const modoToggle = document.getElementById("modoToggle");
+    const body = document.body;
+
+    // Verificar si el usuario ya tiene un modo seleccionado
+    if (localStorage.getItem("modo") === "oscuro") {
+        body.classList.add("dark-mode");
+    }
+
+    modoToggle.addEventListener("click", function () {
+        // Alternar entre los modos claro y oscuro
+        if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("modo", "claro");
+        } else {
+            body.classList.add("dark-mode");
+            localStorage.setItem("modo", "oscuro");
+        }
+    });
+});
+		</script>
+		<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener los enlaces por sus IDs
+  const toggleLanguageButton = document.getElementById("toggleLanguageButton");
+  const modoToggle = document.getElementById("modoToggle");
+
+  // Agregar un evento click a cada enlace
+  toggleLanguageButton.addEventListener("click", function(event) {
+    // Evitar la acción de navegación predeterminada
+    event.preventDefault();
+    
+    // Aquí puedes agregar el código para cambiar el idioma
+    // por ejemplo: cambiar el idioma de la página
+  });
+
+  modoToggle.addEventListener("click", function(event) {
+    // Evitar la acción de navegación predeterminada
+    event.preventDefault();
+    
+    // Aquí puedes agregar el código para cambiar el modo claro/oscuro
+    // por ejemplo: cambiar el estilo de la página
+  });
+});
+</script>
+	
 	</body>
 </html>
