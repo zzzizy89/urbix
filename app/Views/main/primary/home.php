@@ -4,7 +4,7 @@
 		<!-- Meta información -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Parallax Text On Scroll</title>
+		<title>everything you are looking for</title>
 		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>">
 
 		<!-- Estilos CSS -->
