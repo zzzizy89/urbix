@@ -18,7 +18,7 @@ class Dashboard extends BaseController
     }
     public function home()
     {
-        return view('users/home');
+        return view('main/form/home');
     }
 
 public function logout()

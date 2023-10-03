@@ -20,8 +20,8 @@ class Email2 extends BaseController
     
         $email = \Config\Services::email();
         
-        $email->setFrom('TESTING@example.com', 'Test');
-        $email->setTo($emailUsuario); // Utilizar el correo electrónico del usuario
+        $email->setFrom($emailUsuario);
+        $email->setTo('Keytechempresa@gmail.com'); // Utilizar el correo electrónico del usuario
     
         $email->setSubject($asuntoco);
         $email->setMessage("De: " . $nombrecom . "\n" . "Numero de telefono: " . $numtel . "\n" . "Mensaje: " . $sumen);

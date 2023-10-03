@@ -24,7 +24,7 @@ class Teclados extends Controller{
             $datos['cabecera'] = view('templates/cabecera');
             $datos['pie'] = view('templates/piepagina');
     
-            return view('crud/listar', $datos);
+            return view('main/crud/listar', $datos);
         } else {
             // Si el usuario no tiene rol 1, redirigir a la página dashboard
             return redirect()->to('/dashboard');
@@ -36,7 +36,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
     
-        return view('crud/crear', $datos); 
+        return view('main/crud/crear', $datos); 
     }
 
     public function guardar(){
