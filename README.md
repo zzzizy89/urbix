@@ -1,30 +1,48 @@
-# KeyTech - Catálogo de Teclados
+# Bienvenido a Urbix - Tu Tienda de Periféricos
 
-KeyTech es una plataforma de catálogo de teclados que ofrece a los usuarios la posibilidad de explorar una amplia variedad de teclados, iniciar sesión, registrarse como clientes o administradores, y realizar compras utilizando PayPal. Este proyecto está desarrollado utilizando tecnologías web modernas para brindar una experiencia fluida y segura a los usuarios.
+¡Gracias por visitar Urbix! Somos tu destino de confianza para todo lo relacionado con periféricos, desde teclados y ratones hasta auriculares de alta calidad. Pronto también estaremos ofreciendo ropa con nuestra marca exclusiva. En Urbix, nos esforzamos por brindarte la mejor experiencia de compra en línea para tus necesidades tecnológicas y de estilo personal.
 
-## Características
+## Catálogo de Productos
 
-- Explora una amplia gama de teclados disponibles.
+Navega por nuestra amplia gama de productos de alta calidad:
+
+- **Teclados:** Descubre una variedad de teclados ergonómicos, mecánicos y retroiluminados para mejorar tu experiencia de escritura y juego.
+
+- **Ratones:** Encuentra ratones precisos y cómodos para llevar tus habilidades de juego al siguiente nivel.
+
+- **Auriculares:** Sumérgete en el mundo del sonido envolvente con nuestra selección de auriculares con calidad de estudio.
+
+- **Ropa Urbix:** Pronto lanzaremos nuestra colección exclusiva de ropa urbana que combina estilo y comodidad.
+
+## Sobre Urbix
+
+Urbix es la plataforma detrás de nuestra amplia gama de productos. Aquí puedes explorar nuestros productos disponibles y realizar compras de forma segura. Hemos desarrollado esta plataforma utilizando tecnologías web modernas para garantizar una experiencia fluida y segura para nuestros clientes.
+
+### Características de Urbix
+
+- Explora una amplia gama de productos disponibles.
 - Inicia sesión o regístrate como cliente para acceder a funciones adicionales.
 - Funcionalidad de administrador para gestionar productos y usuarios.
 - Realiza compras seguras utilizando PayPal.
 
-## Tecnologías Utilizadas
+### Tecnologías Utilizadas
 
-- Frontend: HTML5, CSS3, JavaScript
-- Backend: PHP
-- Base de Datos: MySQL
-- Servidor Local: XAMPP
-- Integración de Pagos: PayPal API
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Backend:** PHP
+- **Base de Datos:** MySQL
+- **Servidor Local:** XAMPP
+- **Integración de Pagos:** PayPal API
 
 ## Creadores
 
-KeyTech ha sido creado por:
+Urbix ha sido desarrollado por nuestro talentoso equipo:
 
 - Tiago Comba
 - Ezequiel Monteverde
 
 ## Instalación y Uso
+
+¡Si deseas explorar nuestra plataforma Urbix localmente, aquí tienes cómo hacerlo:
 
 1. Clona este repositorio en tu máquina local.
 2. Configura la base de datos utilizando MySQL y XAMPP.
@@ -33,13 +51,14 @@ KeyTech ha sido creado por:
 
 ## Contribuciones
 
-Si deseas contribuir a KeyTech, ¡nos encantaría recibir tus aportes! Siéntete libre de crear un fork del repositorio y enviar tus pull requests.
+En Urbix, valoramos y apreciamos las contribuciones de la comunidad. Si tienes ideas para mejorar nuestra plataforma o te gustaría colaborar, no dudes en hacerlo:
+
+- Crea un fork de nuestro repositorio.
+- Realiza tus cambios y mejoras.
+- Envía tus pull requests para que podamos revisarlos y fusionarlos.
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
 
----
-
-¡Esperamos que disfrutes utilizando KeyTech! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nosotros.
-
+¡Esperamos que disfrutes explorando nuestros productos y utilizando Urbix! Si tienes alguna pregunta, sugerencia o necesitas ayuda, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a encontrar los mejores periféricos y productos de estilo urbano.
