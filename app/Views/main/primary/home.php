@@ -226,8 +226,8 @@ function toggleLanguage() {
 toggleLanguageButton.addEventListener('click', toggleLanguage);
 
 		</script>
-		<script>
-	document.addEventListener("DOMContentLoaded", function () {
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
     const modoToggle = document.getElementById("modoToggle");
     const body = document.body;
     const homeContent = document.querySelector(".home-content");
@@ -235,9 +235,9 @@ toggleLanguageButton.addEventListener('click', toggleLanguage);
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = "url(../assets/img/primary/white.jpg)";
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/white.jpg'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = "url(../assets/img/primary/black.avif)";
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/black.avif'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -245,16 +245,16 @@ toggleLanguageButton.addEventListener('click', toggleLanguage);
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = "url(../assets/img/primary/black.avif)";
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/black.avif'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = "url(../assets/img/primary/white.jpg)";
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/white.jpg'); ?>)`;
         }
     });
 });
+</script>
 
-		</script>
 		<script>
 document.addEventListener("DOMContentLoaded", function() {
   // Obtener los enlaces por sus IDs
