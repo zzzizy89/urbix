@@ -39,6 +39,9 @@ $routes->get('logout', 'Dashboard::logout');
 $routes->post('update', 'Dashboard::update'); // Ruta para actualizar el nombre de usuario
 $routes->post('upload-profile-image', 'Dashboard::uploadProfileImage'); // Ruta para cargar la imagen de perfil
 $routes->get('intro', 'home::index');
+$routes->get('intro_catalogo', 'home::intro_catalogo');
+$routes->get('intro_contacto', 'home::intro_contacto');
+$routes->get('intro_login', 'home::intro_login');
 $routes->post('/login', 'Login::do_login');
 $routes->post('/register', 'Register::do_register');
 $routes->get('catalogo', 'home::catalogo');

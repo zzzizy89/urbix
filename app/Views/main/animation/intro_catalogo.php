@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>intro urbix</title>
-    <link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>">
+    <title>intro catalogo</title>
     <link rel="stylesheet" href="assets/css/intro2.css">
- 
+
 </head>
 <body>
     <div class="header">urbix</div>
@@ -14,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">less is more.</div>
-            <div class="text text-2">less is more.</div>
-            <div class="text text-3">less is more.</div>
-            <div class="text text-4">less is more.</div>
-            <div class="text text-5">less is more.</div>
-            <div class="text text-6">less is more.</div>
-            <div class="text text-7">less is more.</div>
-            <div class="text text-8">less is more.</div>
-            <div class="text text-9">less is more.</div>
-            <div class="text text-10">less is more.</div>
-            <div class="text text-11">less is more.</div>
+            <div class="text text-1">quality >>> quantity</div>
+            <div class="text text-2">quality >>> quantity</div>
+            <div class="text text-3">quality >>> quantity</div>
+            <div class="text text-4">quality >>> quantity</div>
+            <div class="text text-5">quality >>> quantity</div>
+            <div class="text text-6">quality >>> quantity</div>
+            <div class="text text-7">quality >>> quantity</div>
+            <div class="text text-8">quality >>> quantity</div>
+            <div class="text text-9">quality >>> quantity</div>
+            <div class="text text-10">quality >>> quantity</div>
+            <div class="text text-11">quality >>> quantity</div>
         </div>
     </div>
 
@@ -35,7 +34,7 @@
         // Función para redirigir después de que la animación termine
         function redirectToAnotherView() {
             // Cambia la URL a la que deseas redirigir al usuario
-            var absoluteUrl = "<?php echo site_url('inicio'); ?>";
+            var absoluteUrl = "<?php echo site_url('catalogo'); ?>";
             window.location.href = absoluteUrl;
         }
 

@@ -11,6 +11,29 @@ class Home extends BaseController
         
     }
 
+    public function intro_catalogo()
+    {
+
+        return view('main/animation/intro_catalogo');
+
+    }
+
+    public function intro_contacto()
+    {
+
+        return view('main/animation/intro_contact');
+
+    }
+
+    public function intro_login()
+    {
+
+        return view('main/animation/intro_login');
+
+    }
+
+
+
     public function inicio()
     {
         
