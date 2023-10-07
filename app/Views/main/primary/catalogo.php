@@ -19,7 +19,7 @@
       <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
-
+<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?> ">X</a></div>
       <div class="text-slider-wrapper">
             <div class="text-slider">
                   <div class="text-slide"><h1>A blessing for <br> every skin.</h1></div>
@@ -33,6 +33,7 @@
       <div class="slider-control">
             <div class="prev"><button type="button"><ion-icon name="arrow-back"></ion-icon></button></div>
             <div class="next"><button type="button"><ion-icon name="arrow-forward"></ion-icon></button></div>
+            <a href="catalogo/teclados"><button class="buy-button" data-product="teclado">Comprar</button></a>
       </div>
 
       <div class="blocks">
@@ -44,11 +45,12 @@
       <div class="overlay"></div>
 
       <div class="image-slider">
-            <div class="image-slide" id="one" style="background: url(assets/img/primary/women2.jpg) no-repeat 50% 50%; background-size: cover;"></div>
-            <div class="image-slide" id="two" style="background: url(assets/img/primary/women3.jpg) no-repeat 50% 50%; background-size: cover;"></div>
-            <div class="image-slide" id="three" style="background: url(assets/img/primary/women4.jpg) no-repeat 50% 50%; background-size: cover;"></div>
-            <div class="image-slide" id="four" style="background: url(assets/img/primary/women.jpg) no-repeat 50% 50%; background-size: cover;"></div>
-            <div class="image-slide" id="five" style="background: url(assets/img/primary/women2.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="one" style="background: url(assets/img/carrousel/gris.jpg) no-repeat 50% 50%; background-size: cover;">
+            </div>
+            <div class="image-slide" id="two" style="background: url(assets/img/carrousel/head.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="three" style="background: url(assets/img/carrousel/pink.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="four" style="background: url(assets/img/carrousel/parlantes.jpg) no-repeat 50% 50%; background-size: cover;"></div>
+            <div class="image-slide" id="five" style="background: url(assets/img/carrousel/mic.jpg) no-repeat 50% 50%; background-size: cover;"></div>
       </div>
       
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>

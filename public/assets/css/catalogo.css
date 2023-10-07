@@ -6,6 +6,32 @@ html, body {
     overflow: hidden;
     background: #0f0f0f;
 }
+.close-button {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #ff0000; /* Color de fondo de la cruz */
+	color: #fff; /* Color del texto de la cruz */
+	font-size: 10px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 20; /* Asegúrate de que esté por encima del formulario */
+  }
+  .close-button a {
+	text-decoration: none;
+	color: #fff;
+  }
+  
+  .close-button:hover {
+	background-color: #ff5555; /* Cambia el color de fondo al pasar el mouse */
+  }
+
 
 .image-slider {
     z-index: 0;
