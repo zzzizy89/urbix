@@ -47,6 +47,7 @@
 		<section class="home" id="home">
 			<div class="home-content">
 				<img src="<?php echo base_url('assets/img/primary/urbix.png');?>" alt="" class="floating-image">
+				
 			
 			</div>
 			<div class="scroll-down"></div>
