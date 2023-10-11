@@ -7,7 +7,7 @@
 `--' '--' `----'.-'  /      `--'   `----' `---'`--' `--' 
                 `---'                                     -->
 
-<?=$cabecera;?>
+				<?=$cabecera;?>
 		formulario de crear
 
 
@@ -21,6 +21,10 @@
 										<div class="form-group">
 												<label for="nombre">Nombre:</label>
 												<input id="nombre" value="<?=old('nombre')?>" class="form-control" type="text" name="nombre">
+										</div>
+										<div class="form-group">
+												<label for="precio">Precio:</label>
+												<input id="precio" value="<?=old('precio')?>" class="form-control" type="text" name="precio">
 										</div>
 
 										<div class="form-group">

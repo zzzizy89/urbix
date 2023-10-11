@@ -96,7 +96,7 @@ class Teclados extends Controller{
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
 
-        return view('crud/editar', $datos);
+        return view('main/crud/editar', $datos);
 
     }
 
