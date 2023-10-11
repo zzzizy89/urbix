@@ -45,6 +45,7 @@ class Teclados extends Controller{
 
         $validacion = $this->validate([
             'nombre' => 'required|min_length[3]|max_length[255]',
+            'precio' => 'required|numeric',
             'imagen' => [
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpg,image/jpeg,image/png]',
@@ -64,6 +65,7 @@ class Teclados extends Controller{
 
             $datos=[
                 'nombre'=>$nombre= $this->request->getVar('nombre'),
+                'precio'=>$precio=$this->request->getVar('precio'),
                 'imagen'=>$nuevoNombre
             ];
             $teclado->insert($datos);
@@ -104,15 +106,15 @@ class Teclados extends Controller{
 
         $teclado = new Teclado();
         $datos=[
-            'nombre'=>$nombre= $this->request->getVar('nombre')
-            
+            'nombre'=>$nombre= $this->request->getVar('nombre'),
+            'precio'=>$nombre= $this->request->getVar('precio')            
         ];
         $id=$this->request->getVar('id');
 
 
         $validacion = $this->validate([
             'nombre' => 'required|min_length[3]|max_length[255]',
-          
+            'precio' => 'required|numeric',
         ]);
 
         if(!$validacion){
