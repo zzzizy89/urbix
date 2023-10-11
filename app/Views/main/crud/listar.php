@@ -7,7 +7,7 @@
 `--' '--' `----'.-'  /      `--'   `----' `---'`--' `--' 
                 `---'                                     -->
 
-<?=$cabecera;?>
+                <?=$cabecera;?>
 
 <a class="btn btn-success" href="<?=base_url('crear')?>">Crear nuevo teclado</a>
 
@@ -20,6 +20,7 @@
                         <th>#</th>
                         <th>Imagen</th>
                         <th>Nombre</th>
+                        <th>Precio</th>
                         <th>Acciones</th>
                 </tr>
         </thead>
@@ -36,6 +37,11 @@
                         </td>
                         <td>
                                 <?php echo $teclado ['nombre'];?>
+        
+                        </td>
+                        <td>
+                        <?php echo number_format($teclado['precio'], 2, ',', '.'); ?>
+        
                         </td>
                         <td>
                                 <a href="<?=base_url('editar/'.$teclado['id'])?>" class="btn btn-info" type="button">Editar</a>
