@@ -33,7 +33,7 @@
       <div class="slider-control">
             <div class="prev"><button type="button"><ion-icon name="arrow-back"></ion-icon></button></div>
             <div class="next"><button type="button"><ion-icon name="arrow-forward"></ion-icon></button></div>
-            <a href="catalogo/teclados"><button class="buy-button" data-product="teclado">Comprar</button></a>
+            <a href="<?=base_url('carrito')?>"><button class="buy-button" data-product="teclado">Comprar</button></a>
       </div>
 
       <div class="blocks">
