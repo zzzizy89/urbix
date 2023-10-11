@@ -24,7 +24,7 @@ class Login extends BaseController
     
             if ($result !== null && $result->id > 0) {
                 if (password_verify($password, $result->password)) {
-                echo $rol;
+              
                    
                     if ($result->rol == 1) {
                         $this->session->set("user", $result);
