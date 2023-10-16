@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Agrega los enlaces a tus archivos CSS y scripts JS aquí -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard.css');?>">
-    <title>Perfil de Usuario</title>
-</head>
-<body>
+    <title>Your Profile</title>
+  
+    <style>
+        /* Estilos personalizados */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: "Roboto Mono", monospace !important;
+            background: #0D1117 !important;
+            color: #f5f5dc !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-<div class="container">
-    <div class="profile">
-        <div class="profile-header">
-            <h2>Mi Perfil</h2>
-            <button class="edit-profile-btn" onclick="enableEdit()">Editar</button>
-        </div>
-        <div class="profile-details">
-            <div class="row">
-                <div class="col-6">
-                    <label for="user-id">User ID</label>
-                    <input type="text" id="user-id" value="123" disabled>
-                </div>
-                <div class="col-6">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" value="Nombre de Usuario" disabled>
-                </div>
+        .container {
+            width: 400px;
+        }
+
+        .profile {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .user-stats p {
+            margin: 5px 0;
+        }
+
+        .user-stats img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .user-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .user-menu form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .user-menu label,
+        .user-menu input,
+        .user-menu textarea {
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .user-menu button {
+            width: 100%;
+            max-width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile">
+            <h2>Welcome <?= session('user')->name; ?></h2>
+            <div class="user-stats">
+                <p><strong>Name:</strong> <?= session('user')->name; ?></p>
+                <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+                <p><strong>Bio:</strong> <?= session('user')->bio; ?></p>
+                <img src="<?= base_url('uploads/' . session('user')->perfil); ?>" alt="Profile Image">
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" value="usuario@ejemplo.com" disabled>
-                </div>
-                <div class="col-6">
-                    <label for="phone">Teléfono</label>
-                    <input type="tel" id="phone" value="1234567890" disabled>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <label for="bio">Bio</label>
-                    <textarea id="bio" rows="4" disabled>Tu descripción detallada</textarea>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <button class="save-profile-btn" onclick="saveChanges()">Guardar Cambios</button>
-                </div>
+
+            <div class="user-menu">
+                <h2>User Menu</h2>
+                <form action="<?= base_url('update') ?>" method="post" enctype="multipart/form-data">
+                    <label for="new-username">New Username:</label>
+                    <input type="text" id="new-username" name="new_username" required>
+                    <label for="new-email">New Email:</label>
+                    <input type="text" id="new-email" name="new_email" required>
+                    <label for="new-bio">New Bio:</label>
+                    <textarea id="new-bio" name="new_bio" rows="4"></textarea>
+                    <label for="profile-image">Profile Image:</label>
+                    <input type="file" id="profile-image" name="profile_image">
+                    <button type="submit">Change Username, Email, Bio, and Profile Image</button>
+                </form>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-    function enableEdit() {
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => input.removeAttribute('disabled'));
-    }
-
-    function saveChanges() {
-        // Aquí puedes agregar la lógica para guardar los cambios en la base de datos
-        alert("Cambios guardados con éxito");
-    }
-</script>
-
 </body>
+
 </html>

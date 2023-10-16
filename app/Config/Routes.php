@@ -34,6 +34,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/login', 'Login::index');
 $routes->get('/register', 'Register::index');
 $routes->get('/dashboard', 'Dashboard::index');
+$routes->get('dashboard/updateProfile', 'Dashboard::updateProfile');
 $routes->get('/home', 'Dashboard::home');
 $routes->get('logout', 'Dashboard::logout');
 $routes->post('update', 'Dashboard::update'); // Ruta para actualizar el nombre de usuario
