@@ -93,6 +93,13 @@
                     <input type="file" id="profile-image" name="profile_image">
                     <button type="submit">Change Username, Email, Bio, and Profile Image</button>
                 </form>
+                <div class="btn-box btns">
+    <a href="<?= base_url('home') ?>"><button type="submit" class="btn">Inicio</button></a>
+</div>
+
+<div class="btn-box btns">
+    <a href="<?= base_url('logout') ?>"><button type="submit" class="btn">Logout</button></a>
+</div>
             </div>
         </div>
     </div>
