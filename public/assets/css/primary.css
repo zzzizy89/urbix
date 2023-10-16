@@ -155,11 +155,17 @@ span {
 	pointer-events: none;
 	position: fixed;
 	padding: 0.3rem;
-	background-color: #ffffff;
+	background-color: #333; /* Cambia este color al que desees en el modo claro */
 	border-radius: 50%;
 	mix-blend-mode: difference;
 	transition: transform 0.3s ease;
-}
+  }
+  
+  .dark-mode .cursor {
+	background-color: #fff; /* Cambia este color al que desees en el modo oscuro */
+
+  }
+  
 
 /* Efecto de escala para el cursor al pasar el mouse sobre elementos .hover-this */
 
@@ -197,7 +203,7 @@ span {
 	left: 0;
 	width: 100%;
 	padding: 0.5rem 1%;
-	background: #0E0D0D;
+	background: #f6efef;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -206,9 +212,17 @@ span {
 	backdrop-filter: blur(5px);
 }
 
+.dark-mode .header {
+	background: #0E0D0D;
+}
+
 /* Estilos para la cabecera cuando está fija en la parte superior de la página */
 
 .header.sticky {
+	background: #e6e0e063;
+}
+
+.dark-mode .header.sticky {
 	background: #00000063;
 }
 
@@ -256,6 +270,11 @@ span {
 	font-weight: 500;
 	margin-left: 35px;
 	transition: .3s;
+	color: #000;
+}
+
+.dark-mode .navbar span {
+	color: #fff;
 }
 
 /* Estilos para los enlaces dentro de los elementos <span> de la barra de navegación */
@@ -399,11 +418,16 @@ section {
 	text-shadow: 0;
 	width: 13px;
 	height: 13px;
-	border-bottom: 2px solid #000000;
-	border-right: 2px solid #000000;
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
 	-webkit-transform: translate(-50%, 0) rotate(45deg);
 	animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 }
+
+ .dark-mode .scroll-down {
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+ }
 
 /* Animación de la flecha de desplazamiento */
 
@@ -559,7 +583,7 @@ h6 {
 }
 
 .project1::after {
-	content: "001010.";
+	content: "0010011"; /* Elimina el contenido inicial para la animación */
 	font-family: "Arame-Thin";
 	font-size: 46px;
 	position: relative;
@@ -569,8 +593,26 @@ h6 {
 	left: -20%;
 	right: 0;
 	bottom: 0;
-}
-
+	overflow: hidden; 
+	white-space: nowrap;
+	width: 6ch;
+	border-right: 2px solid;
+	animation: typing 2s steps(6), blink .5s infinite step-end alternate;
+  }
+  
+  @keyframes typing {
+	from {
+	  width: 0; /* Comienza con cero ancho para la animación */
+	}
+  }
+	@keyframes blink {
+		50% {
+			border-color: transparent;
+		}
+  }
+   
+  
+  
 /* Estilos para el proyecto 2 */
 
 .project2 {
@@ -589,6 +631,11 @@ h6 {
 	left: 90%;
 	right: 0;
 	bottom: 0;
+	overflow: hidden; 
+	white-space: nowrap;
+	width: 9ch;
+	border-right: 2px solid;
+	animation: typing 2s steps(9), blink .5s infinite step-end alternate;
 }
 
 /* Estilos para el proyecto 3 */
@@ -609,6 +656,11 @@ h6 {
 	left: -20%;
 	right: 0;
 	bottom: 0;
+	overflow: hidden; 
+	white-space: nowrap;
+	width: 5ch;
+	border-right: 2px solid;
+	animation: typing 2s steps(5), blink .5s infinite step-end alternate;
 }
 
 /* Estilos para el proyecto 4 */
@@ -629,6 +681,11 @@ h6 {
 	left: 70%;
 	right: 0;
 	bottom: 0;
+	overflow: hidden; 
+	white-space: nowrap;
+	width: 9ch;
+	border-right: 2px solid;
+	animation: typing 2s steps(9), blink .5s infinite step-end alternate;
 }
 
 /* Media Query para pantallas con un ancho máximo de 768px */
@@ -679,8 +736,17 @@ h6 {
 	display: inline-block;
 	font-family: "Nevolasty-Light";
 	animation: marquee 15s linear infinite;
+	color: white;
 }
 
+  /* Estilos para el modo oscuro */
+  .dark-mode .marquee {
+	background-color: white;
+  }
+
+  .dark-mode .marquee span {
+	color: #000000;
+  }
 /* Animación de la marquesina */
 
 @keyframes marquee {
