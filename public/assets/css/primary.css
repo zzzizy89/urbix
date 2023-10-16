@@ -564,13 +564,21 @@ h6 {
 	font-family: "Arame-Thin";
 	font-size: 74px;
 	padding-left: 100px;
-	color: #333;
+	color: #000;
 	margin-bottom: 10px;
+}
+
+.dark-mode p {
+	color: #6f6b6b;
+}
+
+.dark-mode .col-lg-6 p {
+	color: #6f6b6b;
 }
 
 .col-lg-6 p {
 	font-size: 76px;
-	color: #333;
+	color: #000;
 	font-family: "Arame-Thin";
 	margin-bottom: 10px;
 }
