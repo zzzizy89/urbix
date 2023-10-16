@@ -1,0 +1,87 @@
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "FormulaCondensed";
+	src: url("../fonts/FormulaCondensed.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "NoorgeKarlos-Outline";
+	src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "AQUATIC";
+	src: url("../fonts/AQUATIC.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Barbarian";
+	src: url("../fonts/Barbarian.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "DeathMohaw";
+	src: url("../fonts/DeathMohaw.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "adelia";
+	src: url("../fonts/adelia.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "SnowWhite";
+	src: url("../fonts/SnowWhite.ttf") format("truetype");
+}
+
+.intro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    opacity: 0;
+  }
+  
+  .company-name {
+    display: inline-block;
+    font-family: "Arame-Thin";
+    font-size: 60px;
+  }
+  

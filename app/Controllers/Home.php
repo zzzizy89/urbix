@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index()
     {
         
-        return view('main/animation/intro2');
+        return view('main/animation/urbix');
         
     }
 
