@@ -1,95 +1,71 @@
-body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto Mono", monospace !important;
+    background: #0D1117!important;
+    color: #f5f5dc !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.emp-profile{
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
+
+.container {
+    width: 400px;
 }
-.profile-img{
+
+.profile {
+    margin-top: 30px;
+}
+
+.profile-header {
     text-align: center;
 }
-.profile-img img{
-    width: 70%;
-    height: 100%;
+
+.profile-header h2 {
+    font-size: 24px;
 }
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
+
+.profile-details {
+    margin-top: 30px;
+}
+
+.profile-details .row {
+    margin-bottom: 20px;
+}
+
+.profile-details label {
+    font-size: 14px;
+    color: #999;
+}
+
+.profile-details input, .profile-details textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
     border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
+    border-bottom: 1px solid #dfdfdf;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
 }
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-.profile-head h5{
-    color: #333;
-}
-.profile-head h6{
-    color: #0062cc;
-}
-.profile-edit-btn{
-    border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
+
+.edit-profile-btn, .save-profile-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: transparent;
+    color: #dfdfdf;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border: 1px solid #dfdfdf;
     cursor: pointer;
 }
-.proile-rating{
-    font-size: 12px;
-    color: #818182;
-    margin-top: 5%;
+
+.edit-profile-btn:hover, .save-profile-btn:hover {
+    background: #dfdfdf;
+    color: #101010;
 }
-.proile-rating span{
-    color: #495057;
-    font-size: 15px;
-    font-weight: 600;
-}
-.profile-head .nav-tabs{
-    margin-bottom:5%;
-}
-.profile-head .nav-tabs .nav-link{
-    font-weight:600;
-    border: none;
-}
-.profile-head .nav-tabs .nav-link.active{
-    border: none;
-    border-bottom:2px solid #0062cc;
-}
-.profile-work{
-    padding: 14%;
-    margin-top: -15%;
-}
-.profile-work p{
-    font-size: 12px;
-    color: #818182;
-    font-weight: 600;
-    margin-top: 10%;
-}
-.profile-work a{
-    text-decoration: none;
-    color: #495057;
-    font-weight: 600;
-    font-size: 14px;
-}
-.profile-work ul{
-    list-style: none;
-}
-.profile-tab label{
-    font-weight: 600;
-}
-.profile-tab p{
-    font-weight: 600;
-    color: #0062cc;
+
+textarea {
+    resize: vertical;
 }

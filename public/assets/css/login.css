@@ -205,7 +205,7 @@ h2 {
 			color: var(--color-primary);
 			font-size: 16px;
 			transition: .5s;
-			font-family: "Arame-Thin";
+			font-family: "Mars Model";
 }
 
 .form-label input:focus {
@@ -250,3 +250,4 @@ input[type="submit"]:hover {
 			color: #fff;
 			
 }
+
