@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2023 a las 01:13:34
+-- Tiempo de generación: 17-10-2023 a las 02:19:31
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,20 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carrito` (
   `id_carrito` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_teclado` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `cantidad` int(11) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
-  `imagen` varchar(255) NOT NULL
+  `total` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `carrito`
---
-
-INSERT INTO `carrito` (`id_carrito`, `nombre`, `cantidad`, `precio`, `imagen`) VALUES
-(62, 'gygabite', 17, 0.00, '1697034966_9cd9081e7aeb8fa812a9.png'),
-(63, '111111', 0, 242.00, ''),
-(64, '111111', 0, 242.00, '');
 
 -- --------------------------------------------------------
 
@@ -77,7 +70,7 @@ CREATE TABLE `producto` (
 --
 
 CREATE TABLE `teclados` (
-  `id` int(11) NOT NULL,
+  `id_teclado` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `imagen` varchar(255) NOT NULL
@@ -87,10 +80,8 @@ CREATE TABLE `teclados` (
 -- Volcado de datos para la tabla `teclados`
 --
 
-INSERT INTO `teclados` (`id`, `nombre`, `precio`, `imagen`) VALUES
-(32, 'pepe', 0.00, '1697491287_d26872739e740491ad8b.jpg'),
-(33, 'pepe123456', 0.00, '1697491298_c0e046ff52972a350d12.jpeg'),
-(34, 'hola123', 0.00, '1697491364_bf2e004f8d0bfc13a71e.jpg');
+INSERT INTO `teclados` (`id_teclado`, `nombre`, `precio`, `imagen`) VALUES
+(50, 'hyperex', 12576.25, '1697501665_d88e5a27665150fc49ff.jpg');
 
 -- --------------------------------------------------------
 
@@ -110,7 +101,7 @@ CREATE TABLE `tipo` (
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `perfil` varchar(255) NOT NULL,
   `name` varchar(64) NOT NULL,
   `email` varchar(128) NOT NULL,
@@ -125,13 +116,10 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `updated_at`, `rol`) VALUES
-(3, '1697492315_70f3a27594800faeeca5.png', 'tiago', 'tiagocomba@gmail.com', 'hola, soy tiago comba desarrollador fronted.', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(5, '', 'hh', '', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', '2023-10-11 14:29:29', 0),
-(6, '', '345', '', '', '$2y$10$L97xbGBYvRnQxOrQxD/szegUzf873YE2shcbBrUDijayeZ10JhpfS', '2023-10-16 16:35:07', '2023-10-16 16:35:07', 0),
-(7, '', '12345', '', '', '$2y$10$LeuwGNC3h9T5K0aQX26Oxu0WAItYIP.SfmGn4H.lUeuTZZCrcFOpy', '2023-10-16 17:49:25', '2023-10-16 17:49:25', 0),
-(8, '', 'tiago comba', 'tiagocomba@gmail.com', '', '$2y$10$snH99gijr.x/rT0tkbV7Q./rOm2jhsKfnK5PzCBHDTMGQI4tiTi3e', '2023-10-16 17:51:31', '2023-10-16 17:51:31', 0),
-(9, '1697490751_14ce9774e1cb87474b8b.jpg', 'pedro', 'pedro@gmail.com', 'hola soy pedro', '$2y$10$/cmRHzGFB555S63bdchVweP/G3b/j0tja1RQ8FFO5337qeZBYv5sO', '2023-10-16 21:09:58', '2023-10-16 21:09:58', 0);
+INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `updated_at`, `rol`) VALUES
+(3, '1697501609_a1a5e17e87e5cc24cef6.jpg', 'Tiago', 'tiagocomba@gmail.com', 'soy desarrollador web', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(5, '', 'test', 'test@gmail.com', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', '2023-10-11 14:29:29', 0),
+(6, '', 'pepe', 'pepe@gmail.com', '', '$2y$10$WNP/RwmlNlWqn0czYtzkN.LKBEovUYqywiemsYkCKBvYOR5BTgSVS', '2023-10-15 22:18:21', '2023-10-15 22:18:21', 0);
 
 --
 -- Índices para tablas volcadas
@@ -159,7 +147,7 @@ ALTER TABLE `producto`
 -- Indices de la tabla `teclados`
 --
 ALTER TABLE `teclados`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_teclado`);
 
 --
 -- Indices de la tabla `tipo`
@@ -171,7 +159,7 @@ ALTER TABLE `tipo`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -181,7 +169,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT de la tabla `descripcion_prod`
@@ -199,7 +187,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `teclados`
 --
 ALTER TABLE `teclados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_teclado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
@@ -211,7 +199,7 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
