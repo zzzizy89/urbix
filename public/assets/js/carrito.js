@@ -1,3 +1,4 @@
+/*
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
@@ -198,3 +199,4 @@ function actualizarTotalCarrito() {
 
 // Llamamos a la función para actualizar el total del carrito
 actualizarTotalCarrito();
+*/

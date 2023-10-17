@@ -17,7 +17,7 @@
 
                         <form method="post" action="<?=site_url('/actualizar')?>" enctype="multipart/form-data">
 
-                                <input type="hidden" name="id" value="<?=$teclado['id']?>">
+                                <input type="hidden" name="id_teclado" value="<?=$teclado['id_teclado']?>">
 
                                 <div class="form-group">
                                         <label for="nombre">Nombre:</label>
