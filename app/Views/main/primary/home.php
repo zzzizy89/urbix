@@ -34,7 +34,15 @@
 				<a href="#acerca" class="hover-this"><span data-english="about" data-spanish="acerca">about</span></a>
 				<a href="<?=base_url('intro_catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
 				<a href="<?=base_url('intro_contacto')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
-				<a href="<?=base_url('intro_login')?> " class="hover-this"><span data-english="account" data-spanish="cuenta">account</span></a>
+
+				<?php if (session('user') && session('user')->name): ?>
+				<a href="<?= base_url('dashboard') ?>" class="hover-this"><?= session('user')->name ?></a>
+			<?php else: ?>
+				<a href="<?= base_url('intro_login') ?>" class="hover-this">
+					<span data-english="account" data-spanish="cuenta">account</span>
+				</a>
+			<?php endif; ?>
+				
 				<a href="#" id="toggleLanguageButton"><span>🌍</span></a>
 				<a href="#" id="modoToggle"><span>🌗</span></a>
 				<span class="active-nav"></span>
