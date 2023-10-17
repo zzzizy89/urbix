@@ -2,6 +2,11 @@
     font-family: "Arame-Thin";
     src: url("../fonts/Arame-Thin.ttf") format("truetype");
   }
+
+  @font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
 html,
 body {
     margin: 0;
@@ -15,7 +20,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Monument Extended";
+    font-family: "Headshots";
     text-transform: uppercase;
     font-size: 100px;
     z-index: -1;
@@ -39,7 +44,7 @@ body {
 }
 
 .text {
-    font-family: "Arame-Thin";
+    font-family: "Headshots";
     font-weight: lighter;
     font-size: 54px;
 }

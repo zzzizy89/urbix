@@ -552,6 +552,14 @@ h6 {
 	left: 50%;
 }
 
+.acerca {
+	background: #f5f5dc;
+}
+
+.dark-mode .acerca {
+	background: #0D1117;
+}
+
 /* Estilos para proyectos */
 
 .project {

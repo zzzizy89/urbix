@@ -4,69 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard.css');?>">
     <title>Your Profile</title>
   
-    <style>
-        /* Estilos personalizados */
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: "Roboto Mono", monospace !important;
-            background: #0D1117 !important;
-            color: #f5f5dc !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            width: 400px;
-        }
-
-        .profile {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .user-stats p {
-            margin: 5px 0;
-        }
-
-        .user-stats img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .user-menu {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .user-menu form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .user-menu label,
-        .user-menu input,
-        .user-menu textarea {
-            width: 100%;
-            max-width: 350px;
-            margin-bottom: 10px;
-        }
-
-        .user-menu button {
-            width: 100%;
-            max-width: 350px;
-        }
-    </style>
+    
 </head>
 
 <body>

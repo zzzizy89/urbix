@@ -68,6 +68,10 @@
 	src: url("../fonts/SnowWhite.ttf") format("truetype");
 }
 
+body, html {
+	background-color: #0D1117;
+	color: #f5f5dc;
+}
 .intro {
     position: fixed;
     top: 50%;
@@ -81,7 +85,7 @@
   
   .company-name {
     display: inline-block;
-    font-family: "Arame-Thin";
+    font-family: "Headshots";
     font-size: 60px;
   }
   
