@@ -737,8 +737,8 @@ h6 {
 
 .marquee {
 	overflow: hidden;
-	background-color: black;
-	color: white;
+	background-color: #0D1117;
+	color: #f5f5dc;
 	font-size: 60px;
 	white-space: nowrap;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -752,16 +752,16 @@ h6 {
 	display: inline-block;
 	font-family: "Nevolasty-Light";
 	animation: marquee 15s linear infinite;
-	color: white;
+	color: #f5f5dc;
 }
 
   /* Estilos para el modo oscuro */
   .dark-mode .marquee {
-	background-color: white;
+	background-color: #f5f5dc;
   }
 
   .dark-mode .marquee span {
-	color: #000000;
+	color: #0D1117;
   }
 /* Animación de la marquesina */
 
