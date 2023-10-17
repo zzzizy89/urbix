@@ -22,7 +22,7 @@
                 <img src="<?php echo base_url('uploads/' . $teclado['imagen']); ?>" alt="Imagen del teclado" class="img-item">
                 <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
                 <span class="precio-item">$<?php echo number_format($teclado['precio'], 2, ',', '.'); ?></span>
-                <form method="post" action="<?php echo base_url('carrito/guar'); ?>">
+                <form method="post" action="<?php echo base_url('carrito/guar'); ?>" id="carritoForm">
             <input type="hidden" name="id_teclado" value="<?php echo $teclado['id_teclado']; ?>">
             <input type="hidden" name="nombre" value="<?php echo $teclado['nombre']; ?>">
             <input type="hidden" name="precio" value="<?php echo $teclado['precio']; ?>">
@@ -32,58 +32,27 @@
             </div>
         <?php endforeach; ?>
     </div>
-
     <?php echo $pie; ?>
-        <!-- Carrito de Compras -->
-        <div class="carrito" id="carrito">
-            <div class="header-carrito">
-                <h2>Tu Carrito</h2>
-            </div>
-
-            <div class="carrito-items">
-                <!-- 
-                <div class="carrito-item">
-                    <img src="img/boxengasse.png" width="80px" alt="">
-                    <div class="carrito-item-detalles">
-                        <span class="carrito-item-titulo">Box Engasse</span>
-                        <div class="selector-cantidad">
-                            <i class="fa-solid fa-minus restar-cantidad"></i>
-                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                            <i class="fa-solid fa-plus sumar-cantidad"></i>
-                        </div>
-                        <span class="carrito-item-precio">$15.000,00</span>
-                    </div>
-                   <span class="btn-eliminar">
-                        <i class="fa-solid fa-trash"></i>
-                   </span>
-                </div>
-                <div class="carrito-item">
-                    <img src="img/skinglam.png" width="80px" alt="">
-                    <div class="carrito-item-detalles">
-                        <span class="carrito-item-titulo">Skin Glam</span>
-                        <div class="selector-cantidad">
-                            <i class="fa-solid fa-minus restar-cantidad"></i>
-                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
-                            <i class="fa-solid fa-plus sumar-cantidad"></i>
-                        </div>
-                        <span class="carrito-item-precio">$18.000,00</span>
-                    </div>
-                   <button class="btn-eliminar">
-                        <i class="fa-solid fa-trash"></i>
-                   </button>
-                </div>
-                 -->
-            </div>
-            <div class="carrito-total">
-                <div class="fila">
-                    <strong>Tu Total</strong>
-                    <span class="carrito-precio-total">
-                     
-                    </span>
-                </div>
-                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-            </div>
-        </div>
     </section>
+    
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var carritoForm = document.getElementById('carritoForm');
+
+        if (carritoForm) {
+            carritoForm.addEventListener('submit', function (event) {
+                // Verificar si el usuario está logeado
+                var usuarioLogeado = <?php echo json_encode(session('user') !== null); ?>;
+
+                if (!usuarioLogeado) {
+                    // Mostrar un mensaje de alerta si el usuario no está logeado
+                    alert('Debes estar logeado para agregar productos al carrito.');
+                    event.preventDefault(); // Evitar que el formulario se envíe
+                }
+            });
+        }
+    });
+</script>
+
 </html>
