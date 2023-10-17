@@ -28,7 +28,7 @@ class Login extends BaseController
                    
                     if ($result->rol == 1) {
                         $this->session->set("user", $result);
-                        return redirect()->to('listar');
+                        return redirect()->to('dashboard');
                     } else {
                         $this->session->set("user", $result);
                         return redirect()->to('/dashboard');

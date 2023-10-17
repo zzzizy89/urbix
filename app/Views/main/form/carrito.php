@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="<?php echo base_url('assets/css/carrito.css');?>">
     <script src="<?php echo base_url('assets/js/carrito.js');?>" async></script>
-    <title>Tienda de Relojes | </title>
+    <title>Catalogo Urbix</title>
 </head>
 <body>
     <header>
