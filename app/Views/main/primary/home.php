@@ -236,9 +236,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/white.jpg'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/dfd.png'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/black.avif'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/fdf.png'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -246,11 +246,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/black.avif'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/fdf.png'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/primary/white.jpg'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/dfd.png'); ?>)`;
         }
     });
 });
