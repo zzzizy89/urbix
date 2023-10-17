@@ -36,7 +36,7 @@
 				<a href="<?=base_url('intro_contacto')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
 
 				<?php if (session('user') && session('user')->name): ?>
-				<a href="<?= base_url('intro_dashboard') ?>" class="hover-this"><?= session('user')->name ?></a>
+				<a href="<?= base_url('intro_dashboard') ?>" class="hover-this"><span><?= session('user')->name ?> </span></a>
 			<?php else: ?>
 				<a href="<?= base_url('intro_login') ?>" class="hover-this">
 					<span data-english="account" data-spanish="cuenta">account</span>

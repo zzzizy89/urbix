@@ -248,7 +248,7 @@ span {
 .navbar a {
 	font-family: "Arame-Thin";
 	font-size: 1.7rem;
-	color: var(--forge-color);
+	color: red;
 	text-decoration: none;
 	font-weight: 600;
 	margin-left: 35px;
