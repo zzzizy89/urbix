@@ -6,7 +6,14 @@ use App\Models\Carritos;
 
 class Carrito2 extends Controller{
     public function index()
+
     {
+        $user = session('user');
+
+        if (!$user || $user->id_user < 1) {
+            return redirect()->to('login');
+        } else {
+            
         $car = new Carritos();
     
         // Obtener id_user desde la sesión
@@ -27,7 +34,7 @@ class Carrito2 extends Controller{
         return $vistaCarrito;
     }
     
-    
+}
     public function eliminarcar($id = null)
     {
         $car = new Carritos();
