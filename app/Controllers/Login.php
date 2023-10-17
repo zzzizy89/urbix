@@ -22,22 +22,22 @@ class Login extends BaseController
     
             $result = $userModel->where('email', $email)->first();
     
-            if ($result !== null && $result->id > 0) {
+            if ($result !== null && $result->id_user > 0) {
                 if (password_verify($password, $result->password)) {
-              
+                echo $rol;
                    
                     if ($result->rol == 1) {
                         $this->session->set("user", $result);
-                        return redirect()->to('/listar');
+                        return redirect()->to('listar');
                     } else {
                         $this->session->set("user", $result);
                         return redirect()->to('/dashboard');
                     }
                 } else {
-                    echo 'Invalid email or password';
+                    echo 'contraseña o email incorrecto';
                 }
             } else {
-                echo 'Invalid email or password';
+                echo 'contraseña o email incorrecto';
             }
         
     }
@@ -47,6 +47,10 @@ class Login extends BaseController
         session_destroy();
     }
 }
+
+
+
+
 
 
 

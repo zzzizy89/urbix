@@ -10,7 +10,7 @@ class Dashboard extends BaseController
     {
         $user = session('user');
 
-        if (!$user || $user->id < 1) {
+        if (!$user || $user->id_user < 1) {
             return redirect()->to('login');
         } else {
             return view('main/form/dashboard');
@@ -35,7 +35,7 @@ class Dashboard extends BaseController
         $newUsername = $this->request->getPost('new_username');
         $newEmail = $this->request->getPost('new_email');
         $newBio = $this->request->getPost('new_bio');
-        $userId = $_SESSION['user']->id; // Ajustar esto según tu estructura de datos
+        $userId = $_SESSION['user']->id_user; // Ajustar esto según tu estructura de datos
     
         // Procesar la carga de la imagen
         $profileImage = $this->request->getFile('profile_image');

@@ -9,7 +9,7 @@ class Teclados extends Controller{
 
         $user = session('user');
     
-        if (!$user || $user->id < 1) {
+        if (!$user || $user->id_user < 1) {
             // El usuario no ha iniciado sesión, redirigir a la página de inicio de sesión
             return redirect()->to('/login');
         }
@@ -20,7 +20,7 @@ class Teclados extends Controller{
         if ($rol == 1) {
             // Si el usuario tiene rol 1, cargar la vista listar
             $teclado = new Teclado();
-            $datos['teclados'] = $teclado->orderBy('id', 'ASC')->findAll();
+            $datos['teclados'] = $teclado->orderBy('id_teclado', 'ASC')->findAll();
             $datos['cabecera'] = view('templates/cabecera');
             $datos['pie'] = view('templates/piepagina');
     
@@ -77,12 +77,12 @@ class Teclados extends Controller{
     public function eliminar($id=null){
 
         $teclado = new Teclado();
-        $datosTeclado = $teclado->where('id',$id)->first();
+        $datosTeclado = $teclado->where('id_teclado',$id)->first();
 
         $ruta=('../public/uploads/'.$datosTeclado['imagen']);
         unlink($ruta);
 
-        $teclado->where('id',$id)->delete($id);
+        $teclado->where('id_teclado',$id)->delete($id);
 
         return $this->response->redirect(site_url('/listar'));
 
@@ -93,7 +93,7 @@ class Teclados extends Controller{
 
 
         $teclado = new Teclado();
-        $datos['teclado'] = $teclado->where('id',$id)->first();
+        $datos['teclado'] = $teclado->where('id_teclado',$id)->first();
 
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
@@ -109,7 +109,7 @@ class Teclados extends Controller{
             'nombre'=>$nombre= $this->request->getVar('nombre'),
             'precio'=>$nombre= $this->request->getVar('precio')            
         ];
-        $id=$this->request->getVar('id');
+        $id=$this->request->getVar('id_teclado');
 
 
         $validacion = $this->validate([
@@ -138,7 +138,7 @@ class Teclados extends Controller{
             
         if($imagen=$this->request->getFile('imagen')){
 
-            $datosTeclado = $teclado->where('id',$id)->first();
+            $datosTeclado = $teclado->where('id_teclado',$id)->first();
 
             $ruta=('../public/uploads/'.$datosTeclado['imagen']);
             unlink($ruta);
