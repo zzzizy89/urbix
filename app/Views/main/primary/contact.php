@@ -16,11 +16,13 @@
 										</div>
 
 										<div class="input-field">
-
-												<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
-												<span class="focus"></span>
-
-										</div>
+										<?php if (session('user') && session('user')->email): ?>
+											<input class="form-control" required readonly value="<?= session('user')->email ?>">
+										<?php else: ?>
+											<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
+											<span class="focus"></span>
+										<?php endif; ?>
+									</div>
 
 								</div>
 
@@ -56,5 +58,15 @@
 								</div>
 
 						</form>
+						<script>
+    document.getElementById('form_enviar_email').addEventListener('submit', function (event) {
+        // Verificar si el usuario está autenticado antes de enviar el formulario
+        if (!<?php echo json_encode(session('user')) ?>) {
+            alert('Necesitas estar logeado para mandar una consulta');
+            event.preventDefault(); // Evitar que el formulario se envíe
+        }
+    });
+</script>
+
 
 				</section>
