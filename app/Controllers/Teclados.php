@@ -49,7 +49,7 @@ class Teclados extends Controller{
             'imagen' => [
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpg,image/jpeg,image/png]',
-                'max_size[imagen,4096]',
+                'max_size[imagen,9320]',
             ],
         ]);
 
@@ -130,7 +130,7 @@ class Teclados extends Controller{
             'imagen' => [
                 'uploaded[imagen]',
                 'mime_in[imagen,image/jpg,image/jpeg,image/png]',
-                'max_size[imagen,4096]',
+                'max_size[imagen,9320]',
             ],
         ]);
 
