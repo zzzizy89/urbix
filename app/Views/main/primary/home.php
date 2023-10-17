@@ -36,7 +36,7 @@
 				<a href="<?=base_url('intro_contacto')?> " class="hover-this"><span data-english="contact" data-spanish="contacto">contact</span></a>
 
 				<?php if (session('user') && session('user')->name): ?>
-				<a href="<?= base_url('dashboard') ?>" class="hover-this"><?= session('user')->name ?></a>
+				<a href="<?= base_url('intro_dashboard') ?>" class="hover-this"><?= session('user')->name ?></a>
 			<?php else: ?>
 				<a href="<?= base_url('intro_login') ?>" class="hover-this">
 					<span data-english="account" data-spanish="cuenta">account</span>
@@ -244,9 +244,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/dfd.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/blanco.jpg'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/fdf.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/asbtract.jpg'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -254,11 +254,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/fdf.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/asbtract.jpg'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/dfd.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/blanco.jpg'); ?>)`;
         }
     });
 });

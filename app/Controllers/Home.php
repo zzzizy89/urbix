@@ -11,6 +11,13 @@ class Home extends BaseController
         
     }
 
+    public function intro_inicio()
+    {
+
+        return view('main/animation/intro_inicio');
+
+    }
+
     public function intro_catalogo()
     {
 
@@ -29,6 +36,13 @@ class Home extends BaseController
     {
 
         return view('main/animation/intro_login');
+
+    }
+
+    public function intro_dashboard()
+    {
+
+        return view('main/animation/intro_dashboard');
 
     }
 

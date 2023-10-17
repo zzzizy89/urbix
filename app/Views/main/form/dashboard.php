@@ -35,7 +35,7 @@
                     <button type="submit">Change Username, Email, Bio, and Profile Image</button>
                 </form>
                 <div class="btn-box btns">
-    <a href="<?= base_url('home') ?>"><button type="submit" class="btn">Inicio</button></a>
+    <a href="<?= base_url('intro_inicio') ?>"><button type="submit" class="btn">Inicio</button></a>
 </div>
 
 <div class="btn-box btns">
