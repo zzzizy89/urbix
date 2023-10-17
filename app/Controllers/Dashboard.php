@@ -19,9 +19,14 @@ class Dashboard extends BaseController
 
     public function home()
     {
-        return view('main/form/home');
-    }
+        $user = session('user');
 
+        if (!$user || $user->id_user < 1) {
+            return redirect()->to('inicio');
+        } else {
+            return view('main/form/home');
+        }
+    }
     public function logout()
     {
         session()->destroy();
