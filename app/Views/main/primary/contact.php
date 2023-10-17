@@ -18,6 +18,7 @@
 										<div class="input-field">
 										<?php if (session('user') && session('user')->email): ?>
 											<input class="form-control" required readonly value="<?= session('user')->email ?>">
+											<span class="focus"></span>
 										<?php else: ?>
 											<input type="email" name="correo1" class="form-control" id="correo1" placeholder="Dirrecion de Correo" required>
 											<span class="focus"></span>

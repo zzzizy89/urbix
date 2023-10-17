@@ -197,11 +197,11 @@
 										</div>
 
 										<div class="input-field">
-    <input  class="form-control" required readonly value="<?= session('user')->email ?>">
-    <span class="focus"></span>
-    <div class="col-md-6">
-    </div>
-</div>
+											<input  class="form-control" required readonly value="<?= session('user')->email ?>">
+											<span class="focus"></span>
+											<div class="col-md-6">
+											</div>
+										</div>
 										</div>
 
 								</div>
