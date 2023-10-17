@@ -88,3 +88,4 @@ $routes->get('carrito','Carrito::index');
 $routes->post('carrito/guar','Carrito::guardar');
 $routes->get('carrito2','Carrito2::index');
 $routes->get('carrito2/eliminarcar/(:num)', 'Carrito2::eliminarcar/$1');
+$routes->post('carrito2/actualizarcar/', 'Carrito2::actualizarcar');
