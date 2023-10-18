@@ -61,7 +61,7 @@ class Teclados extends Controller{
 
         if($imagen=$this->request->getFile('imagen')){
             $nuevoNombre = $imagen->getRandomName();
-            $imagen->move('uploads/', $nuevoNombre);
+            $imagen->move('uploads', $nuevoNombre);
 
             $datos=[
                 'nombre'=>$nombre= $this->request->getVar('nombre'),
@@ -74,25 +74,19 @@ class Teclados extends Controller{
         return $this->response->redirect(site_url('/listar'));
     }
 
-    public function eliminar($id = null)
-{
-    $teclado = new Teclado();
-    $datosTeclado = $teclado->where('id_teclado', $id)->first();
+    public function eliminar($id=null){
 
-    if ($datosTeclado) {
-        $ruta = 'uploads/' . $datosTeclado['imagen'];
+        $teclado = new Teclado();
+        $datosTeclado = $teclado->where('id_teclado',$id)->first();
 
-        // Verificar si el archivo existe antes de intentar eliminarlo
-        if (file_exists($ruta)) {
-            unlink($ruta);
-        }
+        $ruta=('uploads/'.$datosTeclado['imagen']);
+        unlink($ruta);
 
-        $teclado->where('id_teclado', $id)->delete($id);
+        $teclado->where('id_teclado',$id)->delete($id);
+
+        return $this->response->redirect(site_url('/listar'));
+
     }
-
-    return $this->response->redirect(site_url('/listar'));
-}
-
 
     public function editar($id=null){
 
@@ -108,46 +102,57 @@ class Teclados extends Controller{
 
     }
 
-    public function actualizar()
-    {
+    public function actualizar(){
+
         $teclado = new Teclado();
-        $datos = [
-            'nombre' => $this->request->getVar('nombre'),
-            'precio' => $this->request->getVar('precio'),
+        $datos=[
+            'nombre'=>$nombre= $this->request->getVar('nombre'),
+            'precio'=>$nombre= $this->request->getVar('precio')            
         ];
-        $id = $this->request->getVar('id_teclado');
-    
+        $id=$this->request->getVar('id_teclado');
+
+
         $validacion = $this->validate([
             'nombre' => 'required|min_length[3]|max_length[255]',
             'precio' => 'required|numeric',
         ]);
-    
-        if (!$validacion) {
+
+        if(!$validacion){
             $session = session();
             $session->setFlashdata('mensaje', 'Verifique la información del formulario');
             return redirect()->back()->withInput();
         }
-    
-        $teclado->update($id, $datos);
-    
-        // Verificar si la imagen se ha subido antes de intentar acceder a ella
-        if ($imagen = $this->request->getFile('imagen')) {
-            $datosTeclado = $teclado->where('id_teclado', $id)->first();
-    
-            // Verificar si la imagen actual existe antes de intentar eliminarla
-            if ($datosTeclado && file_exists('uploads/' . $datosTeclado['imagen'])) {
-                $ruta = 'uploads/' . $datosTeclado['imagen'];
-                unlink($ruta);
-            }
-    
+
+
+        $teclado->update($id,$datos);
+
+        $validacion = $this->validate([
+            'imagen' => [
+                'uploaded[imagen]',
+                'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+                'max_size[imagen,9320]',
+            ],
+        ]);
+
+        if($validacion){
+            
+        if($imagen=$this->request->getFile('imagen')){
+
+            $datosTeclado = $teclado->where('id_teclado',$id)->first();
+
+            $ruta=('uploads/'.$datosTeclado['imagen']);
+            unlink($ruta);
+
             $nuevoNombre = $imagen->getRandomName();
             $imagen->move('uploads/', $nuevoNombre);
-    
-            $datos = ['imagen' => $nuevoNombre];
-            $teclado->update($id, $datos);
+
+            $datos=['imagen'=>$nuevoNombre];
+            $teclado->update($id,$datos);
         }
-    
+
+        }
         return $this->response->redirect(site_url('/listar'));
+       
     }
     
 
@@ -163,3 +168,4 @@ class Teclados extends Controller{
     
     
 }
+ 
