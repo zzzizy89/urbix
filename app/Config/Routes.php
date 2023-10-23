@@ -46,7 +46,8 @@ $routes->get('intro_inicio', 'home::intro_inicio');
 $routes->get('intro_dashboard', 'home::intro_dashboard');
 $routes->post('/login', 'Login::do_login');
 $routes->post('/register', 'Register::do_register');
-$routes->get('catalogo', 'home::catalogo');
+$routes->get('catalogo', 'Productos::catalogo');
+$routes->get('desc_producto', 'Productos::desc_producto');
 $routes->get('contact', 'home::contact');
 
 /*

@@ -34,7 +34,7 @@
         // Función para redirigir después de que la animación termine
         function redirectToAnotherView() {
             // Cambia la URL a la que deseas redirigir al usuario
-            var absoluteUrl = "<?php echo site_url('carrito'); ?>";
+            var absoluteUrl = "<?php echo site_url('catalogo'); ?>";
             window.location.href = absoluteUrl;
         }
 

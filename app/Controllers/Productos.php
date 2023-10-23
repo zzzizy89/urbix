@@ -189,6 +189,25 @@ class Productos extends Controller{
 
         return view('inicio/about');
     }
+
+    public function catalogo(){
+
+        $producto = new Producto();
+        $productos = $producto->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')->orderBy('productos.id_producto', 'ASC')->findAll();
+
+        $datos['productos'] = $productos;
+
+        return view('main/catalogo/catalogo', $datos);
+    }
+
+    public function desc_producto(){
+
+        $producto = new Producto();
+        $productos = $producto->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')->orderBy('productos.id_producto', 'ASC')->findAll();
+
+        $datos['productos'] = $productos;
+        return view('main/catalogo/desc_producto', $datos);
+ }
     
     
 }
