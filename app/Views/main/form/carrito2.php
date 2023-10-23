@@ -10,6 +10,8 @@
                 <th>imagen</th>
                 <th>nombre</th>
                 <th>cantidad</th>
+                <th>Descripción</th>
+                <th>tipo</th>
                 <th>precio</th>
                 <th>Total</th>
                 <th>Acciones</th>
@@ -20,12 +22,20 @@
                 <tr>
                     <td><?php echo $car['id_carrito'];?></td>
                     <td>
-                        <img class="img-thumbnail" width="100" src="<?= base_url('uploads/'.$car['teclado_imagen']) ?>" alt="teclado">
+                        <img class="img-thumbnail" width="100" src="<?= base_url('uploads/'.$car['producto_imagen']) ?>" alt="teclado">
                     </td>
                     <td><?php echo $car['nombre'];?></td>
                     <td>
                         <input type="number" name="cantidad[<?= $car['id_carrito'];?>]" value="<?= $car['cantidad'];?>" min="1">
                     </td>
+                
+                    <td><?php echo $car['descripcion_prod'];?></td>
+
+
+                    <td>
+                        <?php echo $car['tipo_producto'];?>
+                    </td>
+
                     <td><?php echo number_format($car['precio'], 2, ',', '.'); ?></td>
                     <td><?php echo number_format($car['precio'] * $car['cantidad'], 2, ',', '.'); ?></td>
                     <td>

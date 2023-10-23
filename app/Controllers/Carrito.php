@@ -2,16 +2,16 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-use App\Models\Teclado;
+use App\Models\Producto;
 use App\Models\Carritos;
 
 class Carrito extends Controller
 {
     public function index()
     {
-        $teclado = new Teclado();
+        $producto = new Producto();
 
-        $datos['teclados'] = $teclado->orderBy('id_teclado', 'ASC')->findAll();
+        $datos['productos'] = $producto->orderBy('id_producto', 'ASC')->findAll();
 
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
@@ -25,7 +25,7 @@ class Carrito extends Controller
     public function guardar()
 {
     // Obtener los datos del producto desde la segunda vista
-    $id = $this->request->getVar('id_teclado');
+    $id = $this->request->getVar('id_producto');
     $nombre = $this->request->getVar('nombre'); 
     $precio = $this->request->getVar('precio');
     
@@ -36,7 +36,7 @@ class Carrito extends Controller
     $carrito = new Carritos();
     
     // Verificar si el producto ya está en el carrito para el usuario actual
-    $producto_en_carrito = $carrito->where('id_teclado', $id)
+    $producto_en_carrito = $carrito->where('id_producto', $id)
                                    ->where('id_user', $id_user)
                                    ->first();
 
@@ -54,7 +54,7 @@ class Carrito extends Controller
         // Si el producto no está en el carrito, agregar uno nuevo con cantidad 1 y el total calculado
         $datos = [
             'id_user' => $id_user,
-            'id_teclado' => $id,
+            'id_producto' => $id,
             'nombre' => $nombre,
             'precio' => $precio,
             'cantidad' => 1,

@@ -67,16 +67,16 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 
 
-$routes->get('listar', 'Teclados::index');
-$routes->get('crear', 'Teclados::crear');
-$routes->post('guardar', 'Teclados::guardar');
-$routes->get('eliminar/(:num)', 'Teclados::eliminar/$1');
-$routes->get('editar/(:num)', 'Teclados::editar/$1');
-$routes->post('actualizar', 'Teclados::actualizar');
+$routes->get('listar', 'Productos::index');
+$routes->get('crear', 'Productos::crear');
+$routes->post('guardar', 'Productos::guardar');
+$routes->get('eliminar/(:num)', 'Productos::eliminar/$1');
+$routes->get('editar/(:num)', 'Productos::editar/$1');
+$routes->post('actualizar', 'Productos::actualizar');
 
 $routes->get('inicio', 'home::inicio');
-$routes->get('inicio', 'Teclados::inicio');
-$routes->get('about', 'Teclados::about');
+$routes->get('inicio', 'Productos::inicio');
+$routes->get('about', 'Productos::about');
 $routes->get('catalogo', 'catalogo::shop');
 $routes->get('completado', 'catalogo::completado');
 $routes->get('form_email', 'Email::index');

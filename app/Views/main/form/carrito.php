@@ -16,17 +16,19 @@
     <section class="contenedor">
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
-        <?php foreach ($teclados as $teclado): ?>
+        <?php foreach ($productos as $producto): ?>
             <div class="item">
-                <span class="titulo-item"><?php echo $teclado['nombre']; ?></span>
-                <img src="<?php echo base_url('uploads/' . $teclado['imagen']); ?>" alt="Imagen del teclado" class="img-item">
+                <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
+                <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
                 <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
-                <span class="precio-item">$<?php echo number_format($teclado['precio'], 2, ',', '.'); ?></span>
+                <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
+                <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
                 <form method="post" action="<?php echo base_url('carrito/guar'); ?>" id="carritoForm">
-            <input type="hidden" name="id_teclado" value="<?php echo $teclado['id_teclado']; ?>">
-            <input type="hidden" name="nombre" value="<?php echo $teclado['nombre']; ?>">
-            <input type="hidden" name="precio" value="<?php echo $teclado['precio']; ?>">
-            <input type="hidden" name="imagen" value="<?php echo $teclado['imagen']; ?>">
+            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
+            <input type="hidden" name="nombre" value="<?php echo $producto['nombre']; ?>">
+            <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
+            <input type="hidden" name="imagen" value="<?php echo $producto['imagen']; ?>">
+            <input type="hidden" name="imagen" value="<?php echo $producto['descripcion_prod']; ?>">
             <button type="submit" class="boton-item">Agregar al Carrito</button>
         </form>
             </div>

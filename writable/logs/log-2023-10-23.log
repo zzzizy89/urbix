@@ -1,0 +1,671 @@
+INFO - 2023-10-23 00:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:54:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 00:57:10 --> Undefined variable $teclado
+in APPPATH\Controllers\Productos.php on line 71.
+ 1 APPPATH\Controllers\Productos.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $teclado', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 00:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 00:57:40 --> Undefined array key "id_teclado"
+in APPPATH\Views\main\crud\listar.php on line 33.
+ 1 APPPATH\Views\main\crud\listar.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_teclado"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 33)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(27): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 00:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 00:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:18:36 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(27): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:23:46 --> Undefined variable $tipos
+in APPPATH\Views\main\crud\crear.php on line 43.
+ 1 APPPATH\Views\main\crud\crear.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\crear.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\crear.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/crear', [], true)
+ 5 APPPATH\Controllers\Productos.php(39): view('main/crud/crear', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:23:55 --> Undefined variable $tipo
+in APPPATH\Views\main\crud\crear.php on line 43.
+ 1 APPPATH\Views\main\crud\crear.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipo', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\crear.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\crear.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/crear', [], true)
+ 5 APPPATH\Controllers\Productos.php(39): view('main/crud/crear', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->crear()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 01:25:02 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Productos.php on line 35.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Productos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Productos')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Productos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 01:25:14 --> Class "App\Controllers\Tipo" not found
+in APPPATH\Controllers\Productos.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->crear()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:29:36 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:30:18 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:31:26 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:31:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:31:31 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:32:17 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 01:32:31 --> mysqli_sql_exception: Column 'id_tipoprod' cannot be null in C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\urbix\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\urbix\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\urbix\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\urbix\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\urbix\app\Controllers\Productos.php(83): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\urbix\system\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+#9 C:\xampp\htdocs\urbix\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#10 C:\xampp\htdocs\urbix\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\urbix\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-23 01:32:31 --> Column 'id_tipoprod' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024751_caab4f4a5833b513f046.jpg\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024751_caab4f4a5833b513f046.jpg\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024751_caab4f4a5833b513f046.jpg\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (:nombre:, :precio:, :descripcion_prod:, :imagen:, :id_tipoprod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Productos.php(83): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-23 01:33:54 --> mysqli_sql_exception: Column 'id_tipoprod' cannot be null in C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\urbix\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\urbix\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\urbix\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\urbix\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\urbix\app\Controllers\Productos.php(83): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\urbix\system\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+#9 C:\xampp\htdocs\urbix\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#10 C:\xampp\htdocs\urbix\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\urbix\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-23 01:33:54 --> Column 'id_tipoprod' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024834_a72b0b8145d68841c0e6.jpg\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024834_a72b0b8145d68841c0e6.jpg\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024834_a72b0b8145d68841c0e6.jpg\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (:nombre:, :precio:, :descripcion_prod:, :imagen:, :id_tipoprod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Productos.php(83): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 01:34:37 --> mysqli_sql_exception: Column 'id_tipoprod' cannot be null in C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\xampp\htdocs\urbix\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\xampp\htdocs\urbix\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\urbix\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\urbix\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\urbix\app\Controllers\Productos.php(83): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\urbix\system\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+#9 C:\xampp\htdocs\urbix\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#10 C:\xampp\htdocs\urbix\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\urbix\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-10-23 01:34:37 --> Column 'id_tipoprod' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024877_c1b8e51fbc5c76f7f9b7.jpg\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024877_c1b8e51fbc5c76f7f9b7.jpg\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (\'hyperex\', \'12576.25\', \'teclado facherito\', \'1698024877_c1b8e51fbc5c76f7f9b7.jpg\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `productos` (`nombre`, `precio`, `descripcion_prod`, `imagen`, `id_tipoprod`) VALUES (:nombre:, :precio:, :descripcion_prod:, :imagen:, :id_tipoprod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Productos.php(83): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->guardar()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 01:39:07 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Productos.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Productos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Productos')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Productos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:39:28 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:39:48 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:39:50 --> Undefined array key "tipo"
+in APPPATH\Views\main\crud\listar.php on line 52.
+ 1 APPPATH\Views\main\crud\listar.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php', 52)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\listar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/listar', [], true)
+ 5 APPPATH\Controllers\Productos.php(28): view('main/crud/listar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 01:41:43 --> mysqli_sql_exception: Unknown column 'producto.id_tipoprod' in 'on clause' in C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\urbix\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\urbix\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\urbix\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\urbix\app\Controllers\Productos.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\urbix\system\CodeIgniter.php(932): App\Controllers\Productos->index()
+#8 C:\xampp\htdocs\urbix\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#9 C:\xampp\htdocs\urbix\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\urbix\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-23 01:41:43 --> Unknown column 'producto.id_tipoprod' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+JOIN `tipo` ON `producto`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+JOIN `tipo` ON `producto`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+JOIN `tipo` ON `producto`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+JOIN `tipo` ON `producto`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Productos.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-23 01:41:55 --> mysqli_sql_exception: Unknown column 'producto.id_producto' in 'order clause' in C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\urbix\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\urbix\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\urbix\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\urbix\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\urbix\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\urbix\app\Controllers\Productos.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\urbix\system\CodeIgniter.php(932): App\Controllers\Productos->index()
+#8 C:\xampp\htdocs\urbix\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+#9 C:\xampp\htdocs\urbix\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\urbix\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-23 01:41:55 --> Unknown column 'producto.id_producto' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `productos`
+JOIN `tipo` ON `productos`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `productos`
+JOIN `tipo` ON `productos`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `productos`
+JOIN `tipo` ON `productos`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `productos`
+JOIN `tipo` ON `productos`.`id_tipoprod` = `tipo`.`id_tipoprod`
+ORDER BY `producto`.`id_producto` ASC', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Productos.php(26): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->index()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:46:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:48:31 --> Undefined variable $tipos
+in APPPATH\Views\main\crud\editar.php on line 46.
+ 1 APPPATH\Views\main\crud\editar.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/editar', [], true)
+ 5 APPPATH\Controllers\Productos.php(118): view('main/crud/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->editar('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:50:47 --> Undefined variable $tipos
+in APPPATH\Views\main\crud\editar.php on line 46.
+ 1 APPPATH\Views\main\crud\editar.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/editar', [], true)
+ 5 APPPATH\Controllers\Productos.php(118): view('main/crud/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->editar('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:52:28 --> Undefined variable $tipos
+in APPPATH\Views\main\crud\editar.php on line 46.
+ 1 APPPATH\Views\main\crud\editar.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipos', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\crud\\editar.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/crud/editar', [], true)
+ 5 APPPATH\Controllers\Productos.php(118): view('main/crud/editar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->editar('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 01:57:41 --> syntax error, unexpected single-quoted string "id_tipoprod", expecting "]"
+in APPPATH\Controllers\Productos.php on line 133.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Productos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Productos')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Productos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 01:58:00 --> syntax error, unexpected single-quoted string "id_tipoprod", expecting "]"
+in APPPATH\Controllers\Productos.php on line 133.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Productos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Productos')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\Productos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 01:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 01:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:04:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:05:48 --> Undefined variable $tipoProductoID
+in APPPATH\Controllers\Productos.php on line 131.
+ 1 APPPATH\Controllers\Productos.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tipoProductoID', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:06:22 --> Undefined variable $teclado
+in APPPATH\Controllers\Carrito.php on line 14.
+ 1 APPPATH\Controllers\Carrito.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $teclado', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Carrito.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:06:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:06:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:06:42 --> Undefined array key "producto_imagen"
+in APPPATH\Views\main\form\carrito2.php on line 23.
+ 1 APPPATH\Views\main\form\carrito2.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "producto_imagen"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(32): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:06:58 --> Undefined array key "nombre"
+in APPPATH\Views\main\form\carrito2.php on line 25.
+ 1 APPPATH\Views\main\form\carrito2.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 25)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(32): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:07:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:07:55 --> Undefined variable $producto
+in APPPATH\Views\main\form\carrito2.php on line 25.
+ 1 APPPATH\Views\main\form\carrito2.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 25)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(32): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:07:57 --> Undefined variable $producto
+in APPPATH\Views\main\form\carrito2.php on line 25.
+ 1 APPPATH\Views\main\form\carrito2.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 25)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(32): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:10:50 --> Undefined array key "precio"
+in APPPATH\Views\main\form\carrito2.php on line 29.
+ 1 APPPATH\Views\main\form\carrito2.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(32): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:11:49 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 75.
+ 1 APPPATH\Controllers\carrito2.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:15:28 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 76.
+ 1 APPPATH\Controllers\carrito2.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:17:00 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 76.
+ 1 APPPATH\Controllers\carrito2.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:19:22 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 75.
+ 1 APPPATH\Controllers\carrito2.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:19:25 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 75.
+ 1 APPPATH\Controllers\carrito2.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:21:59 --> Undefined array key "precio"
+in APPPATH\Controllers\carrito2.php on line 76.
+ 1 APPPATH\Controllers\carrito2.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "precio"', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\carrito2.php', 76)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 02:24:41 --> Class "App\Controllers\ProductosModel" not found
+in APPPATH\Controllers\carrito2.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-23 02:25:17 --> Class "App\Controllers\Producto" not found
+in APPPATH\Controllers\carrito2.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->actualizarcar()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:27:18 --> Undefined array key "tipo"
+in APPPATH\Views\main\form\carrito2.php on line 31.
+ 1 APPPATH\Views\main\form\carrito2.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(36): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-23 02:29:53 --> Undefined array key "tipo"
+in APPPATH\Views\main\form\carrito2.php on line 31.
+ 1 APPPATH\Views\main\form\carrito2.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tipo"', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\carrito2.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/carrito2', [], true)
+ 5 APPPATH\Controllers\carrito2.php(37): view('main/form/carrito2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito2->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito2))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-23 02:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:36:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:37:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-23 02:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

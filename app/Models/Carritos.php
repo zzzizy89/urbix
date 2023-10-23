@@ -7,5 +7,8 @@ class Carritos extends Model{
     protected $table      = 'carrito';
     // Uncomment below if you want add primary key
      protected $primaryKey = 'id_carrito';
-     protected $allowedFields = ['id_user','id_teclado','nombre','precio','cantidad','total'];
+     protected $allowedFields = ['id_user','id_producto','cantidad','total','createdat','estado_compra'];
+
+    protected $useTimestamps = false;
+    protected $createdField = 'createdat';
 }
