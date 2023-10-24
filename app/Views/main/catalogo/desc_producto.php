@@ -66,7 +66,6 @@
 				<div class="container-add-cart">
 					<div class="container-quantity">
 						<input
-							type="number"
 							placeholder="1"
 							value="1"
 							min="1"
@@ -90,7 +89,7 @@
 					</div>
 					<div class="text-description">
 						<p>
-							Los mejores teclados.
+							<?php echo $producto['descripcion_prod'];?>
 						</p>
 					</div>
 				</div>
@@ -199,7 +198,14 @@
 		</section>
 
 		<footer>
-			<p>Footer</p>
+			<div class="marquee">
+				<span>
+                &nbsp; discuss your ideas &nbsp; / &nbsp; unexpected time &nbsp; /
+                &nbsp; spatial experiencies &nbsp; / &nbsp; best specialists &nbsp; /
+                &nbsp; impulse &nbsp; / &nbsp;  independent online store &nbsp; / &nbsp; 
+                you can't download the experience &nbsp;   
+            </span>
+			</div>
 		</footer>
 
 		<script

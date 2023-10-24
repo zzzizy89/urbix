@@ -10,6 +10,8 @@ body {
 	font-family: 'Ubuntu';
 	max-width: 1200px;
 	margin: 0 auto;
+	background: #0D1117;
+	color: #fff;
 }
 
 img {
@@ -25,9 +27,9 @@ header {
 
 .container-title {
 	padding: 30px;
-	background-color: #eee;
+	background-color: #f5f5dc;
 	margin-bottom: 50px;
-	color: #222;
+	color: #000;
 }
 
 main {
@@ -73,8 +75,9 @@ main {
 
 .form-group label {
 	width: 100px;
-	color: #222;
+	color: #fff;
 	font-weight: 700;
+	
 }
 
 .form-group select {
@@ -83,13 +86,13 @@ main {
 	padding: 12px 15px;
 	background-color: #f7f7f7;
 	outline: none;
-	color: #666;
+	color: #000;
 }
 
 .btn-clean {
 	border: none;
 	background: none;
-	color: #666;
+	color: #fff;
 	margin-left: 120px;
 	cursor: pointer;
 }
@@ -195,7 +198,7 @@ main {
 .title-additional-information h4,
 .title-reviews h4 {
 	font-weight: 300;
-	color: #666;
+	color: #fff;
 	font-size: 14px;
 }
 
@@ -203,7 +206,7 @@ main {
 .text-additional-information,
 .text-reviews {
 	font-size: 13px;
-	color: #252525;
+	color: #fff;
 	line-height: 22px;
 	margin-top: 25px;
 }
@@ -218,7 +221,7 @@ main {
 
 .container-social span {
 	font-weight: 300;
-	color: #252525;
+	color: #fff;
 }
 
 .container-buttons-social {
@@ -229,7 +232,7 @@ main {
 
 .container-buttons-social a:link,
 .container-buttons-social a:visited {
-	color: #666;
+	color: #fff;
 	font-size: 15px;
 }
 
@@ -269,7 +272,7 @@ main {
 }
 
 .text-product {
-	color: #252525;
+	color: #fff;
 	font-weight: 300;
 	line-height: 1.4;
 }
@@ -285,7 +288,7 @@ main {
 }
 
 .text-product p{
-    color: #666;
+    color: #656;
     font-size: 13px;
 }
 
@@ -294,8 +297,52 @@ main {
 }
 
 footer {
-	padding: 30px;
-	background-color: #eee;
-	margin-top: 50px;
-	color: #222;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 2rem 9%;
+
+}
+
+/* Estilos para el marquesina */
+
+.marquee {
+	overflow: hidden;
+	background-color: #0D1117;
+	color: #f5f5dc;
+	font-size: 60px;
+	white-space: nowrap;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	position: sticky;
+	bottom: 0;
+	align-items: center;
+	text-align: center;
+	
+}
+
+.marquee span {
+	display: inline-block;
+	font-family: "Nevolasty-Light";
+	animation: marquee 15s linear infinite;
+	color: #f5f5dc;
+}
+
+  /* Estilos para el modo oscuro */
+  .dark-mode .marquee {
+	background-color: #f5f5dc;
+  }
+
+  .dark-mode .marquee span {
+	color: #0D1117;
+  }
+/* Animación de la marquesina */
+
+@keyframes marquee {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(100%);
+	}
 }
