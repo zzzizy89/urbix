@@ -202,7 +202,7 @@ span {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 0.5rem 1%;
+	padding: 0.1rem 1%;
 	background: #f6efef;
 	display: flex;
 	justify-content: space-between;
@@ -212,6 +212,38 @@ span {
 	backdrop-filter: blur(5px);
 }
 
+.header a {
+    font-family: "Arame-Thin";
+    font-size: 1.7rem;
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px; /* Espacio horizontal entre enlaces */
+    transition: 0.3s;
+}
+
+.header img {
+	width: 5rem;
+	height: 5rem;
+	align-items: center;
+	position: relative;
+}
+
+/* Estilos para los botones de la barra de navegación */
+.header button {
+    outline: none;
+}
+
+/* Estilos para los elementos <span> dentro de la barra de navegación */
+.header span {
+    font-family: "Nevolasty-Light";
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 15px; /* Espacio horizontal entre elementos span */
+    transition: 0.3s;
+    color: #000;
+}
 .dark-mode .header {
 	background: #0E0D0D;
 }
@@ -230,7 +262,7 @@ span {
 
 .logo span {
 	position: relative;
-	font-size: 2.5rem;
+	font-size: 1.7rem;
 	color: var(--second-bg-color);
 	font-family: "Nevolasty-Light";
 	text-decoration: none;
@@ -239,38 +271,39 @@ span {
 
 /* Estilos para la barra de navegación */
 
+/* Estilos para la barra de navegación */
 .navbar {
-	position: relative;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
 }
 
 /* Estilos para los enlaces de la barra de navegación */
-
 .navbar a {
-	font-family: "Arame-Thin";
-	font-size: 1.7rem;
-	color: red;
-	text-decoration: none;
-	font-weight: 600;
-	margin-left: 35px;
-	transition: .3s;
+    font-family: "Arame-Thin";
+    font-size: 1.7rem;
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 15px; /* Espacio horizontal entre enlaces */
+    transition: 0.3s;
 }
 
 /* Estilos para los botones de la barra de navegación */
-
 .navbar button {
-	outline: none;
+    outline: none;
 }
 
 /* Estilos para los elementos <span> dentro de la barra de navegación */
-
 .navbar span {
-	font-family: "Nevolasty-Light";
-	font-size: 1.7rem;
-	text-decoration: none;
-	font-weight: 500;
-	margin-left: 35px;
-	transition: .3s;
-	color: #000;
+	position: relative;
+    font-family: "Nevolasty-Light";
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 15px; /* Espacio horizontal entre elementos span */
+    transition: 0.3s;
+    color: #000;
 }
 
 .dark-mode .navbar span {

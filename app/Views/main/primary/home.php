@@ -25,11 +25,12 @@
 	<body>
 		<!-- Cabecera -->
 		<header class="header">
-			<a href="<?=base_url('intro')?> " class="logo"><span>urbix</span></a>
+	
 			<!-- Para animación JS -->
 			<div class="bx bx-menu" id="menu-icon"></div>
 
 			<nav class="navbar">
+			    <a href="<?=base_url('intro')?> " class="hover-this"><span>urbix</span></a>
 				<a href="#home" class="hover-this"><span data-english="home" data-spanish="inicio">home</span></a>
 				<a href="#acerca" class="hover-this"><span data-english="about" data-spanish="acerca">about</span></a>
 				<a href="<?=base_url('intro_catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
