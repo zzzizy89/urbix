@@ -18,17 +18,16 @@
         <div class="contenedor-items">
         <?php foreach ($productos as $producto): ?>
             <div class="item">
+            <form method="post" action="<?php echo base_url('carrito/guar'); ?>" id="carritoForm">
+            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
                 <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
+                <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
                 <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
                 <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
                 <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
                 <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
-                <form method="post" action="<?php echo base_url('carrito/guar'); ?>" id="carritoForm">
-            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
-            <input type="hidden" name="nombre" value="<?php echo $producto['nombre']; ?>">
-            <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
-            <input type="hidden" name="imagen" value="<?php echo $producto['imagen']; ?>">
-            <input type="hidden" name="imagen" value="<?php echo $producto['descripcion_prod']; ?>">
+        
+            
             <button type="submit" class="boton-item">Agregar al Carrito</button>
         </form>
             </div>

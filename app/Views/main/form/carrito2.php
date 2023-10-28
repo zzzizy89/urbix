@@ -45,6 +45,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <a href="<?= base_url('comprar/')?>" class="btn btn-success" type="button">Comprar</a>
 
     <button type="submit" class="btn btn-primary">Actualizar carrito</button>
 </form>

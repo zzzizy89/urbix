@@ -77,15 +77,8 @@ class Carrito2 extends Controller{
             // Obtener los datos del carrito antes de actualizar
             $datosCar = $car->find($id_carrito);
 
-            // Obtener el precio del producto desde la tabla productos
-            $producto = $productosModel->find($datosCar['id_producto']); // Reemplaza 'ProductosModel' con el nombre real de tu modelo de productos
-            $precio = $producto['precio'];
-
-            // Calcular el nuevo total
-            $nuevoTotal = $precio * $cantidad;
-
-            // Actualizar la cantidad y el total en la base de datos
-            $car->update($id_carrito, ['cantidad' => $cantidad, 'total' => $nuevoTotal]);
+            // Actualizar la cantidad 
+            $car->update($id_carrito, ['cantidad' => $cantidad]);
         }
     }
 
