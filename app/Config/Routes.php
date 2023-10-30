@@ -92,3 +92,5 @@ $routes->get('carrito2/eliminarcar/(:num)', 'Carrito2::eliminarcar/$1');
 $routes->post('carrito2/actualizarcar/', 'Carrito2::actualizarcar');
 $routes->get('comprar/', 'Comprass::index');
 $routes->get('cancelar/compra/', 'Carrito2::index');
+$routes->get('checkout', 'Comprass::check');
+$routes->post('realizar_compra/', 'Comprass::confirmarCompra');

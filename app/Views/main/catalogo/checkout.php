@@ -26,7 +26,7 @@
             return actions.order.create({
                 purchase_units: [{
                     amount: {
-                        value: '50'
+                        value: '155'
                     }
                 }]
             });

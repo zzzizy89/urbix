@@ -16,7 +16,7 @@ class catalogo extends BaseController
     public function completado()
     {
         
-        return view('catalogo/completado');
+        return view('main/catalogo/completado');
         
     }
 }

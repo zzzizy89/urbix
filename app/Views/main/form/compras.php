@@ -16,8 +16,10 @@
         <div class="informacion-envio">
             <h2>Información de Envío</h2>
             <form method="post" action="<?php echo base_url('realizar_compra'); ?>">
+
                 <label for="pais">País:</label>
                 <input type="text" id="pais" name="pais" required>
+
 
                 <label for="provincia">Provincia:</label>
                 <input type="text" id="provincia" name="provincia" required>
@@ -37,16 +39,7 @@
                 <label for="descripcion_casa">Descripción de la Casa:</label>
                 <textarea id="descripcion_casa" name="descripcion_casa" required></textarea>
 
-                <!-- Otros campos necesarios para realizar la compra mediante PayPal -->
-                <label for="paypal_correo">Correo de PayPal:</label>
-                <input type="email" id="paypal_correo" name="paypal_correo" required>
-
-                <label for="paypal_nombre">Nombre de PayPal:</label>
-                <input type="text" id="paypal_nombre" name="paypal_nombre" required>
-
-                <!-- Agrega otros campos de PayPal según tus necesidades -->
-
-                <a href="<?= base_url('comprar/')?>" type="submit" class="boton-comprar">Confirmar Compra</a>
+                <button type="submit" class="boton-comprar">Confirmar Compra</button>
                 <a href="<?= base_url('cancelar/compra')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
             </form>
         </div>

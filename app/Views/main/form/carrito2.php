@@ -1,7 +1,12 @@
 <?=$cabecera;?>
 <br>
 <br>
-
+<?php
+$message = session()->getFlashdata('message');
+if (!empty($message)) {
+    echo '<div class="alert alert-warning">' . $message . '</div>';
+}
+?>
 <form action="<?= base_url('carrito2/actualizarcar');?>" method="post">
     <table class="table table-dark">
         <thead class="thead-light">
