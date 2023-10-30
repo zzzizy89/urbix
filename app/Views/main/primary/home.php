@@ -30,7 +30,10 @@
 			<div class="bx bx-menu" id="menu-icon"></div>
 
 			<nav class="navbar">
-			    <a href="<?=base_url('intro')?> " class="hover-this"><span>urbix</span></a>
+				<div class="logo">
+				<a href="<?=base_url('intro')?> "><span>urbix</span></a>
+				</div>
+			   
 				<a href="#home" class="hover-this"><span data-english="home" data-spanish="inicio">home</span></a>
 				<a href="#acerca" class="hover-this"><span data-english="about" data-spanish="acerca">about</span></a>
 				<a href="<?=base_url('intro_catalogo')?> " class="hover-this"><span data-english="catalogue" data-spanish="catalogo">catalogue</span></a>
@@ -44,7 +47,13 @@
 				</a>
 			<?php endif; ?>
 				
-				<a href="#" id="toggleLanguageButton"><span>🌍</span></a>
+			<div class="language-dropdown">
+        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()">🌍</a>
+        <div id="languageOptions" class="language-options">
+            <a onclick="changeLanguage('english')">English</a>
+            <a onclick="changeLanguage('spanish')">Español</a>
+        </div>
+    </div>
 				<a href="#" id="modoToggle"><span>🌗</span></a>
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
@@ -207,35 +216,7 @@
 			        new WOW().init();
 			
 		</script>
-		<script>
-			// Obtén una referencia al botón y al contenido que deseas traducir
-const toggleLanguageButton = document.getElementById('toggleLanguageButton');
-const translatableElements = document.querySelectorAll('[data-english][data-spanish]');
-
-// Variable para rastrear el idioma actual
-let currentLanguage = 'english';
-
-// Función para cambiar el idioma
-function toggleLanguage() {
-  if (currentLanguage === 'english') {
-    // Cambia a español
-    translatableElements.forEach(element => {
-      element.textContent = element.getAttribute('data-spanish');
-    });
-    currentLanguage = 'spanish';
-  } else {
-    // Cambia a inglés
-    translatableElements.forEach(element => {
-      element.textContent = element.getAttribute('data-english');
-    });
-    currentLanguage = 'english';
-  }
-}
-
-// Agrega un controlador de eventos al botón para cambiar el idioma al hacer clic
-toggleLanguageButton.addEventListener('click', toggleLanguage);
-
-		</script>
+		
 	<script>
 document.addEventListener("DOMContentLoaded", function () {
     const modoToggle = document.getElementById("modoToggle");
@@ -245,9 +226,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/blanco.jpg'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/white.png'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/asbtract.jpg'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/black.png'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -255,11 +236,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/asbtract.jpg'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/black.png'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/blanco.jpg'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/white.png'); ?>)`;
         }
     });
 });
@@ -288,6 +269,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // por ejemplo: cambiar el estilo de la página
   });
 });
+</script>
+<!-- traductor -->
+<script>
+	function toggleLanguageDropdown() {
+    var languageOptions = document.getElementById("languageOptions");
+    if (languageOptions.style.display === "block") {
+        languageOptions.style.display = "none";
+    } else {
+        languageOptions.style.display = "block";
+    }
+}
+
+function changeLanguage(language) {
+    var elements = document.querySelectorAll("[data-english], [data-spanish]");
+    for (var i = 0; i < elements.length; i++) {
+        if (language === "english") {
+            elements[i].innerText = elements[i].getAttribute("data-english");
+        } else if (language === "spanish") {
+            elements[i].innerText = elements[i].getAttribute("data-spanish");
+        }
+    }
+    document.getElementById("languageOptions").style.display = "none";
+}
 </script>
 	
 	</body>

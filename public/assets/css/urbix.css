@@ -88,4 +88,10 @@ body, html {
     font-family: "Headshots";
     font-size: 60px;
   }
+
+  img {
+	width: 10rem;
+	height: 10rem;
+	object-fit: cover;
+  }	
   

@@ -130,6 +130,47 @@ nav {
 	top: 50%;
 }
 
+/* para cambiar el idioma */
+.language-dropdown {
+    position: relative;
+}
+
+.language-options {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+	border-radius: 5px;
+}
+
+.dark-mode .language-options {
+	display: none;
+    position: absolute;
+    background-color: #0D1117;
+	color: #fff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dark-mode .language-options a:hover {
+	background-color: #383333;
+	
+}
+
+.language-options a {
+    display: block;
+    padding: 10px;
+}
+
+.language-options a:hover {
+    background-color: #cabcbc;
+}
+
 /* Efecto de transición para elementos con la clase .hover-this */
 
 .hover-this {
@@ -260,13 +301,13 @@ span {
 
 /* Estilos para el logotipo */
 
-.logo span {
+.navbar span  {
 	position: relative;
 	font-size: 1.7rem;
-	color: var(--second-bg-color);
+	color: cyan;
 	font-family: "Nevolasty-Light";
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 900;
 }
 
 /* Estilos para la barra de navegación */
@@ -306,6 +347,12 @@ span {
     color: #000;
 }
 
+nav .logo a span {
+	font-family: "Headshots" ;
+	
+	font-size: 1.5rem;
+}
+
 .dark-mode .navbar span {
 	color: #fff;
 }
@@ -327,6 +374,8 @@ span {
 .navbar a img {
 	text-align: center;
 }
+
+
 
 .navbar a:hover,
 .navbar a.active {
@@ -586,7 +635,7 @@ h6 {
 }
 
 .acerca {
-	background: #f5f5dc;
+	background: #f6f6ed;
 }
 
 .dark-mode .acerca {
@@ -771,7 +820,7 @@ h6 {
 .marquee {
 	overflow: hidden;
 	background-color: #0D1117;
-	color: #f5f5dc;
+	color: #f6f6ed;
 	font-size: 60px;
 	white-space: nowrap;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -785,12 +834,12 @@ h6 {
 	display: inline-block;
 	font-family: "Nevolasty-Light";
 	animation: marquee 15s linear infinite;
-	color: #f5f5dc;
+	color: #f6f6ed;
 }
 
   /* Estilos para el modo oscuro */
   .dark-mode .marquee {
-	background-color: #f5f5dc;
+	background-color: #f6f6ed;
   }
 
   .dark-mode .marquee span {
