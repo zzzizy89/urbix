@@ -5,19 +5,19 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>everything you are looking for</title>
-		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>">
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/iconos/urbix.png');?>">
 
 		<!-- Estilos CSS -->
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/primary.css');?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/primary.css');?>">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/animation/animate.css');?>">
 
 		<!-- Bibliotecas y scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
-		<script src="<?php echo base_url('assets/js/wow.min.js');?>"></script>
-		<script src="<?php echo base_url('assets/js/t.min.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/animation/wow.min.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/animation/t.min.js');?>"></script>
 
 		<!-- Fuentes -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
@@ -48,12 +48,12 @@
 			<?php endif; ?>
 				
 			<div class="language-dropdown">
-        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()"><img src="<?php echo base_url('assets/img/primary/traductor.png')?>" alt=""></a>
+        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()"><img src="<?php echo base_url('assets/img/iconos/traductor.png')?>" alt=""></a>
         <div id="languageOptions" class="language-options">
             <a onclick="changeLanguage('english')">English</a>
             <a onclick="changeLanguage('spanish')">Español</a>
         </div>
-		<a href="#" id="modoToggle"><span><img src="<?php echo base_url('assets/img/primary/sol.png')?>" alt=""></span></a>
+		<a href="#" id="modoToggle"><span><img src="<?php echo base_url('assets/img/iconos/sol.png')?>" alt=""></span></a>
     </div>
 				
 				<span class="active-nav"></span>
@@ -65,7 +65,7 @@
 		<!-- Sección de inicio -->
 		<section class="home" id="home">
 			<div class="home-content">
-				<img src="<?php echo base_url('assets/img/primary/urbix.png');?>" alt="" class="floating-image">
+				<img src="<?php echo base_url('assets/img/iconos/urbix.png');?>" alt="" class="floating-image">
 				
 			
 			</div>
@@ -119,8 +119,8 @@
 		</footer>
 
 		<!-- Scripts adicionales -->
-		<script src="<?php echo base_url('assets/js/script-marquee.js');?>"></script>
-		<script src="<?php echo base_url('assets/js/script.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/animation/script-marquee.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/animation/script.js');?>"></script>
 
 		<!-- Script para parallax -->
 		<script>
@@ -227,9 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/white.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/white.png'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/black.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/black.png'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -237,11 +237,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/black.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/black.png'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/white.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/white.png'); ?>)`;
         }
     });
 });
@@ -306,8 +306,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-modes");
-        languageImage.src = "<?php echo base_url('assets/img/primary/traductor2.png'); ?>";
-        solIcon.src = "<?php echo base_url('assets/img/primary/luna.png'); ?>";
+        languageImage.src = "<?php echo base_url('assets/img/iconos/traductor2.png'); ?>";
+        solIcon.src = "<?php echo base_url('assets/img/iconos/luna.png'); ?>";
     } else {
         languageImage.src = "<?php echo base_url('assets/img/primary/traductor.png'); ?>";
         solIcon.src = "<?php echo base_url('assets/img/primary/sol.png'); ?>";
@@ -323,8 +323,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             body.classList.add("dark-modes");
             localStorage.setItem("modo", "oscuro");
-            languageImage.src = "<?php echo base_url('assets/img/primary/traductor2.png'); ?>";
-            solIcon.src = "<?php echo base_url('assets/img/primary/luna.png'); ?>";
+            languageImage.src = "<?php echo base_url('assets/img/iconos/traductor2.png'); ?>";
+            solIcon.src = "<?php echo base_url('assets/img/iconos/luna.png'); ?>";
         }
     });
 });
