@@ -146,7 +146,13 @@ nav {
 	border-radius: 5px;
 }
 
-.dark-mode .language-options {
+
+
+ .navbar a img {
+	height: 2rem;
+	width: 2rem;
+}	
+.dark-modes .language-options {
 	display: none;
     position: absolute;
     background-color: #0D1117;
@@ -157,7 +163,7 @@ nav {
     z-index: 1;
 }
 
-.dark-mode .language-options a:hover {
+.dark-modes .language-options a:hover {
 	background-color: #383333;
 	
 }

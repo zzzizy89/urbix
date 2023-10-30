@@ -48,12 +48,12 @@
 			<?php endif; ?>
 				
 			<div class="language-dropdown">
-        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()">֎</a>
+        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()"><img src="<?php echo base_url('assets/img/primary/traductor.png')?>" alt=""></a>
         <div id="languageOptions" class="language-options">
             <a onclick="changeLanguage('english')">English</a>
             <a onclick="changeLanguage('spanish')">Español</a>
         </div>
-		<a href="#" id="modoToggle"><span>☼</span></a>
+		<a href="#" id="modoToggle"><span><img src="<?php echo base_url('assets/img/primary/sol.png')?>" alt=""></span></a>
     </div>
 				
 				<span class="active-nav"></span>
@@ -293,6 +293,42 @@ function changeLanguage(language) {
     }
     document.getElementById("languageOptions").style.display = "none";
 }
+</script>
+<!-- para cambiar icono traductor modo oscuro -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modoToggle = document.getElementById("modoToggle");
+    const body = document.body;
+    const languageButton = document.getElementById("toggleLanguageButton");
+    const languageImage = document.querySelector("#toggleLanguageButton img");
+    const solIcon = document.querySelector("#modoToggle img");
+
+    // Verificar si el usuario ya tiene un modo seleccionado
+    if (localStorage.getItem("modo") === "oscuro") {
+        body.classList.add("dark-modes");
+        languageImage.src = "<?php echo base_url('assets/img/primary/traductor2.png'); ?>";
+        solIcon.src = "<?php echo base_url('assets/img/primary/luna.png'); ?>";
+    } else {
+        languageImage.src = "<?php echo base_url('assets/img/primary/traductor.png'); ?>";
+        solIcon.src = "<?php echo base_url('assets/img/primary/sol.png'); ?>";
+    }
+
+    modoToggle.addEventListener("click", function () {
+        // Alternar entre los modos claro y oscuro
+        if (body.classList.contains("dark-modes")) {
+            body.classList.remove("dark-modes");
+            localStorage.setItem("modo", "claro");
+            languageImage.src = "<?php echo base_url('assets/img/primary/traductor.png'); ?>";
+            solIcon.src = "<?php echo base_url('assets/img/primary/sol.png'); ?>";
+        } else {
+            body.classList.add("dark-modes");
+            localStorage.setItem("modo", "oscuro");
+            languageImage.src = "<?php echo base_url('assets/img/primary/traductor2.png'); ?>";
+            solIcon.src = "<?php echo base_url('assets/img/primary/luna.png'); ?>";
+        }
+    });
+});
+
 </script>
 	
 	</body>
