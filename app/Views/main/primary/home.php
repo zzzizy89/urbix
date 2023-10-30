@@ -48,13 +48,14 @@
 			<?php endif; ?>
 				
 			<div class="language-dropdown">
-        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()">🌍</a>
+        <a id="toggleLanguageButton"  onclick="toggleLanguageDropdown()">֎</a>
         <div id="languageOptions" class="language-options">
             <a onclick="changeLanguage('english')">English</a>
             <a onclick="changeLanguage('spanish')">Español</a>
         </div>
+		<a href="#" id="modoToggle"><span>☼</span></a>
     </div>
-				<a href="#" id="modoToggle"><span>🌗</span></a>
+				
 				<span class="active-nav"></span>
 				<div class="cursor"></div>
 			</nav>
