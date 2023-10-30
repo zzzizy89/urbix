@@ -294,7 +294,7 @@ function changeLanguage(language) {
     document.getElementById("languageOptions").style.display = "none";
 }
 </script>
-<!-- para cambiar icono traductor modo oscuro -->
+<!-- para cambiar iconos Navbar dark-mode -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const modoToggle = document.getElementById("modoToggle");
