@@ -1,0 +1,224 @@
+* {
+    font-family: "Arame-Thin", monospace !important;
+}
+
+:root {
+    --main-color: #ff0000;
+    --second-color: #000000;
+    --text-color: #ffffff;
+    --bg-color: #ffffff;
+    --second-bg-color: #000000;
+}
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "FormulaCondensed";
+	src: url("../fonts/FormulaCondensed.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "NoorgeKarlos-Outline";
+	src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "AQUATIC";
+	src: url("../fonts/AQUATIC.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Barbarian";
+	src: url("../fonts/Barbarian.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "DeathMohaw";
+	src: url("../fonts/DeathMohaw.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "adelia";
+	src: url("../fonts/adelia.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "SnowWhite";
+	src: url("../fonts/SnowWhite.ttf") format("truetype");
+}
+
+html, body {
+    background: #0D1117!important;
+}
+
+h2 {
+    font-family: "Nevolasty-Light";
+    font-size: 50px;
+}
+
+.contact {
+    background: #0D1117!important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 800px;
+    padding-bottom: 7rem;
+    color: #f5f5dc !important;
+    font-family: "Nevolasty-Light";
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.contact form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+    text-decoration: none;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #f5f5dc !important;
+    background: transparent;
+    border-radius: .6rem;
+    border: .1rem solid #f5f5dc;
+    text-decoration: none;
+    outline: none; /* Agregado para eliminar el contorno azul */
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: #f5f5dc !important;
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #f5f5dc !important;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s
+}
+
+.contact form .input-box .input-field input:focus ~ .focus,
+.contact form .input-box .input-field input:valid ~ .focus,
+.contact form .textarea-field textarea:focus ~ .focus,
+.contact form .textarea-field textarea:valid ~ .focus {
+    width: 100%;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--text-color);
+    border: .2rem solid #f5f5dc;
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+.btn-box.btns {
+            display: inline-block;
+            width: 15rem;
+}
+
+.btn-box.btns a::before {
+            background: var(--second-bg-color);
+}
