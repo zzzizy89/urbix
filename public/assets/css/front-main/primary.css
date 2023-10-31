@@ -748,7 +748,7 @@ h6 {
 /* Estilos para el proyecto 2 */
 
 .project2 {
-	background: url(../img/primary/mic.jpg) no-repeat 50% 50%;
+	background: url(../img/front-main/mic.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
@@ -773,7 +773,7 @@ h6 {
 /* Estilos para el proyecto 3 */
 
 .project3 {
-	background: url(../img/primary/mouse.jpg) no-repeat 50% 50%;
+	background: url(../img/front-main/mouse.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 
@@ -798,7 +798,7 @@ h6 {
 /* Estilos para el proyecto 4 */
 
 .project4 {
-	background: url(../img/primary/headphones.jpg) no-repeat 50% 50%;
+	background: url(../img/front-main/headphones.jpg) no-repeat 50% 50%;
 	background-size: cover;
 }
 

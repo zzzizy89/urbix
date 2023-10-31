@@ -13,8 +13,7 @@
 				<meta charset="UTF-8">
 				<meta http-equiv="X-UA-Compatible" contable="IE=edge">
 				<meta name="viewport" content="width=device-width, initial-scale:1.0">
-				<link rel="stylesheet" href="assets/css/login.css">
-				<link rel="stylesheet" href="../assets/css/login.css">
+				<link rel="stylesheet" href="<?php echo base_url('assets/css/account/login.css')?>"
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
 				<title>Login</title>

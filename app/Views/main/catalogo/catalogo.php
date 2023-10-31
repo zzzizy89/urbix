@@ -8,7 +8,7 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Catalogo Urbix</title>
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/catalogo.css')?>" />
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/catalogo/catalogo.css')?>" />
 	</head>
 	<body>
 		<header>
@@ -31,6 +31,6 @@
 			<?php endforeach; ?>
 		</div>
 
-        <script src="<?php echo base_url('assets/js/catalogo.js')?>"></script>
+        <script src="<?php echo base_url('assets/js/catalogo/catalogo.js')?>"></script>
 	</body>
 </html>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo base_url("assets/css/contact.css") ?>">
+<link rel="stylesheet" href="<?php echo base_url("assets/css/front-main/contact.css") ?>">
 
 <section class="contact" id="contacto">
 						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">

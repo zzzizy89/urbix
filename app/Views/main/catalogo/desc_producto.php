@@ -8,7 +8,7 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Descripcion</title>
-		<link rel="stylesheet" href="<?php echo base_url('assets/css/desc_producto.css');?>">
+		<link rel="stylesheet" href="<?php echo base_url('assets/css/catalogo/desc_producto.css');?>">
 	</head>
 	<body>
 		<header>
@@ -137,7 +137,7 @@
 				<div class="card">
 					<div class="card-img">
 						<img
-							src="<?php echo base_url('assets/img/carrousel/gris.jpg')?>"
+							src="<?php echo base_url('assets/css/img/catalogo/gris.jpg')?>"
 							alt="producto-1"
 						/>
 					</div>
@@ -152,7 +152,7 @@
 				<div class="card">
 					<div class="card-img">
 						<img
-							src="<?php echo base_url('assets/img/carrousel/head.jpg')?>"
+							src="<?php echo base_url('assets/css/img/catalogo/head.jpg')?>"
 							alt="producto-2"
 						/>
 					</div>
@@ -167,7 +167,7 @@
 				<div class="card">
 					<div class="card-img">
 						<img
-							src="<?php echo base_url('assets/img/carrousel/parlantes.jpg')?>"
+							src="<?php echo base_url('assets/css/img/catalogo/parlantes.jpg')?>"
 							alt="producto-3"
 						/>
 					</div>
@@ -182,7 +182,7 @@
 				<div class="card">
 					<div class="card-img">
 						<img
-							src="<?php echo base_url('assets/img/carrousel/mic.jpg')?>"
+							src="<?php echo base_url('assets/css/img/catalogo/mic.jpg')?>"
 							alt="producto-4"
 						/>
 					</div>
@@ -212,6 +212,6 @@
 			src="https://kit.fontawesome.com/81581fb069.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="<?php echo base_url('assets/js/desc_producto.js');?>"></script>
+		<script src="<?php echo base_url('assets/js/catalogo/desc_producto.js');?>"></script>
 	</body>
 </html>

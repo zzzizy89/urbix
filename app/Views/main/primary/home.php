@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>everything you are looking for</title>
-		<link rel="website icon" type="png" href="<?php echo base_url('assets/img/iconos/urbix.png');?>">
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/urbix.png');?>">
 
 		<!-- Estilos CSS -->
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/primary.css');?>">
@@ -65,7 +65,7 @@
 		<!-- Sección de inicio -->
 		<section class="home" id="home">
 			<div class="home-content">
-				<img src="<?php echo base_url('assets/img/iconos/urbix.png');?>" alt="" class="floating-image">
+				<img src="<?php echo base_url('assets/css/img/iconos/urbix.png');?>" alt="" class="floating-image">
 				
 			
 			</div>
@@ -227,9 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-mode");
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/white.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/css/img/front-main/white.png'); ?>)`;
     } else {
-        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/black.png'); ?>)`;
+        homeContent.style.backgroundImage = `url(<?php echo base_url('assets/css/img/front-main/black.png'); ?>)`;
     }
 
     modoToggle.addEventListener("click", function () {
@@ -237,11 +237,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-mode")) {
             body.classList.remove("dark-mode");
             localStorage.setItem("modo", "claro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/black.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/css/img/front-main/black.png'); ?>)`;
         } else {
             body.classList.add("dark-mode");
             localStorage.setItem("modo", "oscuro");
-            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/img/front-main/white.png'); ?>)`;
+            homeContent.style.backgroundImage = `url(<?php echo base_url('assets/css/img/front-main/white.png'); ?>)`;
         }
     });
 });
@@ -306,11 +306,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Verificar si el usuario ya tiene un modo seleccionado
     if (localStorage.getItem("modo") === "oscuro") {
         body.classList.add("dark-modes");
-        languageImage.src = "<?php echo base_url('assets/img/iconos/traductor2.png'); ?>";
-        solIcon.src = "<?php echo base_url('assets/img/iconos/luna.png'); ?>";
+        languageImage.src = "<?php echo base_url('assets/css/img/iconos/traductor2.png'); ?>";
+        solIcon.src = "<?php echo base_url('assets/css/img/iconos/luna.png'); ?>";
     } else {
-        languageImage.src = "<?php echo base_url('assets/img/primary/traductor.png'); ?>";
-        solIcon.src = "<?php echo base_url('assets/img/primary/sol.png'); ?>";
+        languageImage.src = "<?php echo base_url('assets/css/img/iconos/traductor.png'); ?>";
+        solIcon.src = "<?php echo base_url('assets/css/img/iconos/sol.png'); ?>";
     }
 
     modoToggle.addEventListener("click", function () {
@@ -318,13 +318,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (body.classList.contains("dark-modes")) {
             body.classList.remove("dark-modes");
             localStorage.setItem("modo", "claro");
-            languageImage.src = "<?php echo base_url('assets/img/primary/traductor.png'); ?>";
-            solIcon.src = "<?php echo base_url('assets/img/primary/sol.png'); ?>";
+            languageImage.src = "<?php echo base_url('assets/css/img/iconos/traductor.png'); ?>";
+            solIcon.src = "<?php echo base_url('assets/css/img/iconos/sol.png'); ?>";
         } else {
             body.classList.add("dark-modes");
             localStorage.setItem("modo", "oscuro");
-            languageImage.src = "<?php echo base_url('assets/img/iconos/traductor2.png'); ?>";
-            solIcon.src = "<?php echo base_url('assets/img/iconos/luna.png'); ?>";
+            languageImage.src = "<?php echo base_url('assets/css/img/iconos/traductor2.png'); ?>";
+            solIcon.src = "<?php echo base_url('assets/css/img/iconos/luna.png'); ?>";
         }
     });
 });
