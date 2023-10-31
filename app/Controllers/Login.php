@@ -11,7 +11,7 @@ class Login extends BaseController
         $user = session('user');
 
         if (!$user || $user->id_user < 1) {
-            return redirect()->to('login');
+            return view('main/form/login');
         } else {
             return view('main/form/dashboard');
         }
