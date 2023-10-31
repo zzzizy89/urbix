@@ -8,9 +8,15 @@ class Login extends BaseController
 {
     public function index()
     {
-        
-        return view('main/form/login');
+        $user = session('user');
+
+        if (!$user || $user->id_user < 1) {
+            return redirect()->to('login');
+        } else {
+            return view('main/form/dashboard');
+        }
     }
+
 
     public function do_login()
 {

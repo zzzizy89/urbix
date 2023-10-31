@@ -12,11 +12,12 @@ use App\Models\Carritos;
 use App\Models\Producto;
 
 
-class Comprass extends Controller{
+class Comprass extends Controller
+{
     public function index()
     {
         $user = session('user');
-    
+
         if (!$user || $user->id_user < 1) {
             return redirect()->to('login');
         } else {
@@ -25,17 +26,50 @@ class Comprass extends Controller{
             $user = session('user');
             $id_user = $user->id_user;
             $carritoVacio = $carritosModel->where('id_user', $id_user)->countAllResults() === 0;
-    
+
             if ($carritoVacio) {
                 // Si el carrito está vacío, establece un mensaje de sesión y redirige a carrito2
                 session()->setFlashdata('message', 'Necesitas productos en el carrito para realizar una compra.');
                 return redirect()->to(base_url('carrito2'));
             }
+
+            // Calcular el total_c antes de cargar la vista
+            $totalCompra = $this->calcularTotalCompra($id_user);
+
+            // Pasar el valor de totalC a la vista
+            $data['totalC'] = $totalCompra;
+
+            // Cargar la vista "compras" con el valor de totalC
+            return view('main/form/compras', $data);
         }
-    
-        // Si el carrito no está vacío, mostrar la vista "compras"
-        return view('main/form/compras');
     }
+
+    // Función para calcular el total de la compra
+    private function calcularTotalCompra($id_user)
+    {
+        $carritosModel = new Carritos();
+        $productoModel = new Producto();
+
+        $totalCompra = 0;
+
+        // Obtener los productos en el carrito
+        $carritos = $carritosModel->where('id_user', $id_user)->findAll();
+
+        foreach ($carritos as $carrito) {
+            // Obtener información del producto
+            $producto = $productoModel->find($carrito['id_producto']);
+
+            // Calcular el subtotal del producto
+            $subtotal = $producto['precio'] * $carrito['cantidad'];
+
+            // Sumar el subtotal al total de la compra
+            $totalCompra += $subtotal;
+        }
+
+        return $totalCompra;
+    }
+
+
     
 
 public function cancelar()
@@ -87,10 +121,10 @@ public function check()
         // Obtener el usuario actual desde la sesión
         $user = session('user');
         $id_user = $user->id_user;
-        
-        // Inicializar el total de la compra
-        $totalCompra = 0;
-        
+
+    // Calcular el total de la compra
+    $totalCompra = $this->calcularTotalCompra($id_user);
+    
         // Obtener los productos en el carrito
         $carritos = $carritosModel->where('id_user', $id_user)->findAll();
     
@@ -105,15 +139,10 @@ public function check()
         foreach ($carritos as $carrito) {
             // Obtener información del producto
             $producto = $productoModel->find($carrito['id_producto']);
-        
+    
             // Calcular el subtotal del producto
             $subtotal = $producto['precio'] * $carrito['cantidad'];
-        
-            // Sumar el subtotal al total de la compra
-            $totalCompra += $subtotal;
-        
-        
-
+    
             // Registrar el detalle de la compra con el ID de compra correcto
             $detalleCompraModel->insert([
                 'id_compras' => $id_compra, // Usar el ID de compra generado
@@ -122,7 +151,7 @@ public function check()
                 'precio_unitario' => $producto['precio'],
                 'subtotal' => $subtotal
             ]);
-        
+    
             // Eliminar el producto del carrito
             $carritosModel->delete($carrito['id_carrito']);
         }
