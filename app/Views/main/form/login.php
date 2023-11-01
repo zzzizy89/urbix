@@ -36,6 +36,7 @@
 				<div class="box">
 						<form method="post" action="<?= base_url(" login ");?>" class="form">
 						<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?> ">X</a></div>
+						<a href="#" id="modoToggle"><span><img src="<?php echo base_url('assets/img/iconos/sol.png')?>" alt=""></span></a>
 								<h2>Iniciar Sesión</h2>
 								<div class="form-inputs">
 										<div class="form-label">
@@ -84,6 +85,32 @@ function startMarquee() {
 startMarquee();
 
 		</script>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+  const modoToggle = document.getElementById("modoToggle");
+  const body = document.body;
+
+  // Verificar si el usuario ya tiene un modo seleccionado
+  if (localStorage.getItem("modo") === "oscuro") {
+    body.classList.add("dark-mode");
+  }
+
+  modoToggle.addEventListener("click", function () {
+    // Alternar entre los modos claro y oscuro
+    if (body.classList.contains("dark-mode")) {
+      body.classList.remove("dark-mode");
+      localStorage.setItem("modo", "claro");
+    } else {
+      body.classList.add("dark-mode");
+      localStorage.setItem("modo", "oscuro");
+    }
+  });
+});
+
+
+</script>
 
 		</body>
 </html>

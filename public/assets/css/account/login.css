@@ -94,7 +94,7 @@
 body {
 	min-height: 100vh;
 	width: 100%;
-	background: black;
+	background: white;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -103,6 +103,53 @@ body {
 	justify-content: center;
 	flex-wrap: nowrap;
 }
+
+/* Definición de clases para el modo oscuro y claro */
+body.dark-mode {
+	background-color: black;
+	color: white;
+}
+
+
+
+body.dark-mode .form {
+	background-color: #f9f9f9;
+
+}
+
+body.dark-mode .form-label input:focus {
+	background-color: var(--color-primary);
+	color: rgb(228, 21, 21);
+}
+
+body.dark-mode #modoToggle {
+	background-color: #000;
+	/* Cambia el color de fondo a tu preferencia */
+	color: #f9f9f9;
+}
+
+body.dark-mode .marquee__inner span {
+	background-color: #f9f9f9;
+	color: #000;
+}
+
+body.dark-mode h2 {
+	color: #0D1117;
+}
+
+body.dark-mode .links a {
+	color: #000;
+}
+
+body.dark-mode .links a:nth-child(2) {
+	color: grey;
+}
+
+/* Otras reglas de estilo aquí */
+
+/* Resto de tu CSS... */
+
+
 
 /* Estilo para el contenedor de la alerta */
 .alert {
@@ -133,7 +180,7 @@ body {
 .close-button {
 	position: absolute;
 	top: 5px;
-	right: 10px;
+	left: 5px;
 	width: 20px;
 	height: 20px;
 	background-color: #ff0000;
@@ -161,6 +208,42 @@ body {
 	/* Cambia el color de fondo al pasar el mouse */
 }
 
+#modoToggle {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	/* Alinea el icono en la esquina superior derecha */
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	z-index: 20;
+	/* Asegúrate de que esté por encima del formulario */
+
+	/* Estilo para el ícono de modo oscuro */
+	background-color: #fff;
+	/* Cambia el color de fondo a tu preferencia */
+	color: #fff;
+	/* Cambia el color del ícono */
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#modoToggle img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* Ajusta el tamaño de la imagen dentro del círculo */
+}
+
+#modoToggle:hover {
+	background-color: #777;
+	/* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
 .box {
 	position: relative;
 	width: 380px;
@@ -172,7 +255,7 @@ body {
 .form {
 	position: absolute;
 	inset: 2px;
-	background-color: #fff;
+	background-color: #0D1117;
 	border-radius: 10px;
 	padding: 30px;
 	display: flex;
@@ -181,15 +264,18 @@ body {
 	z-index: 10;
 }
 
+
+
 h2 {
 	font-size: 32px;
 	font-weight: 900;
-	color: #000;
+	color: #f8f8f8;
 	letter-spacing: 2.5px;
 	text-align: center;
 	font-family: "Nevolasty-Light";
-
 }
+
+
 
 .form-inputs {
 	display: flex;
@@ -242,7 +328,7 @@ h2 {
 }
 
 .links a:nth-child(2) {
-	color: #000;
+	color: #f9f9f9;
 }
 
 input[type="submit"] {
@@ -277,7 +363,7 @@ input[type="submit"]:hover {
 }
 
 .marquee__inner span {
-	color: #fff;
+	background-color: #000000;
 	font-family: "Headshots";
 	font-size: 2rem;
 }

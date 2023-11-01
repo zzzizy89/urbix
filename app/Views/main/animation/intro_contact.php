@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">Opt for excellence over abundance.</div>
-            <div class="text text-2">Opt for excellence over abundance.</div>
-            <div class="text text-3">Opt for excellence over abundance.</div>
-            <div class="text text-4">Opt for excellence over abundance.</div>
-            <div class="text text-5">Opt for excellence over abundance.</div>
-            <div class="text text-6">Opt for excellence over abundance.</div>
-            <div class="text text-7">Opt for excellence over abundance.</div>
-            <div class="text text-8">Opt for excellence over abundance.</div>
-            <div class="text text-9">Opt for excellence over abundance.</div>
-            <div class="text text-10">Opt for excellence over abundance.</div>
-            <div class="text text-11">Opt for excellence over abundance.</div>
+            <div class="text text-1">Opt for excellence.</div>
+            <div class="text text-2">Opt for excellence.</div>
+            <div class="text text-3">Opt for excellence.</div>
+            <div class="text text-4">Opt for excellence.</div>
+            <div class="text text-5">Opt for excellence.</div>
+            <div class="text text-6">Opt for excellence.</div>
+            <div class="text text-7">Opt for excellence.</div>
+            <div class="text text-8">Opt for excellence.</div>
+            <div class="text text-9">Opt for excellence.</div>
+            <div class="text text-10">Opt for excellence.</div>
+            <div class="text text-11">Opt for excellence.</div>
         </div>
     </div>
 
