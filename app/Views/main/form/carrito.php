@@ -26,25 +26,12 @@
                 <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
                 <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
                 <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
-
-                  <div class="container-add-cart">
-        <div class="container-quantity">
-            <input
-                name="cantidad"  
-                placeholder="1"
-                value="1"
-                min="1"
-                class="input-quantity"
-            />
-            <div class="btn-increment-decrement">
-                <i class="fa-solid fa-chevron-up" id="increment"></i>
-                <i class="fa-solid fa-chevron-down" id="decrement"></i>
-            </div>
+             <input name="cantidad" placeholder="1" value="1" min="1" >
         </div>
     </div>
             
             <button type="submit" class="boton-item">Agregar al Carrito</button>
-            <a href="<?= base_url('comprardir/')?>" class="btn btn-success" type="button">Comprar</a>
+            <a href="<?= base_url('compra_dir/')?>" class="btn btn-success" type="button">Comprar</a>
 
         </form>
             </div>

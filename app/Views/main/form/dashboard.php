@@ -1,5 +1,5 @@
 <?php
-$is_admin = (session('user')->email == "tiagocomba@gmail.com") || (session('user')->email == "ezequielmonteverde@gmail.com");
+$is_admin = (session('user')->rol == 1);
 // verifica si el usuario es administrador
 ?>
 
@@ -27,7 +27,7 @@ $is_admin = (session('user')->email == "tiagocomba@gmail.com") || (session('user
                 <form action="<?= base_url('update') ?>" method="post" enctype="multipart/form-data">
                     <label for="new-username">New Username:</label>
                     <input type="text" id="new-username" name="new_username" required>
-                    <label for "new-email">New Email:</label>
+                    <label for= "new-email">New Email:</label>
                     <input type="text" id="new-email" name="new_email" required>
                     <label for="new-bio">New Bio:</label>
                     <textarea id="new-bio" name="new_bio" rows="4"></textarea>
