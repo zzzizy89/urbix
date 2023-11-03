@@ -29,6 +29,8 @@
         
             
             <button type="submit" class="boton-item">Agregar al Carrito</button>
+            <a href="<?= base_url('comprardir/')?>" class="btn btn-success" type="button">Comprar</a>
+
         </form>
             </div>
         <?php endforeach; ?>

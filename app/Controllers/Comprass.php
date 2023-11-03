@@ -14,7 +14,7 @@ use App\Models\Producto;
 
 class Comprass extends Controller
 {
-    public function index()
+    public function index() //carrito
     {
         $user = session('user');
 
@@ -45,7 +45,7 @@ class Comprass extends Controller
     }
 
     // Función para calcular el total de la compra
-    private function calcularTotalCompra($id_user)
+    private function calcularTotalCompra($id_user) //carrito
     {
         $carritosModel = new Carritos();
         $productoModel = new Producto();
@@ -163,4 +163,5 @@ public function check()
         return redirect()->to(base_url('carrito2'));
         
 }
-}
+
+}       
