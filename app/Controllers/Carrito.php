@@ -26,7 +26,8 @@ class Carrito extends Controller
 {
     // Obtener los datos del producto desde la segunda vista
     $id = $this->request->getVar('id_producto');
- 
+    $cantidad = $this->request->getVar('cantidad');
+
     
     // Obtener id_user desde la sesión
     $id_user = session('user')->id_user;
@@ -42,18 +43,18 @@ class Carrito extends Controller
  
     if ($producto_en_carrito) {
         // Si el producto ya está en el carrito, actualizar la cantidad y recalcular el total
-        $nuevaCantidad = $producto_en_carrito['cantidad'] + 1;
+        $nuevaCantidad = $producto_en_carrito['cantidad'] + $cantidad;
 
 
         // Si el producto ya está en el carrito, actualizar la cantidad
         $carrito->update($producto_en_carrito['id_carrito'], ['cantidad' => $nuevaCantidad]);
         
     } else {
-        // Si el producto no está en el carrito, agregar uno nuevo con cantidad 1 
+        // Si el producto no está en el carrito, agregar uno nuevo con la cantidad
         $datos = [
             'id_user' => $id_user,
             'id_producto' => $id,
-            'cantidad' => 1,
+            'cantidad' => $cantidad,
         ];
 
         // Insertar nuevo producto en el carrito
