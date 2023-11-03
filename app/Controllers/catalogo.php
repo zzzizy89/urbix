@@ -13,11 +13,13 @@ class catalogo extends BaseController
         
     }
 
-    public function completado()
-    {
-        
-        return view('main/catalogo/completado');
-        
+    public function completado($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7) {
+        // Realiza las acciones necesarias con los parámetros
+        echo $parametro1 . ' ' . $parametro2 . ' ' . $parametro3 . ' ' . $parametro4 . ' ' . $parametro5 . ' ' . $parametro6 . ' ' . $parametro7;
+        // Puedes mostrar el resultado o redirigir a una vista si es necesario
+        // return view('main/catalogo/completado');
     }
+    
+    
 }
 

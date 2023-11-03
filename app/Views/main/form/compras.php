@@ -73,14 +73,23 @@
             alert('Pago cancelado');
         },
         onApprove: function(data, actions) {
-        actions.order.capture().then(function(details) {
-            // Mostrar el formulario de compra oculto
-            document.getElementById('paypal-form').style.display = 'block';
+    actions.order.capture().then(function(details) {
+        // Obtener el valor de los campos del formulario
+        var pais = document.getElementById('pais').value;
+        var provincia = document.getElementById('provincia').value;
+        var ciudad = document.getElementById('ciudad').value;
+        var barrio = document.getElementById('barrio').value;
+        var calle = document.getElementById('calle').value;
+        var numero = document.getElementById('numero').value;
+        var descripcion_casa = document.getElementById('descripcion_casa').value;
 
-            // Enviar el formulario de compra después de la aprobación de PayPal
-            document.getElementById('confirmar-compra-form').submit();
-        });
-    }
-}).render('#paypal-button-conteiner');
+        // Construye la URL dinámica con separadores ("/")
+        var urlDinamica = "<?= base_url('completado') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
+
+        // Redirige al usuario a la URL basada en los valores del formulario
+        window.location.href = urlDinamica;
+            });
+        }
+    }).render('#paypal-button-conteiner');
 </script>
 </html>

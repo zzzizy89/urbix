@@ -79,7 +79,7 @@ $routes->get('inicio', 'home::inicio');
 $routes->get('inicio', 'Productos::inicio');
 $routes->get('about', 'Productos::about');
 $routes->get('catalogo', 'catalogo::shop');
-$routes->get('completado', 'catalogo::completado');
+$routes->get('completado/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'catalogo::completado/$1/$2/$3/$4/$5/$6/$7');
 $routes->get('form_email', 'Email::index');
 $routes->post('enviar_email', 'Email::enviar_email');
 $routes->get('inicio', 'Emaill::index');
