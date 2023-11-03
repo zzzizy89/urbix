@@ -80,7 +80,7 @@ public function check()
     {
         return view('main/catalogo/checkout');
 }
-    public function confirmarCompra()
+    public function confirmarCompra($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7)
     {
         $paisModel = new Pais();
         $provModel = new Provincia();
@@ -90,13 +90,13 @@ public function check()
        
 
         // Obtener los datos del formulario
-        $pais = $this->request->getPost('pais');
-        $provincia = $this->request->getPost('provincia');
-        $ciudad = $this->request->getPost('ciudad');
-        $barrio = $this->request->getPost('barrio');
-        $calle = $this->request->getPost('calle');
-        $numero = $this->request->getPost('numero');
-        $descripcion_casa = $this->request->getPost('descripcion_casa');
+        $pais = $parametro1;
+        $provincia = $parametro2;
+        $ciudad = $parametro3;
+        $barrio = $parametro4;
+        $calle =  $parametro5;
+        $numero = $parametro6;
+        $descripcion_casa = $parametro7;
 
         $id_pais= $paisModel->insert(['pais' => $pais]);
         $id_provincia= $provModel->insert(['provincia' => $provincia,'id_pais'=>$id_pais]);

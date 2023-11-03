@@ -15,7 +15,7 @@
         <!-- Formulario para la información de envío y compra PayPal -->
         <div class="informacion-envio">
             <h2>Información de Envío</h2>
-            <form method="post" action="<?php echo base_url('realizar_compra'); ?>">
+            <form >
 
                 <label for="pais">País:</label>
                 <input type="text" id="pais" name="pais" required>
@@ -39,7 +39,6 @@
                 <label for="descripcion_casa">Descripción de la Casa:</label>
                 <textarea id="descripcion_casa" name="descripcion_casa"></textarea>
 
-                <button type="submit" class="boton-comprar"  style="">Confirmar Compra</button>
                 <a href="<?= base_url('cancelar/compra')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
            
             </form>
@@ -84,7 +83,7 @@
         var descripcion_casa = document.getElementById('descripcion_casa').value;
 
         // Construye la URL dinámica con separadores ("/")
-        var urlDinamica = "<?= base_url('completado') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
+        var urlDinamica = "<?= base_url('realizar_compra') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
 
         // Redirige al usuario a la URL basada en los valores del formulario
         window.location.href = urlDinamica;

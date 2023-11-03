@@ -93,4 +93,4 @@ $routes->post('carrito2/actualizarcar/', 'Carrito2::actualizarcar');
 $routes->get('comprar/', 'Comprass::index');
 $routes->get('cancelar/compra/', 'Carrito2::index');
 $routes->get('checkout', 'Comprass::check');
-$routes->post('realizar_compra/', 'Comprass::confirmarCompra');
+$routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7');
