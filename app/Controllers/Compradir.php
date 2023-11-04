@@ -132,8 +132,14 @@ public function Compradirtotal()
         // Actualizar el total en la compra con el valor calculado
         $comprasModel->update($id_compra, ['total_c' => $totalCompra]);
 
+      // Borrar sesiones específicas
+        session()->remove('totalCompra');
+        session()->remove('precio');
+        session()->remove('cantidad');
+        session()->remove('id_producto');
+
         // Redirigir a la página de confirmación de compra
-        return redirect()->to(base_url('carrito2'));
+        return redirect()->to(base_url('carrito'));
     
 }
 
