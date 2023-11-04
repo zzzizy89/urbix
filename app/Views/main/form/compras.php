@@ -59,7 +59,7 @@
         },
         createOrder: function(data, actions) {
             // Aquí puedes obtener el valor dinámico de totalC y asignarlo a 'value'
-            var totalC = <?= $totalC ?>;
+            var totalC = "<?= $totalC ?>";
             return actions.order.create({
                 purchase_units: [{
                     amount: {
@@ -82,11 +82,25 @@
         var numero = document.getElementById('numero').value;
         var descripcion_casa = document.getElementById('descripcion_casa').value;
 
+         // Verificar si alguno de los campos está vacío
+    if (
+        pais === '' ||
+        provincia === '' ||
+        ciudad === '' ||
+        barrio === '' ||
+        calle === '' ||
+        numero === '' ||
+        descripcion_casa === ''
+    ) {
+        // Mostrar un mensaje de error
+        alert('Completa todos los campos antes de proceder.');
+    } else {
         // Construye la URL dinámica con separadores ("/")
         var urlDinamica = "<?= base_url('realizar_compra') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
 
         // Redirige al usuario a la URL basada en los valores del formulario
         window.location.href = urlDinamica;
+    }
             });
         }
     }).render('#paypal-button-conteiner');

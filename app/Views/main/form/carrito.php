@@ -26,13 +26,12 @@
                 <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
                 <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
                 <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
-             <input name="cantidad" placeholder="1" value="1" min="1" >
+                <input type="number" name="cantidad" value="1" min="1">
         </div>
     </div>
             
             <button type="submit" class="boton-item">Agregar al Carrito</button>
-            <a href="<?= base_url('compra_dir/')?>" class="btn btn-success" type="button">Comprar</a>
-
+            <a href="<?= base_url('compra_dir/' . $producto['id_producto']) ?>?cantidad=1" class="btn btn-success" type="button">Comprar</a>
         </form>
             </div>
         <?php endforeach; ?>
@@ -41,6 +40,23 @@
     </section>
     
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var cantidadInput = document.querySelector('input[name="cantidad"]');
+        var comprarButton = document.querySelector('.btn-success');
+        
+        comprarButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            
+            var cantidad = cantidadInput.value;
+            var urlBase = "<?= base_url('compra_dir/' . $producto['id_producto']) ?>";
+            var nuevoEnlace = urlBase + '?cantidad=' + cantidad;
+            
+            window.location.href = nuevoEnlace;
+        });
+    });
+</script>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var carritoForm = document.getElementById('carritoForm');

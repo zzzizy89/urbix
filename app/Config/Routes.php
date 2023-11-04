@@ -94,5 +94,7 @@ $routes->get('comprar/', 'Comprass::index');
 $routes->get('cancelar/compra/', 'Carrito2::index');
 $routes->get('checkout', 'Comprass::check');
 $routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7');
-$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::Compradir/$1/$2/$3/$4/$5/$6/$7');
-$routes->get('compra_dir/', 'Compradir::index');
+$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7');
+$routes->get('compra_dir/(:num)', 'Compradir::index/$1');
+
+
