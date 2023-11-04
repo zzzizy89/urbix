@@ -18,8 +18,8 @@
         <div class="contenedor-items">
         <?php foreach ($productos as $producto): ?>
             <div class="item">
-            <form method="post" action="<?php echo base_url('carrito/guar'); ?>" id="carritoForm">
-            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
+            <form method="post" action="<?php echo base_url('compradirca'); ?>" id="carritoForm">
+                <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
                 <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
                 <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
                 <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
@@ -27,12 +27,10 @@
                 <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
                 <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
                 <input type="number" name="cantidad" value="1" min="1">
-        </div>
-    </div>
-            
-            <button type="submit" class="boton-item">Agregar al Carrito</button>
-            <a href="<?= base_url('compra_dir/' . $producto['id_producto']) ?>?cantidad=1" class="btn btn-success" type="button">Comprar</a>
-        </form>
+                <button type="submit" formmethod="post" class="boton-item" onclick="setFormAction('carrito/guar')">Agregar al Carrito</button>
+                <button type="submit" formmethod="post" class="btn btn-success">Comprar</button>
+            </form>
+
             </div>
         <?php endforeach; ?>
     </div>
@@ -41,20 +39,11 @@
     
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var cantidadInput = document.querySelector('input[name="cantidad"]');
-        var comprarButton = document.querySelector('.btn-success');
-        
-        comprarButton.addEventListener('click', function (event) {
-            event.preventDefault();
-            
-            var cantidad = cantidadInput.value;
-            var urlBase = "<?= base_url('compra_dir/' . $producto['id_producto']) ?>";
-            var nuevoEnlace = urlBase + '?cantidad=' + cantidad;
-            
-            window.location.href = nuevoEnlace;
-        });
-    });
+    function setFormAction(action) {
+        var form = document.getElementById('carritoForm');
+        form.action = "<?php echo base_url(); ?>/" + action;
+        form.submit();
+    }
 </script>
 
 <script>

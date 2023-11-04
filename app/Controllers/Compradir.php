@@ -12,52 +12,59 @@ use App\Models\Producto;
 
 class Compradir extends Controller
 {
-    private $id_producto;
-    private $cantidad;
-
-    public function index($id_producto)
+    public function index()
     {
         $user = session('user');
     
         if (!$user || $user->id_user < 1) {
             return redirect()->to('login');
         } else {
-            // Verifica si $id_producto es nulo y maneja ese caso
-            if ($id_producto === null) {
-                echo 'ID de producto no proporcionado.';
-                // Puedes redirigir o mostrar un mensaje de error, según tus necesidades.
-            } else {
-                $cantidad = $this->request->getVar('cantidad');
-                $productoModel = new Producto();
+            // Obtener el valor de totalCompra desde la sesión
+            $totalCompra = session()->get('totalCompra');
     
-                // Obtén el precio del producto desde la consulta
-                $producto = $productoModel
-                ->select('precio')
-                ->where('id_producto', $id_producto)
-                ->first();
+            // Pasar el valor de totalCompra a la vista
+            $data['totalC'] = $totalCompra;
     
-                if ($producto) {
-                    $precio = $producto['precio'];
-                    // Calcula el total de la compra
-                    $totalCompra = $cantidad * $precio;
-    
-                    // Pasar el valor de totalC a la vista
-                    $data['totalC'] = $totalCompra;
-
-                    return view("main/form/compradir",$data);                 
-
-                } else {
-                    echo 'Producto no encontrado.';
-                    // Puedes redirigir o mostrar un mensaje de error, según tus necesidades.
-                }
-            }
+            return view("main/form/compradir", $data);
         }
     }
+
     
+public function Compradirtotal()
+{
+    $cantidad = $this->request->getVar('cantidad');
+    $id_producto = $this->request->getVar('id_producto');
+    
+    
+        $productoModel = new Producto();
+
+        // Obtén el precio del producto desde la consulta
+        $producto = $productoModel
+        ->select('precio')
+        ->where('id_producto', $id_producto)
+        ->first();
+
+        if ($producto !== null) {
+            $precio = $producto['precio'];
+            // Calcula el total de la compra
+            $totalCompra = $cantidad * $precio;
+            // Guardar el valor de totalCompra en la sesión
+            session()->set('totalCompra', $totalCompra);
+            session()->set('precio', $precio);
+            session()->set('cantidad', $cantidad);
+            session()->set('id_producto', $id_producto);
+
+            return redirect()->to('compra_dir');
+        } else {
+            // Manejo de error si $producto es nulo
+            return redirect()->to('carrito');
+        }
+    }
 
     
     public function Compradirecta($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7)
 {
+    
     $paisModel = new Pais();
     $provModel = new Provincia();
     $ciudadModel = new Ciudad();
@@ -96,16 +103,11 @@ class Compradir extends Controller
     $user = session('user');
     $id_user = $user->id_user;
 
-    $producto = $productoModel
-        ->select('precio')
-        ->where('id_producto', $id_producto)
-        ->first();
-
-    if ($producto) {
-        $precio = $producto['precio'];
-        // Calcula el total de la compra
-        $totalCompra = $cantidad * $precio;
-
+    $id_producto = session()->get('id_producto');
+    $cantidad = session()->get('cantidad');
+    $totalCompra = session()->get('totalCompra');
+    $precio = session()->get('precio');
+       
         // Inserta la compra
         $id_compra = $comprasModel->insert([
             'id_user' => $id_user,
@@ -114,7 +116,7 @@ class Compradir extends Controller
             'total_c' => $totalCompra,
             'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
         ]);
-
+        
         // Calcular el subtotal del producto
         $subtotal = $precio * $cantidad;
 
@@ -132,10 +134,7 @@ class Compradir extends Controller
 
         // Redirigir a la página de confirmación de compra
         return redirect()->to(base_url('carrito2'));
-    } else {
-        echo 'Producto no encontrado.';
-        // Puedes redirigir o mostrar un mensaje de error, según tus necesidades.
-    }
+    
 }
 
 }

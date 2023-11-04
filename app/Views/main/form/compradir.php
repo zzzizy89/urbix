@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -78,7 +80,7 @@
                 alert('Completa todos los campos antes de proceder.');
             } else {
                 // Aquí puedes obtener el valor dinámico de totalC y asignarlo a 'value'
-                var totalC = "<?= $totalC ?>";
+                var totalC = <?= $totalC ?>;
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
