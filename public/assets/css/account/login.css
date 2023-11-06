@@ -102,6 +102,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: nowrap;
+
 }
 
 /* Definición de clases para el modo oscuro y claro */
@@ -145,11 +146,39 @@ body.dark-mode .links a:nth-child(2) {
 	color: grey;
 }
 
+body.dark-mode .close-button a {
+	color: #000;
+	text-decoration: none;
+}
+
 /* Otras reglas de estilo aquí */
 
 /* Resto de tu CSS... */
 
+.cursor {
+	pointer-events: none;
+	position: fixed;
+	padding: 0.3rem;
+	background-color: red;
+	/* Cambia este color al que desees en el modo claro */
+	border-radius: 50%;
+	z-index: 11;
+	transition: transform 0.3s ease;
 
+}
+
+.dark-mode .cursor {
+	background-color: red;
+	/* Cambia este color al que desees en el modo oscuro */
+
+}
+
+
+/* Efecto de escala para el cursor al pasar el mouse sobre elementos .hover-this */
+
+.hover-this:hover~.cursor {
+	transform: translate(-50%, -50%) scale(8);
+}
 
 /* Estilo para el contenedor de la alerta */
 .alert {
@@ -183,7 +212,7 @@ body.dark-mode .links a:nth-child(2) {
 	left: 5px;
 	width: 20px;
 	height: 20px;
-	background-color: #ff0000;
+
 	/* Color de fondo de la cruz */
 	color: #fff;
 	/* Color del texto de la cruz */
@@ -201,12 +230,10 @@ body.dark-mode .links a:nth-child(2) {
 .close-button a {
 	text-decoration: none;
 	color: #fff;
+	font-size: 20px;
 }
 
-.close-button:hover {
-	background-color: #ff5555;
-	/* Cambia el color de fondo al pasar el mouse */
-}
+
 
 #modoToggle {
 	position: absolute;
