@@ -142,5 +142,15 @@ public function Compradirtotal()
         return redirect()->to(base_url('carrito'));
     
 }
+public function cancelcompradir()
+{
+    // Borrar sesiones específicas
+    session()->remove('totalCompra');
+    session()->remove('precio');
+    session()->remove('cantidad');
+    session()->remove('id_producto');
 
+    // Redirigir a la página de confirmación de compra
+    return redirect()->to(base_url('carrito'));
+}
 }

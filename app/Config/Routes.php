@@ -97,5 +97,6 @@ $routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)',
 $routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7');
 $routes->get('compra_dir/', 'Compradir::index');
 $routes->post('compradirca/', 'Compradir::Compradirtotal');
+$routes->get('cancelcompradir/', 'Compradir::cancelcompradir');
 
 

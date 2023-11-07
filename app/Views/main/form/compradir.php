@@ -41,7 +41,7 @@
                 <label for="descripcion_casa">Descripción de la Casa:</label>
                 <textarea id="descripcion_casa" name="descripcion_casa"></textarea>
 
-                <a href="<?= base_url('cancelar/compra')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
+                <a href="<?= base_url('cancelcompradir')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
            
             </form>
         </div>
