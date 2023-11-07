@@ -4,103 +4,128 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-	font-family: "sans-serif";
-  
+    font-family: "sans-serif";
+
+}
+
+:root {
+
+    --color-primary: #0D1117;
+    --color-secondary: #f9f9f9;
+    --color-terciary: #30353d;
+    --color-terciary-translucent: #30353d97;
 }
 
 @font-face {
-	font-family: "Mars Model";
-	src: url("../fonts/MarsModel.ttf") format("truetype");
+    font-family: "Mars Model";
+    src: url("../fonts/MarsModel.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Arame-Thin";
-	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+    font-family: "Arame-Thin";
+    src: url("../fonts/Arame-Thin.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "MonumentExtended";
-	src: url("../fonts/MonumentExtended.otf") format("truetype");
+    font-family: "MonumentExtended";
+    src: url("../fonts/MonumentExtended.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "BasementGrotesque";
-	src: url("../fonts/BasementGrotesque.otf") format("truetype");
-}
-
-
-@font-face {
-	font-family: "Nevolasty-Light";
-	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+    font-family: "BasementGrotesque";
+    src: url("../fonts/BasementGrotesque.otf") format("truetype");
 }
 
 
 @font-face {
-	font-family: "BigCityVibes";
-	src: url("../fonts/BigCityVibes.otf") format("truetype");
+    font-family: "Nevolasty-Light";
+    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "BigCityVibes";
+    src: url("../fonts/BigCityVibes.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Headshots";
-	src: url("../fonts/Headshots.otf") format("truetype");
+    font-family: "Headshots";
+    src: url("../fonts/Headshots.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "DistortionDosAnalogue";
-	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+    font-family: "DistortionDosAnalogue";
+    src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "PIGARNOS-NEUE-Regular";
-	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+    font-family: "PIGARNOS-NEUE-Regular";
+    src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "StretchPro";
-	src: url("../fonts/StretchPro.otf") format("truetype");
+    font-family: "StretchPro";
+    src: url("../fonts/StretchPro.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "kenyan-coffee";
-	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+    font-family: "kenyan-coffee";
+    src: url("../fonts/kenyan-coffee.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Akira-Expanded";
-	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+    font-family: "Akira-Expanded";
+    src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+body,
+html {
+
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 /* navbar section starts here */
 
-.container-navbar {
+.container {
     width: 60%;
     max-width: 800px;
     margin: 0 auto;
 }
+
 header {
     height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    background: #0D1117;
+    background: var(--color-terciary-translucent);
     border-radius: 10px;
- 
+
 
 }
+
 header .header-left {
     display: flex;
     align-items: center;
 }
+
 header .header-left .logo {
     width: 140px;
 }
+
 header .header-left nav {
     margin-left: 50px;
 }
+
 header .header-left nav ul {
     display: flex;
 }
+
 nav ul li a {
     display: block;
     color: #cfd9e0;
@@ -108,14 +133,14 @@ nav ul li a {
     font-family: "Arame-Thin";
     padding: 5px 10px;
     transition: 0.2s;
-   
+
 }
 
 header nav ul {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    width: 55%; 
+    align-items: center;
+
 }
 
 nav ul li {
@@ -127,19 +152,23 @@ nav ul li a:hover,
 nav ul li a.active {
     color: #fff;
 }
+
 nav .login-signup {
     display: none;
 }
+
 header .header-right {
     display: flex;
     align-items: center;
-    
+
 }
+
 header .login-signup {
     color: #cfd9e0;
     font-weight: bold;
     font-family: "Arame-Thin";
 }
+
 header .login-signup a {
     display: inline-block;
     color: #0b2239;
@@ -148,25 +177,30 @@ header .login-signup a {
     border-radius: 5px;
     font-family: "Arame-Thin";
 }
+
 header .header-right .hamburger {
     margin-left: 20px;
     cursor: pointer;
     display: none;
 }
+
 header .header-right .hamburger div {
     width: 30px;
     height: 2px;
     margin: 6px 0;
     background: #fff;
 }
+
 @media only screen and (max-width: 1120px) {
     header {
         padding: 0 4px;
-        
+
     }
+
     header .header-right .hamburger {
         display: block;
     }
+
     header .header-left nav {
         margin: 0;
         position: absolute;
@@ -179,26 +213,79 @@ header .header-right .hamburger div {
         text-align: center;
         border-radius: 10px;
         justify-content: center;
-        z-index: -1;
+        z-index: 100;
     }
+
     header .header-left nav.active {
         top: 90px;
-     
+
     }
+
     header .header-left nav ul {
         display: inline-block;
-       
-       
+
+
     }
 }
+
 @media only screen and (max-width: 500px) {
     nav .login-signup {
         display: block;
         margin-top: 20px;
     }
+
     header .header-right .login-signup {
         display: none;
     }
 }
 
 /* navbar section ends here */
+
+/* home section starts here */
+
+.home {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    width: 100%;
+    height: 100vh;
+    /* Make the container cover the full viewport height */
+    background: var(--color-primary);
+}
+
+.phrase {
+    text-align: center;
+    /* Center the text inside the .phrase container */
+}
+
+.phrase h2 {
+    font-size: 44px;
+    font-family: "StretchPro";
+    color: var(--color-terciary);
+    border-right: 4px solid;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .phrase h2 {
+        font-size: 18px;
+        /* Change the font size for smaller screens */
+    }
+}
