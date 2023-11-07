@@ -49,11 +49,40 @@
    
 <!-- navbar section ends here -->
 
-<div class="home">
+<!-- home section starts here -->
+
+<section class="home">
     <div class="phrase">
         <h2 id="typing-text">what you were looking for</h2>
     </div>
-</div>
+</section>
+
+<!-- home section ends here -->
+
+<!-- about section starts here -->
+
+<section class="about">
+<div class="parallax" id="parallax">
+            <!-- Agrega imágenes de fondo aquí -->
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
+            
+            <!-- Agrega más imágenes de fondo si es necesario -->
+        </div>
+        <div class="content">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum justo at malesuada. Nullam dictum arcu at.</p>
+        </div>
+</section>
+
+
+
 
 
 <!-- script for navbar -->
@@ -68,7 +97,7 @@
     <!-- script para el h2 de home -->
 
     <script>
-        const phrases = ["Your first phrase here", "Your second phrase here", "Your third phrase here"];
+        const phrases = ["unique", "quality", "essential"];
 const textElement = document.getElementById("typing-text");
 let phraseIndex = 0;
 
@@ -78,6 +107,38 @@ function changeText() {
 }
 
 textElement.addEventListener("animationiteration", changeText);
+
+    </script>
+
+    <!-- script para about images -->
+
+    <script>
+const images = document.querySelectorAll(".background-image");
+
+function getRandomPosition(image) {
+    const x = Math.random() * 20; // Posición X aleatoria en porcentaje
+    const y = Math.random() * 150; // Posición Y aleatoria en porcentaje
+    image.style.left = x + "%";
+    image.style.top = y + "%";
+}
+
+images.forEach(getRandomPosition);
+
+const parallax = document.querySelector(".parallax");
+
+parallax.addEventListener("mousemove", (e) => {
+    const { clientX, clientY } = e;
+
+    images.forEach((image, index) => {
+        const speed = (index + 1) * 2; // Ajusta la velocidad del paralaje
+        const xOffset = (window.innerWidth / 2 - clientX) * speed / 100;
+        const yOffset = (window.innerHeight / 2 - clientY) * speed / 100;
+
+        image.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+    });
+});
+
+
 
     </script>
 </body>

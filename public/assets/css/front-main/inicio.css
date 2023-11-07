@@ -98,6 +98,7 @@ html {
 }
 
 header {
+    margin-top: 20px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -195,10 +196,12 @@ header .header-right .hamburger div {
     header {
         padding: 0 4px;
 
+
     }
 
     header .header-right .hamburger {
         display: block;
+
     }
 
     header .header-left nav {
@@ -267,7 +270,7 @@ header .header-right .hamburger div {
     border-right: 4px solid;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 4s steps(40, end) infinite;
+    animation: typing 2s steps(20, end) infinite;
 }
 
 @keyframes typing {
@@ -287,5 +290,73 @@ header .header-right .hamburger div {
     .phrase h2 {
         font-size: 18px;
         /* Change the font size for smaller screens */
+    }
+}
+
+/* home section ends here */
+
+/* about section starts here */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.about {
+
+    /* Tamaño de las imágenes de fondo */
+    background-position: top left, top right, bottom right;
+    /* Posición de las imágenes de fondo */
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    /* Evita la repetición de las imágenes */
+    height: 100vh;
+    /* Altura de la sección que cubre toda la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente para el contenido */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    width: 200px;
+    /* Tamaño de las imágenes de fondo */
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .about {
+        background-size: 150px, 180px, 200px;
+        /* Ajusta el tamaño de las imágenes para pantallas más pequeñas */
+        height: 60vh;
+        /* Ajusta la altura para pantallas más pequeñas */
     }
 }
