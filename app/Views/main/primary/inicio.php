@@ -10,12 +10,10 @@
 <body>
 
 <!-- navbar section starts here -->
-    <div class="container-navbar">
+    <div class="container">
     <header>
         <div class="header-left">
-            <div class="logo">
-                <img src="./logo.png" alt="">
-            </div>
+            
             <nav>
                 <ul>
                     <li>
@@ -47,9 +45,15 @@
             </div>
         </div>
     </header>
-    </div>
+</div>
+   
 <!-- navbar section ends here -->
 
+<div class="home">
+    <div class="phrase">
+        <h2 id="typing-text">what you were looking for</h2>
+    </div>
+</div>
 
 
 <!-- script for navbar -->
@@ -59,6 +63,22 @@
         hamburger.onclick = function() {
             nav.classList.toggle("active");
         }
+    </script>
+
+    <!-- script para el h2 de home -->
+
+    <script>
+        const phrases = ["Your first phrase here", "Your second phrase here", "Your third phrase here"];
+const textElement = document.getElementById("typing-text");
+let phraseIndex = 0;
+
+function changeText() {
+    textElement.textContent = phrases[phraseIndex];
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+}
+
+textElement.addEventListener("animationiteration", changeText);
+
     </script>
 </body>
 </html>
