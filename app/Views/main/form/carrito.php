@@ -17,27 +17,56 @@
         <!-- Contenedor de elementos -->
         <div class="contenedor-items">
         <?php foreach ($productos as $producto): ?>
-            <div class="item">
-            <form method="post" action="<?php echo base_url('compradirca'); ?>" id="carritoForm">
-                <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
-                <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
-                <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
-                <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
-                <!-- Puedes modificar la lógica de precio y botón según tus necesidades -->
-                <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
-                <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
-                <input type="number" name="cantidad" value="1" min="1">
-                <button type="submit" formmethod="post" class="boton-item" onclick="setFormAction('carrito/guar')">Agregar al Carrito</button>
-                <button type="submit" formmethod="post" class="btn btn-success">Comprar</button>
-            </form>
+    <div class="item">
+        <form method="post" action="<?php echo base_url('carrito/guar'); ?>">
+            <!-- Campos ocultos para el ID del producto, cantidad y precio -->
+            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
+            <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
+           
+            <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
+            <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
+            <span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
+            <span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
+            <input type="number" name="cantidad" class="cantidad-input" value="1" min="1">
+            <!-- Botón "Agregar al Carrito" -->
+            <button type="submit" name="action" value="add_to_cart" class="boton-item">Agregar al Carrito</button>
+        </form>
 
-            </div>
-        <?php endforeach; ?>
+        <!-- Segundo formulario para el botón "Comprar" -->
+        <form method="post" action="<?php echo base_url('compradirca'); ?>">
+            <!-- Campos ocultos para el ID del producto, cantidad y precio (repetidos) -->
+            <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
+            <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
+            <!-- Campo oculto para la cantidad en el segundo formulario -->
+            <input type="hidden" name="cantidad" class="cantidad-hidden" value="1">
+            <!-- Botón "Comprar" -->
+            <button type="submit" name="action" value="buy" class="btn btn-success">Comprar</button>
+        </form>
+    </div>
+<?php endforeach; ?>
+
     </div>
     <?php echo $pie; ?>
     </section>
     
 </body>
+<script>
+    // Captura todos los campos de cantidad en ambos formularios
+    const cantidadInputs = document.querySelectorAll('.cantidad-input');
+    const cantidadHiddens = document.querySelectorAll('.cantidad-hidden');
+    
+    // Escucha el evento de cambio en los campos de cantidad en el primer formulario
+    cantidadInputs.forEach(function (cantidadInput, index) {
+        cantidadInput.addEventListener('change', function () {
+            // Obtén el valor de la cantidad
+            const cantidad = cantidadInput.value;
+            // Actualiza el campo oculto correspondiente en el segundo formulario
+            cantidadHiddens[index].value = cantidad;
+        });
+    });
+</script>
+
+
 <script>
     function setFormAction(action) {
         var form = document.getElementById('carritoForm');
