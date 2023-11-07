@@ -80,88 +80,88 @@ public function check()
     {
         return view('main/catalogo/checkout');
 }
-    public function confirmarCompra($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7)
-    {
-        $paisModel = new Pais();
-        $provModel = new Provincia();
-        $ciudadModel = new ciudad();
-        $barrioModel = new Barrio();
-        $direccionModel = new Direccion_ca();
-       
+public function confirmarCompra($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7)
+{
+    $paisModel = new Pais();
+    $provModel = new Provincia();
+    $ciudadModel = new ciudad();
+    $barrioModel = new Barrio();
+    $direccionModel = new Direccion_ca();
+   
 
-        // Obtener los datos del formulario
-        $pais = $parametro1;
-        $provincia = $parametro2;
-        $ciudad = $parametro3;
-        $barrio = $parametro4;
-        $calle =  $parametro5;
-        $numero = $parametro6;
-        $descripcion_casa = $parametro7;
+    // Obtener los datos del formulario
+    $pais = $parametro1;
+    $provincia = $parametro2;
+    $ciudad = $parametro3;
+    $barrio = $parametro4;
+    $calle =  $parametro5;
+    $numero = $parametro6;
+    $descripcion_casa = $parametro7;
 
-        $id_pais= $paisModel->insert(['pais' => $pais]);
-        $id_provincia= $provModel->insert(['provincia' => $provincia,'id_pais'=>$id_pais]);
-        $id_ciudad= $ciudadModel->insert(['ciudad' => $ciudad,'id_prov'=>$id_provincia]);
-        $id_barrio= $barrioModel->insert(['barrio' => $barrio,'id_ciudad'=>$id_ciudad]);
+    $id_pais= $paisModel->insert(['pais' => $pais]);
+    $id_provincia= $provModel->insert(['provincia' => $provincia,'id_pais'=>$id_pais]);
+    $id_ciudad= $ciudadModel->insert(['ciudad' => $ciudad,'id_prov'=>$id_provincia]);
+    $id_barrio= $barrioModel->insert(['barrio' => $barrio,'id_ciudad'=>$id_ciudad]);
 
-        $direccionModel->insert([   
-            'calle'=>$calle,
-            'numero'=>$numero,
-            'descripcion_casa'=>$descripcion_casa,
-            'id_barrio'=>$id_barrio
+    $direccionModel->insert([   
+        'calle'=>$calle,
+        'numero'=>$numero,
+        'descripcion_casa'=>$descripcion_casa,
+        'id_barrio'=>$id_barrio
+    ]);
+
+// Obtener el ID de la dirección recién insertada
+    $id_direccion = $direccionModel->getInsertID();
+
+    $carritosModel = new Carritos();
+    $productoModel = new Producto();
+    $comprasModel = new Compras();
+    $detalleCompraModel = new Detalle_compra();
+    
+    // Obtener el usuario actual desde la sesión
+    $user = session('user');
+    $id_user = $user->id_user;
+
+// Calcular el total de la compra
+$totalCompra = $this->calcularTotalCompra($id_user);
+
+    // Obtener los productos en el carrito
+    $carritos = $carritosModel->where('id_user', $id_user)->findAll();
+
+    $id_compra = $comprasModel->insert([
+        'id_user' => $id_user,
+        'id_metodo_pago' => 1, // ID del método de pago (ajusta según tus necesidades)
+        'id_direccion_casa' => $id_direccion, // ID de la dirección (ajusta según tus necesidades)
+        'total_c' => $totalCompra, // Total inicializado en 0
+        'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
+    ]);
+
+    foreach ($carritos as $carrito) {
+        // Obtener información del producto
+        $producto = $productoModel->find($carrito['id_producto']);
+
+        // Calcular el subtotal del producto
+        $subtotal = $producto['precio'] * $carrito['cantidad'];
+
+        // Registrar el detalle de la compra con el ID de compra correcto
+        $detalleCompraModel->insert([
+            'id_compras' => $id_compra, // Usar el ID de compra generado
+            'id_producto' => $carrito['id_producto'],
+            'cantidad' => $carrito['cantidad'],
+            'precio_unitario' => $producto['precio'],
+            'subtotal' => $subtotal
         ]);
 
-    // Obtener el ID de la dirección recién insertada
-        $id_direccion = $direccionModel->getInsertID();
+        // Eliminar el producto del carrito
+        $carritosModel->delete($carrito['id_carrito']);
+    }
+    
+    // Actualizar el total en la compra con el valor calculado
+        $comprasModel->update($id_compra, ['total_c' => $totalCompra]);
 
-        $carritosModel = new Carritos();
-        $productoModel = new Producto();
-        $comprasModel = new Compras();
-        $detalleCompraModel = new Detalle_compra();
-        
-        // Obtener el usuario actual desde la sesión
-        $user = session('user');
-        $id_user = $user->id_user;
-
-    // Calcular el total de la compra
-    $totalCompra = $this->calcularTotalCompra($id_user);
+    // Redirigir a la página de confirmación de compra
+    return redirect()->to(base_url('carrito2'));
     
-        // Obtener los productos en el carrito
-        $carritos = $carritosModel->where('id_user', $id_user)->findAll();
-    
-        $id_compra = $comprasModel->insert([
-            'id_user' => $id_user,
-            'id_metodo_pago' => 1, // ID del método de pago (ajusta según tus necesidades)
-            'id_direccion_casa' => $id_direccion, // ID de la dirección (ajusta según tus necesidades)
-            'total_c' => $totalCompra, // Total inicializado en 0
-            'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
-        ]);
-
-        foreach ($carritos as $carrito) {
-            // Obtener información del producto
-            $producto = $productoModel->find($carrito['id_producto']);
-    
-            // Calcular el subtotal del producto
-            $subtotal = $producto['precio'] * $carrito['cantidad'];
-    
-            // Registrar el detalle de la compra con el ID de compra correcto
-            $detalleCompraModel->insert([
-                'id_compras' => $id_compra, // Usar el ID de compra generado
-                'id_producto' => $carrito['id_producto'],
-                'cantidad' => $carrito['cantidad'],
-                'precio_unitario' => $producto['precio'],
-                'subtotal' => $subtotal
-            ]);
-    
-            // Eliminar el producto del carrito
-            $carritosModel->delete($carrito['id_carrito']);
-        }
-        
-        // Actualizar el total en la compra con el valor calculado
-            $comprasModel->update($id_compra, ['total_c' => $totalCompra]);
-
-        // Redirigir a la página de confirmación de compra
-        return redirect()->to(base_url('carrito2'));
-        
 }
 
 }       
