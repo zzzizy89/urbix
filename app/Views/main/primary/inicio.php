@@ -65,20 +65,17 @@
 <div class="parallax" id="parallax">
             <!-- Agrega imágenes de fondo aquí -->
             <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/mouse.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/pink.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/white.png');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/mic.jpg');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/white.png');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/black.png');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/front-main/black.png');"></div>
+
             <!-- Agrega más imágenes de fondo si es necesario -->
         </div>
-        <div class="content">
-            <h1>About Us</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum justo at malesuada. Nullam dictum arcu at.</p>
-        </div>
+        
 </section>
 
 
@@ -115,14 +112,21 @@ textElement.addEventListener("animationiteration", changeText);
     <script>
 const images = document.querySelectorAll(".background-image");
 
-function getRandomPosition(image) {
-    const x = Math.random() * 20; // Posición X aleatoria en porcentaje
-    const y = Math.random() * 150; // Posición Y aleatoria en porcentaje
+function setFixedPosition(image, x, y) {
     image.style.left = x + "%";
     image.style.top = y + "%";
 }
 
-images.forEach(getRandomPosition);
+// Establece coordenadas X e Y fijas para cada imagen de fondo
+setFixedPosition(images[0], 20, 30);
+setFixedPosition(images[1], 40, 60);
+setFixedPosition(images[2], 60, 20);
+setFixedPosition(images[3], 70, 50);
+setFixedPosition(images[4], 10, 10);
+setFixedPosition(images[5], 80, 70);
+setFixedPosition(images[6], 30, 80);
+setFixedPosition(images[7], 50, 10);
+setFixedPosition(images[8], 90, 40);
 
 const parallax = document.querySelector(".parallax");
 
