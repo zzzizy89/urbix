@@ -62,7 +62,8 @@
 
 <!-- about section starts here -->
 
-<section class="about">
+<section class="about" id="about">
+
 <div class="parallax" id="parallax">
             <!-- Agrega imágenes de fondo aquí -->
             <div class="background-image" style="background-image: url('assets/css/img/gallery/8.jpg'); width: 400px; height:"></div>
@@ -72,12 +73,22 @@
             <div class="background-image" style="background-image: url('assets/css/img/gallery/4.jpg'); width:300px; height:300px;"></div>
             <div class="background-image" style="background-image: url('assets/css/img/gallery/1.jpg'); width:400px; height: 500px;"></div>
             <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width:500px; height:200px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/3.jpg'); width: 200px; height: 200px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/3.jpg'); width: 400px; height: 200px;"></div>
 
             <!-- Agrega más imágenes de fondo si es necesario -->
         </div>
+
+        <div class="text">
+        <h2>something never seen</h2>
+    </div>
         
 </section>
+
+<button class="fixed-button" onclick="toggleMode()">Cambiar modo</button>
+
+
+
+
 
 
 
@@ -127,24 +138,33 @@ setFixedPosition(images[5], 80, 70);
 setFixedPosition(images[6], 30, 80);
 setFixedPosition(images[7], 90, 10);
 setFixedPosition(images[8], 90, 40);
-
-const parallax = document.querySelector(".parallax");
-
-parallax.addEventListener("mousemove", (e) => {
-    const { clientX, clientY } = e;
-
-    images.forEach((image, index) => {
-        const speed = (index + 1) * 2; // Ajusta la velocidad del paralaje
-        const xOffset = (window.innerWidth / 2 - clientX) * speed / 100;
-        const yOffset = (window.innerHeight / 2 - clientY) * speed / 100;
-
-        image.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
-    });
-});
-
-
-
     </script>
- 
+
+<!-- script para boton fijo -->
+
+
+
+<script>
+let isDarkMode = true;
+
+function toggleMode() {
+    const button = document.querySelector('.fixed-button');
+    const body = document.querySelector('body');
+
+    if (isDarkMode) {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        button.textContent = 'Modo Oscuro';
+        isDarkMode = false;
+    } else {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        button.textContent = 'Modo Claro';
+        isDarkMode = true;
+    }
+}
+
+
+</script>
 </body>
 </html>
