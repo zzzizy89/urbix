@@ -15,6 +15,7 @@
     --color-secondary: #f9f9f9;
     --color-terciary: #30353d;
     --color-terciary-translucent: #30353d97;
+    --color-terciary2-translucent: #dbdee497;
     --color-main: rgb(195, 8, 8);
 }
 
@@ -419,7 +420,23 @@ body.light-mode {
     color: var(--color-primary);
 }
 
+body.dark-mode header {
+    background: var(--color-terciary-translucent);
 
+}
+
+body.light-mode header {
+    background: var(--color-terciary2-translucent);
+
+}
+
+body.dark-mode header nav ul li a {
+    color: var(--color-secondary);
+}
+
+body.light-mode header nav ul li a {
+    color: var(--color-primary);
+}
 
 .dark-mode .home {
     background: var(--color-primary);
