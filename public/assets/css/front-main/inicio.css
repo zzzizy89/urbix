@@ -6,6 +6,7 @@
     list-style: none;
     font-family: "sans-serif";
 
+
 }
 
 :root {
@@ -79,11 +80,15 @@
     src: url("../fonts/Akira-Expanded.otf") format("truetype");
 }
 
-body,
-html {
 
+
+html,
+body {
+    margin: 0;
+    padding: 0;
     width: 100%;
     min-height: 100%;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     background: var(--color-primary);
@@ -97,6 +102,8 @@ html {
     width: 60%;
     max-width: 800px;
     margin: 0 auto;
+
+
 }
 
 header {
@@ -115,18 +122,18 @@ header {
 header .header-left {
     display: flex;
     align-items: center;
+
 }
 
-header .header-left .logo {
-    width: 140px;
-}
 
 header .header-left nav {
     margin-left: 50px;
+
 }
 
 header .header-left nav ul {
     display: flex;
+
 }
 
 nav ul li a {
@@ -137,6 +144,7 @@ nav ul li a {
     padding: 5px 10px;
     transition: 0.2s;
 
+
 }
 
 header nav ul {
@@ -144,10 +152,12 @@ header nav ul {
     justify-content: center;
     align-items: center;
 
+
 }
 
 nav ul li {
     margin: 0 15px;
+
 }
 
 
@@ -158,11 +168,13 @@ nav ul li a.active {
 
 nav .login-signup {
     display: none;
+
 }
 
 header .header-right {
     display: flex;
     align-items: center;
+
 
 }
 
@@ -170,6 +182,7 @@ header .login-signup {
     color: #cfd9e0;
     font-weight: bold;
     font-family: "Arame-Thin";
+
 }
 
 header .login-signup a {
@@ -179,12 +192,14 @@ header .login-signup a {
     padding: 5px 12px;
     border-radius: 5px;
     font-family: "Arame-Thin";
+
 }
 
 header .header-right .hamburger {
     margin-left: 20px;
     cursor: pointer;
     display: none;
+
 }
 
 header .header-right .hamburger div {
@@ -192,6 +207,7 @@ header .header-right .hamburger div {
     height: 2px;
     margin: 6px 0;
     background: #fff;
+
 }
 
 @media only screen and (max-width: 1120px) {
@@ -200,10 +216,12 @@ header .header-right .hamburger div {
         margin-top: 10px;
 
 
+
     }
 
     header .header-right .hamburger {
         display: block;
+
 
     }
 
@@ -220,6 +238,7 @@ header .header-right .hamburger div {
         border-radius: 10px;
         justify-content: center;
         z-index: 100;
+
     }
 
     header .header-left nav.active {
@@ -231,6 +250,7 @@ header .header-right .hamburger div {
         display: inline-block;
 
 
+
     }
 }
 
@@ -238,6 +258,7 @@ header .header-right .hamburger div {
     nav .login-signup {
         display: block;
         margin-top: 20px;
+
     }
 
     header .header-right .login-signup {
@@ -319,7 +340,7 @@ header .header-right .hamburger div {
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 100;
-    
+
 }
 
 .text h2 {
@@ -383,12 +404,30 @@ header .header-right .hamburger div {
 
 /* dark-mode section starts here */
 
+
+
 body.dark-mode {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+
+
+body.light-mode {
     background: var(--color-secondary);
+    /* Cambia el color de fondo en el modo claro */
     color: var(--color-primary);
 }
 
+
+
 .dark-mode .home {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.light-mode .home {
     background: var(--color-secondary);
+    /* Cambia el color de fondo en el modo claro */
     color: var(--color-primary);
 }

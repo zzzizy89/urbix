@@ -148,20 +148,18 @@ setFixedPosition(images[8], 90, 40);
 let isDarkMode = true;
 
 function toggleMode() {
-    const button = document.querySelector('.fixed-button');
-    const body = document.querySelector('body');
-
-    if (isDarkMode) {
+    const body = document.body;
+    if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        button.textContent = 'Modo Oscuro';
-        isDarkMode = false;
     } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        button.textContent = 'Modo Claro';
-        isDarkMode = true;
     }
+
+    // Agrega una etiqueta HTML para definir el modo
+    const htmlTag = document.documentElement;
+    htmlTag.setAttribute('data-mode', body.classList.contains('dark-mode') ? 'dark' : 'light');
 }
 
 
