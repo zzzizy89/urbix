@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/inicio.css');?>">
+  
 </head>
 <body>
 
@@ -64,14 +65,14 @@
 <section class="about">
 <div class="parallax" id="parallax">
             <!-- Agrega imágenes de fondo aquí -->
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/teclado.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/mouse.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/pink.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/white.png');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/mic.jpg');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/white.png');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/black.png');"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/front-main/black.png');"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/8.jpg'); width: 400px; height:"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/7.jpg'); width: 300px; height: 300px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/6.jpg'); width: height:"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/5.jpg'); width:300px; height:500px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/4.jpg'); width:300px; height:300px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/1.jpg'); width:400px; height: 500px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width:500px; height:200px;"></div>
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/3.jpg'); width: 200px; height: 200px;"></div>
 
             <!-- Agrega más imágenes de fondo si es necesario -->
         </div>
@@ -108,7 +109,6 @@ textElement.addEventListener("animationiteration", changeText);
     </script>
 
     <!-- script para about images -->
-
     <script>
 const images = document.querySelectorAll(".background-image");
 
@@ -120,12 +120,12 @@ function setFixedPosition(image, x, y) {
 // Establece coordenadas X e Y fijas para cada imagen de fondo
 setFixedPosition(images[0], 20, 30);
 setFixedPosition(images[1], 40, 60);
-setFixedPosition(images[2], 60, 20);
+setFixedPosition(images[2], 40, 10);
 setFixedPosition(images[3], 70, 50);
 setFixedPosition(images[4], 10, 10);
 setFixedPosition(images[5], 80, 70);
 setFixedPosition(images[6], 30, 80);
-setFixedPosition(images[7], 50, 10);
+setFixedPosition(images[7], 90, 10);
 setFixedPosition(images[8], 90, 40);
 
 const parallax = document.querySelector(".parallax");
@@ -145,5 +145,6 @@ parallax.addEventListener("mousemove", (e) => {
 
 
     </script>
+ 
 </body>
 </html>
