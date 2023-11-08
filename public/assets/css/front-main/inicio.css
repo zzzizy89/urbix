@@ -398,7 +398,42 @@ header .header-right .hamburger div {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+
 }
+
+.custom-fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-terciary2-translucent);
+    color: var(--color-secondary);
+    border: solid 1px var(--color-primary);
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.scrolling-text {
+    animation: scrollText 1s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+
+
+
 
 /* button section ends here */
 

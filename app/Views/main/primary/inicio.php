@@ -84,7 +84,8 @@
         
 </section>
 
-<button class="fixed-button" onclick="toggleMode()">Cambiar modo</button>
+<button class="fixed-button" id="modeButton" onclick="toggleMode()">Dark</button>
+<button class="custom-fixed-button" > <span class="scrolling-text">▼</span></button>
 
 
 
@@ -140,29 +141,35 @@ setFixedPosition(images[7], 90, 10);
 setFixedPosition(images[8], 90, 40);
     </script>
 
-<!-- script para boton fijo -->
-
-
-
+<!-- script para boton fijo dark-mode -->
 <script>
 let isDarkMode = true;
 
 function toggleMode() {
     const body = document.body;
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-    } else {
+    const modeButton = document.getElementById('modeButton');
+
+    // Cambia el estado del modo
+    isDarkMode = !isDarkMode;
+
+    // Aplica las clases de modo en función del estado
+    if (isDarkMode) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
+        modeButton.textContent = 'Dark';
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        modeButton.textContent = 'Light';
     }
 
     // Agrega una etiqueta HTML para definir el modo
     const htmlTag = document.documentElement;
-    htmlTag.setAttribute('data-mode', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    htmlTag.setAttribute('data-mode', isDarkMode ? 'dark' : 'light');
 }
-
-
 </script>
+
+
+
 </body>
 </html>
