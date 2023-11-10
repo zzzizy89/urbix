@@ -58,8 +58,7 @@ class Carrito extends Controller
         $carrito->insertardatos($datos);
     }
 
-    return redirect()->to('carrito');
+    return redirect()->to('carrito');//test
 }
 
     
-}
