@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<div class="cursor"></div>
+
 <!-- navbar section starts here -->
     <div class="container">
     <header>
@@ -55,6 +57,8 @@
 <section class="home">
     <div class="phrase">
         <h2 id="typing-text">what you were looking for</h2>
+        
+       
     </div>
 </section>
 
@@ -169,6 +173,19 @@ function toggleMode() {
 }
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", function (e) {
+        const x = e.pageX - cursor.offsetWidth / 2;
+        const y = e.pageY - cursor.offsetHeight / 2;
+
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+</script>
 
 
 </body>

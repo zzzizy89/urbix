@@ -158,14 +158,15 @@ body.dark-mode .close-button a {
 .cursor {
 	pointer-events: none;
 	position: fixed;
+	/* Cambiado a fixed para que siga el scroll */
 	padding: 0.3rem;
 	background-color: red;
-	/* Cambia este color al que desees en el modo claro */
 	border-radius: 50%;
-	z-index: 11;
+	z-index: 9999;
+	/* Ajusta según sea necesario */
 	transition: transform 0.3s ease;
-
 }
+
 
 .dark-mode .cursor {
 	background-color: red;
