@@ -21,14 +21,14 @@ class Productos extends Controller{
         if ($rol == 1) {
             // Si el usuario tiene rol 1, cargar la vista listar
             $producto = new Producto();
-            
-            // Asegúrate de cargar los datos del tipo de producto asociado
-            $productos = $producto->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')->orderBy('productos.id_producto', 'ASC')->findAll();
-    
+
+            // Obtén los productos con la información del tipo asociado
+            $productos = $producto->productotipo();
+        
             $datos['productos'] = $productos;
             $datos['cabecera'] = view('templates/cabecera');
             $datos['pie'] = view('templates/piepagina');
-    
+        
             return view('main/crud/listar', $datos);
         } else {
             // Si el usuario no tiene rol 1, redirigir a la página dashboard
@@ -38,12 +38,12 @@ class Productos extends Controller{
 
     public function crear() {
         $tipoModel = new Tipo();
-        $datos['tipos'] = $tipoModel->findAll();
-    
+        $datos['tipos'] = $tipoModel->tipoprod();
+
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
-    
-        return view('main/crud/crear', $datos);
+
+    return view('main/crud/crear', $datos);
     }
     
         
@@ -84,7 +84,7 @@ class Productos extends Controller{
             'imagen' => $nuevoNombre,
             'id_tipoprod' => $tipoProductoID, // Almacenar la ID del tipo de producto
         ];
-        $producto->insert($datos);
+        $producto->insertproducto($datos);
         
         }
 
@@ -94,12 +94,9 @@ class Productos extends Controller{
     public function eliminar($id=null){
 
         $producto = new Producto();
-        $datosProducto = $producto->where('id_producto',$id)->first();
-
+        $producto->obteneriddelete($id);
         $ruta=('uploads/'.$datosProducto['imagen']);
         unlink($ruta);
-
-        $producto->where('id_producto',$id)->delete($id);
 
         return $this->response->redirect(site_url('/listar'));
 
@@ -109,10 +106,10 @@ class Productos extends Controller{
         $producto = new Producto();
         $tipo = new Tipo();
     
-        $datos['producto'] = $producto->where('id_producto', $id)->first();
+        $datos['producto'] = $producto->obtenerid($id);
         
         // Obtén la lista de tipos de productos
-        $datos['tipos'] = $tipo->findAll();
+        $datos['tipos'] = $tipo->tipoprod();
     
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
@@ -148,7 +145,7 @@ class Productos extends Controller{
             return redirect()->back()->withInput();
         }
 
-        $producto->update($id,$datos);
+        $producto->updateprod($id,$datos);
 
         $validacion = $this->validate([
             'imagen' => [
@@ -162,7 +159,8 @@ class Productos extends Controller{
             
         if($imagen=$this->request->getFile('imagen')){
 
-            $datosProducto = $producto->where('id_producto',$id)->first();
+        // Obtén la información actual del producto
+            $datosProducto = $producto->obtenerid($id);
 
             $ruta=('uploads/'.$datosProducto['imagen']);
             unlink($ruta);
@@ -170,8 +168,9 @@ class Productos extends Controller{
             $nuevoNombre = $imagen->getRandomName();
             $imagen->move('uploads/', $nuevoNombre);
 
+            // Actualiza el registro en la base de datos con el nuevo nombre de la imagen
             $datos=['imagen'=>$nuevoNombre];
-            $producto->update($id,$datos);
+            $producto->updateprod($datos, $id);
         }
 
         }
@@ -193,7 +192,7 @@ class Productos extends Controller{
     public function catalogo(){
 
         $producto = new Producto();
-        $productos = $producto->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')->orderBy('productos.id_producto', 'ASC')->findAll();
+        $productos = $producto->productotipo();
 
         $datos['productos'] = $productos;
 
@@ -203,7 +202,7 @@ class Productos extends Controller{
     public function desc_producto(){
 
         $producto = new Producto();
-        $productos = $producto->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')->orderBy('productos.id_producto', 'ASC')->findAll();
+        $productos = $producto->productotipo();
 
         $datos['productos'] = $productos;
         return view('main/catalogo/desc_producto', $datos);
