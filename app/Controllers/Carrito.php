@@ -11,7 +11,7 @@ class Carrito extends Controller
     {
         $producto = new Producto();
 
-        $datos['productos'] = $producto->orderBy('id_producto', 'ASC')->findAll();
+        $datos['productos'] = $producto->obtenertodoslosprod();
 
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
@@ -35,10 +35,8 @@ class Carrito extends Controller
     // Crear una instancia del modelo que representa el carrito
     $carrito = new Carritos();
     
-    // Verificar si el producto ya está en el carrito para el usuario actual
-    $producto_en_carrito = $carrito->where('id_producto', $id)
-                                   ->where('id_user', $id_user)
-                                   ->first();
+    // Llama al método del modelo para verificar si el producto ya está en el carrito
+    $producto_en_carrito = $carrito->verificarProductoEnCarrito($id, $id_user);
 
  
     if ($producto_en_carrito) {
@@ -47,8 +45,7 @@ class Carrito extends Controller
 
 
         // Si el producto ya está en el carrito, actualizar la cantidad
-        $carrito->update($producto_en_carrito['id_carrito'], ['cantidad' => $nuevaCantidad]);
-        
+        $carrito->actualizarCantidadEnCarrito($producto_en_carrito['id_carrito'], $nuevaCantidad);        
     } else {
         // Si el producto no está en el carrito, agregar uno nuevo con la cantidad
         $datos = [
@@ -58,7 +55,7 @@ class Carrito extends Controller
         ];
 
         // Insertar nuevo producto en el carrito
-        $carrito->insert($datos);
+        $carrito->insertardatos($datos);
     }
 
     return redirect()->to('carrito');

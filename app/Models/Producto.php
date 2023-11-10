@@ -39,5 +39,8 @@ public function updateprod($datos,$id)
 {
     $this->update($datos,$id);
 }
-
+public function obtenertodoslosprod()
+{
+    return $this->orderBy('id_producto', 'ASC')->findAll();
+}
 }
