@@ -38,9 +38,9 @@ class Dashboard extends BaseController
         $userModel = new UserModel();
     
         $newUsername = $this->request->getPost('new_username');
-        $newEmail = $this->request->getPost('new_email');
+        $newEmail = $this->request->getPost('new_email');//quitar
         $newBio = $this->request->getPost('new_bio');
-        $userId = $_SESSION['user']->id_user; // Ajustar esto según tu estructura de datos
+        $userId = session('user')->id_user; 
     
         // Procesar la carga de la imagen
         $profileImage = $this->request->getFile('profile_image');
@@ -49,11 +49,11 @@ class Dashboard extends BaseController
             $profileImage->move('./uploads', $newName);
             $data = [
                 'name' => $newUsername,
-                'email' => $newEmail,
+                'email' => $newEmail, //quitar
                 'bio' => $newBio,
                 'perfil' => $newName // Guarda el nombre de la imagen en la base de datos
             ];
-            $userModel->update($userId, $data);
+            $userModel->updatedashboard($userId, $data);
         } else {
             // Si ocurre algún error en la carga de la imagen, se actualizan solo los otros campos
             $data = [
@@ -61,14 +61,14 @@ class Dashboard extends BaseController
                 'email' => $newEmail,
                 'bio' => $newBio
             ];
-            $userModel->update($userId, $data);
+            $userModel->updatedashboard($userId, $data);
         }
     
         // Actualiza el nombre, correo electrónico, descripción y foto de perfil en la sesión
-        $_SESSION['user']->name = $newUsername;
-        $_SESSION['user']->email = $newEmail;
-        $_SESSION['user']->bio = $newBio;
-        $_SESSION['user']->perfil = $newName; // Asegúrate de manejar la lógica de actualización de perfil de acuerdo con tu estructura de datos
+        session('user')->name = $newUsername;
+        session('user')->email = $newEmail;
+        session('user')->bio = $newBio;
+        session('user')->perfil = $newName; // Asegúrate de manejar la lógica de actualización de perfil de acuerdo con tu estructura de datos
     
         return redirect()->to('dashboard');
     }

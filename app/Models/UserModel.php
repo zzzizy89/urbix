@@ -28,6 +28,18 @@ class UserModel extends Model
 {
     return $this->where('email', $email)->countAllResults() > 0;
 }
+public function register($ra)
+{
+    $this->insert($ra);
 
+}
+public function getUserByEmail($email)
+{
+    return $this->where('email', $email)->first();
+}
+public function updatedashboard($userId, $data)
+{
+   $this->update($userId, $data);
+}
 }
 

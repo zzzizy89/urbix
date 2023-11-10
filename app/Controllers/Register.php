@@ -29,11 +29,10 @@ class Register extends BaseController
     $password = password_hash($password, PASSWORD_BCRYPT);
 
     $data = ['name' => $name, 'email' => $email, 'password' => $password];
-
-    $ra = $userModel->insert($data);
-
+    $ra=($data);
     if ($ra)
 {   
+    $userModel->register($ra);
     $this->session->setFlashdata('success', 'Usuario registrado exitosamente!');
 }
 else

@@ -8,4 +8,10 @@ class Tipo extends Model{
     // Uncomment below if you want add primary key
      protected $primaryKey = 'id_tipoprod';
      protected $allowedFields = ['tipo'];
+
+     public function tipoprod()
+     {
+        return $this->findAll();
+     }
 }
+

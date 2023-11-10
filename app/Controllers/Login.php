@@ -25,7 +25,7 @@ class Login extends BaseController
     $email = $this->request->getPost('email');
     $password = $this->request->getPost('password');
 
-    $result = $userModel->where('email', $email)->first();
+    $result = $userModel->getUserByEmail($email);
 
     if ($result !== null && $result->id_user > 0) {
         if (password_verify($password, $result->password)) {

@@ -8,4 +8,36 @@ class Producto extends Model{
     // Uncomment below if you want add primary key
      protected $primaryKey = 'id_producto';
      protected $allowedFields = ['nombre','precio','imagen','descripcion_prod','id_tipoprod'];
+
+     public function productotipo()
+
+    {
+        // Realiza una unión con la tabla 'tipo'
+        $this->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod');
+
+        // Ordena por el id del producto de forma ascendente
+        $this->orderBy('productos.id_producto', 'ASC');
+
+        // Obtiene todos los resultados
+        return $this->findAll();
+    }
+public function insertproducto($datos)
+{
+    $this->insert($datos);
+}
+public function obteneriddelete($id)
+{
+    return $this->find($id);
+    $this->where('id_producto', $id)->delete();
+}
+public function obtenerid($id)
+{
+    return $this->where('id_producto', $id)->first();
+
+}
+public function updateprod($datos,$id)
+{
+    $this->update($datos,$id);
+}
+
 }
