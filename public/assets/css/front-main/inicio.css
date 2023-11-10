@@ -81,6 +81,21 @@
     src: url("../fonts/Akira-Expanded.otf") format("truetype");
 }
 
+@font-face {
+    font-family: "BLUE-OCEAN";
+    src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CHARLEY";
+    src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "VAL";
+    src: url("../fonts/VAL.otf") format("truetype");
+}
+
 
 
 html,
@@ -95,6 +110,22 @@ body {
     background: var(--color-primary);
     color: var(--color-secondary);
 }
+
+/* cursor section starts here */
+
+.cursor {
+    pointer-events: none;
+    position: absolute;
+    padding: 0.3rem;
+    background-color: var(--color-secondary);
+    /* Cambia este color al que desees en el modo claro */
+    border-radius: 50%;
+    z-index: 11;
+    transition: transform 0.3s ease;
+
+}
+
+/* cursor section ends here */
 
 
 /* navbar section starts here */
@@ -116,6 +147,7 @@ header {
     padding: 0 50px;
     background: var(--color-terciary-translucent);
     border-radius: 10px;
+    z-index: 111;
 
 
 }
@@ -142,7 +174,7 @@ nav ul li a {
     color: #cfd9e0;
     font-size: 18px;
     font-family: "Arame-Thin";
-    padding: 5px 10px;
+    padding: 5px 7px;
     transition: 0.2s;
 
 
@@ -290,8 +322,8 @@ header .header-right .hamburger div {
 }
 
 .phrase h2 {
-    font-size: 44px;
-    font-family: "StretchPro";
+    font-size: 14px;
+    font-family: "Arame-Thin";
     color: var(--color-terciary);
     border-right: 4px solid;
     overflow: hidden;
@@ -405,9 +437,9 @@ header .header-right .hamburger div {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--color-terciary2-translucent);
-    color: var(--color-secondary);
-    border: solid 1px var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: solid 1px var(--color-secondary);
     border-radius: 10px;
     padding: 10px 10px;
     cursor: pointer;
@@ -440,14 +472,19 @@ header .header-right .hamburger div {
 
 /* dark-mode section starts here */
 
+.dark-mode .cursor {
+    background-color: var(--color-secondary);
+}
+
+.light-mode .cursor {
+    background-color: var(--color-primary);
+}
 
 
 body.dark-mode {
     background: var(--color-primary);
     color: var(--color-secondary);
 }
-
-
 
 body.light-mode {
     background: var(--color-secondary);
@@ -482,4 +519,17 @@ body.light-mode header nav ul li a {
     background: var(--color-secondary);
     /* Cambia el color de fondo en el modo claro */
     color: var(--color-primary);
+}
+
+
+.dark-mode .custom-fixed-button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: solid 1px var(--color-secondary);
+}
+
+.light-mode .custom-fixed-button {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: solid 1px var(--color-primary);
 }
