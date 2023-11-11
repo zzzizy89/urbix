@@ -139,7 +139,7 @@ body {
 }
 
 header {
-    margin-top: 20px;
+    margin-bottom: 10px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -147,6 +147,11 @@ header {
     padding: 0 50px;
     background: var(--color-terciary-translucent);
     border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 39%;
     z-index: 111;
 
 
@@ -161,13 +166,20 @@ header .header-left {
 
 header .header-left nav {
     margin-left: 50px;
+    width: 100%;
 
 }
 
 header .header-left nav ul {
     display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
 }
+
+
 
 nav ul li a {
     display: block;
@@ -176,6 +188,7 @@ nav ul li a {
     font-family: "Arame-Thin";
     padding: 5px 7px;
     transition: 0.2s;
+    text-decoration: none;
 
 
 }
@@ -232,6 +245,7 @@ header .header-right .hamburger {
     margin-left: 20px;
     cursor: pointer;
     display: none;
+    padding: 0 10px;
 
 }
 
@@ -245,7 +259,7 @@ header .header-right .hamburger div {
 
 @media only screen and (max-width: 1120px) {
     header {
-        padding: 0 4px;
+        padding: 0 0px;
         margin-top: 10px;
 
 
@@ -261,8 +275,8 @@ header .header-right .hamburger div {
     header .header-left nav {
         margin: 0;
         position: absolute;
-        top: -100%;
-        width: 59.5%;
+        top: -230px;
+        width: 100%;
         height: fit-content;
         background-color: var(--color-terciary);
         padding: 30px;
@@ -271,8 +285,8 @@ header .header-right .hamburger div {
         border-radius: 10px;
         justify-content: center;
         z-index: 100;
-
     }
+
 
     header .header-left nav.active {
         top: 90px;
@@ -306,50 +320,55 @@ header .header-right .hamburger div {
 .home {
     display: flex;
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     width: 100%;
     height: 100vh;
-    /* Make the container cover the full viewport height */
     background: var(--color-primary);
 }
 
-
 .phrase {
     text-align: center;
-    /* Center the text inside the .phrase container */
 }
 
 .phrase h2 {
-    font-size: 14px;
+    font-size: 40px;
     font-family: "Arame-Thin";
     color: var(--color-terciary);
-    border-right: 4px solid;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2s steps(20, end) infinite;
+    position: relative;
+    display: inline-block;
+    /* Añadido para que el mix-blend-mode funcione correctamente */
+    mix-blend-mode: screen;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-
-
+.phrase h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(128, 128, 128), var(--color-terciary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 2s ease-in-out;
+    mix-blend-mode: multiply;
 }
+
+.phrase h2:hover::before,
+.phrase h2.active::before {
+    transform: scaleX(1);
+}
+
 
 
 @media only screen and (max-width: 768px) {
     .phrase h2 {
         font-size: 18px;
-        /* Change the font size for smaller screens */
     }
 }
+
 
 /* home section ends here */
 
@@ -517,7 +536,6 @@ body.light-mode header nav ul li a {
 
 .light-mode .home {
     background: var(--color-secondary);
-    /* Cambia el color de fondo en el modo claro */
     color: var(--color-primary);
 }
 
@@ -532,4 +550,12 @@ body.light-mode header nav ul li a {
     background-color: var(--color-primary);
     color: var(--color-secondary);
     border: solid 1px var(--color-primary);
+}
+
+.dark-mode .phrase h2 {
+    color: var(--color-terciary);
+}
+
+.home .light-mode .phrase h2 {
+    color: red;
 }
