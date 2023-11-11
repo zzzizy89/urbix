@@ -29,26 +29,91 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
 
+// Seccion controlador Home
+$routes->get('/', 'Home::index');
+$routes->get('intro', 'Home::index');
+$routes->get('intro_catalogo', 'Home::intro_catalogo');
+$routes->get('intro_contacto', 'Home::intro_contacto');
+$routes->get('intro_login', 'Home::intro_login');
+$routes->get('intro_inicio', 'Home::intro_inicio');
+$routes->get('intro_dashboard', 'Home::intro_dashboard');
+$routes->get('inicio', 'Home::inicio');
+$routes->get('contact', 'Home::contact');
+
+// Seccion controlador Login
 $routes->get('/login', 'Login::index');
+$routes->post('/login', 'Login::do_login');
+
+// Seccion controlador Register
 $routes->get('/register', 'Register::index');
+$routes->post('/register', 'Register::do_register');
+
+// Seccion controlador Dashboard
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/home', 'Dashboard::home');
 $routes->get('logout', 'Dashboard::logout');
 $routes->post('update', 'Dashboard::update'); // Ruta para actualizar el nombre de usuario
 $routes->post('upload-profile-image', 'Dashboard::uploadProfileImage'); // Ruta para cargar la imagen de perfil
-$routes->get('intro', 'home::index');
-$routes->get('intro_catalogo', 'home::intro_catalogo');
-$routes->get('intro_contacto', 'home::intro_contacto');
-$routes->get('intro_login', 'home::intro_login');
-$routes->get('intro_inicio', 'home::intro_inicio');
-$routes->get('intro_dashboard', 'home::intro_dashboard');
-$routes->post('/login', 'Login::do_login');
-$routes->post('/register', 'Register::do_register');
+
+// Seccion controlador Productos
+
 $routes->get('catalogo', 'Productos::catalogo');
 $routes->get('desc_producto', 'Productos::desc_producto');
-$routes->get('contact', 'home::contact');
+$routes->get('listar', 'Productos::index');
+$routes->get('crear', 'Productos::crear');
+$routes->post('guardar', 'Productos::guardar');
+$routes->get('eliminar/(:num)', 'Productos::eliminar/$1');
+$routes->get('editar/(:num)', 'Productos::editar/$1');
+$routes->post('actualizar', 'Productos::actualizar');
+$routes->get('inicio', 'Productos::inicio');
+$routes->get('about', 'Productos::about');
+
+// seccion controlador catalogo
+
+$routes->get('catalogo', 'catalogo::shop');
+
+// seccion controlador Email
+$routes->get('form_email', 'Email::index');
+$routes->post('enviar_email', 'Email::enviar_email');
+
+// seccion controlador Emaill
+
+$routes->get('inicio', 'Emaill::index');
+
+// seccion controlador Email2
+
+$routes->post('enviar__email', 'Email2::enviar__email');
+
+// seccion controlador Test
+
+$routes->get('test', 'Test::index');
+
+// seccion controlador Carrito
+
+$routes->get('carrito','Carrito::index');
+$routes->post('carrito/guar','Carrito::guardar');
+
+// seccion controlador Carrito2
+
+$routes->get('carrito2','carrito2::index');
+$routes->get('carrito2/eliminarcar/(:num)', 'carrito2::eliminarcar/$1');
+$routes->post('carrito2/actualizarcar/', 'carrito2::actualizarcar');
+$routes->get('cancelar/compra/', 'carrito2::index');
+
+// seccion controlador Comprass
+
+$routes->get('comprar/', 'Comprass::index');
+$routes->get('checkout', 'Comprass::check');
+$routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7');
+
+// seccion controlador Compradir
+
+$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7');
+$routes->get('compra_dir/', 'Compradir::index');
+$routes->post('compradirca/', 'Compradir::Compradirtotal');
+$routes->get('cancelcompradir/', 'Compradir::cancelcompradir');
+
 
 /*
  * --------------------------------------------------------------------
@@ -68,35 +133,12 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 
 
-$routes->get('listar', 'Productos::index');
-$routes->get('crear', 'Productos::crear');
-$routes->post('guardar', 'Productos::guardar');
-$routes->get('eliminar/(:num)', 'Productos::eliminar/$1');
-$routes->get('editar/(:num)', 'Productos::editar/$1');
-$routes->post('actualizar', 'Productos::actualizar');
 
-$routes->get('inicio', 'home::inicio');
-$routes->get('inicio', 'Productos::inicio');
-$routes->get('about', 'Productos::about');
-$routes->get('catalogo', 'catalogo::shop');
+
 //$routes->get('completado/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'catalogo::completado/$1/$2/$3/$4/$5/$6/$7');
-$routes->get('form_email', 'Email::index');
-$routes->post('enviar_email', 'Email::enviar_email');
-$routes->get('inicio', 'Emaill::index');
-$routes->post('enviar__email', 'Email2::enviar__email');
-$routes->get('test', 'Test::index');
-$routes->get('carrito','Carrito::index');
-$routes->post('carrito/guar','Carrito::guardar');
-$routes->get('carrito2','Carrito2::index');
-$routes->get('carrito2/eliminarcar/(:num)', 'Carrito2::eliminarcar/$1');
-$routes->post('carrito2/actualizarcar/', 'Carrito2::actualizarcar');
-$routes->get('comprar/', 'Comprass::index');
-$routes->get('cancelar/compra/', 'Carrito2::index');
-$routes->get('checkout', 'Comprass::check');
-$routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7');
-$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7');
-$routes->get('compra_dir/', 'Compradir::index');
-$routes->post('compradirca/', 'Compradir::Compradirtotal');
-$routes->get('cancelcompradir/', 'Compradir::cancelcompradir');
+
+
+
+
 
 
