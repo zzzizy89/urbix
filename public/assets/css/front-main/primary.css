@@ -246,9 +246,7 @@ span {
 	}
 }
 
-/* Estilos para la cabecera */
-
-.header {
+ut .header {
 	position: fixed;
 	top: 0;
 	left: 0;

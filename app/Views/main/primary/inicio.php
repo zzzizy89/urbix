@@ -35,10 +35,15 @@
                     <li>
                         <a href="#">account</a>
                     </li>
-                 
+                    
+                    <li>
+                    <a class="fixed-button" id="modeButton" onclick="toggleMode()">Dark</a>
+                    </li>
+                  
                 </ul>
              
             </nav>
+           
         </div>
         <div class="header-right">
             <div class="hamburger">
@@ -111,7 +116,7 @@
 
 
 
-<button class="fixed-button" id="modeButton" onclick="toggleMode()">Dark</button>
+
 
 
 

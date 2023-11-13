@@ -5,8 +5,7 @@
     text-decoration: none;
     list-style: none;
     font-family: "sans-serif";
-
-
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -127,7 +126,7 @@ body {
     /* Cambia este color al que desees en el modo claro */
     border-radius: 50%;
     z-index: 11;
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 
 }
 
@@ -454,9 +453,9 @@ td span {
 /* button section starts here */
 
 .fixed-button {
-    position: fixed;
+    position: absolute;
     left: 20px;
-    bottom: 20px;
+    bottom: 5px;
     border-radius: 10px;
     background-color: var(--color-terciary-translucent);
     border: solid 1px var(--color-secondary);
