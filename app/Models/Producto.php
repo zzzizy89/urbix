@@ -43,4 +43,9 @@ public function obtenertodoslosprod()
 {
     return $this->orderBy('id_producto', 'ASC')->findAll();
 }
+public function obtenerPrecioPorId($id_producto)
+    {
+        // Obtén el precio del producto por su ID
+        return $this->select('precio')->where('id_producto', $id_producto)->first();
+    }
 }

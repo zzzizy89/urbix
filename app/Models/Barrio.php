@@ -9,4 +9,9 @@ class Barrio extends Model{
      protected $primaryKey = 'id_barrio';
      protected $allowedFields = ['id_ciudad','barrio'];
 
+
+     public function insertBarrio($barrio,$id_ciudad)
+     {
+        return $this->insert(['barrio' => $barrio, 'id_ciudad' => $id_ciudad]);
+     }
 }

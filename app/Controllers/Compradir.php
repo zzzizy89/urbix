@@ -39,10 +39,8 @@ public function Compradirtotal()
         $productoModel = new Producto();
 
         // Obtén el precio del producto desde la consulta
-        $producto = $productoModel
-        ->select('precio')
-        ->where('id_producto', $id_producto)
-        ->first();
+        $producto = $productoModel->obtenerPrecioPorId($id_producto);
+
 
         if ($producto !== null) {
             $precio = $producto['precio'];
@@ -62,39 +60,31 @@ public function Compradirtotal()
     }
 
     
-    public function Compradirecta($parametro1, $parametro2, $parametro3, $parametro4, $parametro5, $parametro6, $parametro7)
+    public function Compradirecta($pais, $provincia, $ciudad, $barrio, $calle, $numero, $descripcion_casa)
 {
-    
     $paisModel = new Pais();
     $provModel = new Provincia();
     $ciudadModel = new Ciudad();
     $barrioModel = new Barrio();
     $direccionModel = new Direccion_ca();
 
-    // Obtener los datos del formulario
-    $pais = $parametro1;
-    $provincia = $parametro2;
-    $ciudad = $parametro3;
-    $barrio = $parametro4;
-    $calle = $parametro5;
-    $numero = $parametro6;
-    $descripcion_casa = $parametro7;
+    // Insertar país
+    $id_pais = $paisModel->insertPais($pais);
 
-    $id_pais = $paisModel->insert(['pais' => $pais]);
-    $id_provincia = $provModel->insert(['provincia' => $provincia, 'id_pais' => $id_pais]);
-    $id_ciudad = $ciudadModel->insert(['ciudad' => $ciudad, 'id_prov' => $id_provincia]);
-    $id_barrio = $barrioModel->insert(['barrio' => $barrio, 'id_ciudad' => $id_ciudad]);
+    // Insertar provincia
+    $id_provincia = $provModel->insertProvincia($id_pais, $provincia);
 
-    $direccionModel->insert([
-        'calle' => $calle,
-        'numero' => $numero,
-        'descripcion_casa' => $descripcion_casa,
-        'id_barrio' => $id_barrio
-    ]);
+    // Insertar ciudad
+    $id_ciudad = $ciudadModel->insertCiudad($ciudad,$id_provincia);
+
+    // Insertar barrio
+    $id_barrio = $barrioModel->insertBarrio($barrio,$id_ciudad);
+
+    // Insertar dirección y guardar la id en $id_direccion
+    $id_direccion = $direccionModel->insertDireccion($calle,$numero,$descripcion_casa,$id_barrio);
 
     // Obtener el ID de la dirección recién insertada
-    $id_direccion = $direccionModel->getInsertID();
-
+    
     $productoModel = new Producto();
     $comprasModel = new Compras();
     $detalleCompraModel = new Detalle_compra();
@@ -109,28 +99,14 @@ public function Compradirtotal()
     $precio = session()->get('precio');
        
         // Inserta la compra
-        $id_compra = $comprasModel->insert([
-            'id_user' => $id_user,
-            'id_metodo_pago' => 1, // ID del método de pago (ajusta según tus necesidades)
-            'id_direccion_casa' => $id_direccion, // ID de la dirección (ajusta según tus necesidades)
-            'total_c' => $totalCompra,
-            'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
-        ]);
+        $id_compra = $comprasModel->insertCompra($id_user,$id_direccion,$totalCompra);
         
         // Calcular el subtotal del producto
         $subtotal = $precio * $cantidad;
 
         // Registrar el detalle de la compra con el ID de compra correcto
-        $detalleCompraModel->insert([
-            'id_compras' => $id_compra,
-            'id_producto' => $id_producto,
-            'cantidad' => $cantidad,
-            'precio_unitario' => $precio,
-            'subtotal' => $subtotal
-        ]);
+        $detalleCompraModel->insertDetallecompra($id_compra,$id_producto,$cantidad,$precio,$subtotal);
 
-        // Actualizar el total en la compra con el valor calculado
-        $comprasModel->update($id_compra, ['total_c' => $totalCompra]);
 
       // Borrar sesiones específicas
         session()->remove('totalCompra');
