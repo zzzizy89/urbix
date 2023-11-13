@@ -57,9 +57,8 @@
 <section class="home">
     <div class="phrase">
         <h2 id="typing-text">what you were looking for</h2>
-        
-       
     </div>
+    <div class="scroll-down"></div>
 </section>
 
 <!-- home section ends here -->
@@ -69,17 +68,8 @@
 <section class="about" id="about">
 
 <div class="parallax" id="parallax">
-            <!-- Agrega imágenes de fondo aquí -->
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/8.jpg'); width: 400px; height:"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/7.jpg'); width: 300px; height: 300px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/6.jpg'); width: height:"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/5.jpg'); width:300px; height:500px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/4.jpg'); width:300px; height:300px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/1.jpg'); width:400px; height: 500px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width:500px; height:200px;"></div>
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/3.jpg'); width: 400px; height: 200px;"></div>
-
-            <!-- Agrega más imágenes de fondo si es necesario -->
+           
+            <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width:50%; height:50%;"></div>
         </div>
 
         <div class="text">
@@ -87,9 +77,42 @@
     </div>
         
 </section>
+<section class="description">
+    <div class="description-table">
+        <table>
+            <tr>
+                <td><span>Empresa:</span></td>
+                <td>Urbix</td>
+            </tr>
+            <tr>
+                <td><span>Especialidad:</span></td>
+                <td>Perifericos</td>
+            </tr>
+            <tr>
+                <td><span>Origen:</span></td>
+                <td>Argentina</td>
+            </tr>
+            <tr>
+                <td><span>Fundadores:</span></td>
+                <td>Tiago Comba - Ezequiel Monteverde</td>
+            </tr>
+            <tr>
+                <td><span>Idiomas:</span></td>
+                <td>ES-US</td>
+            </tr>
+            <tr>
+                <td><span>Flow:</span></td>
+                <td>Yes</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
 
 <button class="fixed-button" id="modeButton" onclick="toggleMode()">Dark</button>
-<button class="custom-fixed-button" > <span class="scrolling-text">▼</span></button>
+
 
 
 
@@ -108,22 +131,7 @@
         }
     </script>
 
-    <!-- script para el h2 de home -->
-
-    <script>
-        const phrases = ["unique", "quality", "essential"];
-const textElement = document.getElementById("typing-text");
-let phraseIndex = 0;
-
-function changeText() {
-    textElement.textContent = phrases[phraseIndex];
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-}
-
-textElement.addEventListener("animationiteration", changeText);
-
-    </script>
-
+ 
     <!-- script para about images -->
     <script>
 const images = document.querySelectorAll(".background-image");
@@ -133,16 +141,7 @@ function setFixedPosition(image, x, y) {
     image.style.top = y + "%";
 }
 
-// Establece coordenadas X e Y fijas para cada imagen de fondo
-setFixedPosition(images[0], 20, 30);
-setFixedPosition(images[1], 40, 60);
-setFixedPosition(images[2], 40, 10);
-setFixedPosition(images[3], 70, 50);
-setFixedPosition(images[4], 10, 10);
-setFixedPosition(images[5], 80, 70);
-setFixedPosition(images[6], 30, 80);
-setFixedPosition(images[7], 90, 10);
-setFixedPosition(images[8], 90, 40);
+setFixedPosition(images[0], 50, 50);
     </script>
 
 <!-- script para boton fijo dark-mode -->
@@ -172,6 +171,8 @@ function toggleMode() {
     htmlTag.setAttribute('data-mode', isDarkMode ? 'dark' : 'light');
 }
 </script>
+
+<!-- script para el cursor -->
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

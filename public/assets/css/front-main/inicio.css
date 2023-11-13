@@ -16,7 +16,7 @@
     --color-terciary: #30353d;
     --color-terciary-translucent: #30353d97;
     --color-terciary2-translucent: #dbdee497;
-    --color-main: rgb(195, 8, 8);
+    --color-main: rgb(57, 239, 12);
 }
 
 @font-face {
@@ -97,6 +97,12 @@
 }
 
 
+@font-face {
+    font-family: "Akira";
+    src: url("../fonts/Akira.otf") format("truetype");
+}
+
+
 
 html,
 body {
@@ -116,7 +122,7 @@ body {
 .cursor {
     pointer-events: none;
     position: absolute;
-    padding: 0.3rem;
+    padding: 0.6rem;
     background-color: var(--color-secondary);
     /* Cambia este color al que desees en el modo claro */
     border-radius: 50%;
@@ -144,15 +150,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 20px;
     background: var(--color-terciary-translucent);
     border-radius: 10px;
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 39%;
+    width: 80%;
     z-index: 111;
+    transition: height 0.3s;
 
 
 }
@@ -160,12 +167,13 @@ header {
 header .header-left {
     display: flex;
     align-items: center;
+    width: 100%;
 
 }
 
 
 header .header-left nav {
-    margin-left: 50px;
+    margin-left: 10px;
     width: 100%;
 
 }
@@ -209,7 +217,7 @@ nav ul li {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #fff;
+    color: var(--color-main);
 }
 
 nav .login-signup {
@@ -221,23 +229,6 @@ header .header-right {
     display: flex;
     align-items: center;
 
-
-}
-
-header .login-signup {
-    color: #cfd9e0;
-    font-weight: bold;
-    font-family: "Arame-Thin";
-
-}
-
-header .login-signup a {
-    display: inline-block;
-    color: #0b2239;
-    background: #4ad295;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-family: "Arame-Thin";
 
 }
 
@@ -324,6 +315,7 @@ header .header-right .hamburger div {
     width: 100%;
     height: 100vh;
     background: var(--color-primary);
+
 }
 
 .phrase {
@@ -331,41 +323,20 @@ header .header-right .hamburger div {
 }
 
 .phrase h2 {
-    font-size: 40px;
-    font-family: "Arame-Thin";
-    color: var(--color-terciary);
+    font-size: 80px;
+    font-family: "Akira";
+    color: var(--color-main);
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     display: inline-block;
-    /* Añadido para que el mix-blend-mode funcione correctamente */
-    mix-blend-mode: screen;
-}
-
-.phrase h2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgb(128, 128, 128), var(--color-terciary));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 2s ease-in-out;
-    mix-blend-mode: multiply;
-}
-
-.phrase h2:hover::before,
-.phrase h2.active::before {
-    transform: scaleX(1);
 }
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1768px) {
     .phrase h2 {
-        font-size: 18px;
+        font-size: 24px;
     }
 }
 
@@ -401,20 +372,8 @@ header .header-right .hamburger div {
     color: var(--color-main);
 }
 
-
-
-.parallax {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
 .background-image {
     position: absolute;
-    width: 200px;
-    /* Tamaño de las imágenes de fondo */
-    height: 200px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -424,13 +383,73 @@ header .header-right .hamburger div {
 @media (max-width: 768px) {
     .about {
         background-size: 150px, 180px, 200px;
-        /* Ajusta el tamaño de las imágenes para pantallas más pequeñas */
         height: 60vh;
-        /* Ajusta la altura para pantallas más pequeñas */
     }
+
+    .text h2 {
+        font-size: 36px;
+        /* Ajusta el tamaño del título para pantallas más pequeñas */
+    }
+
 }
 
 /* about section ends here */
+
+/* description section starts here */
+
+.description {
+    width: 100%;
+    text-align: left;
+    margin-top: -200px;
+    margin-bottom: 200px;
+
+
+
+}
+
+.description-table {
+    max-width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+    /* Espaciado superior */
+}
+
+td {
+    padding: 10px;
+    font-family: "PiGARNOS-NEUE-Regular";
+    color: var(--color-main);
+    /* Borde para las celdas */
+}
+
+td span {
+    color: var(--color-secondary);
+    font-family: "Akira";
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .description-table {
+        max-width: 100%;
+    }
+
+    td {
+        font-size: 14px;
+        /* Ajusta según sea necesario para pantallas más pequeñas */
+    }
+}
+
+/* description section ends here */
+
+
 
 /* button section starts here */
 
@@ -452,42 +471,46 @@ header .header-right .hamburger div {
 
 }
 
-.custom-fixed-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    border: solid 1px var(--color-secondary);
-    border-radius: 10px;
-    padding: 10px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    overflow: hidden;
-}
-
-.scrolling-text {
-    animation: scrollText 1s linear infinite;
-    white-space: nowrap;
-    display: inline-block;
-}
-
-@keyframes scrollText {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(30px);
-    }
-}
-
-
-
-
 
 /* button section ends here */
 
+/* scroll arrow section starts here */
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 13px;
+    height: 13px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-transform: translate(-50%, 0) rotate(45deg);
+    animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+
+@keyframes fade_move_down {
+    0% {
+        transform: translate(0, -20px) rotate(45deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 20px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+/* scroll arrow section ends here */
 
 /* dark-mode section starts here */
 
@@ -507,7 +530,6 @@ body.dark-mode {
 
 body.light-mode {
     background: var(--color-secondary);
-    /* Cambia el color de fondo en el modo claro */
     color: var(--color-primary);
 }
 
@@ -525,9 +547,21 @@ body.dark-mode header nav ul li a {
     color: var(--color-secondary);
 }
 
+body.dark-mode header nav ul li a:hover,
+body.dark-mode header nav ul li a.active {
+    color: var(--color-main);
+}
+
 body.light-mode header nav ul li a {
     color: var(--color-primary);
 }
+
+body.light-mode header nav ul li a:hover,
+body.light-mode header nav ul li a.active {
+    color: var(--color-main);
+}
+
+
 
 .dark-mode .home {
     background: var(--color-primary);
@@ -552,10 +586,11 @@ body.light-mode header nav ul li a {
     border: solid 1px var(--color-primary);
 }
 
-.dark-mode .phrase h2 {
-    color: var(--color-terciary);
+.dark-mode .home .phrase h2 {
+    color: var(--color-main);
 }
 
-.home .light-mode .phrase h2 {
-    color: red;
+
+.light-mode .home .phrase h2 {
+    color: var(--color-main);
 }
