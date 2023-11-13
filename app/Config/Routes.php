@@ -74,12 +74,12 @@ $routes->get('about', 'Productos::about');
 $routes->get('catalogo', 'catalogo::shop');
 
 // seccion controlador Email
-$routes->get('form_email', 'Email::index');
-$routes->post('enviar_email', 'Email::enviar_email');
+//$routes->get('form_email', 'Email::index');
+//$routes->post('enviar_email', 'Email::enviar_email');
 
 // seccion controlador Emaill
 
-$routes->get('inicio', 'Emaill::index');
+// $routes->get('inicio', 'Emaill::index');
 
 // seccion controlador Email2
 
@@ -87,7 +87,7 @@ $routes->post('enviar__email', 'Email2::enviar__email');
 
 // seccion controlador Test
 
-$routes->get('test', 'Test::index');
+//$routes->get('test', 'Test::index');
 
 // seccion controlador Carrito
 

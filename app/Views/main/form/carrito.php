@@ -18,7 +18,7 @@
         <div class="contenedor-items">
         <?php foreach ($productos as $producto): ?>
     <div class="item">
-        <form method="post" action="<?php echo base_url('carrito/guar'); ?>">
+        <form method="post" id="carritoForm" action="<?php echo base_url('carrito/guar'); ?>">
             <!-- Campos ocultos para el ID del producto, cantidad y precio -->
             <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
             <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">

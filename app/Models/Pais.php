@@ -9,4 +9,8 @@ class Pais extends Model{
      protected $primaryKey = 'id_pais';
      protected $allowedFields = ['pais'];
 
+     public function insertPais($pais)
+{
+    return $this->insert(['pais' => $pais]);
+}
 }

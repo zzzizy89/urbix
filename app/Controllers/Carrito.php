@@ -60,5 +60,5 @@ class Carrito extends Controller
 
     return redirect()->to('carrito');//test
 }
-
+}
     

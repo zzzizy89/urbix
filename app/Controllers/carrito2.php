@@ -21,16 +21,8 @@ class Carrito2 extends Controller{
         // Obtener id_user desde la sesión
         $id_user = session('user')->id_user;
     
-        // Obtener los datos del carrito y unirlos con los datos de los teclados
-        $datos['carritos'] = $car->select('carrito.*, productos.nombre, productos.precio, productos.descripcion_prod, productos.imagen as producto_imagen, tipo.tipo as tipo_producto')
-                                 ->join('productos', 'productos.id_producto = carrito.id_producto')
-                                 ->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')
-                                 ->where('id_user', $id_user)
-                                 ->orderBy('id_carrito', 'ASC')
-                                 ->findAll();
-
-
-
+       // Llama al método del modelo para obtener los productos en el carrito
+         $datos['carritos'] = $car->obtenerdatoscarrito($id_user);
 
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
@@ -46,10 +38,10 @@ class Carrito2 extends Controller{
         $car = new Carritos();
     
         // Obtener los datos del carrito antes de eliminarlo
-        $datosCar = $car->where('id_carrito', $id)->first();
-    
+        $datosCar = $car->obtenerDatosAntesDeEliminar($id);
+
         // Eliminar el carrito por su ID
-        $car->where('id_carrito', $id)->delete();
+        $car->eliminarCarrito($id);
     
         // Redirigir a la página del carrito
         return $this->response->redirect(site_url('/carrito2'));
@@ -75,10 +67,10 @@ class Carrito2 extends Controller{
         // Validar que la cantidad sea un número entero positivo
         if (is_numeric($cantidad) && $cantidad > 0) {
             // Obtener los datos del carrito antes de actualizar
-            $datosCar = $car->find($id_carrito);
+            $datosCar = $carritoModel->obtenerDatosenelCarrito($id_carrito);
 
             // Actualizar la cantidad 
-            $car->update($id_carrito, ['cantidad' => $cantidad]);
+            $carritoModel->actualizarCantidadEnCarrito($id_carrito, $cantidad);
         }
     }
 
@@ -86,9 +78,4 @@ class Carrito2 extends Controller{
     return redirect()->to(base_url('carrito2'));
 }
 
-    
-    
-    
-
-    
 }

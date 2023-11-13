@@ -51,7 +51,7 @@ class Home extends BaseController
     public function inicio()
     {
         
-        return view('main/primary/inicio');
+        return view('main/primary/home');
         
     }
 
