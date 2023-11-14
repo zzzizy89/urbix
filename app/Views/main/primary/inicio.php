@@ -9,8 +9,18 @@
   
 </head>
 <body>
+    
 
 <div class="cursor"></div>
+
+<div class="toggle-container">
+    <label class="toggle-label" for="dark-mode-switch">
+      <input type="checkbox" class="toggle-input" id="dark-mode-switch">
+      <div class="toggle-switch">
+        <div class="toggle-slider"></div>
+      </div>
+    </label>
+  </div>
 
 <!-- navbar section starts here -->
     <div class="container">
@@ -36,9 +46,7 @@
                         <a href="#">account</a>
                     </li>
                     
-                    <li>
-                    <a class="fixed-button" id="modeButton" onclick="toggleMode()">Dark</a>
-                    </li>
+            
                   
                 </ul>
              
@@ -74,14 +82,15 @@
 
 <section class="about" id="about">
 
-<div class="parallax" id="parallax">
-           
-            <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width:50%; height:50%;"></div>
-        </div>
+    <div class="parallax" id="parallax">
+        <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width: 50%; height: 50%;"></div>
+    </div>
 
-        <div class="text">
+    <div class="text">
         <h2>something never seen</h2>
     </div>
+</section>
+
         
 </section>
 <section class="description">
@@ -153,32 +162,21 @@ setFixedPosition(images[0], 50, 50);
 
 <!-- script para boton fijo dark-mode -->
 <script>
-let isDarkMode = true;
-
-function toggleMode() {
+    const toggleInput = document.getElementById('dark-mode-switch');
     const body = document.body;
-    const modeButton = document.getElementById('modeButton');
 
-    // Cambia el estado del modo
-    isDarkMode = !isDarkMode;
+    // Cambia el estado del interruptor al cargar la página
+    toggleInput.checked = body.classList.contains('dark-mode');
 
-    // Aplica las clases de modo en función del estado
-    if (isDarkMode) {
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        modeButton.textContent = 'Dark';
-    } else {
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        modeButton.textContent = 'Light';
+    // Cambia el estado del modo y del interruptor con animación
+    function toggleMode() {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
     }
 
-    // Agrega una etiqueta HTML para definir el modo
-    const htmlTag = document.documentElement;
-    htmlTag.setAttribute('data-mode', isDarkMode ? 'dark' : 'light');
-}
-</script>
-
+    // Escucha los cambios en el interruptor
+    toggleInput.addEventListener('change', toggleMode);
+  </script>
 <!-- script para el cursor -->
 
 <script>
