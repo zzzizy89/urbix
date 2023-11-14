@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2023 a las 03:13:26
+-- Tiempo de generación: 15-11-2023 a las 00:08:02
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.1.17
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,6 +31,17 @@ CREATE TABLE `barrio` (
   `id_barrio` int(11) NOT NULL,
   `id_ciudad` int(11) NOT NULL,
   `barrio` varchar(65) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `calle`
+--
+
+CREATE TABLE `calle` (
+  `id_calle` int(11) NOT NULL,
+  `calle` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
@@ -97,10 +108,24 @@ CREATE TABLE `detalle_compra` (
 CREATE TABLE `direccion_ca` (
   `id_direccion_casa` int(11) NOT NULL,
   `id_barrio` int(11) NOT NULL,
-  `calle` varchar(75) NOT NULL,
-  `numero` tinyint(4) NOT NULL,
+  `id_calle` int(11) NOT NULL,
+  `codigo_postal` int(11) NOT NULL,
+  `numero` int(11) NOT NULL,
   `descripcion_casa` varchar(175) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `direccion_ca`
+--
+
+INSERT INTO `direccion_ca` (`id_direccion_casa`, `id_barrio`, `id_calle`, `codigo_postal`, `numero`, `descripcion_casa`) VALUES
+(37, 37, 2, 127, 127, 'casa rojua'),
+(38, 38, 3, 127, 0, 'dasdas'),
+(39, 0, 4, 39, 127, 'dwadwdwa'),
+(40, 0, 5, 40, 127, 'dsadsads'),
+(41, 0, 6, 41, 127, 'wwdwda'),
+(42, 42, 7, 5523, 127, 'adad'),
+(43, 43, 8, 5850, 123456789, 'asdasda');
 
 -- --------------------------------------------------------
 
@@ -151,8 +176,8 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `imagen`, `descripcion_prod`, `id_tipoprod`) VALUES
-(15, 'hyperex', 99999.00, '1698454470_c9a07d9bbebf10969f4a.jpg', 'teclado facherito', 3),
-(16, 'hyperex pro maxed', 500.00, '1698629313_088a4d2565a2f7ece85f.jpg', 'teclado facherito', 3);
+(22, 'teclado cents', 25.99, '1699390685_b86b4d4d996f1590a266.jpg', 'teclado de centavos', 3),
+(23, 'teclado', 500.00, '1699393928_37f344589071be4fe77d.jpg', '1231', 3);
 
 -- --------------------------------------------------------
 
@@ -208,10 +233,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `updated_at`, `rol`) VALUES
-(3, '1697501609_a1a5e17e87e5cc24cef6.jpg', 'Tiago', 'tiagocomba@gmail.com', 'soy desarrollador web', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
+(3, '1699995101_98462e7bfa97732c856c.jpg', 'Pepe', 'tiagocomba@gmail.com', 'hola me gusta la manzana', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
 (5, '', 'test', 'test@gmail.com', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', '2023-10-11 14:29:29', 0),
 (6, '', 'pepe', 'pepe@gmail.com', '', '$2y$10$WNP/RwmlNlWqn0czYtzkN.LKBEovUYqywiemsYkCKBvYOR5BTgSVS', '2023-10-15 22:18:21', '2023-10-15 22:18:21', 0),
-(7, '', 'Luca', 'lucaferna@gmail.com', '', '$2y$10$4li6pkjY7bROijJFuTGrTecLinIsc1N9mAVdcppB7eEiC62hgLsuK', '2023-10-25 19:40:11', '2023-10-25 19:40:11', 0);
+(7, '', 'Luca', 'lucaferna@gmail.com', '', '$2y$10$4li6pkjY7bROijJFuTGrTecLinIsc1N9mAVdcppB7eEiC62hgLsuK', '2023-10-25 19:40:11', '2023-10-25 19:40:11', 0),
+(8, '', 'eze', 'eze@gmail.com', '', '$2y$10$fINKdk19sX.xXaumtRXyzewh/sZ7m1XXMghWjjvP172SsmLT0pp9e', '2023-11-01 19:19:52', '2023-11-01 19:19:52', 0),
+(9, '', '3', 'palo@gmail.com', '', '$2y$10$AO0iNaBdRlXPqsYoTy5ipukhiXTFVz5YCjccZjIAknUXNFtssP0BC', '2023-11-07 23:42:58', '2023-11-07 23:42:58', 0),
+(10, '', 'eze', 'lololo@gmail.com', '', '$2y$10$aWMiO/bO6e8mZ2kR47/TleRhqf7rua2zCs7s7fg.8DTTlebuCM7u.', '2023-11-10 22:10:24', '2023-11-10 22:10:24', 0);
 
 --
 -- Índices para tablas volcadas
@@ -222,6 +250,12 @@ INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `c
 --
 ALTER TABLE `barrio`
   ADD PRIMARY KEY (`id_barrio`);
+
+--
+-- Indices de la tabla `calle`
+--
+ALTER TABLE `calle`
+  ADD PRIMARY KEY (`id_calle`);
 
 --
 -- Indices de la tabla `carrito`
@@ -297,37 +331,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `barrio`
 --
 ALTER TABLE `barrio`
-  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+--
+-- AUTO_INCREMENT de la tabla `calle`
+--
+ALTER TABLE `calle`
+  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compra`
 --
 ALTER TABLE `detalle_compra`
-  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_ca`
 --
 ALTER TABLE `direccion_ca`
-  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `metodo_pago`
@@ -339,19 +379,19 @@ ALTER TABLE `metodo_pago`
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `provincia`
 --
 ALTER TABLE `provincia`
-  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
@@ -363,7 +403,7 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

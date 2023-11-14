@@ -9,6 +9,7 @@ use App\Models\Ciudad;
 use App\Models\Pais;
 use App\Models\Provincia;
 use App\Models\Producto;
+use App\Models\Calle;
 
 class Compradir extends Controller
 {
@@ -60,13 +61,14 @@ public function Compradirtotal()
     }
 
     
-    public function Compradirecta($pais, $provincia, $ciudad, $barrio, $calle, $numero, $descripcion_casa)
+    public function Compradirecta($pais, $provincia, $ciudad,$codigo_postal, $barrio, $calle, $numero, $descripcion_casa)
 {
     $paisModel = new Pais();
     $provModel = new Provincia();
     $ciudadModel = new Ciudad();
     $barrioModel = new Barrio();
     $direccionModel = new Direccion_ca();
+    $calleModel = new Calle();
 
     // Insertar país
     $id_pais = $paisModel->insertPais($pais);
@@ -80,8 +82,11 @@ public function Compradirtotal()
     // Insertar barrio
     $id_barrio = $barrioModel->insertBarrio($barrio,$id_ciudad);
 
-    // Insertar dirección y guardar la id en $id_direccion
-    $id_direccion = $direccionModel->insertDireccion($calle,$numero,$descripcion_casa,$id_barrio);
+    // Insertar calle
+    $id_calle = $calleModel->insertCalle($calle);
+    
+  // Insertar dirección y guardar la id en $id_direccion
+  $id_direccion = $direccionModel->insertDireccion($id_calle,$codigo_postal,$numero,$descripcion_casa,$id_barrio);
 
     // Obtener el ID de la dirección recién insertada
     
