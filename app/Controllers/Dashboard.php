@@ -38,40 +38,49 @@ class Dashboard extends BaseController
         $userModel = new UserModel();
     
         $newUsername = $this->request->getPost('new_username');
-        $newEmail = $this->request->getPost('new_email');//quitar
         $newBio = $this->request->getPost('new_bio');
-        $userId = session('user')->id_user; 
+        $userId = session('user')->id_user;
     
         // Procesar la carga de la imagen
         $profileImage = $this->request->getFile('profile_image');
+    
+        $data = [];
+    
+        if (!empty($newUsername)) {
+            $data['name'] = $newUsername;
+        }
+    
+        if (!empty($newBio)) {
+            $data['bio'] = $newBio;
+        }
+    
         if ($profileImage->isValid() && !$profileImage->hasMoved()) {
             $newName = $profileImage->getRandomName();
             $profileImage->move('./uploads', $newName);
-            $data = [
-                'name' => $newUsername,
-                'email' => $newEmail, //quitar
-                'bio' => $newBio,
-                'perfil' => $newName // Guarda el nombre de la imagen en la base de datos
-            ];
-            $userModel->updatedashboard($userId, $data);
-        } else {
-            // Si ocurre algún error en la carga de la imagen, se actualizan solo los otros campos
-            $data = [
-                'name' => $newUsername,
-                'email' => $newEmail,
-                'bio' => $newBio
-            ];
+            $data['perfil'] = $newName;
+        }
+    
+        // Solo actualiza si hay datos para actualizar
+        if (!empty($data)) {
             $userModel->updatedashboard($userId, $data);
         }
     
-        // Actualiza el nombre, correo electrónico, descripción y foto de perfil en la sesión
-        session('user')->name = $newUsername;
-        session('user')->email = $newEmail;
-        session('user')->bio = $newBio;
-        session('user')->perfil = $newName; // Asegúrate de manejar la lógica de actualización de perfil de acuerdo con tu estructura de datos
+        // Actualiza la sesión solo con los campos que se han actualizado
+        if (isset($data['name'])) {
+            session('user')->name = $data['name'];
+        }
+    
+        if (isset($data['bio'])) {
+            session('user')->bio = $data['bio'];
+        }
+    
+        if (isset($data['perfil'])) {
+            session('user')->perfil = $data['perfil'];
+        }
     
         return redirect()->to('dashboard');
     }
+    
     
     
  }

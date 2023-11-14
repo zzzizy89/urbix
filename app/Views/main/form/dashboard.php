@@ -26,14 +26,12 @@ $is_admin = (session('user')->rol == 1);
                 <h2>User Menu</h2>
                 <form action="<?= base_url('update') ?>" method="post" enctype="multipart/form-data">
                     <label for="new-username">New Username:</label>
-                    <input type="text" id="new-username" name="new_username" required>
-                    <label for= "new-email">New Email:</label>
-                    <input type="text" id="new-email" name="new_email" required>
+                    <input type="text" id="new-username" name="new_username">
                     <label for="new-bio">New Bio:</label>
                     <textarea id="new-bio" name="new_bio" rows="4"></textarea>
                     <label for="profile-image">Profile Image:</label>
                     <input type="file" id="profile-image" name="profile_image">
-                    <button type="submit">Change Username, Email, Bio, and Profile Image</button>
+                    <button type="submit">Change Username, Bio, and Profile Image</button>
                 </form>
 
                 <!-- Botón "Listar Periféricos" solo para el administrador con el correo electrónico 'admin@example.com' -->
