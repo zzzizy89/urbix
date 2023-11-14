@@ -12,7 +12,7 @@
 <body>
     
 <div class="intro">
-  <div class="company-name"><img src="<?php echo base_url('assets/css/img/iconos/urbix.png') ?>" alt=""></div>
+  <div class="company-name"><img src="<?php echo base_url('assets/css/img/iconos/robot.png') ?>" alt=""></div>
 </div>
 <script>
  const tl = gsap.timeline({

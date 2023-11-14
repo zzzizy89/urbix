@@ -322,7 +322,7 @@ header .header-right .hamburger div {
 }
 
 .phrase h2 {
-    font-size: 80px;
+    font-size: 150px;
     font-family: "Akira";
     color: var(--color-main);
     overflow: hidden;
@@ -331,10 +331,27 @@ header .header-right .hamburger div {
     display: inline-block;
 }
 
+.phrase h2 span {
+    font-size: 150px;
+    font-family: "StretchPro";
+    color: var(--color-secondary);
+}
+
+.slogan {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Akira";
+    color: var(--color-terciary);
+    font-size: 40px;
+}
 
 
 @media only screen and (max-width: 1768px) {
     .phrase h2 {
+        font-size: 24px;
+    }
+
+    .phrase h2 span {
         font-size: 24px;
     }
 }
@@ -592,4 +609,16 @@ body.light-mode header nav ul li a.active {
 
 .light-mode .home .phrase h2 {
     color: var(--color-main);
+}
+
+.dark-mode .home .phrase h2 span {
+    color: var(--color-secondary);
+}
+
+.light-mode .home .phrase h2 span {
+    color: var(--color-primary);
+}
+
+.light-mode .home .slogan {
+    color: var(--color-terciary-translucent);
 }

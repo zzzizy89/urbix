@@ -61,8 +61,10 @@
 
 <section class="home">
     <div class="phrase">
-        <h2 id="typing-text">what you were looking for</h2>
+        <h2>What are you <br> <span>looking</span> for?</h2>
+        <p class="slogan">©ertified by us</p>
     </div>
+
     <div class="scroll-down"></div>
 </section>
 
