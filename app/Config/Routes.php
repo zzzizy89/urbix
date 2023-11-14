@@ -69,9 +69,6 @@ $routes->post('actualizar', 'Productos::actualizar');
 $routes->get('inicio', 'Productos::inicio');
 $routes->get('about', 'Productos::about');
 
-// seccion controlador catalogo
-
-$routes->get('catalogo', 'catalogo::shop');
 
 // seccion controlador Email
 //$routes->get('form_email', 'Email::index');
