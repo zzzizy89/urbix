@@ -29,6 +29,9 @@
                 <label for="ciudad">Ciudad:</label>
                 <input type="text" id="ciudad" name="ciudad" required>
 
+                <label for="codigo_postal">Codigo Postal:</label>
+                <input type="number" id="codigo_postal" name="codigo_postal" required>
+
                 <label for="barrio">Barrio:</label>
                 <input type="text" id="barrio" name="barrio" required>
 
@@ -63,6 +66,7 @@
             var pais = document.getElementById('pais').value;
             var provincia = document.getElementById('provincia').value;
             var ciudad = document.getElementById('ciudad').value;
+            var codigo_postal = document.getElementById('codigo_postal').value;
             var barrio = document.getElementById('barrio').value;
             var calle = document.getElementById('calle').value;
             var numero = document.getElementById('numero').value;
@@ -72,6 +76,7 @@
                 pais === '' ||
                 provincia === '' ||
                 ciudad === '' ||
+                codigo_postal === '' ||
                 barrio === '' ||
                 calle === '' ||
                 numero === '' ||
@@ -99,12 +104,13 @@
                 var pais = document.getElementById('pais').value;
                 var provincia = document.getElementById('provincia').value;
                 var ciudad = document.getElementById('ciudad').value;
+                var codigo_postal = document.getElementById('codigo_postal').value;
                 var barrio = document.getElementById('barrio').value;
                 var calle = document.getElementById('calle').value;
                 var numero = document.getElementById('numero').value;
                 var descripcion_casa = document.getElementById('descripcion_casa').value;
 
-                var urlDinamica = "<?= base_url('realizar_compra_dir') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
+                var urlDinamica = "<?= base_url('realizar_compra_dir') ?>/" + encodeURIComponent(pais) + "/" + encodeURIComponent(provincia) + "/" + encodeURIComponent(ciudad) + "/" + encodeURIComponent(codigo_postal) + "/" + encodeURIComponent(barrio) + "/" + encodeURIComponent(calle) + "/" + encodeURIComponent(numero) + "/" + encodeURIComponent(descripcion_casa);
 
                 // Redirige al usuario a la URL basada en los valores del formulario
                 window.location.href = urlDinamica;

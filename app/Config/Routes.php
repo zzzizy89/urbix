@@ -102,11 +102,11 @@ $routes->get('cancelar/compra/', 'carrito2::index');
 
 $routes->get('comprar/', 'Comprass::index');
 $routes->get('checkout', 'Comprass::check');
-$routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7');
+$routes->get('realizar_compra/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Comprass::confirmarCompra/$1/$2/$3/$4/$5/$6/$7/$8');
 
 // seccion controlador Compradir
 
-$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7');
+$routes->get('realizar_compra_dir/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)', 'Compradir::Compradirecta/$1/$2/$3/$4/$5/$6/$7/$9');
 $routes->get('compra_dir/', 'Compradir::index');
 $routes->post('compradirca/', 'Compradir::Compradirtotal');
 $routes->get('cancelcompradir/', 'Compradir::cancelcompradir');

@@ -10,7 +10,7 @@ use App\Models\pais;
 use App\Models\provincia;
 use App\Models\Carritos;
 use App\Models\Producto;
-
+use App\Models\Calle;
 
 class Comprass extends Controller
 {
@@ -81,14 +81,14 @@ public function check()
     {
         return view('main/catalogo/checkout');
 }
-public function confirmarCompra($pais, $provincia, $ciudad, $barrio, $calle, $numero, $descripcion_casa)
+public function confirmarCompra($pais, $provincia, $ciudad,$codigo_postal, $barrio, $calle, $numero, $descripcion_casa)
 {
     $paisModel = new Pais();
     $provModel = new Provincia();
     $ciudadModel = new ciudad();
     $barrioModel = new Barrio();
     $direccionModel = new Direccion_ca();
-   
+    $calleModel = new Calle();
      // Insertar país
      $id_pais = $paisModel->insertPais($pais);
 
@@ -100,9 +100,12 @@ public function confirmarCompra($pais, $provincia, $ciudad, $barrio, $calle, $nu
  
      // Insertar barrio
      $id_barrio = $barrioModel->insertBarrio($barrio,$id_ciudad);
+
+     // Insertar calle
+     $id_calle = $calleModel->insertCalle($calle);
  
      // Insertar dirección y guardar la id en $id_direccion
-     $id_direccion = $direccionModel->insertDireccion($calle,$numero,$descripcion_casa,$id_barrio);
+     $id_direccion = $direccionModel->insertDireccion($id_calle,$codigo_postal,$numero,$descripcion_casa,$id_barrio);
  
     $carritosModel = new Carritos();
     $productoModel = new Producto();
