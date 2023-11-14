@@ -52,4 +52,14 @@ class Carritos extends Model{
         // Obtén los datos del carrito por su ID
         return $this->find($id_carrito);
     }
+    public function isCarritoVacio($id_user)
+{
+    // Verifica si el carrito está vacío para el usuario dado
+    return $this->where('id_user', $id_user)->countAllResults() === 0;
+}
+public function obtenerCarritosPorUsuario($id_user)
+{
+    // Obtén los carritos para el usuario dado
+    return $this->where('id_user', $id_user)->findAll();
+}
 }
