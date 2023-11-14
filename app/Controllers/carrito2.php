@@ -67,10 +67,10 @@ class Carrito2 extends Controller{
         // Validar que la cantidad sea un número entero positivo
         if (is_numeric($cantidad) && $cantidad > 0) {
             // Obtener los datos del carrito antes de actualizar
-            $datosCar = $carritoModel->obtenerDatosenelCarrito($id_carrito);
+            $datosCar = $car->obtenerDatosenelCarrito($id_carrito);
 
             // Actualizar la cantidad 
-            $carritoModel->actualizarCantidadEnCarrito($id_carrito, $cantidad);
+            $car->actualizarCantidadEnCarrito($id_carrito, $cantidad);
         }
     }
 

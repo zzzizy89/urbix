@@ -48,4 +48,9 @@ public function obtenerPrecioPorId($id_producto)
         // Obtén el precio del producto por su ID
         return $this->select('precio')->where('id_producto', $id_producto)->first();
     }
+    
+    public function obtenerProductoPorId($id_producto)
+    {
+        return $this->find($id_producto);
+    }
 }
