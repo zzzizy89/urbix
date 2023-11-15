@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KeyTech</title>
-    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/animation/intro.css')?>">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="js/pace.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/src/jquery.bez.js"></script>

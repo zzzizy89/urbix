@@ -775,8 +775,6 @@ header .header-right .hamburger div {
     margin-bottom: 15vh;
     margin-left: -9vh;
 
-
-
 }
 
 .description-table {
@@ -789,15 +787,13 @@ header .header-right .hamburger div {
 table {
     border-collapse: collapse;
     margin-top: 2vh;
-
-    /* Espaciado superior */
 }
 
 td {
     padding: 1vw;
     font-family: "PiGARNOS-NEUE-Regular";
     color: var(--color-main);
-    /* Borde para las celdas */
+
 }
 
 td span {
@@ -805,20 +801,180 @@ td span {
     font-family: "Akira";
 }
 
+/* Resolucion para Monitores */
 
-@media only screen and (max-width: 768px) {
-
+@media (max-width: 1920px) {
     .description {
-        margin-top: -10vh;
-        margin-left: 10vh;
+        width: 100%;
+        margin-top: -25vh;
+        margin-bottom: 15vh;
+        margin-left: -9vh;
     }
 
     .description-table {
-        max-width: 100%;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
     }
 
     td {
-        font-size: 2vw;
+        padding: 1vw;
+    }
+}
+
+/* @media (max-width: 1366px) {
+    .description {
+        width: 100%;
+        margin-top: -25vh;
+        margin-bottom: 15vh;
+        margin-left: -9vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.4vw;
+    }
+} */
+
+@media (max-width: 1280px) {
+    .description {
+        width: 100%;
+        margin-top: -20vh;
+        margin-bottom: 15vh;
+        margin-left: 7.9vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.3vw;
+    }
+}
+
+/* Resolucion para Tablets */
+
+@media (max-width: 1120px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 13vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 960px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 18vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.2vw;
+    }
+}
+
+/* Resolucion para Celulares */
+@media (max-width: 950px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 18.5vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .description {
+        width: 100%;
+        margin-top: -8vh;
+        margin-bottom: 15vh;
+        margin-left: 11.2vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
         padding: 1vw;
     }
 }
