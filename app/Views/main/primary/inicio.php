@@ -97,23 +97,23 @@
     <div class="description-table">
         <table>
             <tr>
-                <td><span>Empresa:</span></td>
+                <td><span>Company:</span></td>
                 <td>Urbix</td>
             </tr>
             <tr>
-                <td><span>Especialidad:</span></td>
-                <td>Perifericos</td>
+                <td><span>Specialty:</span></td>
+                <td>peripherals</td>
             </tr>
             <tr>
-                <td><span>Origen:</span></td>
+                <td><span>Origin:</span></td>
                 <td>Argentina</td>
             </tr>
             <tr>
-                <td><span>Fundadores:</span></td>
+                <td><span>Founders:</span></td>
                 <td>Tiago Comba - Ezequiel Monteverde</td>
             </tr>
             <tr>
-                <td><span>Idiomas:</span></td>
+                <td><span>Languages:</span></td>
                 <td>ES-US</td>
             </tr>
             <tr>
