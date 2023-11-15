@@ -83,7 +83,7 @@
 <section class="about" id="about">
 
     <div class="parallax" id="parallax">
-        <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width: 50%; height: 50%;"></div>
+        <div class="background-image" style="background-image: url('assets/css/img/gallery/1.jpg'); width: 50%; height: 50%;"></div>
     </div>
 
     <div class="text">
@@ -123,7 +123,6 @@
         </table>
     </div>
 </section>
-
 
 
 
