@@ -21,13 +21,7 @@ class Email2 extends BaseController
     */
     public function enviar__email()
     {
-        // Verificar si el usuario está autenticado
-        if (!session('user')) {
-            // Puedes personalizar este mensaje según tus necesidades
-            echo "Necesitas estar logeado para mandar una consulta";
-            return;
-        }
-
+       
         $nombrecom = $this->request->getPost('nombrecom');
         $emailUsuario = session('user')->email;
         $sumen = $this->request->getPost('mensaje1');
