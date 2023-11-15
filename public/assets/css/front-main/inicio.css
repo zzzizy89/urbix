@@ -655,14 +655,36 @@ header .header-right .hamburger div {
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 100;
-
+    animation: bounceAndColorChange 3s infinite alternate;
 }
 
 .text h2 {
     font-size: 5vw;
     font-family: "PIGARNOS-NEUE-Regular";
-    color: var(--color-main);
+
 }
+
+@keyframes bounceAndColorChange {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        color: var(--color-terciary);
+
+    }
+
+    50% {
+        transform: translate(-50%, -40%) scale(1.1);
+        color: var(--color-secondary);
+
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        color: var(--color-terciary);
+
+    }
+}
+
+
 
 .background-image {
     position: absolute;
@@ -801,6 +823,18 @@ td span {
     font-family: "Akira";
 }
 
+.dropdown-arrow {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.additional-info {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+}
+
 /* Resolucion para Monitores */
 
 @media (max-width: 1920px) {
@@ -928,6 +962,9 @@ td span {
         font-size: 1.2vw;
     }
 }
+
+
+
 
 /* Resolucion para Celulares */
 @media (max-width: 950px) {
