@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro dashboard</title>
-    <link rel="stylesheet" href="assets/css/intro2.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/animation/intro2.css')?>">
 
 </head>
 <body>
@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">Choose greatness over plenty.</div>
-            <div class="text text-2">Choose greatness over plenty.</div>
-            <div class="text text-3">Choose greatness over plenty.</div>
-            <div class="text text-4">Choose greatness over plenty.</div>
-            <div class="text text-5">Choose greatness over plenty.</div>
-            <div class="text text-6">Choose greatness over plenty.</div>
-            <div class="text text-7">Choose greatness over plenty.</div>
-            <div class="text text-8">Choose greatness over plenty.</div>
-            <div class="text text-9">Choose greatness over plenty.</div>
-            <div class="text text-10">Choose greatness over plenty.</div>
-            <div class="text text-11">Choose greatness over plenty.</div>
+            <div class="text text-1">Choose greatness.</div>
+            <div class="text text-2">Choose greatness.</div>
+            <div class="text text-3">Choose greatness.</div>
+            <div class="text text-4">Choose greatness.</div>
+            <div class="text text-5">Choose greatness.</div>
+            <div class="text text-6">Choose greatness.</div>
+            <div class="text text-7">Choose greatness.</div>
+            <div class="text text-8">Choose greatness.</div>
+            <div class="text text-9">Choose greatness.</div>
+            <div class="text text-10">Choose greatness.</div>
+            <div class="text text-11">Choose greatness.</div>
         </div>
     </div>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro login</title>
-    <link rel="stylesheet" href="assets/css/intro2.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/animation/intro2.css')?>">
 
 </head>
 <body>
@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">Emphasize quality, not quantity.</div>
-            <div class="text text-2">Emphasize quality, not quantity.</div>
-            <div class="text text-3">Emphasize quality, not quantity.</div>
-            <div class="text text-4">Emphasize quality, not quantity.</div>
-            <div class="text text-5">Emphasize quality, not quantity.</div>
-            <div class="text text-6">Emphasize quality, not quantity.</div>
-            <div class="text text-7">Emphasize quality, not quantity.</div>
-            <div class="text text-8">Emphasize quality, not quantity.</div>
-            <div class="text text-9">Emphasize quality, not quantity.</div>
-            <div class="text text-10">Emphasize quality, not quantity.</div>
-            <div class="text text-11">Emphasize quality, not quantity.</div>
+            <div class="text text-1">Emphasize quality.</div>
+            <div class="text text-2">Emphasize quality.</div>
+            <div class="text text-3">Emphasize quality.</div>
+            <div class="text text-4">Emphasize quality.</div>
+            <div class="text text-5">Emphasize quality.</div>
+            <div class="text text-6">Emphasize quality.</div>
+            <div class="text text-7">Emphasize quality.</div>
+            <div class="text text-8">Emphasize quality.</div>
+            <div class="text text-9">Emphasize quality.</div>
+            <div class="text text-10">Emphasize quality.</div>
+            <div class="text text-11">Emphasize quality.</div>
         </div>
     </div>
 

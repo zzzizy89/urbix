@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/urbix.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/animation/urbix.css')?>">
 
     <title>everything you are looking for</title>
-    <link rel="website icon" type="png" href="<?php echo base_url('assets/img/primary/urbix.png');?>"> 
+    <link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/urbix.png');?>"> 
 </head>
 <body>
     
 <div class="intro">
-  <div class="company-name">Urbix</div>
+  <div class="company-name"><img src="<?php echo base_url('assets/css/img/iconos/robot.png') ?>" alt=""></div>
 </div>
 <script>
  const tl = gsap.timeline({

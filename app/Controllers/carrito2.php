@@ -3,6 +3,8 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use CodeIgniter\Controller;
 use App\Models\Carritos;
+use App\Models\Producto;
+
 
 class Carrito2 extends Controller{
     public function index()
@@ -19,13 +21,9 @@ class Carrito2 extends Controller{
         // Obtener id_user desde la sesión
         $id_user = session('user')->id_user;
     
-        // Obtener los datos del carrito y unirlos con los datos de los teclados
-        $datos['carritos'] = $car->select('carrito.*, teclados.imagen as teclado_imagen')
-                               ->join('teclados', 'teclados.id_teclado = carrito.id_teclado')
-                               ->where('id_user', $id_user)
-                               ->orderBy('id_carrito', 'ASC')
-                               ->findAll();
-    
+       // Llama al método del modelo para obtener los productos en el carrito
+         $datos['carritos'] = $car->obtenerdatoscarrito($id_user);
+
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');
     
@@ -40,49 +38,44 @@ class Carrito2 extends Controller{
         $car = new Carritos();
     
         // Obtener los datos del carrito antes de eliminarlo
-        $datosCar = $car->where('id_carrito', $id)->first();
-    
+        $datosCar = $car->obtenerDatosAntesDeEliminar($id);
+
         // Eliminar el carrito por su ID
-        $car->where('id_carrito', $id)->delete();
+        $car->eliminarCarrito($id);
     
         // Redirigir a la página del carrito
         return $this->response->redirect(site_url('/carrito2'));
     }
     public function actualizarcar()
-    {
-        $car = new Carritos();
+{
+    $car = new Carritos();
+    $productosModel = new Producto(); 
     
-        // Obtener id_user desde la sesión
-        $id_user = session('user')->id_user;
-    
-        // Obtener datos del formulario
-        $cantidades = $this->request->getPost('cantidad');
-    
-        // Verificar si el carrito está vacío
-        if (empty($cantidades)) {
-            // Redirigir a la vista carrito2
-            return redirect()->to(base_url('carrito2'));
-        }
-    
-        foreach ($cantidades as $id_carrito => $cantidad) {
-            // Validar que la cantidad sea un número entero positivo
-            if (is_numeric($cantidad) && $cantidad > 0) {
-                // Obtener los datos del carrito antes de actualizar
-                $datosCar = $car->find($id_carrito);
-    
-                // Calcular el nuevo total
-                $nuevoTotal = $datosCar['precio'] * $cantidad;
-    
-                // Actualizar la cantidad y el total en la base de datos
-                $car->update($id_carrito, ['cantidad' => $cantidad, 'total' => $nuevoTotal]);
-            }
-        }
-    
+    // Obtener id_user desde la sesión
+    $id_user = session('user')->id_user;
+
+    // Obtener datos del formulario
+    $cantidades = $this->request->getPost('cantidad');
+
+    // Verificar si el carrito está vacío
+    if (empty($cantidades)) {
         // Redirigir a la vista carrito2
         return redirect()->to(base_url('carrito2'));
     }
-    
-    
 
-    
+    foreach ($cantidades as $id_carrito => $cantidad) {
+        // Validar que la cantidad sea un número entero positivo
+        if (is_numeric($cantidad) && $cantidad > 0) {
+            // Obtener los datos del carrito antes de actualizar
+            $datosCar = $car->obtenerDatosenelCarrito($id_carrito);
+
+            // Actualizar la cantidad 
+            $car->actualizarCantidadEnCarrito($id_carrito, $cantidad);
+        }
+    }
+
+    // Redirigir a la vista carrito2
+    return redirect()->to(base_url('carrito2'));
+}
+
 }

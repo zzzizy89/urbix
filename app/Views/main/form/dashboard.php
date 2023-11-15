@@ -1,5 +1,5 @@
 <?php
-$is_admin = (session('user')->email == "tiagocomba@gmail.com") || (session('user')->email == "ezequielmonteverde@gmail.com");
+$is_admin = (session('user')->rol == 1);
 // verifica si el usuario es administrador
 ?>
 
@@ -8,7 +8,7 @@ $is_admin = (session('user')->email == "tiagocomba@gmail.com") || (session('user
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/dashboard.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/account/dashboard.css');?>">
     <title>Your Profile</title>
 </head>
 <body>
@@ -26,14 +26,12 @@ $is_admin = (session('user')->email == "tiagocomba@gmail.com") || (session('user
                 <h2>User Menu</h2>
                 <form action="<?= base_url('update') ?>" method="post" enctype="multipart/form-data">
                     <label for="new-username">New Username:</label>
-                    <input type="text" id="new-username" name="new_username" required>
-                    <label for "new-email">New Email:</label>
-                    <input type="text" id="new-email" name="new_email" required>
+                    <input type="text" id="new-username" name="new_username">
                     <label for="new-bio">New Bio:</label>
                     <textarea id="new-bio" name="new_bio" rows="4"></textarea>
                     <label for="profile-image">Profile Image:</label>
                     <input type="file" id="profile-image" name="profile_image">
-                    <button type="submit">Change Username, Email, Bio, and Profile Image</button>
+                    <button type="submit">Change Username, Bio, and Profile Image</button>
                 </form>
 
                 <!-- Botón "Listar Periféricos" solo para el administrador con el correo electrónico 'admin@example.com' -->

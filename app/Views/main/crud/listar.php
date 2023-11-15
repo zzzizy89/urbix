@@ -21,31 +21,41 @@
                         <th>Imagen</th>
                         <th>Nombre</th>
                         <th>Precio</th>
+                        <th>Descripcion</th>
+                        <th>tipo</th>
                         <th>Acciones</th>
                 </tr>
         </thead>
         <tbody>
 
-                <?php foreach($teclados as $teclado): ?>
+                <?php foreach($productos as $producto): ?>
                 <tr>
                         <td>
-                                <?php echo $teclado ['id_teclado'];?>
+                                <?php echo $producto ['id_producto'];?>
                         </td>
                         <td>
-                                <img class="img-thumbnail" width="100" src="<?=base_url('uploads/'.$teclado['imagen'])?>" alt="teclado">
+                                <img class="img-thumbnail" width="100" src="<?=base_url('uploads/'.$producto['imagen'])?>" alt="teclado">
 
                         </td>
                         <td>
-                                <?php echo $teclado ['nombre'];?>
+                                <?php echo $producto ['nombre'];?>
         
                         </td>
                         <td>
-                        <?php echo number_format($teclado['precio'], 2, ',', '.'); ?>
+                        <?php echo number_format($producto['precio'], 2, ',', '.'); ?>
         
                         </td>
                         <td>
-                                <a href="<?=base_url('editar/'.$teclado['id_teclado'])?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?=base_url('eliminar/'.$teclado['id_teclado'])?>" class="btn btn-danger" type="button">Eliminar</a>
+                                <?php echo $producto ['descripcion_prod'];?>
+        
+                        </td>
+                        <td>
+                                <?php echo $producto ['tipo'];?>
+        
+                        </td>
+                        <td>
+                                <a href="<?=base_url('editar/'.$producto['id_producto'])?>" class="btn btn-info" type="button">Editar</a>
+                                <a href="<?=base_url('eliminar/'.$producto['id_producto'])?>" class="btn btn-danger" type="button">Eliminar</a>
                         </td>
                 </tr>
                 <?php endforeach; ?>

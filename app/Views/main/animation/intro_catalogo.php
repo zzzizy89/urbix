@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro catalogo</title>
-    <link rel="stylesheet" href="assets/css/intro2.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/animation/intro2.css')?>">
 
 </head>
 <body>
@@ -34,7 +34,7 @@
         // Función para redirigir después de que la animación termine
         function redirectToAnotherView() {
             // Cambia la URL a la que deseas redirigir al usuario
-            var absoluteUrl = "<?php echo site_url('carrito'); ?>";
+            var absoluteUrl = "<?php echo site_url('catalogo'); ?>";
             window.location.href = absoluteUrl;
         }
 
