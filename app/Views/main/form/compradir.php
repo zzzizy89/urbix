@@ -10,8 +10,13 @@
     <header>
         <h1>Realizar compra</h1>
     </header>
+    <div class="user-stats">
+                <p><strong>Name:</strong> <?= session('nombre')->nombre; ?></p>
+                <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+                <p><strong>Bio:</strong> <?= session('user')->bio; ?></p>
+                <img src="<?= base_url('uploads/' . session('user')->perfil); ?>" alt="Profile Image">
+            </div>
     <section class="contenedor">
-
         <!-- Formulario para la información de envío y compra PayPal -->
         <div class="informacion-envio">
             <h2>Información de Envío</h2>
