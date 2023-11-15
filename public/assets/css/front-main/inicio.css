@@ -680,18 +680,26 @@ body.dark-mode header nav ul li a.active {
 
 body.light-mode header nav ul li a {
     color: var(--color-primary);
+
 }
 
 body.light-mode header nav ul li a:hover,
 body.light-mode header nav ul li a.active {
     color: var(--color-main);
+
+}
+
+body.light-mode header {
+    background: var(--color-secondary);
 }
 
 body.light-mode header .header-left nav {
     background: var(--color-secondary);
 }
 
-
+body.light-mode header .header-right .hamburger div {
+    background: var(--color-primary);
+}
 
 .dark-mode .home {
     background: var(--color-primary);
