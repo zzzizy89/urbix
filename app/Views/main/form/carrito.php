@@ -33,7 +33,7 @@
         </form>
 
         <!-- Segundo formulario para el botón "Comprar" -->
-        <form method="post" action="<?php echo base_url('compradirca'); ?>">
+        <form id="compra" method="post" action="<?php echo base_url('compradirca'); ?>">
             <!-- Campos ocultos para el ID del producto, cantidad y precio (repetidos) -->
             <input type="hidden" name="id_producto" value="<?php echo $producto['id_producto']; ?>">
             <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
@@ -87,6 +87,24 @@
                 if (!usuarioLogeado) {
                     // Mostrar un mensaje de alerta si el usuario no está logeado
                     alert('Debes estar logeado para agregar productos al carrito.');
+                    event.preventDefault(); // Evitar que el formulario se envíe
+                }
+            });
+        }
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var compra = document.getElementById('compra');
+
+        if (compra) {
+            compra.addEventListener('submit', function (event) {
+                // Verificar si el usuario está logeado
+                var usuarioLogeado = <?php echo json_encode(session('user') !== null); ?>;
+
+                if (!usuarioLogeado) {
+                    // Mostrar un mensaje de alerta si el usuario no está logeado
+                    alert('Debes estar logeado para comprar.');
                     event.preventDefault(); // Evitar que el formulario se envíe
                 }
             });
