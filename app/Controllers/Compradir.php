@@ -22,7 +22,6 @@ class Compradir extends Controller
         } else {
             // Obtener el valor de totalCompra desde la sesión
             $totalCompra = session()->get('totalCompra');
-            $data=session('compra') //pasar todos los datos de nombre precio cantidad etc
             // Pasar el valor de totalCompra a la vista
             $data['totalC'] = $totalCompra;
     
@@ -53,7 +52,6 @@ public function Compradirtotal()
             session()->set('cantidad', $cantidad);
             session()->set('nombre', $nombre);
             session()->set('id_producto', $id_producto);
-
             return redirect()->to('compra_dir');
         } else {
             // Manejo de error si $producto es nulo
@@ -119,7 +117,7 @@ public function Compradirtotal()
         session()->remove('precio');
         session()->remove('cantidad');
         session()->remove('id_producto');
-
+        session()->remove('nombre');
         // Redirigir a la página de confirmación de compra
         return redirect()->to(base_url('carrito'));
     
@@ -131,7 +129,7 @@ public function cancelcompradir()
     session()->remove('precio');
     session()->remove('cantidad');
     session()->remove('id_producto');
-
+    session()->remove('nombre');
     // Redirigir a la página de confirmación de compra
     return redirect()->to(base_url('carrito'));
 }
