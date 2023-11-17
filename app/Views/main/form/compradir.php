@@ -10,8 +10,14 @@
     <header>
         <h1>Realizar compra</h1>
     </header>
-    <section class="contenedor">
+    <div class="user-stats">
+                <p><strong>Producto:</strong> <?= session('nombre'); ?></p>
+                <p><strong>Cantidad:</strong> <?= session('cantidad'); ?></p>
+                <p><strong>Precio:</strong> <?= session('precio'); ?></p>
+                <p><strong>Total de la compra:</strong> <?= session('totalCompra'); ?></p>
 
+            </div>
+    <section class="contenedor">
         <!-- Formulario para la información de envío y compra PayPal -->
         <div class="informacion-envio">
             <h2>Información de Envío</h2>

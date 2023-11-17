@@ -68,68 +68,17 @@
 <!-- home section starts here -->
 
 <section class="home">
+    <div class="background-media"></div>
     <div class="phrase">
         <h2>What are you <br> <span>looking</span> for?</h2>
         <p class="slogan">©ertified by us</p>
     </div>
-
     <div class="scroll-down"></div>
 </section>
 
 <!-- home section ends here -->
 
 <!-- about section starts here -->
-
-<section class="about" id="about">
-
-    <div class="parallax" id="parallax">
-        <div class="background-image" style="background-image: url('assets/css/img/gallery/2.jpg'); width: 50%; height: 50%;"></div>
-    </div>
-
-    <div class="text">
-        <h2>something never seen</h2>
-    </div>
-</section>
-
-        
-</section>
-<section class="description">
-    <div class="description-table">
-        <table>
-            <tr>
-                <td><span>Company:</span></td>
-                <td>Urbix</td>
-            </tr>
-            <tr>
-                <td><span>Specialty:</span></td>
-                <td>peripherals</td>
-            </tr>
-            <tr>
-                <td><span>Origin:</span></td>
-                <td>Argentina</td>
-            </tr>
-            <tr>
-                <td><span>Founders:</span></td>
-                <td>Tiago Comba - Ezequiel Monteverde</td>
-            </tr>
-            <tr>
-                <td><span>Languages:</span></td>
-                <td>ES-US</td>
-            </tr>
-            <tr>
-                <td><span>Flow:</span></td>
-                <td>Yes</td>
-            </tr>
-        </table>
-    </div>
-</section>
-
-
-
-
-
-
-
 
 
 
@@ -147,18 +96,7 @@
         }
     </script>
 
- 
-    <!-- script para about images -->
-    <script>
-const images = document.querySelectorAll(".background-image");
 
-function setFixedPosition(image, x, y) {
-    image.style.left = x + "%";
-    image.style.top = y + "%";
-}
-
-setFixedPosition(images[0], 50, 50);
-    </script>
 
 <!-- script para boton fijo dark-mode -->
 <script>

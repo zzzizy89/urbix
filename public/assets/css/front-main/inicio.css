@@ -113,6 +113,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    transition: 0.3s ease-out;
     background: var(--color-primary);
     color: var(--color-secondary);
 }
@@ -122,11 +123,11 @@ body {
 .cursor {
     pointer-events: none;
     position: absolute;
-    padding: 0.5vw;
-    background-color: var(--color-secondary);
+    padding: 0.9vw;
+    border: 2px solid #ffff;
     /* Cambia este color al que desees en el modo claro */
     border-radius: 50%;
-    z-index: 11;
+    z-index: 200;
     transition: transform 0.1s ease;
 
 }
@@ -487,11 +488,24 @@ header .header-right .hamburger div {
     width: 100%;
     height: 100vh;
     background: var(--color-primary);
+    position: relative;
+}
 
+.background-media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    background: url('../img/gallery/01.jpg') center center/cover no-repeat;
+    z-index: 100;
+    /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
 }
 
 .phrase {
     text-align: center;
+    z-index: 150;
 }
 
 .phrase h2 {
@@ -502,6 +516,39 @@ header .header-right .hamburger div {
     white-space: nowrap;
     position: relative;
     display: inline-block;
+
+
+}
+
+.matrix-effect {
+    font-size: 9vw;
+    font-family: "Akira";
+    color: var(--color-main);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    z-index: 30000;
+}
+
+.matrix-effect span {
+    position: absolute;
+    opacity: 0;
+    animation: fall 2s linear infinite;
+    transform-origin: bottom;
+    z-index: 30000;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
 }
 
 .phrase h2 span {
@@ -655,14 +702,36 @@ header .header-right .hamburger div {
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 100;
-
+    animation: bounceAndColorChange 3s infinite alternate;
 }
 
 .text h2 {
     font-size: 5vw;
     font-family: "PIGARNOS-NEUE-Regular";
-    color: var(--color-main);
+
 }
+
+@keyframes bounceAndColorChange {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        color: var(--color-terciary);
+
+    }
+
+    50% {
+        transform: translate(-50%, -40%) scale(1.1);
+        color: var(--color-secondary);
+
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        color: var(--color-terciary);
+
+    }
+}
+
+
 
 .background-image {
     position: absolute;
@@ -775,8 +844,6 @@ header .header-right .hamburger div {
     margin-bottom: 15vh;
     margin-left: -9vh;
 
-
-
 }
 
 .description-table {
@@ -789,15 +856,13 @@ header .header-right .hamburger div {
 table {
     border-collapse: collapse;
     margin-top: 2vh;
-
-    /* Espaciado superior */
 }
 
 td {
     padding: 1vw;
     font-family: "PiGARNOS-NEUE-Regular";
     color: var(--color-main);
-    /* Borde para las celdas */
+
 }
 
 td span {
@@ -805,20 +870,195 @@ td span {
     font-family: "Akira";
 }
 
+.dropdown-arrow {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
 
-@media only screen and (max-width: 768px) {
+.additional-info {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+}
 
+/* Resolucion para Monitores */
+
+@media (max-width: 1920px) {
     .description {
-        margin-top: -10vh;
-        margin-left: 10vh;
+        width: 100%;
+        margin-top: -25vh;
+        margin-bottom: 15vh;
+        margin-left: -9vh;
     }
 
     .description-table {
-        max-width: 100%;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
     }
 
     td {
-        font-size: 2vw;
+        padding: 1vw;
+    }
+}
+
+/* @media (max-width: 1366px) {
+    .description {
+        width: 100%;
+        margin-top: -25vh;
+        margin-bottom: 15vh;
+        margin-left: -9vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.4vw;
+    }
+} */
+
+@media (max-width: 1280px) {
+    .description {
+        width: 100%;
+        margin-top: -20vh;
+        margin-bottom: 15vh;
+        margin-left: 7.9vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.3vw;
+    }
+}
+
+/* Resolucion para Tablets */
+
+@media (max-width: 1120px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 13vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 960px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 18vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.2vw;
+    }
+}
+
+
+
+
+/* Resolucion para Celulares */
+@media (max-width: 950px) {
+    .description {
+        width: 100%;
+        margin-top: -15vh;
+        margin-bottom: 15vh;
+        margin-left: 18.5vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
+        padding: 1vw;
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-width: 430px) {
+    .description {
+        width: 100%;
+        margin-top: -8vh;
+        margin-bottom: 15vh;
+        margin-left: 11.2vh;
+    }
+
+    .description-table {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+    }
+
+    table {
+        margin-top: 2vh;
+    }
+
+    td {
         padding: 1vw;
     }
 }
@@ -832,9 +1072,10 @@ td span {
 .toggle-container {
     position: absolute;
     top: 2vh;
-    right: 2vw;
+    left: 2vw;
     display: flex;
     align-items: center;
+    z-index: 160;
 }
 
 .toggle-label {

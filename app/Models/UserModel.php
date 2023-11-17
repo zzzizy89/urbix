@@ -35,8 +35,11 @@ public function register($ra)
 }
 public function getUserByEmail($email)
 {
-    return $this->where('email', $email)->first();
+    return $this->select('id_user, perfil, name, email, bio, rol,password')
+                ->where('email', $email)
+                ->first();
 }
+
 public function updatedashboard($userId, $data)
 {
    $this->update($userId, $data);

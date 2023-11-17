@@ -29,6 +29,8 @@ class Login extends BaseController
 
     if ($result !== null && $result->id_user > 0) {
         if (password_verify($password, $result->password)) {
+            // Elimina la propiedad 'password' antes de guardar en la sesión
+            unset($result->password);
             // Contraseña correcta, establece la sesión del usuario y redirige a la vista de dashboard
             $this->session->set("user", $result);
             return redirect()->to('dashboard');

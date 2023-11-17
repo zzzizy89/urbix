@@ -23,9 +23,12 @@ if (!empty($message)) {
             </tr>
         </thead>
         <tbody>
+        <?php   $contador = 1;?>
             <?php foreach($carritos as $car): ?>
                 <tr>
-                    <td><?php echo $car['id_carrito'];?></td>
+                <td><?php echo $contador; ?></td> <!-- Mostramos el contador en lugar de id_carrito -->
+
+                    <!--  <td> <?php  echo $car['id_carrito'];?></td> -->
                     <td>
                         <img class="img-thumbnail" width="100" src="<?= base_url('uploads/'.$car['producto_imagen']) ?>" alt="teclado">
                     </td>
@@ -47,6 +50,7 @@ if (!empty($message)) {
                         <a href="<?= base_url('carrito2/eliminarcar/'.$car['id_carrito'])?>" class="btn btn-danger" type="button">Eliminar</a>
                     </td>
                 </tr>
+                <?php  $contador++;?> 
             <?php endforeach; ?>
         </tbody>
     </table>
