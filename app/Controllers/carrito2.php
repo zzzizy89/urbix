@@ -22,7 +22,7 @@ class Carrito2 extends Controller{
         $id_user = session('user')->id_user;
     
        // Llama al método del modelo para obtener los productos en el carrito
-         $datos['carritos'] = $car->obtenerdatoscarrito($id_user);
+        $datos['carritos'] = $car->obtenerdatoscarrito($id_user);
 
         $datos['cabecera'] = view('templates/cabecera');
         $datos['pie'] = view('templates/piepagina');

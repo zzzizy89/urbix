@@ -13,8 +13,7 @@
 				<meta charset="UTF-8">
 				<meta http-equiv="X-UA-Compatible" contable="IE=edge">
 				<meta name="viewport" content="width=device-width, initial-scale:1.0">
-				<link rel="stylesheet" href="<?php echo base_url('assets/css/account/login.css')?>"
-				<title>Register</title>
+				<link rel="stylesheet" href="<?php echo base_url('assets/css/account/login.css')?>">
 
 		</head>
 		<body>
@@ -33,7 +32,7 @@
 										</div>
 
 										<div class="form-label">
-												<input name="password" required type="password" class="form-control" id="password" placeholder="password">
+										<input name="password" required pattern=".{8,}" type="password" class="form-control" id="password" placeholder="password">
 										</div>
 
 								</div>

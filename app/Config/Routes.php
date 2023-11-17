@@ -85,7 +85,6 @@ $routes->post('carrito/guar','Carrito::guardar');
 $routes->get('carrito2','carrito2::index');
 $routes->get('carrito2/eliminarcar/(:num)', 'carrito2::eliminarcar/$1');
 $routes->post('carrito2/actualizarcar/', 'carrito2::actualizarcar');
-$routes->get('cancelar/compra/', 'carrito2::index');
 
 // seccion controlador Comprass
 

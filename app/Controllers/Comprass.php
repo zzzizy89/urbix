@@ -33,6 +33,7 @@ class Comprass extends Controller
             return redirect()->to(base_url('carrito2'));
             }
 
+            $data['carritos'] = $carritosModel->datoscarritocompra($id_user);
             // Calcular el total_c antes de cargar la vista
             $totalCompra = $this->calcularTotalCompra($id_user);
 

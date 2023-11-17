@@ -62,4 +62,16 @@ public function obtenerCarritosPorUsuario($id_user)
     // Obtén los carritos para el usuario dado
     return $this->where('id_user', $id_user)->findAll();
 }
+
+public function datoscarritocompra($id_user)
+{
+    return $this->select('carrito.*, productos.nombre, productos.precio, productos.descripcion_prod, productos.imagen as producto_imagen, tipo.tipo as tipo_producto')
+        ->join('productos', 'productos.id_producto = carrito.id_producto')
+        ->join('tipo', 'productos.id_tipoprod = tipo.id_tipoprod')
+        ->where('id_user', $id_user)
+        ->orderBy('id_carrito', 'ASC')
+        ->get()->getResult(); // Utiliza getResult() para obtener los resultados como un arreglo de objetos
+}
+
+
 }

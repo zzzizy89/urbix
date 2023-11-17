@@ -10,6 +10,24 @@
     <header>
         <h1>Realizar compra</h1>
     </header>
+    <div class="user-stats">
+    <?php
+    foreach ($carritos as $carrito) {
+        $nombre[] = $carrito->nombre;
+        $cantidad[] = $carrito->cantidad;
+         // Calcular el subtotal para cada producto
+         $subtotal = $carrito->cantidad * $carrito->precio;
+         $subtotales[] = '$' . number_format($subtotal, 2);
+        $preciou[] = '$' . number_format($carrito->precio, 2); // Formatear el precio
+
+    }
+    ?>
+    <p><strong>Productos:</strong> <?= implode(', ', $nombre); ?></p>
+    <p><strong>cantidad:</strong> <?= implode(', ', $cantidad); ?></p>
+    <p><strong>precio:</strong> <?= implode(', ', $preciou); ?></p>
+    <p><strong>subtotal:</strong> <?= implode(', ', $subtotales); ?></p>
+    <p><strong>Total de la compra:</strong> <?= $totalC; ?></p>
+</div>
     <section class="contenedor">
 
         <!-- Formulario para la información de envío y compra PayPal -->
@@ -43,7 +61,7 @@
                 <label for="descripcion_casa">Descripción de la Casa:</label>
                 <textarea id="descripcion_casa" name="descripcion_casa"></textarea>
 
-                <a href="<?= base_url('cancelar/compra')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
+                <a href="<?= base_url('carrito2')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
            
             </form>
         </div>

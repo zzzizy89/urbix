@@ -11,10 +11,11 @@
         <h1>Realizar compra</h1>
     </header>
     <div class="user-stats">
-                <p><strong>Name:</strong> <?= session('nombre')->nombre; ?></p>
-                <p><strong>Email:</strong> <?= session('user')->email; ?></p>
-                <p><strong>Bio:</strong> <?= session('user')->bio; ?></p>
-                <img src="<?= base_url('uploads/' . session('user')->perfil); ?>" alt="Profile Image">
+                <p><strong>Producto:</strong> <?= session('nombre'); ?></p>
+                <p><strong>Cantidad:</strong> <?= session('cantidad'); ?></p>
+                <p><strong>Precio:</strong> <?= session('precio'); ?></p>
+                <p><strong>Total de la compra:</strong> <?= session('totalCompra'); ?></p>
+
             </div>
     <section class="contenedor">
         <!-- Formulario para la información de envío y compra PayPal -->
