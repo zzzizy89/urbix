@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">quality >>> quantity</div>
-            <div class="text text-2">quality >>> quantity</div>
-            <div class="text text-3">quality >>> quantity</div>
-            <div class="text text-4">quality >>> quantity</div>
-            <div class="text text-5">quality >>> quantity</div>
-            <div class="text text-6">quality >>> quantity</div>
-            <div class="text text-7">quality >>> quantity</div>
-            <div class="text text-8">quality >>> quantity</div>
-            <div class="text text-9">quality >>> quantity</div>
-            <div class="text text-10">quality >>> quantity</div>
-            <div class="text text-11">quality >>> quantity</div>
+            <div class="text text-1">perfection.</div>
+            <div class="text text-2">perfection.</div>
+            <div class="text text-3">perfection.</div>
+            <div class="text text-4">perfection.</div>
+            <div class="text text-5">perfection.</div>
+            <div class="text text-6">perfection.</div>
+            <div class="text text-7">perfection.</div>
+            <div class="text text-8">perfection.</div>
+            <div class="text text-9">perfection.</div>
+            <div class="text text-10">perfection.</div>
+            <div class="text text-11">perfection.</div>
         </div>
     </div>
 

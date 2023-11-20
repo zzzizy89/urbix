@@ -1,0 +1,172 @@
+:root {
+
+    --color-primary: #0D1117;
+    --color-secondary: #f9f9f9;
+    --color-secondary2: #868e96;
+    --color-terciary: #30353d;
+    --color-terciary-translucent: #30353d97;
+    --color-terciary2-translucent: #dbdee497;
+    --color-main: rgb(57, 239, 12);
+}
+
+@font-face {
+    font-family: "Mars Model";
+    src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Arame-Thin";
+    src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MonumentExtended";
+    src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "BasementGrotesque";
+    src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Nevolasty-Light";
+    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "BigCityVibes";
+    src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Headshots";
+    src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "DistortionDosAnalogue";
+    src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "PIGARNOS-NEUE-Regular";
+    src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "StretchPro";
+    src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "kenyan-coffee";
+    src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Akira-Expanded";
+    src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "BLUE-OCEAN";
+    src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CHARLEY";
+    src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "VAL";
+    src: url("../fonts/VAL.otf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "Akira";
+    src: url("../fonts/Akira.otf") format("truetype");
+}
+
+body {
+    background-color: var(--color-primary); /* Fondo oscuro */
+    color: var(--color-secondary); /* Texto blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para la tabla */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #343a40; /* Fondo oscuro */
+}
+
+.table thead {
+    background-color: #212529; /* Encabezado oscuro */
+    color: #fff;
+    margin-bottom: 10px; /* Margen inferior para th */
+}
+
+.table th,
+.table td {
+    font-family: "Akira";
+    font-size: 0.6vw;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px; /* Margen inferior para td */
+}
+
+/* Estilo para las imágenes */
+.img-thumbnail {
+    border-radius: 10px;
+}
+
+/* Estilo para los botones */
+.btn {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Rojo oscuro */
+    border: 1px solid #dc3545;
+    color: #fff;
+}
+
+.btn-danger a {
+    text-decoration: none;
+    font-size: 0.8vw;
+    font-family: "Akira";
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #28a745; /* Verde oscuro */
+    border: 1px solid #28a745;
+    color: #fff;
+}
+
+.btn-success a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.8vw;
+    font-family: "Akira";
+}
+
+.btn-primary {
+    background-color: #007bff; /* Azul oscuro */
+    border: 1px solid #007bff;
+    color: #fff;
+    font-size: 0.8vw;
+    font-family: "Akira";
+}

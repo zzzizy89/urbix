@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">quality >>> quantity</div>
-            <div class="text text-2">quality >>> quantity</div>
-            <div class="text text-3">quality >>> quantity</div>
-            <div class="text text-4">quality >>> quantity</div>
-            <div class="text text-5">quality >>> quantity</div>
-            <div class="text text-6">quality >>> quantity</div>
-            <div class="text text-7">quality >>> quantity</div>
-            <div class="text text-8">quality >>> quantity</div>
-            <div class="text text-9">quality >>> quantity</div>
-            <div class="text text-10">quality >>> quantity</div>
-            <div class="text text-11">quality >>> quantity</div>
+            <div class="text text-1">quality.</div>
+            <div class="text text-2">quality.</div>
+            <div class="text text-3">quality.</div>
+            <div class="text text-4">quality.</div>
+            <div class="text text-5">quality.</div>
+            <div class="text text-6">quality.</div>
+            <div class="text text-7">quality.</div>
+            <div class="text text-8">quality.</div>
+            <div class="text text-9">quality.</div>
+            <div class="text text-10">quality.</div>
+            <div class="text text-11">quality.</div>
         </div>
     </div>
 
@@ -34,7 +34,7 @@
         // Función para redirigir después de que la animación termine
         function redirectToAnotherView() {
             // Cambia la URL a la que deseas redirigir al usuario
-            var absoluteUrl = "<?php echo site_url('catalogo'); ?>";
+            var absoluteUrl = "<?php echo site_url('carrito'); ?>";
             window.location.href = absoluteUrl;
         }
 

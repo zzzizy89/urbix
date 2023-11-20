@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">Strive for perfection.</div>
-            <div class="text text-2">Strive for perfection.</div>
-            <div class="text text-3">Strive for perfection.</div>
-            <div class="text text-4">Strive for perfection.</div>
-            <div class="text text-5">Strive for perfection.</div>
-            <div class="text text-6">Strive for perfection.</div>
-            <div class="text text-7">Strive for perfection.</div>
-            <div class="text text-8">Strive for perfection.</div>
-            <div class="text text-9">Strive for perfection.</div>
-            <div class="text text-10">Strive for perfection.</div>
-            <div class="text text-11">Strive for perfection.</div>
+            <div class="text text-1">Strive.</div>
+            <div class="text text-2">Strive.</div>
+            <div class="text text-3">Strive.</div>
+            <div class="text text-4">Strive.</div>
+            <div class="text text-5">Strive.</div>
+            <div class="text text-6">Strive.</div>
+            <div class="text text-7">Strive.</div>
+            <div class="text text-8">Strive.</div>
+            <div class="text text-9">Strive.</div>
+            <div class="text text-10">Strive.</div>
+            <div class="text text-11">Strive.</div>
         </div>
     </div>
 

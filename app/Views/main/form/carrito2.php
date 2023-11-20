@@ -1,6 +1,12 @@
-<?=$cabecera;?>
-<br>
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/form/carrito.css');?>">
+    <title>Document</title>
+</head>
+<body>
 <?php
 $message = session()->getFlashdata('message');
 if (!empty($message)) {
@@ -47,16 +53,19 @@ if (!empty($message)) {
                     <td><?php echo number_format($car['precio'], 2, ',', '.'); ?></td>
                     <td><?php echo number_format($car['precio'] * $car['cantidad'], 2, ',', '.'); ?></td>
                     <td>
-                        <a href="<?= base_url('carrito2/eliminarcar/'.$car['id_carrito'])?>" class="btn btn-danger" type="button">Eliminar</a>
+                        <button  class="btn btn-danger" ><a href="<?= base_url('carrito2/eliminarcar/'.$car['id_carrito'])?>">Eliminar</a></button>
                     </td>
                 </tr>
                 <?php  $contador++;?> 
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="<?= base_url('comprar/')?>" class="btn btn-success" type="button">Comprar</a>
-
+  <button  class="btn btn-success" ><a href="<?= base_url('comprar/')?>">Comprar</a></button>
     <button type="submit" class="btn btn-primary">Actualizar carrito</button>
 </form>
 
-<?=$pie;?>
+</body>
+</html>
+
+
+

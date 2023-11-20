@@ -23,12 +23,51 @@
 
 <body>
     <!-- Encabezado de la página -->
+    <div class="container">
     <header>
-        <h1></h1>
+        <div class="header-left">
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="<?=base_url('intro_inicio')?>" >Home</a>
+                    </li>
+                    <li>
+                        <a href="<?=base_url('intro_about')?>">about</a>
+                    </li>
+                    <li>
+                        <a href="<?=base_url('carrito')?>" class="active">catalogue</a>
+                    </li>
+                    <li>
+                        <a href="#">contact</a>
+                    </li>
+
+                    <li>
+                        <a href="#">account</a>
+                    </li>
+                    
+            
+                  
+                </ul>
+             
+            </nav>
+           
+        </div>
+        <div class="header-right">
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </header>
+</div>
 <!-- Agrega este código donde desees mostrar el botón de filtro -->
 <div>
-    <label for="tipo">Filtrar por tipo:</label>
+<button class="cart-button">
+        <span class="cart-icon"><a href="<?=base_url('carrito2')?>">&#128722;</a></span>
+    </button>
+    <label for="tipo"></label>
     <!-- this.value estaria guardando el value de cada uno
     ejemplo en todos no tiene un value por lo que en el script
     se estaria cumpliento la condicion de idTipo === ""
