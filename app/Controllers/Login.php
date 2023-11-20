@@ -36,12 +36,18 @@ class Login extends BaseController
             return redirect()->to('dashboard');
         } else {
             // Contraseña incorrecta
-            echo 'Contraseña incorrecta';
+            $this->session->setFlashdata('success', 'Contraseña incorrecta');
+           
+
+            
         }
     } else {
         // Usuario no encontrado
-        echo 'Correo electrónico no válido';
+        $this->session->setFlashdata('success', 'Correo electrónico no válido');
+  
+        
     }
+    return redirect()->to('login');
 }
 
 
