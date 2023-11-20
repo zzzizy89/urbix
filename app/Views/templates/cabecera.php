@@ -1,6 +1,12 @@
 <?php
-$is_admin = (session('user')->rol == 1);
-// verifica si el usuario es administrador
+// Verifica si hay una sesión activa y si existe la información del usuario
+$is_admin = false;  // Por defecto, no es administrador si no hay sesión
+
+if (session()->has('user')) {
+    $user = session('user');
+    $is_admin = ($user->rol == 1);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

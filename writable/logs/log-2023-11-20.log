@@ -3332,3 +3332,35 @@ INFO - 2023-11-20 23:05:11 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-11-20 23:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-11-20 23:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-11-20 23:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 23:10:36 --> Attempt to read property "rol" on null
+in APPPATH\Views\templates\cabecera.php on line 5.
+ 1 APPPATH\Views\templates\cabecera.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rol" on null', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\templates\\cabecera.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\templates\\cabecera.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('templates/cabecera', [], true)
+ 5 APPPATH\Controllers\Carrito.php(30): view('templates/cabecera')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 23:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-20 23:10:58 --> syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+in APPPATH\Views\templates\cabecera.php on line 5.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('templates/cabecera', [], true)
+ 3 APPPATH\Controllers\Carrito.php(30): view('templates/cabecera')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Carrito->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Carrito))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-20 23:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-20 23:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
