@@ -13,6 +13,7 @@
 
 <div class="cursor"></div>
 
+<section class="buttons">
 <div class="toggle-container">
     <label class="toggle-label" for="dark-mode-switch">
       <input type="checkbox" class="toggle-input" id="dark-mode-switch">
@@ -21,6 +22,9 @@
       </div>
     </label>
   </div>
+
+
+</section>
 
 <!-- navbar section starts here -->
     <div class="container">
@@ -73,7 +77,7 @@
         <h2>What are you <br> <span>looking</span> for?</h2>
         <p class="slogan">©ertified by us</p>
     </div>
-    <div class="scroll-down"></div>
+
 </section>
 
 <!-- home section ends here -->

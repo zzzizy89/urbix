@@ -125,7 +125,6 @@ body {
     position: absolute;
     padding: 0.9vw;
     border: 2px solid #ffff;
-    /* Cambia este color al que desees en el modo claro */
     border-radius: 50%;
     z-index: 200;
     transition: transform 0.1s ease;
@@ -348,7 +347,7 @@ header .header-right .hamburger div {
 
 
     header .header-left nav.active {
-        top: -14.5vw;
+        top: -15.5vw;
 
     }
 
@@ -388,7 +387,7 @@ header .header-right .hamburger div {
 
 
     header .header-left nav.active {
-        top: -14.8vw;
+        top: -15.8vw;
 
     }
 
@@ -427,7 +426,7 @@ header .header-right .hamburger div {
     }
 
     header .header-left nav.active {
-        top: -14.8vw;
+        top: -15.8vw;
 
     }
 
@@ -464,7 +463,7 @@ header .header-right .hamburger div {
     }
 
     header .header-left nav.active {
-        top: -14.8vw;
+        top: -15.8vw;
 
     }
 
@@ -520,37 +519,6 @@ header .header-right .hamburger div {
 
 }
 
-.matrix-effect {
-    font-size: 9vw;
-    font-family: "Akira";
-    color: var(--color-main);
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    display: inline-block;
-    z-index: 30000;
-}
-
-.matrix-effect span {
-    position: absolute;
-    opacity: 0;
-    animation: fall 2s linear infinite;
-    transform-origin: bottom;
-    z-index: 30000;
-}
-
-@keyframes fall {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(100vh);
-    }
-}
-
 .phrase h2 span {
     font-size: 9vw;
     font-family: "StretchPro";
@@ -563,8 +531,21 @@ header .header-right .hamburger div {
     font-family: "Akira";
     color: var(--color-terciary);
     font-size: 2vw;
+    animation: changeColor 5s infinite alternate;
 }
 
+@keyframes changeColor {
+    0% {
+        color: var(--color-terciary); /* Color inicial (gris) */
+    }
+    50% {
+        color: gold; /* Color final (dorado) */
+    }
+
+    100% {
+        color: var(--color-terciary); /* Color inicial (gris) */
+    }
+}
 
 /* Resolcuon para Monitores */
 
@@ -834,240 +815,13 @@ header .header-right .hamburger div {
 
 /* about section ends here */
 
-/* description section starts here */
-
-.description {
-    width: 100%;
-    text-align: left;
-    justify-content: center;
-    margin-top: -25vh;
-    margin-bottom: 15vh;
-    margin-left: -9vh;
-
-}
-
-.description-table {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    margin-top: 2vh;
-}
-
-td {
-    padding: 1vw;
-    font-family: "PiGARNOS-NEUE-Regular";
-    color: var(--color-main);
-
-}
-
-td span {
-    color: var(--color-secondary);
-    font-family: "Akira";
-}
-
-.dropdown-arrow {
-    cursor: pointer;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.additional-info {
-    display: none;
-    text-align: left;
-    margin-top: 10px;
-}
-
-/* Resolucion para Monitores */
-
-@media (max-width: 1920px) {
-    .description {
-        width: 100%;
-        margin-top: -25vh;
-        margin-bottom: 15vh;
-        margin-left: -9vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-    }
-}
-
-/* @media (max-width: 1366px) {
-    .description {
-        width: 100%;
-        margin-top: -25vh;
-        margin-bottom: 15vh;
-        margin-left: -9vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-        font-size: 1.4vw;
-    }
-} */
-
-@media (max-width: 1280px) {
-    .description {
-        width: 100%;
-        margin-top: -20vh;
-        margin-bottom: 15vh;
-        margin-left: 7.9vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-        font-size: 1.3vw;
-    }
-}
-
-/* Resolucion para Tablets */
-
-@media (max-width: 1120px) {
-    .description {
-        width: 100%;
-        margin-top: -15vh;
-        margin-bottom: 15vh;
-        margin-left: 13vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-        font-size: 1.4vw;
-    }
-}
-
-@media (max-width: 960px) {
-    .description {
-        width: 100%;
-        margin-top: -15vh;
-        margin-bottom: 15vh;
-        margin-left: 18vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-        font-size: 1.2vw;
-    }
-}
-
-
-
-
-/* Resolucion para Celulares */
-@media (max-width: 950px) {
-    .description {
-        width: 100%;
-        margin-top: -15vh;
-        margin-bottom: 15vh;
-        margin-left: 18.5vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-        font-size: 1.1vw;
-    }
-}
-
-@media (max-width: 430px) {
-    .description {
-        width: 100%;
-        margin-top: -8vh;
-        margin-bottom: 15vh;
-        margin-left: 11.2vh;
-    }
-
-    .description-table {
-        max-width: 800px;
-        width: 100%;
-        margin: 0 auto;
-        overflow-x: auto;
-    }
-
-    table {
-        margin-top: 2vh;
-    }
-
-    td {
-        padding: 1vw;
-    }
-}
-
-/* description section ends here */
-
 
 
 /* button section starts here */
+
+.buttons {
+    position: relative; /* Agregado para que las posiciones sean relativas al contenedor principal */
+}
 
 .toggle-container {
     position: absolute;
@@ -1137,54 +891,17 @@ td span {
 
 /* button section ends here */
 
-/* scroll arrow section starts here */
-.scroll-down {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: 20vh;
-    display: block;
-    text-align: center;
-    font-size: 1.5vw;
-    z-index: 0;
-    text-decoration: none;
-    text-shadow: 0;
-    width: 1vw;
-    height: 1vw;
-    border-bottom: 0.2vw solid #fff;
-    border-right: 0.2vw solid #fff;
-    transform: translate(-50%, 0) rotate(45deg);
-    animation: fade_move_down 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
-}
-
-@keyframes fade_move_down {
-    0% {
-        transform: translate(0, -2vh) rotate(45deg);
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0, 2vh) rotate(45deg);
-        opacity: 0;
-    }
-}
 
 
-/* scroll arrow section ends here */
 
 /* dark-mode section starts here */
 
 .dark-mode .cursor {
-    background-color: var(--color-secondary);
+    background-color: none;
 }
 
 .light-mode .cursor {
-    background-color: var(--color-primary);
+    border: 2px solid #000;
 }
 
 
