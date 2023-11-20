@@ -94,13 +94,15 @@ class Productos extends Controller{
     public function eliminar($id=null){
 
         $producto = new Producto();
-        $producto->obteneriddelete($id);
-        $ruta=('uploads/'.$datosProducto['imagen']);
+        $datosProducto = $producto->obteneriddelete($id);
+
+       if ($datosProducto) {
+        $ruta = ('uploads/'.$datosProducto['imagen']);
         unlink($ruta);
 
         return $this->response->redirect(site_url('/listar'));
-
     }
+}
 
     public function editar($id = null){
         $producto = new Producto();

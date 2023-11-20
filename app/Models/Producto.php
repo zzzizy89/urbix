@@ -27,9 +27,15 @@ public function insertproducto($datos)
 }
 public function obteneriddelete($id)
 {
-    return $this->find($id);
-    $this->where('id_producto', $id)->delete();
+    $datosProducto = $this->find($id);
+
+    if ($datosProducto) {
+        $this->where('id_producto', $id)->delete();
+    }
+
+    return $datosProducto;
 }
+
 public function obtenerid($id)
 {
     return $this->where('id_producto', $id)->first();
