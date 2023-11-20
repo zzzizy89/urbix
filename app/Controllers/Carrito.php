@@ -98,13 +98,17 @@ public function filtrarPorTipo($idTipo)
     }
 
     $tipoActual = $this->request->getPost('tipo_actual');
-/*
+    if ($tipoActual) {
+               /*
 se usa la ruta carritop con el parametro para que al cargar el index
 tenga el $tipoActual asi se mantiene la vista con los productos del tipo
 al usar el boton de agregar al carrito
 */
-    return redirect()->to(base_url("carritop/$tipoActual"));
+return redirect()->to(base_url("carritop/$tipoActual"));
+    } else {
+    return redirect()->to('carrito');
+    }
 
-  //  return redirect()->to('carrito');//test
 }
 }
+    
