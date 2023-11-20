@@ -37,9 +37,13 @@ class Email2 extends BaseController
         $email->setMessage("De: " . $nombrecom . "\n" . "Numero de telefono: " . $numtel . "\n" . "Mensaje: " . $sumen);
 
         if (!$email->send()) {
-            echo "No se ha podido enviar el correo";
+            $this->session->setFlashdata('error', 'No se ha podido enviar el correo');
+
         } else {
-            echo "Correo enviado exitosamente";
+            $this->session->setFlashdata('success', 'Correo enviado exitosamente');
+            return redirect()->to('contact');
+
         }
+
     }
 }

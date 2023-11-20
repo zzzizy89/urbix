@@ -22,7 +22,7 @@ class Register extends BaseController
     
     // Verificar si el correo electrónico ya está registrado
     if ($userModel->isEmailTaken($email)) {
-        $this->session->setFlashdata('success', 'El correo electrónico ya está registrado.');
+        $this->session->setFlashdata('error', 'El correo electrónico ya está registrado.');
         return;
     }
     
@@ -34,6 +34,7 @@ class Register extends BaseController
 {   
     $userModel->register($ra);
     $this->session->setFlashdata('success', 'Usuario registrado exitosamente!');
+
 }
 else
 {

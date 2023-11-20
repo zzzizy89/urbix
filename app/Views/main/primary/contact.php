@@ -1,5 +1,24 @@
-<link rel="stylesheet" href="<?php echo base_url("assets/css/front-main/contact.css") ?>">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
 
+    <!-- Incluye los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Agrega tu archivo de estilos personalizado -->
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/front-main/contact.css") ?>">
+</head>
+<body>
+<div class="alert">
+    <?php if (session()->has('success')) : ?>
+        <div class="alert-success"><?= session('success') ?></div>
+    <?php endif ?>
+    <?php if (session()->has('error')) : ?>
+        <div class="alert-error"><?= session('error') ?></div>
+    <?php endif ?>
+</div>
 <section class="contact" id="contacto">
 						<form id="form_enviar_email" method="post" action="<?php echo base_url("enviar__email") ?>">
 
@@ -59,6 +78,8 @@
 								</div>
 
 						</form>
+
+			</body>
 						<script>
     document.getElementById('form_enviar_email').addEventListener('submit', function (event) {
         // Verificar si el usuario está autenticado antes de enviar el formulario
@@ -71,3 +92,5 @@
 
 
 				</section>
+				
+</html>
