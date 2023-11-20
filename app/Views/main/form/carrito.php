@@ -15,7 +15,7 @@
     </header>
     <section class="contenedor">
         <!-- Contenedor de elementos -->
-        <div class="contenedor-items">
+        <div id ="bfor"class="contenedor-items">
         <?php foreach ($productos as $producto): ?>
     <div class="item">
         <form method="post" id="carritoForm" action="<?php echo base_url('carrito/guar'); ?>">
@@ -77,7 +77,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var carritoForm = document.getElementById('carritoForm');
+        var carritoForm = document.getElementById('bfor');
 
         if (carritoForm) {
             carritoForm.addEventListener('submit', function (event) {
@@ -86,30 +86,13 @@
 
                 if (!usuarioLogeado) {
                     // Mostrar un mensaje de alerta si el usuario no está logeado
-                    alert('Debes estar logeado para agregar productos al carrito.');
+                    alert('Debes estar logeado para realizar esta operación');
                     event.preventDefault(); // Evitar que el formulario se envíe
                 }
             });
         }
     });
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var compra = document.getElementById('compra');
 
-        if (compra) {
-            compra.addEventListener('submit', function (event) {
-                // Verificar si el usuario está logeado
-                var usuarioLogeado = <?php echo json_encode(session('user') !== null); ?>;
-
-                if (!usuarioLogeado) {
-                    // Mostrar un mensaje de alerta si el usuario no está logeado
-                    alert('Debes estar logeado para comprar.');
-                    event.preventDefault(); // Evitar que el formulario se envíe
-                }
-            });
-        }
-    });
-</script>
 
 </html>
