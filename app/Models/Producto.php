@@ -31,6 +31,7 @@ public function obteneriddelete($id)
 
     if ($datosProducto) {
         $this->where('id_producto', $id)->delete();
+        $this->db->table('carrito')->where('id_producto', $id)->delete();
     }
 
     return $datosProducto;
