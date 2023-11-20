@@ -18,6 +18,13 @@ class Home extends BaseController
 
     }
 
+    public function intro_about()
+    {
+
+        return view('main/animation/intro_about');
+
+    }
+
     public function intro_catalogo()
     {
 
@@ -52,6 +59,13 @@ class Home extends BaseController
     {
         
         return view('main/primary/inicio');
+        
+    }
+
+    public function about()
+    {
+        
+        return view('main/primary/about');
         
     }
 

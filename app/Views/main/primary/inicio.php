@@ -34,13 +34,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#" class="active">Home</a>
+                        <a href="<?=base_url('inicio')?>" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="#">about</a>
+                        <a href="<?=base_url('intro_about')?>">about</a>
                     </li>
                     <li>
-                        <a href="#">catalogue</a>
+                        <a href="<?=base_url('intro_catalogo')?>">catalogue</a>
                     </li>
                     <li>
                         <a href="#">contact</a>

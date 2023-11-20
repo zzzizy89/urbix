@@ -53,4 +53,13 @@ public function obtenertodoslosprod()
     {
         return $this->find($id_producto);
     }
+    public function obtenerProductosPorTipo($idTipo)
+{
+    if ($idTipo) {
+        return $this->where('id_tipoprod', $idTipo)->orderBy('id_producto', 'ASC')->findAll();
+    } else {
+        return $this->orderBy('id_producto', 'ASC')->findAll();
+    }
+}
+
 }

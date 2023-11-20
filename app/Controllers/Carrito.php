@@ -4,24 +4,63 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\Producto;
 use App\Models\Carritos;
+use App\Models\Tipo;
 
 class Carrito extends Controller
 {
-    public function index()
-    {
-        $producto = new Producto();
+/*    en caso de usar la ruta sin parametros se declara como null 
+      en caso de usar la ruta con parametros se declara $tipoActual 
+*/
+public function index($tipoActual = null) 
+{
+    $producto = new Producto();
+    $tipo = new Tipo();
 
+    $datos['productos'] = null;
+
+    if ($tipoActual) {
+        $datos['productos'] = $producto->obtenerProductosPorTipo($tipoActual);
+    } else {
         $datos['productos'] = $producto->obtenertodoslosprod();
-
-        $datos['cabecera'] = view('templates/cabecera');
-        $datos['pie'] = view('templates/piepagina');
-
-        // Cargamos la vista "carrito.php" con los mismos datos
-        $vistaCarrito = view('main/form/carrito', $datos);
-
-        // Devolvemos la vista
-        return $vistaCarrito;
     }
+    
+    $datos['tipos'] = $tipo->tipoprod();
+    $datos['tipo_actual'] = $tipoActual;  
+
+    $datos['cabecera'] = view('templates/cabecera');
+    $datos['pie'] = view('templates/piepagina');
+
+    // Cargamos la vista "carrito.php" con los mismos datos
+    $vistaCarrito = view('main/form/carrito', $datos);
+
+    // Devolvemos la vista
+    return $vistaCarrito;
+}
+
+/*   
+    al usar el filtro de la vista se usa esta funcion 
+    y se carga la vista con solo los productos del tipo
+    seleccionado
+*/
+public function filtrarPorTipo($idTipo)
+{
+    $producto = new Producto();
+    $tipo = new Tipo();
+
+    $datos['productos'] = $producto->obtenerProductosPorTipo($idTipo);
+    $datos['tipos'] = $tipo->tipoprod();
+    $datos['tipo_actual'] = $idTipo;  // Agrega el tipo actual a los datos
+
+    $datos['cabecera'] = view('templates/cabecera');
+    $datos['pie'] = view('templates/piepagina');
+
+    // Cargamos la vista "carrito.php" con los mismos datos
+    $vistaCarrito = view('main/form/carrito', $datos);
+
+    // Devolvemos la vista
+    return $vistaCarrito;
+}
+
     public function guardar()
 {
     // Obtener los datos del producto desde la segunda vista
@@ -58,7 +97,14 @@ class Carrito extends Controller
         $carrito->insertardatos($datos);
     }
 
-    return redirect()->to('carrito');//test
+    $tipoActual = $this->request->getPost('tipo_actual');
+/*
+se usa la ruta carritop con el parametro para que al cargar el index
+tenga el $tipoActual asi se mantiene la vista con los productos del tipo
+al usar el boton de agregar al carrito
+*/
+    return redirect()->to(base_url("carritop/$tipoActual"));
+
+  //  return redirect()->to('carrito');//test
 }
 }
-    
