@@ -1,3 +1,7 @@
+<?php
+$is_admin = (session('user')->rol == 1);
+// verifica si el usuario es administrador
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,9 +48,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?=base_url('carrito')?>">Catálogo</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('listar')?>">Listar</a>
+                <?php if ($is_admin): ?>
+                    <li class="btn-box btns">
+                    <a class="nav-link" href="<?= base_url('listar') ?>">Listar Periféricos</a>                    
                 </li>
+                <?php else: ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= base_url('intro_dashboard') ?>">Dashboard</a>
+                    </li>
+                <?php endif; ?>
+
             </ul>
         </div>
     </nav>
