@@ -97,6 +97,10 @@ body {
 	padding: 0;
 }
 
+body.light-mode {
+	background: var(--color-secondary);
+}
+
 .cursor {
 	pointer-events: none;
 	position: absolute;
@@ -277,6 +281,7 @@ header .header-right .hamburger div {
 		width: 60vw;
 		z-index: 111;
 	}
+
 	nav ul li a {
 		display: block;
 		color: #cfd9e0;
@@ -299,6 +304,7 @@ header .header-right .hamburger div {
 		width: 55vw;
 		z-index: 111;
 	}
+
 	nav ul li a {
 		display: block;
 		color: #cfd9e0;
@@ -321,6 +327,7 @@ header .header-right .hamburger div {
 		width: 50vw;
 		z-index: 111;
 	}
+
 	nav ul li a {
 		display: block;
 		color: #cfd9e0;
@@ -340,9 +347,11 @@ header .header-right .hamburger div {
 		margin-top: 1vh;
 		;
 	}
+
 	header .header-right .hamburger {
 		display: block;
 	}
+
 	header .header-left nav {
 		margin: 0;
 		position: absolute;
@@ -357,9 +366,11 @@ header .header-right .hamburger div {
 		justify-content: center;
 		z-index: 100;
 	}
+
 	header .header-left nav.active {
 		top: -15.5vw;
 	}
+
 	header .header-left nav ul {
 		display: inline-block;
 	}
@@ -371,9 +382,11 @@ header .header-right .hamburger div {
 		margin-top: 1vh;
 		;
 	}
+
 	header .header-right .hamburger {
 		display: block;
 	}
+
 	header .header-left nav {
 		margin: 0;
 		position: absolute;
@@ -388,9 +401,11 @@ header .header-right .hamburger div {
 		justify-content: center;
 		z-index: 100;
 	}
+
 	header .header-left nav.active {
 		top: -15.8vw;
 	}
+
 	header .header-left nav ul {
 		display: inline-block;
 	}
@@ -404,9 +419,11 @@ header .header-right .hamburger div {
 		display: block;
 		margin-top: 2vh;
 	}
+
 	header .header-right .login-signup {
 		display: none;
 	}
+
 	header .header-left nav {
 		margin: 0;
 		position: absolute;
@@ -421,9 +438,11 @@ header .header-right .hamburger div {
 		justify-content: center;
 		z-index: 100;
 	}
+
 	header .header-left nav.active {
 		top: -15.8vw;
 	}
+
 	header .header-left nav ul {
 		display: inline-block;
 	}
@@ -434,9 +453,11 @@ header .header-right .hamburger div {
 		display: block;
 		margin-top: 2vh;
 	}
+
 	header .header-right .login-signup {
 		display: none;
 	}
+
 	header .header-left nav {
 		margin: 0;
 		position: absolute;
@@ -451,9 +472,11 @@ header .header-right .hamburger div {
 		justify-content: center;
 		z-index: 100;
 	}
+
 	header .header-left nav.active {
 		top: -15.8vw;
 	}
+
 	header .header-left nav ul {
 		display: inline-block;
 	}
