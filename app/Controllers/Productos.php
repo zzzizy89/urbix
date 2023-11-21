@@ -106,29 +106,15 @@ class Productos extends Controller{
     }
     
 
-    public function eliminar($id = null)
-{
-    // Instanciar el modelo Producto
-    $producto = new Producto();
+    public function eliminar($id=null){
 
-    // Obtener los datos del producto a eliminar
-    $datosProducto = $producto->obteneriddelete($id);
+        $producto = new Producto();
+        $datosProducto = $producto->obteneriddelete($id);
 
-    // Verificar si se encontraron datos para el ID proporcionado
-    if ($datosProducto) {
-        // Construir la ruta completa de la imagen a eliminar
-        $ruta = 'uploads/' . $datosProducto['imagen'];
+       if ($datosProducto) {
+        $ruta = ('uploads/'.$datosProducto['imagen']);
+        unlink($ruta);
 
-        // Verificar si el archivo de la imagen existe antes de intentar eliminarlo
-        if (file_exists($ruta)) {
-            // Eliminar el archivo de la imagen
-            unlink($ruta);
-        }
-
-        // Realizar la eliminación del producto en la base de datos
-        $producto->eliminarProducto($id);
-
-        // Redirigir a la página de listar productos
         return $this->response->redirect(site_url('/listar'));
     }
 }

@@ -31,10 +31,7 @@ public function obteneriddelete($id)
 
     if ($datosProducto) {
         $this->where('id_producto', $id)->delete();
-        // Eliminar la fila correspondiente en la tabla carrito si existe
-
         $this->db->table('carrito')->where('id_producto', $id)->delete();
-
     }
 
     return $datosProducto;
