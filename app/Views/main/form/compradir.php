@@ -4,52 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/form/carrito.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/form/compradir.css');?>">
     <title> Realizar Compra</title>
 </head>
 <body>
+
     <header>
         <h1>Realizar compra</h1>
     </header>
     <div class="user-stats">
-                <p><strong>Producto:</strong> <?= session('nombre'); ?></p>
-                <p><strong>Cantidad:</strong> <?= session('cantidad'); ?></p>
-                <p><strong>Precio:</strong> <?= session('precio'); ?></p>
-                <p><strong>Total de la compra:</strong> <?= session('totalCompra'); ?></p>
+                <p><strong>product:</strong> <?= session('nombre'); ?></p>
+                <p><strong>quantity:</strong> <?= session('cantidad'); ?></p>
+                <p><strong>price:</strong> $ <?= session('precio'); ?></p>
+                <p><strong>Total:</strong> $ <?= session( 'totalCompra'); ?></p>
 
             </div>
     <section class="contenedor">
         <!-- Formulario para la información de envío y compra PayPal -->
         <div class="informacion-envio">
-            <h2>Información de Envío</h2>
+            <h2>Shipping Information</h2>
             <form >
 
-                <label for="pais">País:</label>
+                <label for="pais">country:</label>
                 <input type="text" id="pais" name="pais" required>
 
 
-                <label for="provincia">Provincia:</label>
+                <label for="provincia">province:</label>
                 <input type="text" id="provincia" name="provincia" required>
 
-                <label for="ciudad">Ciudad:</label>
+                <label for="ciudad">city:</label>
                 <input type="text" id="ciudad" name="ciudad" required>
 
-                <label for="codigo_postal">Codigo Postal:</label>
+                <label for="codigo_postal">postal code:</label>
                 <input type="number" id="codigo_postal" name="codigo_postal" required>
 
-                <label for="barrio">Barrio:</label>
+                <label for="barrio">neighborhood:</label>
                 <input type="text" id="barrio" name="barrio" required>
 
-                <label for="calle">Calle:</label>
+                <label for="calle">street:</label>
                 <input type="text" id="calle" name="calle" required>
 
-                <label for="numero">Número:</label>
+                <label for="numero">phone number:</label>
                 <input type="text" id="numero" name="numero" required>
 
-                <label for="descripcion_casa">Descripción de la Casa:</label>
+                <label for="descripcion_casa">house description:</label>
                 <textarea id="descripcion_casa" name="descripcion_casa"></textarea>
+                <div id="paypal-container">
 
-                <a href="<?= base_url('cancelcompradir')?>" type="button" class="boton-cancelar">Cancelar Compra</a>
+    <div id="paypal-button-conteiner"></div>
+    <a href="<?= base_url('cancelcompradir')?>" type="button" class="boton-cancelar">cancel purchase</a>
+</div>
+
+
+                
+            
            
             </form>
         </div>
@@ -57,7 +65,7 @@
 </body>
 <script src="https://www.paypal.com/sdk/js?client-id=AZQBCaHQ4lHq6OI-mMRoxPv8nHioysdo_lnwAWuXxHgD31c5-3Nvw-fs0_WTL_-ghOvt8WeoipePRltE"></script>
 
-<div id="paypal-button-conteiner"></div>
+
     
 <script>
     paypal.Buttons({
@@ -66,7 +74,9 @@
             color: 'blue',
             layout: 'vertical',
             label: 'pay',
+           
         },
+        fundingSource: paypal.FUNDING.PAYPAL,
         createOrder: function(data, actions) {
             var pais = document.getElementById('pais').value;
             var provincia = document.getElementById('provincia').value;
@@ -123,4 +133,6 @@
         }
     }).render('#paypal-button-conteiner');
 </script>
+
+
 </html>

@@ -22,6 +22,7 @@
 </head>
 
 <body>
+<div class="cursor"></div>
     <!-- Encabezado de la página -->
     <div class="container">
     <header>
@@ -39,13 +40,17 @@
                         <a href="<?=base_url('carrito')?>" class="active">catalogue</a>
                     </li>
                     <li>
-                        <a href="#">contact</a>
+                        <a href="<?=base_url('intro_contacto')?>">contact</a>
                     </li>
 
-                    <li>
-                        <a href="#">account</a>
-                    </li>
-                    
+
+                    <?php if (session('user') && session('user')->name): ?>
+				<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
+			<?php else: ?>
+				<li><a href="<?= base_url('intro_login') ?>">account</a></li>
+			<?php endif; ?>
+
+
             
                   
                 </ul>
@@ -77,9 +82,9 @@
 -->
     <select id="tipo" onchange="filtrarPorTipo(this.value)"> 
 
-    <option value="">Tipo</option>
+    <option value="">type</option>
     
-    <option value="">Todos</option>
+    <option value="">all</option>
     <?php foreach ($tipos as $tipo): ?>
         <option value="<?php echo $tipo['id_tipoprod']; ?>" <?php echo ($tipo_actual == $tipo['id_tipoprod']) ? 'selected' : ''; ?>>
             <?php echo $tipo['tipo']; ?>
@@ -109,7 +114,7 @@
 
                         <!-- Entrada de cantidad y botón "Agregar al Carrito" -->
                         <input type="number" name="cantidad" class="cantidad-input" value="1" min="1">
-                        <button type="submit" name="action" value="add_to_cart" class="boton-item">Agregar al Carrito</button>
+                        <button type="submit" name="action" value="add_to_cart" class="boton-item">add to cart</button>
                     </form>
 
                     <!-- Segundo formulario para comprar -->
@@ -123,7 +128,7 @@
                         <input type="hidden" name="cantidad" class="cantidad-hidden" value="1">
 
                         <!-- Botón "Comprar" -->
-                        <button type="submit" name="action" value="buy" class="btn btn-success">Comprar</button>
+                        <button type="submit" name="action" value="buy" class="btn btn-success">to purchase</button>
                     </form>
                 </div>
                 <?php endforeach; ?>
@@ -184,6 +189,22 @@
             });
         }
     });
+</script>
+
+<!-- script para el cursor -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", function (e) {
+        const x = e.pageX - cursor.offsetWidth / 2;
+        const y = e.pageY - cursor.offsetHeight / 2;
+
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
 </script>
 
 </html>

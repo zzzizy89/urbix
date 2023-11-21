@@ -12,6 +12,7 @@ $is_admin = (session('user')->rol == 1);
     <title>Your Profile</title>
 </head>
 <body>
+
     <div class="container">
         <div class="profile">
             <h2>Welcome <?= session('user')->name; ?></h2>
@@ -36,15 +37,15 @@ $is_admin = (session('user')->rol == 1);
 
                 <!-- Botón "Listar Periféricos" solo para el administrador con el correo electrónico 'admin@example.com' -->
                 <?php if ($is_admin): ?>
-                    <div class="btn-box btns">
+                    <div class="btn-box btns1">
                         <a href="<?= base_url('listar') ?>"><button type="submit" class="btn">Listar Periféricos</button></a>
-                    </div>
+                    </div><br>
                 <?php endif; ?>
 
                 <!-- Resto de tus botones -->
                 <div class="btn-box btns">
                     <a href="<?= base_url('intro_inicio') ?>"><button type="submit" class="btn">Inicio</button></a>
-                </div>
+                </div> <br>
 
                 <div class="btn-box btns">
                     <a href="<?= base_url('logout') ?>"><button type="submit" class="btn">Logout</button></a>
@@ -53,4 +54,22 @@ $is_admin = (session('user')->rol == 1);
         </div>
     </div>
 </body>
+<!-- script para el cursor -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", function (e) {
+        const x = e.pageX - cursor.offsetWidth / 2;
+        const y = e.pageY - cursor.offsetHeight / 2;
+
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+</script>
+
+
 </html>
+

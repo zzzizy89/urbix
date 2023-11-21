@@ -43,12 +43,15 @@
                         <a href="<?=base_url('intro_catalogo')?>">catalogue</a>
                     </li>
                     <li>
-                        <a href="#">contact</a>
+                        <a href="<?=base_url('intro_contacto')?>">contact</a>
                     </li>
 
-                    <li>
-                        <a href="#">account</a>
-                    </li>
+                
+                    <?php if (session('user') && session('user')->name): ?>
+				<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
+			<?php else: ?>
+				<li><a href="<?= base_url('intro_login') ?>">account</a></li>
+			<?php endif; ?>
                     
             
                   
@@ -82,7 +85,7 @@
 
 <!-- home section ends here -->
 
-<!-- about section starts here -->
+
 
 
 

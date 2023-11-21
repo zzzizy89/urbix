@@ -13,17 +13,17 @@
     <div class="container">
         <div class="text-wrapper">
             <!-- Agrega la clase "text" a cada elemento de texto -->
-            <div class="text text-1">Emphasize quality.</div>
-            <div class="text text-2">Emphasize quality.</div>
-            <div class="text text-3">Emphasize quality.</div>
-            <div class="text text-4">Emphasize quality.</div>
-            <div class="text text-5">Emphasize quality.</div>
-            <div class="text text-6">Emphasize quality.</div>
-            <div class="text text-7">Emphasize quality.</div>
-            <div class="text text-8">Emphasize quality.</div>
-            <div class="text text-9">Emphasize quality.</div>
-            <div class="text text-10">Emphasize quality.</div>
-            <div class="text text-11">Emphasize quality.</div>
+            <div class="text text-1">Emphasize.</div>
+            <div class="text text-2">Emphasize.</div>
+            <div class="text text-3">Emphasize.</div>
+            <div class="text text-4">Emphasize.</div>
+            <div class="text text-5">Emphasize.</div>
+            <div class="text text-6">Emphasize.</div>
+            <div class="text text-7">Emphasize.</div>
+            <div class="text text-8">Emphasize.</div>
+            <div class="text text-9">Emphasize.</div>
+            <div class="text text-10">Emphasize.</div>
+            <div class="text text-11">Emphasize.</div>
         </div>
     </div>
 

@@ -9,7 +9,7 @@
 
                 <?=$cabecera;?>
 
-<a class="btn btn-success" href="<?=base_url('crear')?>">Crear nuevo teclado</a>
+<a class="btn btn-success" href="<?=base_url('crear')?>">create</a>
 
 <br>
 <br>
@@ -18,12 +18,12 @@
         <thead class="thead-light">
                 <tr>
                         <th>#</th>
-                        <th>Imagen</th>
-                        <th>Nombre</th>
-                        <th>Precio</th>
-                        <th>Descripcion</th>
-                        <th>tipo</th>
-                        <th>Acciones</th>
+                        <th>image</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>type</th>
+                        <th>actions</th>
                 </tr>
         </thead>
         <tbody>
@@ -54,8 +54,8 @@
         
                         </td>
                         <td>
-                                <a href="<?=base_url('editar/'.$producto['id_producto'])?>" class="btn btn-info" type="button">Editar</a>
-                                <a href="<?=base_url('eliminar/'.$producto['id_producto'])?>" class="btn btn-danger" type="button">Eliminar</a>
+                                <a href="<?=base_url('editar/'.$producto['id_producto'])?>" class="btn btn-info" type="button">edit</a>
+                                <a href="<?=base_url('eliminar/'.$producto['id_producto'])?>" class="btn btn-danger" type="button">delete</a>
                         </td>
                 </tr>
                 <?php endforeach; ?>

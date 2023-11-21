@@ -12,14 +12,14 @@ if (!empty($message)) {
         <thead class="thead-light">
             <tr>
                 <th>#</th>
-                <th>imagen</th>
-                <th>nombre</th>
-                <th>cantidad</th>
-                <th>Descripción</th>
-                <th>tipo</th>
-                <th>precio</th>
-                <th>Total</th>
-                <th>Acciones</th>
+                <th>image</th>
+                <th>name</th>
+                <th>amount</th>
+                <th>description</th>
+                <th>type</th>
+                <th>price</th>
+                <th>total</th>
+                <th>actions</th>
             </tr>
         </thead>
         <tbody>
@@ -54,9 +54,9 @@ if (!empty($message)) {
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="<?= base_url('comprar/')?>" class="btn btn-success" type="button">Comprar</a>
+    <a href="<?= base_url('comprar/')?>" class="btn btn-success" type="button">to purchase</a>
 
-    <button type="submit" class="btn btn-primary">Actualizar carrito</button>
+    <button type="submit" class="btn btn-primary">update cart</button>
 </form>
 
 <?=$pie;?>

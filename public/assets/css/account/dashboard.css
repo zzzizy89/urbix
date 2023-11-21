@@ -1,92 +1,220 @@
 
-@font-face {
-	font-family: "Mars Model";
-	src: url("../fonts/MarsModel.ttf") format("truetype");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "sans-serif";
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --color-primary: #0D1117;
+    --color-secondary: #f9f9f9;
+    --color-secondary2: #868e96;
+    --color-terciary: #30353d;
+    --color-terciary-translucent: #30353d97;
+    --color-terciary2-translucent: #dbdee497;
+    --color-main: rgb(57, 239, 12);
 }
 
 @font-face {
-	font-family: "Arame-Thin";
-	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+    font-family: "Mars Model";
+    src: url("../fonts/MarsModel.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "MonumentExtended";
-	src: url("../fonts/MonumentExtended.otf") format("truetype");
+    font-family: "Arame-Thin";
+    src: url("../fonts/Arame-Thin.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Nevolasty-Light";
-	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+    font-family: "MonumentExtended";
+    src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "BasementGrotesque";
+    src: url("../fonts/BasementGrotesque.otf") format("truetype");
 }
 
 
 @font-face {
-	font-family: "BigCityVibes";
-	src: url("../fonts/BigCityVibes.otf") format("truetype");
+    font-family: "Nevolasty-Light";
+    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
 }
 
 
 @font-face {
-	font-family: "Headshots";
-	src: url("../fonts/Headshots.otf") format("truetype");
+    font-family: "BigCityVibes";
+    src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Headshots";
+    src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "DistortionDosAnalogue";
+    src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "PIGARNOS-NEUE-Regular";
+    src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "StretchPro";
+    src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "kenyan-coffee";
+    src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Akira-Expanded";
+    src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "BLUE-OCEAN";
+    src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CHARLEY";
+    src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "VAL";
+    src: url("../fonts/VAL.otf") format("truetype");
 }
 
 
-  html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: "monospace", monospace !important;
-            background: #0D1117 !important;
-            color: #f5f5dc !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+@font-face {
+    font-family: "Akira";
+    src: url("../fonts/Akira.otf") format("truetype");
+}
 
-        .container {
-            width: 400px;
-        }
 
-        .profile {
-            margin-top: 30px;
-            text-align: center;
-        }
+html,
+body {
+    font-family: 'Akira', sans-serif;
+    background: var(--color-primary);
+}
 
-        .user-stats p {
-            margin: 5px 0;
-        }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+}
 
-        .user-stats img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+.profile {
+    display: flex;
+    background-color: var(--color-terciary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
 
-        .user-menu {
-            text-align: center;
-            margin-top: 20px;
-        }
+.profile h2 {
+    font-size: 24px;
+    font-family: "Akira";
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    color: var(--color-secondary);
+}
 
-        .user-menu form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        .user-menu label,
-        .user-menu input,
-        .user-menu textarea {
-            width: 100%;
-            max-width: 350px;
-            margin-bottom: 10px;
-        }
 
-        .user-menu button {
-            width: 100%;
-            max-width: 350px;
-        }
+.user-stats {
+    padding: 30px;
+    margin-top: 100px;
+    margin-left: -300px;
+}
+
+
+.user-stats p {
+ 
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "PIGARNOS-NEUE-Regular";
+    color: var(--color-secondary);
+}
+
+
+.user-stats p strong {
+ 
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "PIGARNOS-NEUE-Regular";
+    color: var(--color-main);
+}
+
+.user-stats img {
+    max-width: 250px;
+    border-radius: 10%;
+    margin-top: 20px;
+}
+
+.user-menu {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-secondary2);
+}
+
+.user-menu h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.user-menu form {
+    margin-bottom: 20px;
+    
+}
+
+.user-menu label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-family: "PIGARNOS-NEUE-Regular";
+    color: var(--color-main);
+}
+
+.user-menu input,
+.user-menu textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  
+    border-radius: 4px;
+    font-family: "PIGARNOS-NEUE-Regular";
+}
+
+.user-menu button  {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.user-menu button:hover {
+    background-color: #45a049;
+}
+

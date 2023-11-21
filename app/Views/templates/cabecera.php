@@ -39,7 +39,7 @@ if (session()->has('user')) {
 </style>
 
 <div class="maintenance-message">
-    <strong>¡En mantenimiento!</strong> Estamos trabajando para mejorar la experiencia. Disculpa las molestias.
+    <strong>Under maintenance!</strong> We are working to improve the experience. We apologize for the inconvenience..
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">urbix</a>

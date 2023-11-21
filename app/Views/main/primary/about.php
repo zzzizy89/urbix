@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/about.css');?>">
   </head>
   <body>
+  <div class="cursor"></div>
   <div class="container">
     <header>
         <div class="header-left">
@@ -24,12 +25,15 @@
                         <a href="<?=base_url('intro_catalogo')?>">catalogue</a>
                     </li>
                     <li>
-                        <a href="#">contact</a>
+                        <a href="<?=base_url('intro_contacto')?>">contact</a>
                     </li>
 
-                    <li>
-                        <a href="#">account</a>
-                    </li>
+                    
+                    <?php if (session('user') && session('user')->name): ?>
+				<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
+			<?php else: ?>
+				<li><a href="<?= base_url('intro_login') ?>">account</a></li>
+			<?php endif; ?>
                     
             
                   
@@ -163,5 +167,21 @@
       ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
       ScrollTrigger.refresh();
     </script>
+
+    <!-- script para el cursor -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove", function (e) {
+        const x = e.pageX - cursor.offsetWidth / 2;
+        const y = e.pageY - cursor.offsetHeight / 2;
+
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+</script>
   </body>
 </html>

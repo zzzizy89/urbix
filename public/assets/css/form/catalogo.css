@@ -97,8 +97,19 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #222; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
+    background-color: var(--color-primary); /* Fondo oscuro */
+    color: var(--color-secondary); /* Texto blanco */
+}
+
+.cursor {
+    pointer-events: none;
+    position: absolute;
+    padding: 0.9vw;
+    border: 2px solid #ffff;
+    border-radius: 50%;
+    z-index: 200;
+    transition: transform 0.1s ease;
+
 }
 
 header {

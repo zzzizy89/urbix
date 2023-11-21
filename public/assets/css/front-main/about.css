@@ -101,6 +101,17 @@ body {
   padding: 0;
 }
 
+.cursor {
+    pointer-events: none;
+    position: absolute;
+    padding: 0.9vw;
+    border: 2px solid #ffff;
+    border-radius: 50%;
+    z-index: 2000;
+    transition: transform 0.1s ease;
+
+}
+
 .smooth-scroller {
   overflow: hidden;
 }

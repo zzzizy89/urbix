@@ -27,8 +27,17 @@ public function insertproducto($datos)
 }
 public function obteneriddelete($id)
 {
-    return $this->find($id);
-    $this->where('id_producto', $id)->delete();
+    $datosProducto = $this->find($id);
+
+    if ($datosProducto) {
+        $this->where('id_producto', $id)->delete();
+        // Eliminar la fila correspondiente en la tabla carrito si existe
+
+        $this->db->table('carrito')->where('id_producto', $id)->delete();
+
+    }
+
+    return $datosProducto;
 }
 public function obtenerid($id)
 {

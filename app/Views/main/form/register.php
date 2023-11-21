@@ -21,8 +21,8 @@
 
 				<div class="box">
 						<form method="post" action="<?= base_url(" register ");?>" class="form">
-						<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?> ">X</a></div>
-								<h2>Registrarse</h2>
+						<div class="close-button" id="close-button"><a href="<?=base_url('inicio')?>">←</a></div>
+								<h2>sign up</h2>
 								<div class="form-inputs">
 										<div class="form-label">
 												<input name="name" required type="text" class="form-control" id="name" placeholder="Your name">
@@ -38,7 +38,7 @@
 								</div>
 
 								<div class="links">
-										<a href="<?= base_url(" login ");?>">¿Ya tienes una cuenta?</a>
+										<a href="<?= base_url(" login ");?>">do you already have an account?</a>
 								</div>
 								<input type="submit" value="Register">
 
