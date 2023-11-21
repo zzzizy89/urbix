@@ -41,7 +41,7 @@ class Dashboard extends BaseController
         session()->destroy();
     
         // Redirigir a la página de inicio de sesión
-        return redirect()->to('login');
+        return redirect()->to('intro_inicio');
     }
     
     public function update()

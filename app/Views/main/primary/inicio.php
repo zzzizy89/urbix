@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/inicio.css');?>">
 
 	</head>
+	
 	<body>
 
 
@@ -48,10 +49,16 @@
 
 
 							<?php if (session('user') && session('user')->name): ?>
-							<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
-							<?php else: ?>
-							<li><a href="<?= base_url('intro_login') ?>">account</a></li>
-							<?php endif; ?>
+                        <li class="header-left">
+                            <a href="#" class="active" onclick="toggleDropdown()"> <?= session('user')->name ?></a>
+                            <div id="dropdown" class="dropdown">
+                                <a href="<?= base_url('intro_dashboard') ?>">Configuration</a>
+                                <a href="<?= base_url('logout') ?>">Logout</a>
+                            </div>
+                        </li>
+                    <?php else: ?>
+                        <li><a href="<?= base_url('intro_login') ?>">account</a></li>
+                    <?php endif; ?>
 
 
 
@@ -84,7 +91,15 @@
 		</section>
 
 		<!-- home section ends here -->
+		<script>
+    // Oculta el menú desplegable al cargar la página
+    document.getElementById("dropdown").style.display = "none";
 
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdown");
+        dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+    }
+</script>
 
 		<!-- script for navbar -->
 		<script>
