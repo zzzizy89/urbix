@@ -1,16 +1,12 @@
-/* 
-                                                         
-,--. ,--.                ,--------.            ,--.      
-|  .'   / ,---. ,--. ,--.'--.  .--',---.  ,---.|  ,---.  
-|  .   ' | .-. : \  '  /    |  |  | .-. :| .--'|  .-.  | 
-|  |\   \\   --.  \   '     |  |  \   --.\ `--.|  | |  | 
-`--' '--' `----'.-'  /      `--'   `----' `---'`--' `--' 
-                `---'                                      */
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
-
 :root {
-	--color-primary: #ffffff;
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main: rgb(57, 239, 12);
 }
 
 @font-face {
@@ -34,18 +30,8 @@
 }
 
 @font-face {
-	font-family: "FormulaCondensed";
-	src: url("../fonts/FormulaCondensed.otf") format("truetype");
-}
-
-@font-face {
 	font-family: "Nevolasty-Light";
 	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "NoorgeKarlos-Outline";
-	src: url("../fonts/NoorgeKarlos-Outline.ttf") format("truetype");
 }
 
 @font-face {
@@ -54,33 +40,53 @@
 }
 
 @font-face {
-	font-family: "AQUATIC";
-	src: url("../fonts/AQUATIC.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "Barbarian";
-	src: url("../fonts/Barbarian.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "DeathMohaw";
-	src: url("../fonts/DeathMohaw.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "adelia";
-	src: url("../fonts/adelia.ttf") format("truetype");
-}
-
-@font-face {
 	font-family: "Headshots";
 	src: url("../fonts/Headshots.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "SnowWhite";
-	src: url("../fonts/SnowWhite.ttf") format("truetype");
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
 }
 
 * {
@@ -91,10 +97,11 @@
 	font-weight: 400;
 }
 
+html,
 body {
 	min-height: 100vh;
 	width: 100%;
-	background: white;
+	background: var(--color-primary);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -102,86 +109,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: nowrap;
-
 }
 
-/* Definición de clases para el modo oscuro y claro */
-body.dark-mode {
-	background-color: black;
-	color: white;
-}
-
-
-
-body.dark-mode .form {
-	background-color: #f9f9f9;
-
-}
-
-body.dark-mode .form-label input:focus {
-	background-color: var(--color-primary);
-	color: rgb(228, 21, 21);
-}
-
-body.dark-mode #modoToggle {
-	background-color: #000;
-	/* Cambia el color de fondo a tu preferencia */
-	color: #f9f9f9;
-}
-
-body.dark-mode .marquee__inner span {
-	background-color: #f9f9f9;
-	color: #000;
-}
-
-body.dark-mode h2 {
-	color: #0D1117;
-}
-
-body.dark-mode .links a {
-	color: #000;
-}
-
-body.dark-mode .links a:nth-child(2) {
-	color: grey;
-}
-
-body.dark-mode .close-button a {
-	color: #000;
-	text-decoration: none;
-}
-
-/* Otras reglas de estilo aquí */
-
-/* Resto de tu CSS... */
-
-.cursor {
-	pointer-events: none;
-	position: fixed;
-	/* Cambiado a fixed para que siga el scroll */
-	padding: 0.3rem;
-	background-color: red;
-	border-radius: 50%;
-	z-index: 9999;
-	/* Ajusta según sea necesario */
-	transition: transform 0.3s ease;
-}
-
-
-.dark-mode .cursor {
-	background-color: red;
-	/* Cambia este color al que desees en el modo oscuro */
-
-}
-
-
-/* Efecto de escala para el cursor al pasar el mouse sobre elementos .hover-this */
-
-.hover-this:hover~.cursor {
-	transform: translate(-50%, -50%) scale(8);
-}
 
 /* Estilo para el contenedor de la alerta */
+
 .alert {
 	position: absolute;
 	top: 0;
@@ -190,17 +122,21 @@ body.dark-mode .close-button a {
 	padding: 10px;
 	text-align: center;
 	z-index: 1000;
-	/* Asegura que la alerta esté por encima de otros elementos */
+
 }
 
+
 /* Estilo para los mensajes de éxito */
+
 .alert-success {
 	background-color: #dff0d8;
 	border: 1px solid #d6e9c6;
 	color: #3c763d;
 }
 
+
 /* Estilo para los mensajes de error */
+
 .alert-error {
 	background-color: #f2dede;
 	border: 1px solid #ebccd1;
@@ -213,10 +149,7 @@ body.dark-mode .close-button a {
 	left: 5px;
 	width: 20px;
 	height: 20px;
-
-	/* Color de fondo de la cruz */
 	color: #fff;
-	/* Color del texto de la cruz */
 	font-size: 10px;
 	font-weight: bold;
 	display: flex;
@@ -225,7 +158,6 @@ body.dark-mode .close-button a {
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 20;
-	/* Asegúrate de que esté por encima del formulario */
 }
 
 .close-button a {
@@ -233,44 +165,6 @@ body.dark-mode .close-button a {
 	color: #fff;
 	font-size: 20px;
 }
-
-
-
-#modoToggle {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	/* Alinea el icono en la esquina superior derecha */
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-	z-index: 20;
-	/* Asegúrate de que esté por encima del formulario */
-
-	/* Estilo para el ícono de modo oscuro */
-	background-color: #fff;
-	/* Cambia el color de fondo a tu preferencia */
-	color: #fff;
-	/* Cambia el color del ícono */
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#modoToggle img {
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	/* Ajusta el tamaño de la imagen dentro del círculo */
-}
-
-#modoToggle:hover {
-	background-color: #777;
-	/* Cambia el color de fondo al pasar el mouse */
-}
-
-
 
 .box {
 	position: relative;
@@ -283,7 +177,7 @@ body.dark-mode .close-button a {
 .form {
 	position: absolute;
 	inset: 2px;
-	background-color: #0D1117;
+	background-color: var(--color-terciary);
 	border-radius: 10px;
 	padding: 30px;
 	display: flex;
@@ -292,18 +186,14 @@ body.dark-mode .close-button a {
 	z-index: 10;
 }
 
-
-
 h2 {
 	font-size: 32px;
 	font-weight: 900;
 	color: #f8f8f8;
 	letter-spacing: 2.5px;
 	text-align: center;
-	font-family: "Nevolasty-Light";
+	font-family: "PIGARNOS-NEUE-Regular";
 }
-
-
 
 .form-inputs {
 	display: flex;
@@ -322,19 +212,19 @@ h2 {
 	height: 100%;
 	padding: 10px 30px;
 	outline: none;
-	background-color: #12121273;
+	background-color: var(--color-secondary2);
 	border: none;
 	border-bottom: 1px solid var(--color-primary);
-	color: var(--color-primary);
+	color: var(--color-main);
 	font-size: 16px;
 	transition: .5s;
-	font-family: "Mars Model";
+	font-family: "PIGARNOS-NEUE-Regular";
 }
 
 .form-label input:focus {
 	border-radius: 10px;
-	background-color: var(--color-primary);
-	color: rgb(0, 0, 0);
+	background-color: var(--color-main);
+	color: var(--color-primary);
 }
 
 .links {
@@ -347,12 +237,11 @@ h2 {
 	text-decoration: none;
 	color: #777;
 	transition: .5s;
-	font-family: "Arame-Thin";
-
+	font-family: "PIGARNOS-NEUE-Regular";
 }
 
 .links a:first-child:hover {
-	color: red;
+	color: var(--color-main);
 }
 
 .links a:nth-child(2) {
@@ -365,43 +254,11 @@ input[type="submit"] {
 	border-radius: 10px;
 	cursor: pointer;
 	transition: .5s;
-	font-family: "Arame-Thin";
+	font-family: "PIGARNOS-NEUE-Regular";
+	color: var(--color-secondary2);
 }
 
 input[type="submit"]:hover {
 	background-color: #000;
 	color: #fff;
-
-}
-
-.marquee {
-	overflow: hidden;
-
-	color: #fff;
-}
-
-.marquee__inner {
-	width: 100%;
-	position: fixed;
-	white-space: nowrap;
-	display: flex;
-	align-items: center;
-	animation: marquee 15s linear infinite;
-	/* Ajusta la duración según sea necesario */
-}
-
-.marquee__inner span {
-	background-color: #000000;
-	font-family: "Headshots";
-	font-size: 2rem;
-}
-
-@keyframes marquee {
-	0% {
-		transform: translateX(-160%);
-	}
-
-	100% {
-		transform: translateX(100%);
-	}
 }

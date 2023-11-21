@@ -7,7 +7,7 @@ class Home extends BaseController
     public function index()
     {
         
-        return view('main/animation/urbix');
+        return view('main/animation/intro');
         
     }
 
@@ -15,6 +15,13 @@ class Home extends BaseController
     {
 
         return view('main/animation/intro_inicio');
+
+    }
+
+    public function intro_about()
+    {
+
+        return view('main/animation/intro_about');
 
     }
 
@@ -52,6 +59,13 @@ class Home extends BaseController
     {
         
         return view('main/primary/inicio');
+        
+    }
+
+    public function about()
+    {
+        
+        return view('main/primary/about');
         
     }
 
