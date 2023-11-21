@@ -1,32 +1,38 @@
-// Función para obtener el valor de una cookie
-function getCookie(name) {
-    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    if (match) return match[2];
-}
+$(document).ready(function() {
 
-// Función para establecer el valor de una cookie
-function setCookie(name, value) {
-    document.cookie = name + '=' + value + '; path=/';
-}
+    // Función para obtener el valor de una cookie
+    function getCookie(name) {
+        const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        if (match) return match[2];
+    }
 
-const body = document.body;
-const toggleInput = $('#dark-mode-switch');
+    // Función para establecer el valor de una cookie
+    function setCookie(name, value) {
+        document.cookie = name + '=' + value + '; path=/';
+    }
 
-// Cambia el estado del interruptor al cargar la página
-toggleInput.prop('checked', getCookie('darkMode') === 'true');
-body.classList.toggle('dark-mode', getCookie('darkMode') === 'true');
-body.classList.toggle('light-mode', getCookie('darkMode') !== 'true');
+    const body = document.body;
+    const toggleInput = $('#dark-mode-switch');
 
-// Cambia el estado del modo y del interruptor con animación
-function toggleMode() {
-    const isDarkMode = !body.classList.contains('dark-mode');
-    body.classList.toggle('dark-mode', isDarkMode);
-    body.classList.toggle('light-mode', !isDarkMode);
-    toggleInput.prop('checked', isDarkMode);
+    // Cambia el estado del interruptor al cargar la página
+    toggleInput.prop('checked', getCookie('darkMode') === 'true');
+    body.classList.toggle('dark-mode', getCookie('darkMode') === 'true');
+    body.classList.toggle('light-mode', getCookie('darkMode') !== 'true');
 
-    // Guarda el estado del modo en una cookie
-    setCookie('darkMode', isDarkMode.toString());
-}
+    // Cambia el estado del modo y del interruptor con animación
+    function toggleMode() {
+        const isDarkMode = !body.classList.contains('dark-mode');
+        body.classList.toggle('dark-mode', isDarkMode);
+        body.classList.toggle('light-mode', !isDarkMode);
+        toggleInput.prop('checked', isDarkMode);
 
-// Escucha los cambios en el interruptor
-toggleInput.on('change', toggleMode);
+        // Guarda el estado del modo en una cookie
+        setCookie('darkMode', isDarkMode.toString());
+    }
+
+    // Escucha los cambios en el interruptor
+    toggleInput.on('change', toggleMode);
+
+    // Otro código relacionado con el documento listo si es necesario
+
+});
