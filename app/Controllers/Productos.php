@@ -106,29 +106,15 @@ class Productos extends Controller{
     }
     
 
-    public function eliminar($id = null)
-{
-    // Instanciar el modelo Producto
-    $producto = new Producto();
+    public function eliminar($id=null){
 
-    // Obtener los datos del producto a eliminar
-    $datosProducto = $producto->obteneriddelete($id);
+        $producto = new Producto();
+        $datosProducto = $producto->obteneriddelete($id);
 
-    // Verificar si se encontraron datos para el ID proporcionado
-    if ($datosProducto) {
-        // Construir la ruta completa de la imagen a eliminar
-        $ruta = 'uploads/' . $datosProducto['imagen'];
+       if ($datosProducto) {
+        $ruta = ('uploads/'.$datosProducto['imagen']);
+        unlink($ruta);
 
-        // Verificar si el archivo de la imagen existe antes de intentar eliminarlo
-        if (file_exists($ruta)) {
-            // Eliminar el archivo de la imagen
-            unlink($ruta);
-        }
-
-        // Realizar la eliminación del producto en la base de datos
-        $producto->eliminarProducto($id);
-
-        // Redirigir a la página de listar productos
         return $this->response->redirect(site_url('/listar'));
     }
 }
@@ -155,7 +141,7 @@ public function editar($id = null)
     $datos['pie'] = view('templates/piepagina');
 
     // Cargar la vista de edición con la información del producto
-    return view('main/crud/editar', $datos);
+    return view('main/crud/editar',$datos);
 }
 
 
@@ -166,18 +152,17 @@ public function editar($id = null)
  */
 public function actualizar()
 {
-    $tipoProductoID = $this->request->getVar('tipoprod'); // Obtener la ID del tipo de producto seleccionado
+    $tipoProductoID = $this->request->getVar('tipoprod');
 
     $producto = new Producto();
     $datos = [
-        'nombre' => $nombre = $this->request->getVar('nombre'),
-        'precio' => $nombre = $this->request->getVar('precio'),
-        'descripcion_prod' => $nombre = $this->request->getVar('descripcion_prod'),
-        'id_tipoprod' => $tipoProductoID // Actualizar la ID del tipo de producto
+        'nombre' => $this->request->getVar('nombre'),
+        'precio' => $this->request->getVar('precio'),
+        'descripcion_prod' => $this->request->getVar('descripcion_prod'),
+        'id_tipoprod' => $tipoProductoID
     ];
     $id = $this->request->getVar('id_producto');
 
-    // Validar los campos del formulario
     $validacion = $this->validate([
         'nombre' => 'required|min_length[3]|max_length[255]',
         'precio' => 'required|numeric',
@@ -191,40 +176,24 @@ public function actualizar()
         return redirect()->back()->withInput();
     }
 
-    // Actualizar la información del producto en la base de datos
-    $producto->updateprod($id, $datos);
+    $producto->updateprod($datos, $id);
 
-    // Validar la imagen y actualizar si se proporciona una nueva
-    $validacionImagen = $this->validate([
-        'imagen' => [
-            'uploaded[imagen]',
-            'mime_in[imagen,image/jpg,image/jpeg,image/png]',
-            'max_size[imagen,9320]',
-        ],
-    ]);
-
-    if ($validacionImagen) {
-        if ($imagen = $this->request->getFile('imagen')) {
-
-            // Obtener la información actual del producto
-            $datosProducto = $producto->obtenerid($id);
-
-            // Eliminar la imagen anterior
-            $ruta = ('uploads/' . $datosProducto['imagen']);
+    if ($this->request->getFile('imagen')->isValid()) {
+        $datosProducto = $producto->obtenerid($id);
+        $ruta = ('uploads/' . $datosProducto['imagen']);
+        if (file_exists($ruta)) {
             unlink($ruta);
-
-            // Mover la nueva imagen al directorio de uploads
-            $nuevoNombre = $imagen->getRandomName();
-            $imagen->move('uploads/', $nuevoNombre);
-
-            // Actualizar el registro en la base de datos con el nuevo nombre de la imagen
-            $datos = ['imagen' => $nuevoNombre];
-            $producto->updateprod($datos, $id);
         }
+
+        $imagen = $this->request->getFile('imagen');
+        $nuevoNombre = $imagen->getRandomName();
+        $imagen->move('uploads/', $nuevoNombre);
+
+        $datos = ['imagen' => $nuevoNombre];
+        $producto->updateprod($datos, $id);
     }
 
-    // Redirigir a la lista de productos después de la actualización
-    return $this->response->redirect(site_url('/listar'));
+    return redirect()->to(site_url('/listar'));
 }
 
 

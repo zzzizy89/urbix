@@ -31,22 +31,22 @@ public function obteneriddelete($id)
 
     if ($datosProducto) {
         $this->where('id_producto', $id)->delete();
-        // Eliminar la fila correspondiente en la tabla carrito si existe
-
         $this->db->table('carrito')->where('id_producto', $id)->delete();
-
     }
 
     return $datosProducto;
 }
 public function obtenerid($id)
 {
-    return $this->where('id_producto', $id)->first();
+    $datosProducto = $this->find($id);
+
+     $this->where('id_producto', $id)->first();
+     return $datosProducto;
 
 }
 public function updateprod($datos,$id)
 {
-    $this->update($datos,$id);
+    $this->update($id, $datos);
 }
 public function obtenertodoslosprod()
 {
