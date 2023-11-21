@@ -4751,3 +4751,206 @@ WARNING - 2023-11-21 15:46:47 --> [DEPRECATED] Creation of dynamic property App\
  3 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
 INFO - 2023-11-21 19:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-21 19:37:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\Login::$session is deprecated in APPPATH\Controllers\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(905): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-21 19:37:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\Login::$session is deprecated in APPPATH\Controllers\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(905): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2023-11-21 19:37:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\Dashboard::$session is deprecated in APPPATH\Controllers\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(905): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:37:42 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('22', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '22')
+ 3 APPPATH\Models\Producto.php(46): CodeIgniter\Model->update([...], '22')
+ 4 APPPATH\Controllers\Productos.php(208): App\Models\Producto->updateprod([...], '22')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:38:01 --> unlink(uploads/1699390685_b86b4d4d996f1590a266.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1699390685_b86b4d4d996f1590a266.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 116)
+ 2 APPPATH\Controllers\Productos.php(116): unlink('uploads/1699390685_b86b4d4d996f1590a266.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->eliminar('22')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:38:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:39:57 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('28', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '28')
+ 3 APPPATH\Models\Producto.php(46): CodeIgniter\Model->update([...], '28')
+ 4 APPPATH\Controllers\Productos.php(208): App\Models\Producto->updateprod([...], '28')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:41:16 --> unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 200)
+ 2 APPPATH\Controllers\Productos.php(200): unlink('uploads/1700595568_15543e63f5ba4e180c77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:41:22 --> unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 200)
+ 2 APPPATH\Controllers\Productos.php(200): unlink('uploads/1700595568_15543e63f5ba4e180c77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:42:23 --> unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 200)
+ 2 APPPATH\Controllers\Productos.php(200): unlink('uploads/1700595568_15543e63f5ba4e180c77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:42:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:42:37 --> unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 200)
+ 2 APPPATH\Controllers\Productos.php(200): unlink('uploads/1700595568_15543e63f5ba4e180c77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:42:43 --> unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595568_15543e63f5ba4e180c77.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 116)
+ 2 APPPATH\Controllers\Productos.php(116): unlink('uploads/1700595568_15543e63f5ba4e180c77.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->eliminar('28')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:42:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:43:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:43:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:43:14 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('29', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '29')
+ 3 APPPATH\Models\Producto.php(46): CodeIgniter\Model->update([...], '29')
+ 4 APPPATH\Controllers\Productos.php(208): App\Models\Producto->updateprod([...], '29')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-21 19:50:51 --> unlink(uploads/1700595786_382e4db1c3674bad5db0.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595786_382e4db1c3674bad5db0.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 200)
+ 2 APPPATH\Controllers\Productos.php(200): unlink('uploads/1700595786_382e4db1c3674bad5db0.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:50:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:51:01 --> unlink(uploads/1700595786_382e4db1c3674bad5db0.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700595786_382e4db1c3674bad5db0.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 116)
+ 2 APPPATH\Controllers\Productos.php(116): unlink('uploads/1700595786_382e4db1c3674bad5db0.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->eliminar('29')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:51:34 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('30', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '30')
+ 3 APPPATH\Models\Producto.php(49): CodeIgniter\Model->update([...], '30')
+ 4 APPPATH\Controllers\Productos.php(208): App\Models\Producto->updateprod([...], '30')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:51:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:54:04 --> unlink(uploads/1700596283_719e4226759ef9849b11.jpg): No such file or directory
+in APPPATH\Controllers\Productos.php on line 116.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/1700596283_719e4226759ef9849b11.jpg): No such file or directory', 'C:\\xampp\\htdocs\\urbix\\app\\Controllers\\Productos.php', 116)
+ 2 APPPATH\Controllers\Productos.php(116): unlink('uploads/1700596283_719e4226759ef9849b11.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->eliminar('30')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:54:22 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('31', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '31')
+ 3 APPPATH\Models\Producto.php(49): CodeIgniter\Model->update([...], '31')
+ 4 APPPATH\Controllers\Productos.php(179): App\Models\Producto->updateprod([...], '31')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:54:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-21 19:54:33 --> CodeIgniter\BaseModel::transformDataToArray(): Return value must be of type array, string returned
+in SYSTEMPATH\BaseModel.php on line 1706.
+ 1 SYSTEMPATH\BaseModel.php(910): CodeIgniter\BaseModel->transformDataToArray('31', 'update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], '31')
+ 3 APPPATH\Models\Producto.php(49): CodeIgniter\Model->update([...], '31')
+ 4 APPPATH\Controllers\Productos.php(179): App\Models\Producto->updateprod([...], '31')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->actualizar()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-21 19:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-11-21 19:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
