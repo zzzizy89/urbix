@@ -39,12 +39,15 @@ public function obteneriddelete($id)
 
 public function obtenerid($id)
 {
-    return $this->where('id_producto', $id)->first();
+    $datosProducto = $this->find($id);
+
+     $this->where('id_producto', $id)->first();
+     return $datosProducto;
 
 }
 public function updateprod($datos,$id)
 {
-    $this->update($datos,$id);
+    $this->update($id, $datos);
 }
 public function obtenertodoslosprod()
 {
@@ -60,4 +63,13 @@ public function obtenertodoslosprod()
     {
         return $this->find($id_producto);
     }
+    public function obtenerProductosPorTipo($idTipo)
+{
+    if ($idTipo) {
+        return $this->where('id_tipoprod', $idTipo)->orderBy('id_producto', 'ASC')->findAll();
+    } else {
+        return $this->orderBy('id_producto', 'ASC')->findAll();
+    }
+}
+
 }

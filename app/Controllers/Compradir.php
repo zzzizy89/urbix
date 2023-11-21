@@ -13,115 +13,146 @@ use App\Models\Calle;
 
 class Compradir extends Controller
 {
-    public function index()
-    {
-        $user = session('user');
-    
-        if (!$user || $user->id_user < 1) {
-            return redirect()->to('login');
-        } else {
-            // Obtener el valor de totalCompra desde la sesión
-            $totalCompra = session()->get('totalCompra');
-            // Pasar el valor de totalCompra a la vista
-            $data['totalC'] = $totalCompra;
-    
-            return view("main/form/compradir", $data);
-        }
+   /**
+ * Método para mostrar la página principal del proceso de compra.
+ */
+public function index()
+{
+    // Verificar si el usuario está autenticado y tiene un ID válido
+    $user = session('user');
+
+    if (!$user || $user->id_user < 1) {
+        // Si no está autenticado, redirigir a la página de inicio de sesión
+        return redirect()->to('login');
+    } else {
+        // Obtener el valor de totalCompra desde la sesión
+        $totalCompra = session()->get('totalCompra');
+
+        // Pasar el valor de totalCompra a la vista
+        $data['totalC'] = $totalCompra;
+
+        // Cargar la vista para la página principal del proceso de compra
+        return view("main/form/compradir", $data);
     }
+}
+
 
     
+/**
+ * Método para procesar la compra total de productos.
+ */
 public function Compradirtotal()
 {
+    // Obtener la cantidad y el ID del producto desde la solicitud
     $cantidad = $this->request->getVar('cantidad');
     $id_producto = $this->request->getVar('id_producto');
-    
-    
-        $productoModel = new Producto();
 
-        // Obtén el precio del producto desde la consulta
-        $producto = $productoModel->obtenerProductoPorId($id_producto);
-     
-        if ($producto !== null) {
-            $precio = $producto['precio'];
-            $nombre = $producto['nombre'];
-            // Calcula el total de la compra
-            $totalCompra = $cantidad * $precio;
-            // Guardar el valor de totalCompra en la sesión
-            session()->set('totalCompra', $totalCompra);
-            session()->set('precio', $precio);
-            session()->set('cantidad', $cantidad);
-            session()->set('nombre', $nombre);
-            session()->set('id_producto', $id_producto);
-            return redirect()->to('compra_dir');
-        } else {
-            // Manejo de error si $producto es nulo
-            return redirect()->to('carrito');
-        }
+    // Crear una instancia del modelo de Producto
+    $productoModel = new Producto();
+
+    // Obtener información del producto por su ID
+    $producto = $productoModel->obtenerProductoPorId($id_producto);
+
+    if ($producto !== null) {
+        // Obtener el precio, nombre y calcular el total de la compra
+        $precio = $producto['precio'];
+        $nombre = $producto['nombre'];
+        $totalCompra = $cantidad * $precio;
+
+        // Guardar los valores relevantes en la sesión
+        session()->set('totalCompra', $totalCompra);
+        session()->set('precio', $precio);
+        session()->set('cantidad', $cantidad);
+        session()->set('nombre', $nombre);
+        session()->set('id_producto', $id_producto);
+
+        // Redirigir a la página de compra
+        return redirect()->to('compra_dir');
+    } else {
+        // Manejo de error si $producto es nulo, redirigir al carrito
+        return redirect()->to('carrito');
     }
+}
+
 
     
-    public function Compradirecta($pais, $provincia, $ciudad,$codigo_postal, $barrio, $calle, $numero, $descripcion_casa)
+   /**
+ * Método para procesar la compra directa.
+ *
+ * @param string $pais País de la dirección.
+ * @param string $provincia Provincia de la dirección.
+ * @param string $ciudad Ciudad de la dirección.
+ * @param string $codigo_postal Código postal de la dirección.
+ * @param string $barrio Barrio de la dirección.
+ * @param string $calle Calle de la dirección.
+ * @param string $numero Número de la dirección.
+ * @param string $descripcion_casa Descripción adicional de la dirección.
+ */
+public function Compradirecta($pais, $provincia, $ciudad, $codigo_postal, $barrio, $calle, $numero, $descripcion_casa)
 {
+    // Crear instancias de los modelos necesarios
     $paisModel = new Pais();
     $provModel = new Provincia();
     $ciudadModel = new Ciudad();
     $barrioModel = new Barrio();
     $direccionModel = new Direccion_ca();
     $calleModel = new Calle();
-
-    // Insertar país
-    $id_pais = $paisModel->insertPais($pais);
-
-    // Insertar provincia
-    $id_provincia = $provModel->insertProvincia($id_pais, $provincia);
-
-    // Insertar ciudad
-    $id_ciudad = $ciudadModel->insertCiudad($ciudad,$id_provincia);
-
-    // Insertar barrio
-    $id_barrio = $barrioModel->insertBarrio($barrio,$id_ciudad);
-
-    // Insertar calle
-    $id_calle = $calleModel->insertCalle($calle);
-    
-  // Insertar dirección y guardar la id en $id_direccion
-  $id_direccion = $direccionModel->insertDireccion($id_calle,$codigo_postal,$numero,$descripcion_casa,$id_barrio);
-
-    // Obtener el ID de la dirección recién insertada
-    
     $productoModel = new Producto();
     $comprasModel = new Compras();
     $detalleCompraModel = new Detalle_compra();
+
+    // Insertar país y obtener su ID
+    $id_pais = $paisModel->insertPais($pais);
+
+    // Insertar provincia y obtener su ID
+    $id_provincia = $provModel->insertProvincia($id_pais, $provincia);
+
+    // Insertar ciudad y obtener su ID
+    $id_ciudad = $ciudadModel->insertCiudad($ciudad, $id_provincia);
+
+    // Insertar barrio y obtener su ID
+    $id_barrio = $barrioModel->insertBarrio($barrio, $id_ciudad);
+
+    // Insertar calle y obtener su ID
+    $id_calle = $calleModel->insertCalle($calle);
+
+    // Insertar dirección y obtener su ID
+    $id_direccion = $direccionModel->insertDireccion($id_calle, $codigo_postal, $numero, $descripcion_casa, $id_barrio);
 
     // Obtener el usuario actual desde la sesión
     $user = session('user');
     $id_user = $user->id_user;
 
+    // Obtener información de la compra desde las sesiones
     $id_producto = session()->get('id_producto');
     $cantidad = session()->get('cantidad');
     $totalCompra = session()->get('totalCompra');
     $precio = session()->get('precio');
-       
-        // Inserta la compra
-        $id_compra = $comprasModel->insertCompra($id_user,$id_direccion,$totalCompra);
-        
-        // Calcular el subtotal del producto
-        $subtotal = $precio * $cantidad;
+    $nombre = session()->get('nombre');
 
-        // Registrar el detalle de la compra con el ID de compra correcto
-        $detalleCompraModel->insertDetallecompra($id_compra,$id_producto,$cantidad,$precio,$subtotal);
+    // Insertar la compra y obtener su ID
+    $id_compra = $comprasModel->insertCompra($id_user, $id_direccion, $totalCompra);
 
+    // Calcular el subtotal del producto
+    $subtotal = $precio * $cantidad;
 
-      // Borrar sesiones específicas
-        session()->remove('totalCompra');
-        session()->remove('precio');
-        session()->remove('cantidad');
-        session()->remove('id_producto');
-        session()->remove('nombre');
-        // Redirigir a la página de confirmación de compra
-        return redirect()->to(base_url('carrito'));
-    
+    // Registrar el detalle de la compra con el ID de compra correcto
+    $detalleCompraModel->insertDetallecompra($id_compra, $id_producto, $cantidad, $precio, $subtotal);
+
+    // Borrar sesiones específicas
+    session()->remove('totalCompra');
+    session()->remove('precio');
+    session()->remove('cantidad');
+    session()->remove('id_producto');
+    session()->remove('nombre');
+
+    // Redirigir a la página de confirmación de compra
+    return redirect()->to(base_url('carrito'));
 }
+
+/**
+ * Método para cancelar la compra directa.
+ */
 public function cancelcompradir()
 {
     // Borrar sesiones específicas
@@ -130,7 +161,9 @@ public function cancelcompradir()
     session()->remove('cantidad');
     session()->remove('id_producto');
     session()->remove('nombre');
-    // Redirigir a la página de confirmación de compra
+
+    // Redirigir a la página del carrito
     return redirect()->to(base_url('carrito'));
 }
+
 }

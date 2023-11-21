@@ -1,0 +1,486 @@
+:root {
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main: rgb(57, 239, 12);
+}
+
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
+}
+
+html,
+body {
+	background: var(--color-primary);
+	color: var(--color-secondary);
+	font-family: "Akira";
+	margin: 0;
+	padding: 0;
+}
+
+body.light-mode {
+	background: var(--color-secondary);
+}
+
+.cursor {
+	pointer-events: none;
+	position: absolute;
+	padding: 0.9vw;
+	border: 2px solid #ffff;
+	border-radius: 50%;
+	z-index: 2000;
+	transition: transform 0.1s ease;
+}
+
+.smooth-scroller {
+	overflow: hidden;
+}
+
+.hero-scroller {
+	height: 250vh;
+	overflow: hidden;
+}
+
+.section {
+	position: relative;
+	display: flex;
+	min-height: 100vh;
+	padding: 50px;
+	justify-content: center;
+}
+
+.copy {
+	background: var(--color-secondary2);
+	font-family: "stretchpro";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-wrapper {
+	max-width: 1400px;
+}
+
+.content {
+	width: 100%;
+	max-width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h1 {
+	font-size: 180px;
+	font-weight: 400;
+	line-height: 150px;
+	margin: 0px;
+	text-transform: uppercase;
+}
+
+.image-wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 50%;
+}
+
+.image {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+p {
+	font-size: 4em;
+	line-height: 1.2em;
+}
+
+
+/* navbar section starts here */
+
+.container {
+	width: 60%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+header {
+	margin-bottom: 1vh;
+	height: 5.5vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2vw;
+	background: var(--color-terciary);
+	border-radius: 1vw;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80vw;
+	z-index: 111;
+}
+
+header .header-left {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+header .header-left nav {
+	margin-left: 1vw;
+	width: 100%;
+}
+
+header .header-left nav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul li a {
+	display: block;
+	color: #cfd9e0;
+	font-size: 1.5vw;
+	font-family: "Akira";
+	padding: 0.5vw 0.7vw;
+	text-decoration: none;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li {
+	margin: 0 1.3vw;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+	color: var(--color-main);
+}
+
+header .header-right {
+	display: flex;
+	align-items: center;
+}
+
+header .header-right .hamburger {
+	margin-left: 2vw;
+	cursor: pointer;
+	display: none;
+	padding: 0 1vw;
+}
+
+header .header-right .hamburger div {
+	width: 3vw;
+	height: 0.3vw;
+	margin: 0.6vw 0;
+	background: #fff;
+}
+
+
+/* Resolucion para Monitores */
+
+@media only screen and (max-width: 1920px) {
+	header {
+		margin-bottom: 1vh;
+		height: 4.5vw;
+		display: flex;
+		padding: 0 2vw;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60vw;
+		z-index: 111;
+	}
+
+	nav ul li a {
+		display: block;
+		color: #cfd9e0;
+		font-size: 1.2vw;
+		font-family: "Akira";
+		padding: 0.5vw 0.7vw;
+		text-decoration: none;
+	}
+}
+
+@media only screen and (max-width: 1366px) {
+	header {
+		margin-bottom: 1vh;
+		height: 4vw;
+		display: flex;
+		padding: 0 2vw;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 55vw;
+		z-index: 111;
+	}
+
+	nav ul li a {
+		display: block;
+		color: #cfd9e0;
+		font-size: 1vw;
+		font-family: "Akira";
+		padding: 0.4vw 0.6vw;
+		text-decoration: none;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	header {
+		margin-bottom: 1vh;
+		height: 3.8vw;
+		display: flex;
+		padding: 0 1vw;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 50vw;
+		z-index: 111;
+	}
+
+	nav ul li a {
+		display: block;
+		color: #cfd9e0;
+		font-size: 0.9vw;
+		font-family: "Akira";
+		padding: 0.2vw 0.4vw;
+		text-decoration: none;
+	}
+}
+
+
+/* Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {
+	header {
+		padding: 0 0px;
+		margin-top: 1vh;
+		;
+	}
+
+	header .header-right .hamburger {
+		display: block;
+	}
+
+	header .header-left nav {
+		margin: 0;
+		position: absolute;
+		top: 14.5vw;
+		width: 100%;
+		height: fit-content;
+		background-color: var(--color-terciary);
+		padding: 3.5vw;
+		transition: 0.3s;
+		text-align: center;
+		border-radius: 1vw;
+		justify-content: center;
+		z-index: 100;
+	}
+
+	header .header-left nav.active {
+		top: -15.5vw;
+	}
+
+	header .header-left nav ul {
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	header {
+		padding: 0 0px;
+		margin-top: 1vh;
+		;
+	}
+
+	header .header-right .hamburger {
+		display: block;
+	}
+
+	header .header-left nav {
+		margin: 0;
+		position: absolute;
+		top: 14.5vw;
+		width: 100%;
+		height: fit-content;
+		background-color: var(--color-terciary);
+		padding: 3.5vw;
+		transition: 0.3s;
+		text-align: center;
+		border-radius: 1vw;
+		justify-content: center;
+		z-index: 100;
+	}
+
+	header .header-left nav.active {
+		top: -15.8vw;
+	}
+
+	header .header-left nav ul {
+		display: inline-block;
+	}
+}
+
+
+/* Resolucion para Celulares */
+
+@media only screen and (max-width: 950px) {
+	nav .login-signup {
+		display: block;
+		margin-top: 2vh;
+	}
+
+	header .header-right .login-signup {
+		display: none;
+	}
+
+	header .header-left nav {
+		margin: 0;
+		position: absolute;
+		top: 14.8vw;
+		width: 100%;
+		height: fit-content;
+		background-color: var(--color-terciary);
+		padding: 3.5vw;
+		transition: 0.3s;
+		text-align: center;
+		border-radius: 1vw;
+		justify-content: center;
+		z-index: 100;
+	}
+
+	header .header-left nav.active {
+		top: -15.8vw;
+	}
+
+	header .header-left nav ul {
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 430px) {
+	nav .login-signup {
+		display: block;
+		margin-top: 2vh;
+	}
+
+	header .header-right .login-signup {
+		display: none;
+	}
+
+	header .header-left nav {
+		margin: 0;
+		position: absolute;
+		top: 14.8vw;
+		width: 100%;
+		height: fit-content;
+		background-color: var(--color-terciary);
+		padding: 3.5vw;
+		transition: 0.3s;
+		text-align: center;
+		border-radius: 1vw;
+		justify-content: center;
+		z-index: 100;
+	}
+
+	header .header-left nav.active {
+		top: -15.8vw;
+	}
+
+	header .header-left nav ul {
+		display: inline-block;
+	}
+}
+
+
+/* navbar section ends here */

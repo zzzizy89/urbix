@@ -33,12 +33,14 @@ $routes->set404Override();
 // Seccion controlador Home
 $routes->get('/', 'Home::index');
 $routes->get('intro', 'Home::index');
+$routes->get('intro_about', 'Home::intro_about');
 $routes->get('intro_catalogo', 'Home::intro_catalogo');
 $routes->get('intro_contacto', 'Home::intro_contacto');
 $routes->get('intro_login', 'Home::intro_login');
 $routes->get('intro_inicio', 'Home::intro_inicio');
 $routes->get('intro_dashboard', 'Home::intro_dashboard');
 $routes->get('inicio', 'Home::inicio');
+$routes->get('about', 'Home::about');
 $routes->get('contact', 'Home::contact');
 
 // Seccion controlador Login
@@ -72,13 +74,18 @@ $routes->get('about', 'Productos::about');
 
 // seccion controlador Email2
 
-$routes->post('enviar__email', 'Email2::enviar__email');
+$routes->post('enviar__email', 'Email2::enviar_email');
 
 
 // seccion controlador Carrito
 
+// Ruta sin parámetro
 $routes->get('carrito','Carrito::index');
+// Ruta con parámetro
+$routes->get('carritop/(:any)','Carrito::index/$1');
 $routes->post('carrito/guar','Carrito::guardar');
+//
+$routes->get('productof/(:any)', 'Carrito::filtrarPorTipo/$1');
 
 // seccion controlador Carrito2
 
