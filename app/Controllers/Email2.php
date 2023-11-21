@@ -19,31 +19,31 @@ class Email2 extends BaseController
         
     }
     */
-    public function enviar__email()
-    {
-       
-        $nombrecom = $this->request->getPost('nombrecom');
-        $emailUsuario = session('user')->email;
-        $sumen = $this->request->getPost('mensaje1');
-        $asuntoco = $this->request->getPost('asuntoco');
-        $numtel = $this->request->getPost('numtel');
+    public function enviar_email()
+{
+    // Obtener datos del formulario
+    $nombrecom = $this->request->getPost('nombrecom');
+    $emailUsuario = session('user')->email;
+    $sumen = $this->request->getPost('mensaje1');
+    $asuntoco = $this->request->getPost('asuntoco');
+    $numtel = $this->request->getPost('numtel');
 
-        $email = \Config\Services::email();
+    // Configurar el servicio de correo
+    $email = \Config\Services::email();
+    $email->setFrom($emailUsuario);
+    $email->setTo('Keytechempresa@gmail.com');
+    $email->setSubject($asuntoco);
+    $email->setMessage("De: " . $nombrecom . "\n" . "Numero de telefono: " . $numtel . "\n" . "Mensaje: " . $sumen);
 
-        $email->setFrom($emailUsuario);
-        $email->setTo('Keytechempresa@gmail.com');
-
-        $email->setSubject($asuntoco);
-        $email->setMessage("De: " . $nombrecom . "\n" . "Numero de telefono: " . $numtel . "\n" . "Mensaje: " . $sumen);
-
-        if (!$email->send()) {
-            $this->session->setFlashdata('error', 'No se ha podido enviar el correo');
-
-        } else {
-            $this->session->setFlashdata('success', 'Correo enviado exitosamente');
-            return redirect()->to('contact');
-
-        }
-
+    // Enviar el correo
+    if (!$email->send()) {
+        // Manejar error si no se puede enviar el correo
+        $this->session->setFlashdata('error', 'No se ha podido enviar el correo');
+    } else {
+        // Mostrar mensaje de éxito y redirigir
+        $this->session->setFlashdata('success', 'Correo enviado exitosamente');
+        return redirect()->to('contact');
     }
+}
+
 }

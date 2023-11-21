@@ -1,241 +1,226 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-
-  --color-primary: #0D1117;
-  --color-secondary: #f9f9f9;
-  --color-secondary2: #868e96;
-  --color-terciary: #30353d;
-  --color-terciary-translucent: #30353d97;
-  --color-terciary2-translucent: #dbdee497;
-  --color-main: rgb(57, 239, 12);
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main: rgb(57, 239, 12);
 }
 
 @font-face {
-  font-family: "Mars Model";
-  src: url("../fonts/MarsModel.ttf") format("truetype");
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Arame-Thin";
-  src: url("../fonts/Arame-Thin.ttf") format("truetype");
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "MonumentExtended";
-  src: url("../fonts/MonumentExtended.otf") format("truetype");
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "BasementGrotesque";
-  src: url("../fonts/BasementGrotesque.otf") format("truetype");
-}
-
-
-@font-face {
-  font-family: "Nevolasty-Light";
-  src: url("../fonts/Nevolasty-Light.otf") format("truetype");
-}
-
-
-@font-face {
-  font-family: "BigCityVibes";
-  src: url("../fonts/BigCityVibes.otf") format("truetype");
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "Headshots";
-  src: url("../fonts/Headshots.otf") format("truetype");
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "DistortionDosAnalogue";
-  src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "PIGARNOS-NEUE-Regular";
-  src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "StretchPro";
-  src: url("../fonts/StretchPro.otf") format("truetype");
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "kenyan-coffee";
-  src: url("../fonts/kenyan-coffee.otf") format("truetype");
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Akira-Expanded";
-  src: url("../fonts/Akira-Expanded.otf") format("truetype");
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "BLUE-OCEAN";
-  src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "CHARLEY";
-  src: url("../fonts/CHARLEY.otf") format("truetype");
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "VAL";
-  src: url("../fonts/VAL.otf") format("truetype");
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
 
 @font-face {
-  font-family: "Akira";
-  src: url("../fonts/Akira.otf") format("truetype");
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
 }
 
 .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  background: none;
-  border: none;
-  outline: none;
-  font-family: "Akira", sans-serif;
-  font-weight: 300;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-size: 2em;
-  cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	background: none;
+	border: none;
+	outline: none;
+	font-family: "Akira", sans-serif;
+	font-weight: 300;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-size: 2em;
+	cursor: pointer;
 }
 
 .header {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  color: #ffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -2;
-  font-family: "Akira";
-  font-size: 8em;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	color: #ffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -2;
+	font-family: "Akira";
+	font-size: 8em;
 }
 
 .text-container {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: var(--color-terciary);
-  z-index: -1;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: var(--color-terciary);
+	z-index: -1;
 }
 
 .text-wrapper {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  left: -50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: default;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	left: -50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: default;
 }
 
 .text {
-  width: 300%;
-  font-family: "Akira";
-  font-size: 2.7vw;
-  text-transform: uppercase;
-  opacity: 0.1;
-  z-index: -3;
+	width: 300%;
+	font-family: "Akira";
+	font-size: 2.7vw;
+	text-transform: uppercase;
+	opacity: 0.1;
+	z-index: -3;
 }
 
-/* Resolcuon para Monitores */
+
+/* Resolucion para Monitores */
 
 @media only screen and (max-width: 1920px) {
-  
-  .header {
-    font-size: 8em;
-  }
-
-  .text {
-    font-size: 2.7vw;
-  }
+	.header {
+		font-size: 8em;
+	}
+	.text {
+		font-size: 2.7vw;
+	}
 }
 
 @media only screen and (max-width: 1366px) {
-  
-  .header {
-    font-size: 8em;
-  }
-
-  .text {
-    font-size: 3.3vw;
-  }
+	.header {
+		font-size: 8em;
+	}
+	.text {
+		font-size: 3.3vw;
+	}
 }
-
 
 @media only screen and (max-width: 1280px) {
- 
-  .header {
-    font-size: 8em;
-  }
-
-  .text {
-    font-size: 4vw;
-  }
+	.header {
+		font-size: 8em;
+	}
+	.text {
+		font-size: 4vw;
+	}
 }
 
-/* Resolucion para Tablets */
-@media only screen and (max-width: 1120px) {
- 
-  .header {
-    font-size: 8em;
-  }
 
-  .text {
-    font-size: 4.3vw;
-  }
+/* Resolucion para Tablets */
+
+@media only screen and (max-width: 1120px) {
+	.header {
+		font-size: 8em;
+	}
+	.text {
+		font-size: 4.3vw;
+	}
 }
 
 @media only screen and (max-width: 960px) {
- 
-  .header {
-    font-size: 8em;
-  }
-
-  .text {
-    font-size: 4.5vw;
-  }
+	.header {
+		font-size: 8em;
+	}
+	.text {
+		font-size: 4.5vw;
+	}
 }
+
 
 /* Resolucion para Celulares */
 
 @media only screen and (max-width: 950px) {
-  
-  .header {
-    font-size: 6em;
-  }
-
-  .text {
-    font-size: 5vw;
-  }
+	.header {
+		font-size: 6em;
+	}
+	.text {
+		font-size: 5vw;
+	}
 }
 
 @media only screen and (max-width: 430px) {
-  
-  .header {
-    font-size: 4em;
-  }
-
-  .text {
-    font-size: 5.3vw;
-  }
+	.header {
+		font-size: 4em;
+	}
+	.text {
+		font-size: 5.3vw;
+	}
 }

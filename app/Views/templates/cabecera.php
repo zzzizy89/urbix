@@ -8,72 +8,72 @@ if (session()->has('user')) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrito</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-</head>
-<body>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>carrito</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	</head>
+	<body>
 
-<style>
-   
-    body {
-        background: #000000;
-        color: white;   
-    }
+		<style>
+			body {
+			        background: #000000;
+			        color: white;   
+			    }
+			
+			    .card {
+			        background: #000000;
+			        color: white;
+			    }
+			    .maintenance-message {
+			        background-color: #ffd700; /* Amarillo */
+			        padding: 10px;
+			        text-align: center;
+			        font-size: 18px;
+			        color: #000000; /* Texto negro en amarillo para mayor contraste */
+			    }
+			
+		</style>
 
-    .card {
-        background: #000000;
-        color: white;
-    }
-    .maintenance-message {
-        background-color: #ffd700; /* Amarillo */
-        padding: 10px;
-        text-align: center;
-        font-size: 18px;
-        color: #000000; /* Texto negro en amarillo para mayor contraste */
-    }
-</style>
-
-<div class="maintenance-message">
-    <strong>Under maintenance!</strong> We are working to improve the experience. We apologize for the inconvenience..
-</div>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">urbix</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<div class="maintenance-message">
+			<strong>Under maintenance!</strong> We are working to improve the experience. We apologize for the inconvenience..
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">urbix</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?=base_url('inicio')?>">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('carrito')?>">Catálogo</a>
-                </li>
-                <?php if ($is_admin): ?>
-                    <li class="btn-box btns">
-                    <a class="nav-link" href="<?= base_url('listar') ?>">Listar Periféricos</a>                    
-                </li>
-                <?php else: ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('intro_dashboard') ?>">Dashboard</a>
-                    </li>
-                <?php endif; ?>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="<?=base_url('inicio')?>">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="<?=base_url('carrito')?>">Catálogo</a>
+					</li>
+					<?php if ($is_admin): ?>
+					<li class="btn-box btns">
+						<a class="nav-link" href="<?= base_url('listar') ?>">Listar Periféricos</a>
+					</li>
+					<?php else: ?>
+					<li class="nav-item">
+						<a class="nav-link" href="<?= base_url('intro_dashboard') ?>">Dashboard</a>
+					</li>
+					<?php endif; ?>
 
-            </ul>
-        </div>
-    </nav>
-    
-    <div class="container">
+				</ul>
+			</div>
+		</nav>
 
-<?php if(session('mensaje')):?>
+		<div class="container">
 
-<div class="alert alert-danger" role="alert">
-    <?php echo session('mensaje') ?>
-</div>
+			<?php if(session('mensaje')):?>
 
-<?php endif;?>
+			<div class="alert alert-danger" role="alert">
+				<?php echo session('mensaje') ?>
+			</div>
+
+			<?php endif;?>

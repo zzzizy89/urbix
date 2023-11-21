@@ -74,7 +74,7 @@ $routes->get('about', 'Productos::about');
 
 // seccion controlador Email2
 
-$routes->post('enviar__email', 'Email2::enviar__email');
+$routes->post('enviar__email', 'Email2::enviar_email');
 
 
 // seccion controlador Carrito

@@ -1,99 +1,94 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
-
 :root {
-
-    --color-primary: #0D1117;
-    --color-secondary: #f9f9f9;
-    --color-secondary2: #868e96;
-    --color-terciary: #30353d;
-    --color-terciary-translucent: #30353d97;
-    --color-terciary2-translucent: #dbdee497;
-    --color-main: rgb(57, 239, 12);
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main: rgb(57, 239, 12);
 }
 
 @font-face {
-    font-family: "Mars Model";
-    src: url("../fonts/MarsModel.ttf") format("truetype");
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Arame-Thin";
-    src: url("../fonts/Arame-Thin.ttf") format("truetype");
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "MonumentExtended";
-    src: url("../fonts/MonumentExtended.otf") format("truetype");
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "BasementGrotesque";
-    src: url("../fonts/BasementGrotesque.otf") format("truetype");
-}
-
-
-@font-face {
-    font-family: "Nevolasty-Light";
-    src: url("../fonts/Nevolasty-Light.otf") format("truetype");
-}
-
-
-@font-face {
-    font-family: "BigCityVibes";
-    src: url("../fonts/BigCityVibes.otf") format("truetype");
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "Headshots";
-    src: url("../fonts/Headshots.otf") format("truetype");
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "DistortionDosAnalogue";
-    src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "PIGARNOS-NEUE-Regular";
-    src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "StretchPro";
-    src: url("../fonts/StretchPro.otf") format("truetype");
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "kenyan-coffee";
-    src: url("../fonts/kenyan-coffee.otf") format("truetype");
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Akira-Expanded";
-    src: url("../fonts/Akira-Expanded.otf") format("truetype");
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "BLUE-OCEAN";
-    src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "CHARLEY";
-    src: url("../fonts/CHARLEY.otf") format("truetype");
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
 }
 
 @font-face {
-    font-family: "VAL";
-    src: url("../fonts/VAL.otf") format("truetype");
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
 }
-
 
 @font-face {
-    font-family: "Akira";
-    src: url("../fonts/Akira.otf") format("truetype");
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
 }
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -114,16 +109,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: nowrap;
-
 }
 
 
-
-/* Otras reglas de estilo aquí */
-
-/* Resto de tu CSS... */
-
 /* Estilo para el contenedor de la alerta */
+
 .alert {
 	position: absolute;
 	top: 0;
@@ -132,17 +122,21 @@ body {
 	padding: 10px;
 	text-align: center;
 	z-index: 1000;
-	/* Asegura que la alerta esté por encima de otros elementos */
+
 }
 
+
 /* Estilo para los mensajes de éxito */
+
 .alert-success {
 	background-color: #dff0d8;
 	border: 1px solid #d6e9c6;
 	color: #3c763d;
 }
 
+
 /* Estilo para los mensajes de error */
+
 .alert-error {
 	background-color: #f2dede;
 	border: 1px solid #ebccd1;
@@ -164,7 +158,6 @@ body {
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 20;
-	/* Asegúrate de que esté por encima del formulario */
 }
 
 .close-button a {
@@ -172,9 +165,6 @@ body {
 	color: #fff;
 	font-size: 20px;
 }
-
-
-
 
 .box {
 	position: relative;
@@ -196,8 +186,6 @@ body {
 	z-index: 10;
 }
 
-
-
 h2 {
 	font-size: 32px;
 	font-weight: 900;
@@ -206,8 +194,6 @@ h2 {
 	text-align: center;
 	font-family: "PIGARNOS-NEUE-Regular";
 }
-
-
 
 .form-inputs {
 	display: flex;
@@ -252,7 +238,6 @@ h2 {
 	color: #777;
 	transition: .5s;
 	font-family: "PIGARNOS-NEUE-Regular";
-
 }
 
 .links a:first-child:hover {
@@ -276,6 +261,4 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: #000;
 	color: #fff;
-
 }
-
