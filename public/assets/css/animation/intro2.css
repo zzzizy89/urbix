@@ -105,6 +105,7 @@ body {
 	text-transform: uppercase;
 	font-size: 100px;
 	z-index: -1;
+
 }
 
 .container {
@@ -127,15 +128,18 @@ body {
 .text {
 	font-family: "Akira";
 	font-size: 10vw;
+
+
 }
 
+.text-wrapper,
 .text-1,
 .text-3,
 .text-4,
 .text-8,
 .text-9,
 .text-11 {
-	color: rgba(0, 0, 0, 0);
+	color: var(--color-primary);
 	-webkit-text-stroke: 1px var(--color-secondary2);
 }
 
@@ -143,12 +147,15 @@ body {
 	0% {
 		opacity: 0%;
 	}
+
 	1% {
 		opacity: 100%;
 	}
+
 	99% {
 		opacity: 100%;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -213,33 +220,43 @@ body {
 	0% {
 		opacity: 0%;
 	}
+
 	1% {
 		opacity: 100%;
 	}
+
 	19% {
 		opacity: 100%;
 	}
+
 	20% {
 		opacity: 0%;
 	}
+
 	39% {
 		opacity: 0%;
 	}
+
 	40% {
 		opacity: 100%;
 	}
+
 	59% {
 		opacity: 100%;
 	}
+
 	60% {
 		opacity: 0%;
 	}
+
 	79% {
 		opacity: 0%;
 	}
+
 	80% {
 		opacity: 100%;
 	}
+
 	100% {
 		opacity: 100%;
 	}
@@ -249,9 +266,11 @@ body {
 	0% {
 		height: 100vh;
 	}
+
 	40% {
 		height: 100vh;
 	}
+
 	100% {
 		height: 0%;
 	}
@@ -261,7 +280,32 @@ body {
 	.header {
 		font-size: 24px;
 	}
+
 	.text {
 		font-size: 24px;
 	}
+}
+
+/* modo oscuro */
+
+
+
+.light-mode .container {
+	background: var(--color-secondary);
+}
+
+.light-mode .container .text-wrapper {
+	color: var(--color-primary);
+}
+
+
+.light-mode .text-wrapper,
+.text-1,
+.text-3,
+.text-4,
+.text-8,
+.text-9,
+.text-11 {
+	color: var(--color-secondary);
+	-webkit-text-stroke: 1px var(--color-terciary);
 }

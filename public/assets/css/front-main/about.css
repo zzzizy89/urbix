@@ -97,9 +97,6 @@ body {
 	padding: 0;
 }
 
-body.light-mode {
-	background: var(--color-secondary);
-}
 
 .cursor {
 	pointer-events: none;
@@ -484,3 +481,49 @@ header .header-right .hamburger div {
 
 
 /* navbar section ends here */
+
+
+/* modo oscuro */
+
+body.light-mode {
+	background: var(--color-secondary);
+	color: var(--color-primary);
+}
+
+body.dark-mode header {
+	background: var(--color-terciary-translucent);
+}
+
+body.light-mode header {
+	background: var(--color-terciary2-translucent);
+}
+
+body.dark-mode header nav ul li a {
+	color: var(--color-secondary);
+}
+
+body.dark-mode header nav ul li a:hover,
+body.dark-mode header nav ul li a.active {
+	color: var(--color-main);
+}
+
+body.light-mode header nav ul li a {
+	color: var(--color-primary);
+}
+
+body.light-mode header nav ul li a:hover,
+body.light-mode header nav ul li a.active {
+	color: var(--color-main);
+}
+
+body.light-mode header {
+	background: var(--color-secondary);
+}
+
+body.light-mode header .header-left nav {
+	background: var(--color-secondary);
+}
+
+body.light-mode header .header-right .hamburger div {
+	background: var(--color-primary);
+}
