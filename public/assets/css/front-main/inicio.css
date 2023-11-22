@@ -896,7 +896,7 @@ body.light-mode {
 }
 
 body.dark-mode header {
-	background: var(--color-terciary-translucent);
+	background: var(--color-terciary);
 }
 
 body.light-mode header {
