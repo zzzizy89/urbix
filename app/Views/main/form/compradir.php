@@ -52,8 +52,8 @@
 					<label for="calle">street:</label>
 					<input type="text" id="calle" name="calle" required>
 
-					<label for="numero">phone number:</label>
-					<input type="text" id="numero" name="numero" required>
+					<label for="numero">adress number:</label>
+					<input type="number" id="numero" name="numero" required>
 
 					<label for="descripcion_casa">house description:</label>
 					<textarea id="descripcion_casa" name="descripcion_casa"></textarea>

@@ -81,18 +81,21 @@
 		</div>
 
 		<!-- navbar section ends here -->
-
+		<div class="phrase">
+				<h2>What are you <br> <span>looking</span> for?</h2>
+			
+			</div>
+			<div class="background-media1"></div>
 		<!-- home section starts here -->
 
 		<section class="home">
-			<div class="background-media"></div>
-			<div class="phrase">
-				<h2>What are you <br> <span>looking</span> for?</h2>
-				<p class="slogan">©ertified by us</p>
-			</div>
-
+			<div class="background-media2"></div>
 		</section>
 
+		<div class="phrase2">
+				<h2>30/07/2023 released</h2>
+			
+			</div>
 
 		<!-- home section ends here -->
 		<script>

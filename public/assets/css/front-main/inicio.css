@@ -15,6 +15,7 @@
 	--color-terciary: #30353d;
 	--color-terciary-translucent: #30353d97;
 	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
 	--color-main: rgb(57, 239, 12);
 }
 
@@ -480,26 +481,60 @@ header .header-right .hamburger div {
 	position: relative;
 }
 
-.background-media {
+.background-media1 {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 25%;
+	left: 2vw;
 	bottom: 0;
-	left: 50%;
-	width: 50%;
-	background: url('../img/gallery/01.jpg') center center/cover no-repeat;
+	width: 15vw;
+	height: 50vw;
+	background: url('../img/front-main/red.png') center center/cover no-repeat;
 	z-index: 100;
 }
 
+/* modifcar medida 1280px */
+.background-media2 {
+	position: absolute;
+	top: 40%;
+	right: 2vw;
+	bottom: 0;
+	width: 20vw;
+	height: 20vw;
+	background: url('../img/gallery/airph.jpg') center center/cover no-repeat;
+	z-index: 100;
+}
+
+
 .phrase {
-	text-align: center;
+	position: absolute;
 	z-index: 150;
 }
 
+.phrase2 {
+	position: absolute;
+	z-index: 150;
+}
+
+.phrase2 h2 {
+	position: absolute;
+	z-index: 150;
+	top: -22vw;
+	margin-right: 10px;
+	font-family: "Arame-thin";
+	font-size: 1.5vw;
+	font-weight: 500;
+	left: 86vw;
+
+	color: var(--color-secondary);
+	font-size: 1.5vw;
+}
+
 .phrase h2 {
+
 	font-size: 9vw;
-	font-family: "Akira";
-	color: var(--color-main);
+	font-family: "Arame-thin";
+	font-weight: 500;
+	color: var(--color-secondary);
 	overflow: hidden;
 	white-space: nowrap;
 	position: relative;
@@ -508,7 +543,7 @@ header .header-right .hamburger div {
 
 .phrase h2 span {
 	font-size: 9vw;
-	font-family: "StretchPro";
+	font-family: "Arame-thin";
 	color: var(--color-secondary);
 }
 
@@ -573,11 +608,13 @@ header .header-right .hamburger div {
 
 @media only screen and (max-width: 1280px) {
 	.phrase h2 {
-		font-size: 8vw;
+		margin-top: 100%;
+		margin-left: 2vw;
+		font-size: 1.5vw;
 	}
 
 	.phrase h2 span {
-		font-size: 8vw;
+		font-size: 1.5vw;
 	}
 
 	.slogan {
@@ -891,29 +928,20 @@ body.dark-mode {
 }
 
 body.light-mode {
-	background: var(--color-secondary2);
+	background: var(--color-secondary);
 	color: var(--color-primary);
-}
-
-body.dark-mode header {
-	background: var(--color-terciary);
 }
 
 body.light-mode header {
+	background: var(--color-terciary);
+}
+
+body.dark-mode header {
 	background: var(--color-terciary2-translucent);
 }
 
-body.dark-mode header nav ul li a {
-	color: var(--color-secondary);
-}
-
-body.dark-mode header nav ul li a:hover,
-body.dark-mode header nav ul li a.active {
-	color: var(--color-main);
-}
-
 body.light-mode header nav ul li a {
-	color: var(--color-primary);
+	color: var(--color-secondary);
 }
 
 body.light-mode header nav ul li a:hover,
@@ -921,15 +949,24 @@ body.light-mode header nav ul li a.active {
 	color: var(--color-main);
 }
 
-body.light-mode header {
+body.dark-mode header nav ul li a {
+	color: var(--color-primary);
+}
+
+body.dark-mode header nav ul li a:hover,
+body.dark-mode header nav ul li a.active {
+	color: var(--color-main);
+}
+
+body.dark-mode header {
 	background: var(--color-secondary);
 }
 
-body.light-mode header .header-left nav {
+body.dark-mode header .header-left nav {
 	background: var(--color-secondary);
 }
 
-body.light-mode header .header-right .hamburger div {
+body.dark-mode header .header-right .hamburger div {
 	background: var(--color-primary);
 }
 
@@ -939,7 +976,7 @@ body.light-mode header .header-right .hamburger div {
 }
 
 .light-mode .home {
-	background: var(--color-secondary2);
+	background: var(--color-secondary);
 	color: var(--color-primary);
 }
 
