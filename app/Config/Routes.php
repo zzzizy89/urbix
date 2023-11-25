@@ -106,6 +106,8 @@ $routes->get('compra_dir/', 'Compradir::index');
 $routes->post('compradirca/', 'Compradir::Compradirtotal');
 $routes->get('cancelcompradir/', 'Compradir::cancelcompradir');
 
+//Control de compras
+$routes->get('control_compras/', 'Controlcompras::index');
 
 /*
  * --------------------------------------------------------------------

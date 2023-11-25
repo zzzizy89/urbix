@@ -20,7 +20,7 @@
          // Calcular el subtotal para cada producto
          $subtotal = $carrito->cantidad * $carrito->precio;
          $subtotales[] = '$' . number_format($subtotal, 2);
-        $preciou[] = '$' . number_format($carrito->precio, 2); // Formatear el precio
+        $preciou[] = '$' . number_format($carrito->precio, 2); 
 
     }
     ?>
@@ -75,7 +75,7 @@
 					<div id="paypal-container">
 
 						<div id="paypal-button-conteiner"></div>
-						<a href="<?= base_url('cancelcompradir')?>" type="button" class="boton-cancelar">cancel purchase</a>
+						<a href="<?= base_url('carrito2')?>" type="button" class="boton-cancelar">cancel purchase</a>
 					</div>
 
 

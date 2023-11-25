@@ -22,4 +22,16 @@ class Compras extends Model{
             'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
         ]);
     }
+    public function controlcompras()
+    {
+        return $this->select('u.email AS email_usuario,t.tipo as tipo_prod, p.nombre AS nombre_producto, dc.cantidad, p.precio AS precio_unitario, (dc.cantidad * p.precio) AS subtotal')
+            ->join('users u', 'compras.id_user = u.id_user')
+            ->join('detalle_compra dc', 'compras.id_compras = dc.id_compras')
+            ->join('productos p', 'dc.id_producto = p.id_producto')
+            ->join('tipo t', 'p.id_tipoprod = t.id_tipoprod')
+            ->get()
+            ->getResult();
+    }
+    
+
 }

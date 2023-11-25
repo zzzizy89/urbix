@@ -67,6 +67,7 @@ if (!empty($message)) {
 			</table>
 			<a href="<?= base_url('comprar/')?>" class="btn btn-success" type="button">to purchase</a>
 
+
 			<button type="submit" class="btn btn-primary">update cart</button>
 		</form>
 
