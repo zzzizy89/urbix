@@ -1,98 +1,112 @@
+/* TODO: root section starts here */
+
 :root {
-	--color-primary: #0D1117;
-	--color-secondary: #f9f9f9;
-	--color-secondary2: #868e96;
-	--color-terciary: #30353d;
-	--color-terciary-translucent: #30353d97;
-	--color-terciary2-translucent: #dbdee497;
-	--color-main2: #d32222;
-	--color-main: rgb(57, 239, 12);
+  --color-primary: #0D1117;
+  --color-secondary: #f9f9f9;
+  --color-secondary2: #868e96;
+  --color-terciary: #30353d;
+  --color-terciary-translucent: #30353d97;
+  --color-terciary2-translucent: #dbdee497;
+  --color-main2: #d32222;
+  --color-main: rgb(57, 239, 12);
+}
+
+
+/* TODO: root section ends here */
+
+
+/* ? tipografias section starts here */
+
+@font-face {
+  font-family: "Mars Model";
+  src: url("../fonts/MarsModel.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Mars Model";
-	src: url("../fonts/MarsModel.ttf") format("truetype");
+  font-family: "Arame-Thin";
+  src: url("../fonts/Arame-Thin.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Arame-Thin";
-	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+  font-family: "MonumentExtended";
+  src: url("../fonts/MonumentExtended.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "MonumentExtended";
-	src: url("../fonts/MonumentExtended.otf") format("truetype");
+  font-family: "BasementGrotesque";
+  src: url("../fonts/BasementGrotesque.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "BasementGrotesque";
-	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+  font-family: "Nevolasty-Light";
+  src: url("../fonts/Nevolasty-Light.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Nevolasty-Light";
-	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+  font-family: "BigCityVibes";
+  src: url("../fonts/BigCityVibes.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "BigCityVibes";
-	src: url("../fonts/BigCityVibes.otf") format("truetype");
+  font-family: "Headshots";
+  src: url("../fonts/Headshots.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Headshots";
-	src: url("../fonts/Headshots.otf") format("truetype");
+  font-family: "DistortionDosAnalogue";
+  src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "DistortionDosAnalogue";
-	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+  font-family: "PIGARNOS-NEUE-Regular";
+  src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "PIGARNOS-NEUE-Regular";
-	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+  font-family: "StretchPro";
+  src: url("../fonts/StretchPro.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "StretchPro";
-	src: url("../fonts/StretchPro.otf") format("truetype");
+  font-family: "kenyan-coffee";
+  src: url("../fonts/kenyan-coffee.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "kenyan-coffee";
-	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+  font-family: "Akira-Expanded";
+  src: url("../fonts/Akira-Expanded.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Akira-Expanded";
-	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+  font-family: "BLUE-OCEAN";
+  src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "BLUE-OCEAN";
-	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+  font-family: "CHARLEY";
+  src: url("../fonts/CHARLEY.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "CHARLEY";
-	src: url("../fonts/CHARLEY.otf") format("truetype");
+  font-family: "VAL";
+  src: url("../fonts/VAL.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "VAL";
-	src: url("../fonts/VAL.otf") format("truetype");
+  font-family: "Akira";
+  src: url("../fonts/Akira.otf") format("truetype");
 }
 
 @font-face {
-	font-family: "Akira";
-	src: url("../fonts/Akira.otf") format("truetype");
+  font-family: "nothing";
+  src: url("../fonts/nothing.ttf") format("truetype");
 }
 
-@font-face {
-	font-family: "nothing";
-	src: url("../fonts/nothing.ttf") format("truetype");
-}
+
+/* ? tipografias section ends here */
+
+
+/* * HTML BODY section starts here */
 
 html,
 body {
@@ -103,30 +117,40 @@ body {
   font-family: "Monument Extended", sans-serif;
   overflow: hidden;
   background: #ffffff;
+}
 
-}
-/* modo oscuro */
+
+/* ? Dark-Mode Body */
+
 body.dark-mode {
-    background: #0D1117;
+  background: #0D1117;
 }
+
+
+/* TODO: Cursor Body */
 
 .cursor {
-	pointer-events: none;
-	position: absolute;
-	padding: 0.9vw;
-	border: 2px solid #000000;
-	border-radius: 50%;
-	z-index: 200;
-	transition: transform 0.1s ease;
+  pointer-events: none;
+  position: absolute;
+  padding: 0.9vw;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  z-index: 200;
+  transition: transform 0.1s ease;
 }
 
-/* modo oscuro */
+
+/* ? Dark-Mode Cursor */
 
 body.dark-mode .cursor {
-    border: 2px solid #ffff;
+  border: 2px solid #ffff;
 }
 
-/* nav  */
+
+/* * HTML BODY section ends here */
+
+
+/* * NAV section starts here */
 
 nav {
   width: 80%;
@@ -149,80 +173,88 @@ nav {
   font-family: "nothing";
 }
 
-/* modo oscuro */
-body.dark-mode .menu-left  span a{
-    color: var(--color-secondary);
+
+/* ? Dark-Mode Menu-Left */
+
+body.dark-mode .menu-left span a {
+  color: var(--color-secondary);
 }
 
-body.dark-mode .menu-left  span a:hover{
-    color: var(--color-main2);
+body.dark-mode .menu-left span a:hover {
+  color: var(--color-main2);
 }
 
-.menu-left span a{
-   color: var(--color-primary);
-   text-decoration: none;
-  }
-
+.menu-left span a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
 
 .menu-left span a:hover {
-    text-decoration: none;
-    color: var(--color-main2);
-  }
+  text-decoration: none;
+  color: var(--color-main2);
+}
 
 .menu-center {
   text-align: center;
   font-family: "nothing";
 }
 
-/* modo oscuro */
-body.dark-mode .menu-center a{
-    color: var(--color-secondary);
+
+/* ? Dark-Mode Menu-Center */
+
+body.dark-mode .menu-center a {
+  color: var(--color-secondary);
 }
 
-body.dark-mode .menu-center a:hover{
-    color: var(--color-main2);
+body.dark-mode .menu-center a:hover {
+  color: var(--color-main2);
 }
 
 .menu-center .brand-logo a {
   color: var(--color-primary);
   text-decoration: none;
-}	
+}
 
 .menu-center .brand-logo a:hover {
-    color: var(--color-main2);
-    text-decoration: none;
-  }	
+  color: var(--color-main2);
+  text-decoration: none;
+}
 
 .menu-right {
   text-align: right;
   font-family: "nothing";
 }
 
-/* modo oscuro */
-body.dark-mode .menu-right  span a{
-    color: var(--color-secondary);
+
+/* ? Dark-Mode Menu-Right */
+
+body.dark-mode .menu-right span a {
+  color: var(--color-secondary);
 }
-body.dark-mode .menu-right  span a:hover{
-    color: var(--color-main2);
+
+body.dark-mode .menu-right span a:hover {
+  color: var(--color-main2);
 }
 
 .menu-right span a {
-   color: var(--color-primary);
-   text-decoration: none;
-  }
+  color: var(--color-primary);
+  text-decoration: none;
+}
 
 .menu-right span a:hover {
-    color: var(--color-main2);
-    text-decoration: none;
-  }
+  color: var(--color-main2);
+  text-decoration: none;
+}
 
 .menu-link {
   padding: 0 30px;
 }
 
 
+/* * NAV section ends here */
 
-/* hero img  */
+
+/* * WRAPPER-IMG section stars here */
 
 .wrapper-img {
   overflow: hidden;
@@ -251,13 +283,19 @@ img {
   z-index: 2;
 }
 
-/* modo oscuro */
+
+/* ? Dark-Mode Box */
+
 body.dark-mode .box {
-    background: var(--color-primary);
-    opacity: 0.8;
+  background: var(--color-primary);
+  opacity: 0.8;
 }
 
-/* header  */
+
+/* * WRAPPER-IMG section ends here */
+
+
+/* * HEADER section starts here */
 
 .header {
   position: absolute;
@@ -271,7 +309,6 @@ body.dark-mode .box {
   text-transform: uppercase;
   margin: 0;
   mix-blend-mode: overlay;
-
 }
 
 .header-1 .letter {
@@ -281,17 +318,24 @@ body.dark-mode .box {
   font-family: "Akira";
 }
 
-
 .header-2 .letter {
   display: inline-block;
   line-height: 1em;
   font-family: "Akira";
 }
-/* modo oscuro */
+
+
+/* ? Dark-Mode Header-2 */
+
 body.dark-mode .header-2 .letter {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
-/* hero-container */
+
+
+/* * HEADER section ends here */
+
+
+/* * HERO-CONTAINER section starts here */
 
 .sidebar-text {
   position: absolute;
@@ -314,9 +358,11 @@ body.dark-mode .header-2 .letter {
   font-family: "nothing";
 }
 
-/* modo oscuro */
+
+/* ? Dark-Mode Change */
+
 body.dark-mode .change {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .img-nav {
@@ -336,17 +382,22 @@ body.dark-mode .change {
 }
 
 
+/* * HERO-CONTAINER section ends here */
+
+
 /* media queries  */
 
 @media (max-width: 900px) {
   .wrapper-img {
     width: 90%;
   }
+
   .header {
     top: 50%;
     left: 50%;
     text-align: center;
   }
+
   .header h1 {
     font-size: 40px;
   }
