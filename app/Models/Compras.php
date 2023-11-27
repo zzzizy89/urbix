@@ -19,12 +19,11 @@ class Compras extends Model{
             'id_metodo_pago' => 1, // ID del método de pago (ajusta según tus necesidades)
             'id_direccion_casa' => $id_direccion, // ID de la dirección (ajusta según tus necesidades)
             'total_c' => $totalCompra,
-            'fecha_compra' => date('Y-m-d H:i:s') // Fecha y hora actual
         ]);
     }
     public function controlcompras()
     {
-        return $this->select('u.email AS email_usuario,t.tipo as tipo_prod, p.nombre AS nombre_producto, dc.cantidad, p.precio AS precio_unitario, (dc.cantidad * p.precio) AS subtotal')
+        return $this->select('compras.fecha_compra AS fecha_compra, u.email AS email_usuario,t.tipo AS tipo_prod, p.nombre AS nombre_producto, dc.cantidad, p.precio AS precio_unitario, (dc.cantidad * p.precio) AS subtotal')
             ->join('users u', 'compras.id_user = u.id_user')
             ->join('detalle_compra dc', 'compras.id_compras = dc.id_compras')
             ->join('productos p', 'dc.id_producto = p.id_producto')

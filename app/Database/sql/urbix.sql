@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2023 a las 00:08:02
+-- Tiempo de generación: 27-11-2023 a las 22:16:27
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,6 +33,14 @@ CREATE TABLE `barrio` (
   `barrio` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `barrio`
+--
+
+INSERT INTO `barrio` (`id_barrio`, `id_ciudad`, `barrio`) VALUES
+(45, 45, 'castagnino'),
+(46, 46, 'dwawddw');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +51,14 @@ CREATE TABLE `calle` (
   `id_calle` int(11) NOT NULL,
   `calle` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `calle`
+--
+
+INSERT INTO `calle` (`id_calle`, `calle`) VALUES
+(10, 'leandro n alem'),
+(11, '1212');
 
 -- --------------------------------------------------------
 
@@ -69,6 +85,14 @@ CREATE TABLE `ciudad` (
   `ciudad` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`id_ciudad`, `id_prov`, `ciudad`) VALUES
+(45, 45, 'Rio tercero'),
+(46, 46, 'dwwdawd');
+
 -- --------------------------------------------------------
 
 --
@@ -84,6 +108,14 @@ CREATE TABLE `compras` (
   `fecha_compra` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id_compras`, `id_user`, `id_metodo_pago`, `id_direccion_casa`, `total_c`, `fecha_compra`) VALUES
+(44, 3, 1, 45, 43000, '2023-11-28 00:09:55'),
+(45, 3, 1, 46, 12000, '2023-11-27 21:14:43');
+
 -- --------------------------------------------------------
 
 --
@@ -98,6 +130,16 @@ CREATE TABLE `detalle_compra` (
   `precio_unitario` int(11) NOT NULL,
   `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `detalle_compra`
+--
+
+INSERT INTO `detalle_compra` (`id_dcompra`, `id_compras`, `id_producto`, `cantidad`, `precio_unitario`, `subtotal`) VALUES
+(52, 44, 34, 1, 12000, 12000),
+(53, 44, 37, 2, 8000, 16000),
+(54, 44, 35, 1, 15000, 15000),
+(55, 45, 34, 1, 12000, 12000);
 
 -- --------------------------------------------------------
 
@@ -119,13 +161,8 @@ CREATE TABLE `direccion_ca` (
 --
 
 INSERT INTO `direccion_ca` (`id_direccion_casa`, `id_barrio`, `id_calle`, `codigo_postal`, `numero`, `descripcion_casa`) VALUES
-(37, 37, 2, 127, 127, 'casa rojua'),
-(38, 38, 3, 127, 0, 'dasdas'),
-(39, 0, 4, 39, 127, 'dwadwdwa'),
-(40, 0, 5, 40, 127, 'dsadsads'),
-(41, 0, 6, 41, 127, 'wwdwda'),
-(42, 42, 7, 5523, 127, 'adad'),
-(43, 43, 8, 5850, 123456789, 'asdasda');
+(45, 45, 10, 5850, 1712, 'casa de rejas negras'),
+(46, 46, 11, 5850, 2333, 'casa roja');
 
 -- --------------------------------------------------------
 
@@ -156,6 +193,14 @@ CREATE TABLE `pais` (
   `pais` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `pais`
+--
+
+INSERT INTO `pais` (`id_pais`, `pais`) VALUES
+(45, 'Argentina'),
+(46, 'aSsdsad');
+
 -- --------------------------------------------------------
 
 --
@@ -176,8 +221,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `imagen`, `descripcion_prod`, `id_tipoprod`) VALUES
-(22, 'teclado cents', 25.99, '1699390685_b86b4d4d996f1590a266.jpg', 'teclado de centavos', 3),
-(23, 'teclado', 500.00, '1699393928_37f344589071be4fe77d.jpg', '1231', 3);
+(34, 'hyperx', 12000.00, '1701118994_5cb045821410950e1f22.jpg', 'teclaod facheraso loco', 3),
+(35, 'aufinexs', 15000.00, '1701119059_c72758022870c76cc022.jpg', 'audifonos facheritos facha', 4),
+(36, 'cascotex', 7000.00, '1701119084_cec811228783176b25fa.jpg', 'cascos facha', 4),
+(37, 'teclado', 8000.00, '1701119105_198334f621b8cad3589b.jpg', 'teclado de colores good', 3);
 
 -- --------------------------------------------------------
 
@@ -190,6 +237,14 @@ CREATE TABLE `provincia` (
   `id_pais` int(11) NOT NULL,
   `provincia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `provincia`
+--
+
+INSERT INTO `provincia` (`id_prov`, `id_pais`, `provincia`) VALUES
+(45, 45, 'Cordoba'),
+(46, 46, 'awdd');
 
 -- --------------------------------------------------------
 
@@ -224,7 +279,6 @@ CREATE TABLE `users` (
   `bio` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `rol` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -232,14 +286,16 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `updated_at`, `rol`) VALUES
-(3, '1699995101_98462e7bfa97732c856c.jpg', 'Pepe', 'tiagocomba@gmail.com', 'hola me gusta la manzana', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1),
-(5, '', 'test', 'test@gmail.com', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', '2023-10-11 14:29:29', 0),
-(6, '', 'pepe', 'pepe@gmail.com', '', '$2y$10$WNP/RwmlNlWqn0czYtzkN.LKBEovUYqywiemsYkCKBvYOR5BTgSVS', '2023-10-15 22:18:21', '2023-10-15 22:18:21', 0),
-(7, '', 'Luca', 'lucaferna@gmail.com', '', '$2y$10$4li6pkjY7bROijJFuTGrTecLinIsc1N9mAVdcppB7eEiC62hgLsuK', '2023-10-25 19:40:11', '2023-10-25 19:40:11', 0),
-(8, '', 'eze', 'eze@gmail.com', '', '$2y$10$fINKdk19sX.xXaumtRXyzewh/sZ7m1XXMghWjjvP172SsmLT0pp9e', '2023-11-01 19:19:52', '2023-11-01 19:19:52', 0),
-(9, '', '3', 'palo@gmail.com', '', '$2y$10$AO0iNaBdRlXPqsYoTy5ipukhiXTFVz5YCjccZjIAknUXNFtssP0BC', '2023-11-07 23:42:58', '2023-11-07 23:42:58', 0),
-(10, '', 'eze', 'lololo@gmail.com', '', '$2y$10$aWMiO/bO6e8mZ2kR47/TleRhqf7rua2zCs7s7fg.8DTTlebuCM7u.', '2023-11-10 22:10:24', '2023-11-10 22:10:24', 0);
+INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `rol`) VALUES
+(3, '1699995101_98462e7bfa97732c856c.jpg', 'Pepe', 'tiagocomba@gmail.com', 'hola me gusta la manzana', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', 1),
+(5, '', 'test', 'test@gmail.com', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', 0),
+(6, '', 'pepe', 'pepe@gmail.com', '', '$2y$10$WNP/RwmlNlWqn0czYtzkN.LKBEovUYqywiemsYkCKBvYOR5BTgSVS', '2023-10-15 22:18:21', 0),
+(7, '', 'Luca', 'lucaferna@gmail.com', '', '$2y$10$4li6pkjY7bROijJFuTGrTecLinIsc1N9mAVdcppB7eEiC62hgLsuK', '2023-10-25 19:40:11', 0),
+(8, '1700075362_cbf670270209050e4eb6.jpg', 'eze', 'eze@gmail.com', '', '$2y$10$fINKdk19sX.xXaumtRXyzewh/sZ7m1XXMghWjjvP172SsmLT0pp9e', '2023-11-01 19:19:52', 0),
+(9, '', '3', 'palo@gmail.com', '', '$2y$10$AO0iNaBdRlXPqsYoTy5ipukhiXTFVz5YCjccZjIAknUXNFtssP0BC', '2023-11-07 23:42:58', 0),
+(10, '', 'eze', 'lololo@gmail.com', '', '$2y$10$aWMiO/bO6e8mZ2kR47/TleRhqf7rua2zCs7s7fg.8DTTlebuCM7u.', '2023-11-10 22:10:24', 0),
+(11, '', '1313', 'peapwe@gmail.com', '', '$2y$10$cxtcMxrJkKkbJcvn0Pq0A.sOvMkttF6XnzikH6ufGqWhqALVWzl8O', '2023-11-17 22:50:36', 0),
+(12, '', '13123', 'adado@gmail.com', '', '$2y$10$b7wdOOYixqhU0bzm9lSsJ.bFAoCnLJdLRcz0E.I50lWWuekhsmLGK', '2023-11-17 22:55:50', 0);
 
 --
 -- Índices para tablas volcadas
@@ -331,43 +387,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `barrio`
 --
 ALTER TABLE `barrio`
-  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `calle`
 --
 ALTER TABLE `calle`
-  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
+  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compra`
 --
 ALTER TABLE `detalle_compra`
-  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_ca`
 --
 ALTER TABLE `direccion_ca`
-  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `metodo_pago`
@@ -379,19 +435,19 @@ ALTER TABLE `metodo_pago`
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `provincia`
 --
 ALTER TABLE `provincia`
-  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
@@ -403,7 +459,7 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

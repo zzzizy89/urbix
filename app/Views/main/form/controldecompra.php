@@ -28,6 +28,8 @@
 
                     <th>Subtotal</th>
 
+                    <th>Fecha compra</th>
+
                     			<!-- 
                     <th>Total de Compra</th>
                     -->
@@ -51,6 +53,8 @@
 
 
                         <td><?= $item->subtotal ?></td>
+
+                        <td><?= $item->fecha_compra ?></td>
 
                         <!-- 
                         <td> //$item->total_compra </td>
