@@ -12,26 +12,26 @@ $(document).ready(function() {
     }
 
     const body = document.body;
-    const toggleInput = $('#dark-mode-switch');
+    const changeLink = document.querySelector(".change");
 
-    // Cambia el estado del interruptor al cargar la página
-    toggleInput.prop('checked', getCookie('darkMode') === 'true');
+    // Cambia el estado del modo al cargar la página
     body.classList.toggle('dark-mode', getCookie('darkMode') === 'true');
     body.classList.toggle('light-mode', getCookie('darkMode') !== 'true');
 
-    // Cambia el estado del modo y del interruptor con animación
-    function toggleMode() {
+    // Cambia el estado del modo con animación
+    function toggleMode(event) {
+        event.preventDefault();
+
         const isDarkMode = !body.classList.contains('dark-mode');
         body.classList.toggle('dark-mode', isDarkMode);
         body.classList.toggle('light-mode', !isDarkMode);
-        toggleInput.prop('checked', isDarkMode);
 
         // Guarda el estado del modo en una cookie
         setCookie('darkMode', isDarkMode.toString());
     }
 
-    // Escucha los cambios en el interruptor
-    toggleInput.on('change', toggleMode);
+    // Escucha los clics en el enlace
+    changeLink.addEventListener('click', toggleMode);
 
     // Otro código relacionado con el documento listo si es necesario
 
