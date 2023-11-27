@@ -1,0 +1,290 @@
+:root {
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
+	--color-main: rgb(57, 239, 12);
+}
+
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Monument Extended", sans-serif;
+  overflow: hidden;
+}
+
+/* nav  */
+
+nav {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.menu-item {
+  flex: 1;
+}
+
+.menu-left {
+  text-align: left;
+  font-family: "nothing";
+}
+
+.menu-left span a{
+   color: var(--color-primary);
+   text-decoration: none;
+  }
+
+
+.menu-left span a:hover {
+    text-decoration: none;
+    color: var(--color-main2);
+  }
+
+.menu-center {
+  text-align: center;
+  font-family: "nothing";
+}
+
+.menu-center .brand-logo a {
+  color: var(--color-primary);
+  text-decoration: none;
+}	
+
+.menu-center .brand-logo a:hover {
+    color: var(--color-main2);
+    text-decoration: none;
+  }	
+
+.menu-right {
+  text-align: right;
+  font-family: "nothing";
+}
+
+.menu-right span a {
+   color: var(--color-primary);
+   text-decoration: none;
+  }
+
+.menu-right span a:hover {
+    color: var(--color-main2);
+    text-decoration: none;
+  }
+
+.menu-link {
+  padding: 0 30px;
+}
+
+/* hero img  */
+
+.wrapper-img {
+  overflow: hidden;
+  position: relative;
+  top: 50% !important;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+  height: 90vh;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box {
+  background: white;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* header  */
+
+.header {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: 0;
+  mix-blend-mode: overlay;
+
+}
+
+.header-1 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: var(--color-main2);
+  font-family: "Akira";
+
+}
+.header-2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-family: "Akira";
+}
+
+/* hero-container */
+
+.sidebar-text {
+  position: absolute;
+  top: 20%;
+  right: 7%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(165, 165, 165);
+}
+
+.projects {
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.img-nav {
+  position: absolute;
+  right: 13%;
+  bottom: 13%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: grey;
+}
+
+.next {
+  position: relative;
+  top: 40px;
+  left: 80px;
+}
+
+
+/* media queries  */
+
+@media (max-width: 900px) {
+  .wrapper-img {
+    width: 90%;
+  }
+  .header {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .projects,
+  .img-nav {
+    display: none;
+  }
+}

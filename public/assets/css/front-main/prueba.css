@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+	--color-primary: #0D1117;
+	--color-secondary: #f9f9f9;
+	--color-secondary2: #868e96;
+	--color-terciary: #30353d;
+	--color-terciary-translucent: #30353d97;
+	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
+	--color-main: rgb(57, 239, 12);
+}
+
+@font-face {
+	font-family: "Mars Model";
+	src: url("../fonts/MarsModel.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Arame-Thin";
+	src: url("../fonts/Arame-Thin.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "MonumentExtended";
+	src: url("../fonts/MonumentExtended.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BasementGrotesque";
+	src: url("../fonts/BasementGrotesque.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Nevolasty-Light";
+	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BigCityVibes";
+	src: url("../fonts/BigCityVibes.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Headshots";
+	src: url("../fonts/Headshots.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "DistortionDosAnalogue";
+	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "PIGARNOS-NEUE-Regular";
+	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "StretchPro";
+	src: url("../fonts/StretchPro.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "kenyan-coffee";
+	src: url("../fonts/kenyan-coffee.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira-Expanded";
+	src: url("../fonts/Akira-Expanded.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "BLUE-OCEAN";
+	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "CHARLEY";
+	src: url("../fonts/CHARLEY.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "VAL";
+	src: url("../fonts/VAL.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "Akira";
+	src: url("../fonts/Akira.otf") format("truetype");
+}
+
+@font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+  
+  html,
+  body {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary);
+    font-family: "Space Grotesk";
+  }
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    text-transform: uppercase;
+  
+  }
+  
+  .header-logo {
+    font-size: 2em;
+    color: var(--color-secondary);
+  }
+  
+  
+  .header-hamburger {
+    padding: 1em;
+    position: center;
+
+  }
+  
+  .header-hamburger span {
+    display: block;
+    height: 2px;
+    width: 60px;
+    background: var(--color-secondary);
+  }
+  
+  .header-hamburger span:nth-child(2) {
+    margin-top: 0.5em;
+  }
+  
+  .wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .main-title {
+    padding: 0 0.2em;
+    font-size: 8em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .title {
+    letter-spacing: -4px;
+    font-family: "Akira-Expanded";
+    color: var(--color-secondary);
+  
+  }
+  
+  .main-title img {
+    position: relative;
+    top: 0.2em;
+  
+    width: 140px;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 8px;
+    background: var(--color-secondary);
+    margin: 0.5em 0;
+  }
+  
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../img/gallery/airph.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+  }
+  
+  .hero-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    font-weight: bolder;
+    color: greenyellow;
+    font-family: "Akira";
+  }
+  
+  .arrow-img img {
+    position: relative;
+    width: 150px;
+    top: -5em;
+  }
+  
+  .hero-copy {
+    display: flex;
+    margin-top: 4em;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1em;
+  }
+  
+  .copy-left {
+    color: greenyellow;
+    text-transform: uppercase;
+    font-family: "nothing";
+  }
+  
+  .btns {
+    display: flex;
+  }
+  
+  .btn {
+    margin: 0 0.8em 1em 0;
+    padding: 0.3em 0.6em;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    font-family: "nothing";
+  }
+  
+  .copy-right {
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "nothing";
+  }
+  
+  @media (max-width: 900px) {
+    .header-menu-1,
+    .header-menu-2 {
+      display: none;
+    }
+  
+    .main-title {
+      font-size: 4em;
+    }
+  
+    .main-title img {
+      display: none;
+    }
+  
+    .hero-title img {
+      display: none;
+    }
+  
+    .hero-copy {
+      flex-direction: column;
+      margin-top: 10em;
+    }
+  
+    .btns {
+      display: none;
+    }
+  
+    .copy-right {
+      text-align: left;
+    }
+  }
+
+  .menu-open {
+	color: #fff;
+    z-index: 1000;
+}
+
+.menu-open,
+.menu-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 40px;
+	font-size: 20px;
+	cursor: pointer;
+    z-index: 1000;
+    font-family: "nothing";
+}
+
+.socials {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 40px 100px;
+    z-index: 1000;
+    font-family: "nothing";
+}
+
+.socials span {
+	text-transform: uppercase;
+	margin: 0 20px;
+	letter-spacing: 0px;
+    z-index: 1000;
+}
+
+.nav-container {
+	position: fixed;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+    z-index: 1000;
+}
+
+.menu__item {
+	position: relative;
+	padding: 0 6vw;
+    z-index: 1000;
+}
+
+.menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.4s;
+    z-index: 1000;
+    font-family: "stretchpro";
+}
+
+.menu__item-link::before {
+	all: initial;
+	counter-increment: menu;
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+    z-index: 1000;
+
+}
+
+.menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+    z-index: 1000;
+ 
+}
+
+
+
+.menu {
+	padding: 10vh 0 25vh;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	font-size: 7vw;
+    z-index: 1000;
+}
+
+.marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	color: rgb(214, 214, 214);
+	pointer-events: none;
+    z-index: 1000;
+}
+
+.marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transition: all 0.1s;
+	transform: translateX(60px);
+    z-index: 1000;
+ 
+}
+
+.menu__item-link:hover ~ .marquee .marquee__inner {
+	opacity: 1;
+	transform: translateX(0px);
+	transition-duration: 0.4s;
+    z-index: 1000;
+}
+
+.menu__item-link,
+.marquee span {
+	white-space: nowrap;
+	font-size: 7vw;
+	padding: 0 1vw;
+	line-height: 1.15;
+    z-index: 1000;
+}
+
+.marquee span {
+	font-style: italic;
+    z-index: 1000;
+    font-family: "stretchpro";
+}
