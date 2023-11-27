@@ -129,7 +129,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background: var(--color-terciary);
+	background: var(--color-secondary);
 	z-index: -1;
 }
 

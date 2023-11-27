@@ -110,7 +110,21 @@ body.dark-mode {
     background: #0D1117;
 }
 
+.cursor {
+	pointer-events: none;
+	position: absolute;
+	padding: 0.9vw;
+	border: 2px solid #000000;
+	border-radius: 50%;
+	z-index: 200;
+	transition: transform 0.1s ease;
+}
 
+/* modo oscuro */
+
+body.dark-mode .cursor {
+    border: 2px solid #ffff;
+}
 
 /* nav  */
 
