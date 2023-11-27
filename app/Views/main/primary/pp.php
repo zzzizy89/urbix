@@ -25,7 +25,11 @@
 					<div class="brand-logo"><a href="<?=base_url('inicio')?>" class="active">urbix</a></div>
 				</div>
 				<div class="menu-right menu-item">
-					<span class="menu-link"><a href="<?= base_url('intro_login') ?>">account</a></span>
+                <?php if (session('user') && session('user')->name): ?>
+					<span class="menu-link"><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></span>
+                    <?php else: ?>
+                        <span class="menu-link"><a href="<?= base_url('intro_login') ?>">account</a></span>
+                        <?php endif; ?>
 
 				</div>
 		</div>
