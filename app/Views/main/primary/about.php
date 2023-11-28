@@ -14,48 +14,7 @@
 	</head>
 	<body>
 		<div class="cursor"></div>
-		<div class="container">
-			<header>
-				<div class="header-left">
 
-					<nav>
-						<ul>
-							<li>
-								<a href="<?=base_url('intro_inicio')?>">Home</a>
-							</li>
-							<li>
-								<a href="<?=base_url('about')?>" class="active">about</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_catalogo')?>">catalogue</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_contacto')?>">contact</a>
-							</li>
-
-
-							<?php if (session('user') && session('user')->name): ?>
-							<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
-							<?php else: ?>
-							<li><a href="<?= base_url('intro_login') ?>">account</a></li>
-							<?php endif; ?>
-
-
-
-						</ul>
-
-					</nav>
-
-				</div>
-				<div class="header-right">
-					<div class="hamburger">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</header>
-		</div>
 		<div class="smooth-scroll">
 			<div class="hero-scroller">
 				<div class="section">
