@@ -14,8 +14,9 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/form/catalogo.css');?>">
 
 		<!-- Enlace al script de JavaScript local NO NECESARIO
-    <script src="<?php echo base_url('assets/js/carrito.js');?>" async></script>
-    -->
+    <script src="<?php echo base_url('assets/js/carrito.js');?>" async></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
 		<!-- Título de la página -->
 		<title>Catalogo</title>
 	</head>

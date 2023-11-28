@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/account/login.css')?>">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
 		<title>Login</title>
 
 	</head>
