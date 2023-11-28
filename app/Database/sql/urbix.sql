@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-11-2023 a las 22:16:27
+-- Tiempo de generación: 28-11-2023 a las 22:10:25
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,14 +33,6 @@ CREATE TABLE `barrio` (
   `barrio` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Volcado de datos para la tabla `barrio`
---
-
-INSERT INTO `barrio` (`id_barrio`, `id_ciudad`, `barrio`) VALUES
-(45, 45, 'castagnino'),
-(46, 46, 'dwawddw');
-
 -- --------------------------------------------------------
 
 --
@@ -51,14 +43,6 @@ CREATE TABLE `calle` (
   `id_calle` int(11) NOT NULL,
   `calle` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `calle`
---
-
-INSERT INTO `calle` (`id_calle`, `calle`) VALUES
-(10, 'leandro n alem'),
-(11, '1212');
 
 -- --------------------------------------------------------
 
@@ -85,14 +69,6 @@ CREATE TABLE `ciudad` (
   `ciudad` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Volcado de datos para la tabla `ciudad`
---
-
-INSERT INTO `ciudad` (`id_ciudad`, `id_prov`, `ciudad`) VALUES
-(45, 45, 'Rio tercero'),
-(46, 46, 'dwwdawd');
-
 -- --------------------------------------------------------
 
 --
@@ -107,14 +83,6 @@ CREATE TABLE `compras` (
   `total_c` int(11) NOT NULL,
   `fecha_compra` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `compras`
---
-
-INSERT INTO `compras` (`id_compras`, `id_user`, `id_metodo_pago`, `id_direccion_casa`, `total_c`, `fecha_compra`) VALUES
-(44, 3, 1, 45, 43000, '2023-11-28 00:09:55'),
-(45, 3, 1, 46, 12000, '2023-11-27 21:14:43');
 
 -- --------------------------------------------------------
 
@@ -131,16 +99,6 @@ CREATE TABLE `detalle_compra` (
   `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Volcado de datos para la tabla `detalle_compra`
---
-
-INSERT INTO `detalle_compra` (`id_dcompra`, `id_compras`, `id_producto`, `cantidad`, `precio_unitario`, `subtotal`) VALUES
-(52, 44, 34, 1, 12000, 12000),
-(53, 44, 37, 2, 8000, 16000),
-(54, 44, 35, 1, 15000, 15000),
-(55, 45, 34, 1, 12000, 12000);
-
 -- --------------------------------------------------------
 
 --
@@ -155,14 +113,6 @@ CREATE TABLE `direccion_ca` (
   `numero` int(11) NOT NULL,
   `descripcion_casa` varchar(175) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `direccion_ca`
---
-
-INSERT INTO `direccion_ca` (`id_direccion_casa`, `id_barrio`, `id_calle`, `codigo_postal`, `numero`, `descripcion_casa`) VALUES
-(45, 45, 10, 5850, 1712, 'casa de rejas negras'),
-(46, 46, 11, 5850, 2333, 'casa roja');
 
 -- --------------------------------------------------------
 
@@ -193,14 +143,6 @@ CREATE TABLE `pais` (
   `pais` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Volcado de datos para la tabla `pais`
---
-
-INSERT INTO `pais` (`id_pais`, `pais`) VALUES
-(45, 'Argentina'),
-(46, 'aSsdsad');
-
 -- --------------------------------------------------------
 
 --
@@ -221,10 +163,26 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `imagen`, `descripcion_prod`, `id_tipoprod`) VALUES
-(34, 'hyperx', 12000.00, '1701118994_5cb045821410950e1f22.jpg', 'teclaod facheraso loco', 3),
-(35, 'aufinexs', 15000.00, '1701119059_c72758022870c76cc022.jpg', 'audifonos facheritos facha', 4),
-(36, 'cascotex', 7000.00, '1701119084_cec811228783176b25fa.jpg', 'cascos facha', 4),
-(37, 'teclado', 8000.00, '1701119105_198334f621b8cad3589b.jpg', 'teclado de colores good', 3);
+(38, 'PRO KEYBOARD', 149.99, '1701204255_19c2ebcc79c3dc02c258.png', 'The tournament-proven PRO design, now with your choice of swappable pro-grade GX mechanical switches: Clicky, Tactile an', 3),
+(39, 'Urbix 413', 350.00, '1701204339_9dd8e5fca84c383453a3.png', 'From tactile mechanical switches to 6-key rollover anti-ghosting and PBT keycaps—the full-size G413 SE keyboard has the ', 3),
+(40, 'Urbix 513', 445.99, '1701204401_8fb59139c9cc6b7c3c69.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
+(41, 'Urbix 715', 175.00, '1701204445_9a075560561a8c533703.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
+(42, 'Urbix 915', 450.50, '1701204487_7f5c1987e568b39a5832.png', 'A breakthrough in design and engineering. LIGHTSPEED pro-grade wireless, advanced LIGHTSYNC RGB, and your choice in pro-', 3),
+(43, 'Urbix 560', 1200.00, '1701204604_d2b060b9fc760b480cd9.jpg', '2.1 speaker system with full-spectrum LIGHTSYNC RGB reacts to in-game action and audio. DTS:X Ultra positional surround ', 6),
+(44, 'Urbix Z623 SPEAKER SYSTEM', 995.99, '1701204874_0c6116bea67c6bd2da95.png', 'More sound, more dimension. THX®-certified sound features 400 Watts Peak/200 Watts RMS power, adding richness to music, ', 6),
+(45, 'Urbix MegaBoom 3', 2100.00, '1701205016_f861fa68394b3e1e5e5a.png', 'Introducing the MEGABOOM 3 —the ultimate portable party speaker! Blast your favorite tunes with powerful, Hi-Fi sound th', 6),
+(46, 'Pro x Superlight 2', 150.00, '1701205091_9621bcc83dab350f200c.png', 'The next evolution of our championship-winning mouse. Meet the new weapon of choice for the world’s top esports athletes', 5),
+(47, 'PRO X', 185.00, '1701205127_e3717f72b8bda3c52345.png', 'Less than 63 grams. Advanced low-latency LIGHTSPEED wireless. Sub-micron precision with HERO 25K sensor. Remove all obst', 5),
+(48, 'Urbix 502 x plus', 159.99, '1701205192_837127ed719da6996c6a.png', 'G502 X PLUS is the latest addition to legendary G502 lineage. Reinvented with our first-ever LIGHTFORCE hybrid switches,', 5),
+(49, 'Urbix 502', 89.99, '1701205236_d366476655f3c26d54b9.png', 'Iconic G502 design meets pro-grade LIGHTSPEED wireless for ultra-fast, reliable connectivity. HERO 25K sensor features s', 5),
+(50, 'Urbix 705', 79.99, '1701205269_d09c0e580d0d09a15226.png', 'From the Aurora Collection, G705 Wireless Gaming Mouse is contoured for comfort and control with an intentional design t', 5),
+(51, 'Snowball-Ice', 49.99, '1701205346_27dac2575b9f1133c88f.png', 'From the Aurora Collection, G705 Wireless Gaming Mouse is contoured for comfort and control with an intentional design t', 7),
+(52, 'YETI-ORB', 59.99, '1701205387_9a12033266c918ebed40.png', 'Logitech G Yeti Orb is a premium gaming microphone with LIGHTSYNC RGB, a condenser capsule optimized for game streaming,', 7),
+(53, 'YETI-URBIX X', 149.99, '1701205418_4ce0c5d5844ab8810fe3.png', 'Logitech G Yeti Orb is a premium gaming microphone with LIGHTSYNC RGB, a condenser capsule optimized for game streaming,', 7),
+(54, 'YETI X', 139.99, '1701205497_f635332446e078b9c0c9.png', 'Yeti X is a state-of-the-art flagship USB microphone for professional gaming, Twitch streaming, podcasting and YouTube p', 7),
+(55, 'PRO X 2 LIGHTSPEED', 249.99, '1701205626_4c33bded7c83bce36844.png', 'Designed with pros for the highest levels of competition.', 4),
+(56, 'Urbix 735', 159.99, '1701205697_41354b897ea4ecdda81b.png', 'From the Aurora Collection, G735 maximizes comfort and fit for all gamers inclusive of smaller head sizes. ', 4),
+(57, 'ASTRO A50 WIRELESS + BASE STATION', 299.99, '1701205736_bf9040ec6e5ad2a70e60.png', 'With revolutionary design, advanced acoustics and ergonomic comfort, A50 Wireless + Base Station delivers an unforgettab', 4);
 
 -- --------------------------------------------------------
 
@@ -237,14 +195,6 @@ CREATE TABLE `provincia` (
   `id_pais` int(11) NOT NULL,
   `provincia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `provincia`
---
-
-INSERT INTO `provincia` (`id_prov`, `id_pais`, `provincia`) VALUES
-(45, 45, 'Cordoba'),
-(46, 46, 'awdd');
 
 -- --------------------------------------------------------
 
@@ -262,8 +212,11 @@ CREATE TABLE `tipo` (
 --
 
 INSERT INTO `tipo` (`id_tipoprod`, `tipo`) VALUES
-(3, 'teclado'),
-(4, 'audifonos');
+(3, 'Keyboards'),
+(4, 'Headphones'),
+(5, 'Mouses'),
+(6, 'Speakers'),
+(7, 'Microphones');
 
 -- --------------------------------------------------------
 
@@ -287,15 +240,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `rol`) VALUES
-(3, '1699995101_98462e7bfa97732c856c.jpg', 'Pepe', 'tiagocomba@gmail.com', 'hola me gusta la manzana', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', 1),
-(5, '', 'test', 'test@gmail.com', '', '$2y$10$jXlVn1lg46wOXzY2GLdEYuH1mjrm6gYTyNJ6WyaqhfR3qdQ.NCVlu', '2023-10-11 14:29:29', 0),
-(6, '', 'pepe', 'pepe@gmail.com', '', '$2y$10$WNP/RwmlNlWqn0czYtzkN.LKBEovUYqywiemsYkCKBvYOR5BTgSVS', '2023-10-15 22:18:21', 0),
-(7, '', 'Luca', 'lucaferna@gmail.com', '', '$2y$10$4li6pkjY7bROijJFuTGrTecLinIsc1N9mAVdcppB7eEiC62hgLsuK', '2023-10-25 19:40:11', 0),
-(8, '1700075362_cbf670270209050e4eb6.jpg', 'eze', 'eze@gmail.com', '', '$2y$10$fINKdk19sX.xXaumtRXyzewh/sZ7m1XXMghWjjvP172SsmLT0pp9e', '2023-11-01 19:19:52', 0),
-(9, '', '3', 'palo@gmail.com', '', '$2y$10$AO0iNaBdRlXPqsYoTy5ipukhiXTFVz5YCjccZjIAknUXNFtssP0BC', '2023-11-07 23:42:58', 0),
-(10, '', 'eze', 'lololo@gmail.com', '', '$2y$10$aWMiO/bO6e8mZ2kR47/TleRhqf7rua2zCs7s7fg.8DTTlebuCM7u.', '2023-11-10 22:10:24', 0),
-(11, '', '1313', 'peapwe@gmail.com', '', '$2y$10$cxtcMxrJkKkbJcvn0Pq0A.sOvMkttF6XnzikH6ufGqWhqALVWzl8O', '2023-11-17 22:50:36', 0),
-(12, '', '13123', 'adado@gmail.com', '', '$2y$10$b7wdOOYixqhU0bzm9lSsJ.bFAoCnLJdLRcz0E.I50lWWuekhsmLGK', '2023-11-17 22:55:50', 0);
+(3, '1701200873_9cdc3529c4e0eddbc5cb.jpg', 'Admin', 'admin@admin.com', 'admin', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', 1);
 
 --
 -- Índices para tablas volcadas
@@ -387,43 +332,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `barrio`
 --
 ALTER TABLE `barrio`
-  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `calle`
 --
 ALTER TABLE `calle`
-  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compra`
 --
 ALTER TABLE `detalle_compra`
-  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_ca`
 --
 ALTER TABLE `direccion_ca`
-  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `metodo_pago`
@@ -435,25 +380,25 @@ ALTER TABLE `metodo_pago`
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT de la tabla `provincia`
 --
 ALTER TABLE `provincia`
-  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
-  MODIFY `id_tipoprod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_tipoprod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
