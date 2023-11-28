@@ -9,6 +9,8 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<!-- Agrega tu archivo de estilos personalizado -->
 		<link rel="stylesheet" href="<?php echo base_url(" assets/css/front-main/contact.css ") ?>">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
 	</head>
 	<body>
 		<div class="cursor"></div>

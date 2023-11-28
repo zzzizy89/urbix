@@ -6,6 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" contable="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale:1.0">
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/account/login.css')?>">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
 
 	</head>
 	<body>
