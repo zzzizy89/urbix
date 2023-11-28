@@ -165,15 +165,6 @@
 		
 	</script>
 
-	<!-- Script para cambiar la acción del formulario no es necesario
-<script>
-    function setFormAction(action) {
-        var form = document.getElementById('carritoForm');
-        form.action = "<?php echo base_url(); ?>/" + action;
-        form.submit();
-    }
-</script>
--->
 	<!-- Script para verificar si el usuario está logeado antes de enviar el formulario -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
