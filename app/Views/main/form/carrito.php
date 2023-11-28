@@ -24,49 +24,7 @@
 	<body>
 		<div class="cursor"></div>
 		<!-- Encabezado de la página -->
-		<div class="container">
-			<header>
-				<div class="header-left">
-
-					<nav>
-						<ul>
-							<li>
-								<a href="<?=base_url('intro_inicio')?>">Home</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_about')?>">about</a>
-							</li>
-							<li>
-								<a href="<?=base_url('carrito')?>" class="active">catalogue</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_contacto')?>">contact</a>
-							</li>
-
-
-							<?php if (session('user') && session('user')->name): ?>
-							<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
-							<?php else: ?>
-							<li><a href="<?= base_url('intro_login') ?>">account</a></li>
-							<?php endif; ?>
-
-
-
-
-						</ul>
-
-					</nav>
-
-				</div>
-				<div class="header-right">
-					<div class="hamburger">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</header>
-		</div>
+	
 		<!-- Agrega este código donde desees mostrar el botón de filtro -->
 		<div>
 			<button class="cart-button">
@@ -109,7 +67,7 @@
 						<!-- Visualización de información del producto -->
 						<span class="titulo-item"><?php echo $producto['nombre']; ?></span>
 						<img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">
-						<span class="titulo-item"><?php echo $producto['descripcion_prod']; ?></span>
+						<span class="descp-item"><?php echo $producto['descripcion_prod']; ?></span>
 						<span class="precio-item">$<?php echo number_format($producto['precio'], 2, ',', '.'); ?></span>
 
 						<!-- Entrada de cantidad y botón "Agregar al Carrito" -->
@@ -129,13 +87,14 @@
 
 						<!-- Botón "Comprar" -->
 						<button type="submit" name="action" value="buy" class="btn btn-success">to purchase</button>
+						
 					</form>
 				</div>
 				<?php endforeach; ?>
 			</div>
 
 			<!-- Inclusión de un fragmento HTML llamado $pie -->
-			<?php echo $pie; ?>
+		
 		</section>
 	</body>
 
