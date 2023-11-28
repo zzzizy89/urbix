@@ -28,49 +28,7 @@
 		</div>
 
 
-		<div class="container">
-
-			<header>
-				<div class="header-left">
-
-					<nav>
-						<ul>
-							<li>
-								<a href="<?=base_url('intro_inicio')?>">Home</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_about')?>">about</a>
-							</li>
-							<li>
-								<a href="<?=base_url('intro_catalogo')?>">catalogue</a>
-							</li>
-							<li>
-								<a href="<?=base_url('contact')?>" class="active">contact</a>
-							</li>
-
-
-							<?php if (session('user') && session('user')->name): ?>
-							<li><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></li>
-							<?php else: ?>
-							<li><a href="<?= base_url('intro_login') ?>">account</a></li>
-							<?php endif; ?>
-
-
-
-						</ul>
-
-					</nav>
-
-				</div>
-				<div class="header-right">
-					<div class="hamburger">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</header>
-		</div>
+		
 		<section class="contact" id="contacto">
 			<form id="form_enviar_email" method="post" action="<?php echo base_url(" enviar__email ") ?>">
 
@@ -122,12 +80,18 @@
 					<span class="focus"></span>
 
 				</div>
+				<div class="btn-box btns">
 
+<button type="submit" class="btn" id="contactButton"><a href="<?php echo base_url('intro_inicio')?>">cancel</a></button>
+
+</div>
 				<div class="btn-box btns">
 
 					<button type="submit" class="btn" id="contactButton">send</button>
 
 				</div>
+
+				
 
 			</form>
 
