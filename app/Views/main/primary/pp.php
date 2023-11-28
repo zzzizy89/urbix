@@ -23,6 +23,11 @@
   <!-- NAV section starts here -->
 
    <nav class="menu">
+   <button class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</button>
     <div class="menu-left menu-item">
 
      <span class="menu-link"><a href="<?=base_url('intro_about')?>">about</a></span>
@@ -194,6 +199,32 @@
    			
    			
    
+  </script>
+
+  <script>
+document.querySelector(".hamburger").addEventListener("click", function() {
+    var menu = document.querySelector(".menu-left");
+    var menuCenter = document.querySelector(".menu-center");
+    if (menu.style.display === "none") {
+        menu.style.display = "flex";
+        menu.style.position = "fixed";
+        menu.style.top = "0";
+        menu.style.left = "0";
+        menu.style.height = "10vh"; // Cubre toda la altura de la pantalla
+        menu.style.width = "10vw"; // Cubre la mitad de la anchura de la pantalla
+
+    } else {
+        menu.style.display = "none";
+        menu.style.position = "";
+        menu.style.top = "";
+        menu.style.left = "";
+        menu.style.height = "";
+        menu.style.width = "";
+        menu.style.backgroundColor = "";
+        menuCenter.style.position = "";
+        menuCenter.style.transform = "";
+    }
+});
   </script>
  </body>
 </html>
