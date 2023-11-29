@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2023 a las 20:35:40
+-- Tiempo de generación: 30-11-2023 a las 00:55:28
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -213,26 +213,26 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_producto`, `nombre`, `precio`, `imagen`, `descripcion_prod`, `id_tipoprod`) VALUES
-(38, 'PRO KEYBOARD', 149.99, '1701204255_19c2ebcc79c3dc02c258.png', 'The tournament-proven PRO design, now with your choice of swappable pro-grade GX mechanical switches: Clicky, Tactile an', 3),
-(39, 'Urbix 413', 350.00, '1701204339_9dd8e5fca84c383453a3.png', 'From tactile mechanical switches to 6-key rollover anti-ghosting and PBT keycaps—the full-size G413 SE keyboard has the ', 3),
-(40, 'Urbix 513', 445.99, '1701204401_8fb59139c9cc6b7c3c69.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
-(41, 'Urbix 715', 175.00, '1701204445_9a075560561a8c533703.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
-(42, 'Urbix 915', 450.50, '1701204487_7f5c1987e568b39a5832.png', 'A breakthrough in design and engineering. LIGHTSPEED pro-grade wireless, advanced LIGHTSYNC RGB, and your choice in pro-', 3),
-(43, 'Urbix 560', 1200.00, '1701204604_d2b060b9fc760b480cd9.jpg', '2.1 speaker system with full-spectrum LIGHTSYNC RGB reacts to in-game action and audio. DTS:X Ultra positional surround ', 6),
-(44, 'Urbix Z623 SPEAKER SYSTEM', 995.99, '1701204874_0c6116bea67c6bd2da95.png', 'More sound, more dimension. THX®-certified sound features 400 Watts Peak/200 Watts RMS power, adding richness to music, ', 6),
-(45, 'Urbix MegaBoom 3', 2100.00, '1701205016_f861fa68394b3e1e5e5a.png', 'Introducing the MEGABOOM 3 —the ultimate portable party speaker! Blast your favorite tunes with powerful, Hi-Fi sound th', 6),
-(46, 'Pro x Superlight 2', 150.00, '1701205091_9621bcc83dab350f200c.png', 'The next evolution of our championship-winning mouse. Meet the new weapon of choice for the world’s top esports athletes', 5),
-(47, 'PRO X', 185.00, '1701205127_e3717f72b8bda3c52345.png', 'Less than 63 grams. Advanced low-latency LIGHTSPEED wireless. Sub-micron precision with HERO 25K sensor. Remove all obst', 5),
-(48, 'Urbix 502 x plus', 159.99, '1701205192_837127ed719da6996c6a.png', 'G502 X PLUS is the latest addition to legendary G502 lineage. Reinvented with our first-ever LIGHTFORCE hybrid switches,', 5),
-(49, 'Urbix 502', 89.99, '1701205236_d366476655f3c26d54b9.png', 'Iconic G502 design meets pro-grade LIGHTSPEED wireless for ultra-fast, reliable connectivity. HERO 25K sensor features s', 5),
-(50, 'Urbix 705', 79.99, '1701205269_d09c0e580d0d09a15226.png', 'From the Aurora Collection, G705 Wireless Gaming Mouse is contoured for comfort and control with an intentional design t', 5),
+(38, 'PRO KEYBOARD', 149.99, '1701302069_91e82f634837e8f5347c.png', 'The tournament-proven PRO design, now with your choice of swappable pro-grade GX mechanical switches: Clicky, Tactile an', 3),
+(39, 'Urbix 413', 350.00, '1701302081_579c95b0c5ca81b8aaf7.png', 'From tactile mechanical switches to 6-key rollover anti-ghosting and PBT keycaps—the full-size G413 SE keyboard has the ', 3),
+(40, 'Urbix 513', 445.99, '1701302091_7df9e35c8c7ff7d9a654.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
+(41, 'Urbix 715', 175.00, '1701302099_e24f3fb23931487e4392.png', 'Advanced gaming keyboard featuring your choice of GX mechanical switches. The detachable, memory-foam palmrest and premi', 3),
+(42, 'Urbix 915', 450.50, '1701302105_5fb83b7ced156419e949.png', 'A breakthrough in design and engineering. LIGHTSPEED pro-grade wireless, advanced LIGHTSYNC RGB, and your choice in pro-', 3),
+(43, 'Urbix 560', 1200.00, '1701302055_ec90f68b229675883730.png', '2.1 speaker system with full-spectrum LIGHTSYNC RGB reacts to in-game action and audio. DTS:X Ultra positional surround ', 6),
+(44, 'Urbix Z623 SPEAKER SYSTEM', 995.99, '1701302048_5a5ee1b543afdfeb724c.png', 'More sound, more dimension. THX®-certified sound features 400 Watts Peak/200 Watts RMS power, adding richness to music, ', 6),
+(45, 'Urbix MegaBoom 3', 2100.00, '1701302037_21cb1a947c91663ee51c.png', 'Introducing the MEGABOOM 3 —the ultimate portable party speaker! Blast your favorite tunes with powerful, Hi-Fi sound th', 6),
+(46, 'Pro x Superlight 2', 150.00, '1701301695_4c0a1170846b2ec98c99.png', 'The next evolution of our championship-winning mouse. Meet the new weapon of choice for the world’s top esports athletes', 5),
+(47, 'PRO X', 185.00, '1701301686_6b7b70f69cf68ab54f59.png', 'Less than 63 grams. Advanced low-latency LIGHTSPEED wireless. Sub-micron precision with HERO 25K sensor. Remove all obst', 5),
+(48, 'Urbix 502 x plus', 159.99, '1701301675_43131a9594399150a492.png', 'G502 X PLUS is the latest addition to legendary G502 lineage. Reinvented with our first-ever LIGHTFORCE hybrid switches,', 5),
+(49, 'Urbix 502', 89.99, '1701301666_81c07f2beb1afd2e98e6.png', 'Iconic G502 design meets pro-grade LIGHTSPEED wireless for ultra-fast, reliable connectivity. HERO 25K sensor features s', 5),
+(50, 'Urbix 705', 79.99, '1701301658_b7a16e2813d832deb81d.png', 'From the Aurora Collection, G705 Wireless Gaming Mouse is contoured for comfort and control with an intentional design t', 5),
 (51, 'Snowball-Ice', 49.99, '1701205346_27dac2575b9f1133c88f.png', 'From the Aurora Collection, G705 Wireless Gaming Mouse is contoured for comfort and control with an intentional design t', 7),
 (52, 'YETI-ORB', 59.99, '1701205387_9a12033266c918ebed40.png', 'Logitech G Yeti Orb is a premium gaming microphone with LIGHTSYNC RGB, a condenser capsule optimized for game streaming,', 7),
 (53, 'YETI-URBIX X', 149.99, '1701205418_4ce0c5d5844ab8810fe3.png', 'Logitech G Yeti Orb is a premium gaming microphone with LIGHTSYNC RGB, a condenser capsule optimized for game streaming,', 7),
 (54, 'YETI X', 139.99, '1701205497_f635332446e078b9c0c9.png', 'Yeti X is a state-of-the-art flagship USB microphone for professional gaming, Twitch streaming, podcasting and YouTube p', 7),
-(55, 'PRO X 2 LIGHTSPEED', 249.99, '1701205626_4c33bded7c83bce36844.png', 'Designed with pros for the highest levels of competition.', 4),
-(56, 'Urbix 735', 159.99, '1701205697_41354b897ea4ecdda81b.png', 'From the Aurora Collection, G735 maximizes comfort and fit for all gamers inclusive of smaller head sizes. ', 4),
-(57, 'ASTRO A50 WIRELESS + BASE STATION', 299.99, '1701205736_bf9040ec6e5ad2a70e60.png', 'With revolutionary design, advanced acoustics and ergonomic comfort, A50 Wireless + Base Station delivers an unforgettab', 4);
+(55, 'PRO X 2 LIGHTSPEED', 249.99, '1701301514_36327a003c6f28582e7e.png', 'Designed with pros for the highest levels of competition.', 4),
+(56, 'Urbix 735', 159.99, '1701301503_fcf5f883088f5527221a.png', 'From the Aurora Collection, G735 maximizes comfort and fit for all gamers inclusive of smaller head sizes. ', 4),
+(57, 'ASTRO A50 WIRELESS + BASE STATION', 299.99, '1701301461_a5661e51e1df7f54af10.png', 'With revolutionary design, advanced acoustics and ergonomic comfort, A50 Wireless + Base Station delivers an unforgettab', 4);
 
 -- --------------------------------------------------------
 
