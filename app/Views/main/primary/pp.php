@@ -34,7 +34,7 @@
 			</div>
 			<nav class="menu">
 				<div class="menu__item">
-					<a class="menu__item-link">Home</a>
+					<a class="menu__item-link" href="<?php echo base_url('inicio')?>">Home</a>
 				
 					<div class="marquee">
 						<div class="marquee__inner">
@@ -43,28 +43,28 @@
 					</div>
 				</div>
 				<div class="menu__item">
-					<a class="menu__item-link">Showcase</a>
+					<a class="menu__item-link" href="<?php echo base_url('intro_about')?>">About</a>
 
 					<div class="marquee">
 						<div class="marquee__inner">
 							<span
-								>Showcase - Showcase - Showcase - Showcase - Showcase - Showcase
-								- Showcase</span
+								>About - About - About - About - About - About
+								- About</span
 							>
 						</div>
 					</div>
 				</div>
 				<div class="menu__item">
-					<a class="menu__item-link">About</a>
+					<a class="menu__item-link" href="<?php echo base_url('intro_catalogo')?>">Catalogue</a>
 			
 					<div class="marquee">
 						<div class="marquee__inner">
-							<span>About - About - About - About - About - About - About</span>
+							<span>Catalogue - Catalogue - Catalogue - Catalogue - Catalogue - Catalogue - Catalogue</span>
 						</div>
 					</div>
 				</div>
 				<div class="menu__item">
-					<a class="menu__item-link">Contact</a>
+					<a class="menu__item-link" href="<?php echo base_url('intro_contacto')?>">Contact</a>
 
 					<div class="marquee">
 						<div class="marquee__inner">
@@ -75,6 +75,31 @@
 						</div>
 					</div>
 				</div>
+				<?php if (session('user') && session('user')->name): ?>
+				<div class="menu__item">
+					<a class="menu__item-link" href="<?php echo base_url('intro_dashboard')?>"><?= session('user')->name ?></a>
+
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span><?= session('user')->name ?> - <?= session('user')->name ?> - <?= session('user')->name ?> - <?= session('user')->name ?> - <?= session('user')->name ?> - <?= session('user')->name ?> -
+								Account</span>
+
+								</div>
+					</div>
+								<?php else: ?>
+										<div class="menu__item">
+										<a class="menu__item-link" href="<?php echo base_url('intro_login')?>">Account</a>
+										<div class="marquee">
+										<div class="marquee__inner">
+										<span>Account - Account - Account - Account - Account - Account -
+									Account</span>
+									</div>
+									</div>
+	</div>
+									  <?php endif; ?>
+						</div>
+				
+				
 			</nav>
 		</div>
         </div>
