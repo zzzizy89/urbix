@@ -1,8 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/* TODO: root section starts here */
 
 :root {
 	--color-primary: #0D1117;
@@ -11,88 +7,109 @@
 	--color-terciary: #30353d;
 	--color-terciary-translucent: #30353d97;
 	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
 	--color-main: rgb(57, 239, 12);
-}
-
-@font-face {
+	--color-pure: #ffffff;
+	--color-impure: #000000;
+  }
+  
+  
+  /* TODO: root section ends here */
+  
+  
+  /* ? tipografias section starts here */
+  
+  @font-face {
 	font-family: "Mars Model";
 	src: url("../fonts/MarsModel.ttf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "Arame-Thin";
 	src: url("../fonts/Arame-Thin.ttf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "MonumentExtended";
 	src: url("../fonts/MonumentExtended.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "BasementGrotesque";
 	src: url("../fonts/BasementGrotesque.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "Nevolasty-Light";
 	src: url("../fonts/Nevolasty-Light.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "BigCityVibes";
 	src: url("../fonts/BigCityVibes.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "Headshots";
 	src: url("../fonts/Headshots.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "DistortionDosAnalogue";
 	src: url("../fonts/DistortionDosAnalogue.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "PIGARNOS-NEUE-Regular";
 	src: url("../fonts/PIGARNOS-NEUE-Regular.ttf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "StretchPro";
 	src: url("../fonts/StretchPro.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "kenyan-coffee";
 	src: url("../fonts/kenyan-coffee.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "Akira-Expanded";
 	src: url("../fonts/Akira-Expanded.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "BLUE-OCEAN";
 	src: url("../fonts/BLUE-OCEAN.ttf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "CHARLEY";
 	src: url("../fonts/CHARLEY.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "VAL";
 	src: url("../fonts/VAL.otf") format("truetype");
-}
-
-@font-face {
+  }
+  
+  @font-face {
 	font-family: "Akira";
 	src: url("../fonts/Akira.otf") format("truetype");
-}
+  }
+  
+  @font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+  }
+  
+  
+  /* ? tipografias section ends here */
+
+  html,body {
+	background: var(--color-impure);
+  }
 
 .btn {
 	position: absolute;
@@ -109,14 +126,15 @@
 	text-transform: uppercase;
 	font-size: 2em;
 	cursor: pointer;
+	color: var(--color-pure);
 }
 
 .header {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background: #000;
-	color: #ffff;
+	background: var(--color-pure);
+	color: var(--color-impure);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -129,7 +147,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100vh;
-	background: var(--color-secondary);
+	background: var(--color-impure);
 	z-index: -1;
 }
 
@@ -142,11 +160,13 @@
 	flex-direction: column;
 	justify-content: space-between;
 	cursor: default;
+
 }
 
 .text {
 	width: 300%;
 	font-family: "Akira";
+	color: var(--color-pure);
 	font-size: 2.7vw;
 	text-transform: uppercase;
 	opacity: 0.1;

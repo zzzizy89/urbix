@@ -6,6 +6,8 @@
   <title>home</title>
   <link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/pp.css');?>">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
@@ -22,31 +24,60 @@
 
   <!-- NAV section starts here -->
 
-   <nav class="menu">
-   <button class="hamburger">
-    <div></div>
-    <div></div>
-    <div></div>
-</button>
-    <div class="menu-left menu-item">
+<div class="container2">
+  <div class="menu-open">menu</div>
+		<div class="nav-container">
+			<div class="menu-close">close</div>
+			<div class="socials">
+				<span>facebook</span>
+				<span>instagram</span>
+			</div>
+			<nav class="menu">
+				<div class="menu__item">
+					<a class="menu__item-link">Home</a>
+				
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Home - Home - Home - Home - Home - Home - Home</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">Showcase</a>
 
-     <span class="menu-link"><a href="<?=base_url('intro_about')?>">about</a></span>
-     <span class="menu-link"><a href="<?=base_url('intro_catalogo')?>">catalogue</a></span>
-     <span class="menu-link">	<a href="<?=base_url('intro_contacto')?>">contact</a></span>
-    </div>
-    <div class="menu-center menu-item">
-     <div class="brand-logo"><a href="<?=base_url('inicio')?>" class="active">urbix</a></div>
-    </div>
-    <div class="menu-right menu-item">
-     <?php if (session('user') && session('user')->name): ?>
-     <span class="menu-link"><a href="<?= base_url('intro_dashboard') ?>"><?= session('user')->name ?></a></span>
-     <?php else: ?>
-     <span class="menu-link"><a href="<?= base_url('intro_login') ?>">account</a></span>
-     <?php endif; ?>
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span
+								>Showcase - Showcase - Showcase - Showcase - Showcase - Showcase
+								- Showcase</span
+							>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">About</a>
+			
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>About - About - About - About - About - About - About</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link">Contact</a>
 
-    </div>
-   </nav>
-
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span
+								>Contact - Contact - Contact - Contact - Contact - Contact -
+								Contact</span
+							>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+        </div>
      <!-- NAV section ends here -->
 
 <!-- WRAPPER-IMG section starts here -->
@@ -125,13 +156,6 @@
    						    delay: 1,
    						    });
    						
-   						    var tl = new TweenMax.staggerFrom(".menu > div", 2, {
-   						        opacity: 0,     
-   						        y: 30,
-   						        ease: Expo.easeInOut,
-   						        delay: 1
-   						    }, 0.1);
-   						
    						    var tl = new TweenMax.staggerFrom(".hero-container > div", 2, {
    						        opacity: 0,     
    						        y: 30,
@@ -200,31 +224,38 @@
    			
    
   </script>
+<script>
+			$(document).ready(function() {
+    var t1 = new TimelineMax({ paused: true });
 
-  <script>
-document.querySelector(".hamburger").addEventListener("click", function() {
-    var menu = document.querySelector(".menu-left");
-    var menuCenter = document.querySelector(".menu-center");
-    if (menu.style.display === "none") {
-        menu.style.display = "flex";
-        menu.style.position = "fixed";
-        menu.style.top = "0";
-        menu.style.left = "0";
-        menu.style.height = "10vh"; // Cubre toda la altura de la pantalla
-        menu.style.width = "10vw"; // Cubre la mitad de la anchura de la pantalla
+    t1.to(".nav-container", 1, {
+        left: 0,
+        ease: Expo.easeInOut,
+    });
 
-    } else {
-        menu.style.display = "none";
-        menu.style.position = "";
-        menu.style.top = "";
-        menu.style.left = "";
-        menu.style.height = "";
-        menu.style.width = "";
-        menu.style.backgroundColor = "";
-        menuCenter.style.position = "";
-        menuCenter.style.transform = "";
-    }
+    t1.staggerFrom(
+        ".menu > div",
+        0.8,
+        { y: 100, opacity: 0, ease: Expo.easeOut },
+        "0.1",
+        "-=0.4"
+    );
+
+    t1.staggerFrom(
+        ".socials",
+        0.8,
+        { y: 100, opacity: 0, ease: Expo.easeOut },
+        "0.4",
+        "-=0.6"
+    );
+
+    t1.reverse();
+    $(document).on("click", ".menu-open", function () {
+        t1.reversed(!t1.reversed());
+    });
+    $(document).on("click", ".menu-close", function () {
+        t1.reversed(!t1.reversed());
+    });
 });
-  </script>
- </body>
+		</script>
 </html>
