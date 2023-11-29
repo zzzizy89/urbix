@@ -135,12 +135,15 @@ public function confirmarCompra($pais, $provincia, $ciudad, $codigo_postal, $bar
     // Insertar calle
     $id_calle = $calleModel->insertCalle($calle);
 
-    // Insertar dirección y guardar la id en $id_direccion
-    $id_direccion = $direccionModel->insertDireccion($id_calle, $codigo_postal, $numero, $descripcion_casa, $id_barrio);
-
-    // Obtener el usuario actual desde la sesión
+     // Obtener el usuario actual desde la sesión
     $user = session('user');
     $id_user = $user->id_user;
+
+    // Insertar dirección y guardar la id en $id_direccion
+    $id_direccion = $direccionModel->insertDireccion($id_calle, $codigo_postal,$id_user, $numero, $descripcion_casa, $id_barrio);
+
+   
+    
 
     // Calcular el total de la compra
     $totalCompra = $this->calcularTotalCompra($id_user);

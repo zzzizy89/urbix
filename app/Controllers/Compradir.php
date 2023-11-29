@@ -116,12 +116,14 @@ public function Compradirecta($pais, $provincia, $ciudad, $codigo_postal, $barri
     // Insertar calle y obtener su ID
     $id_calle = $calleModel->insertCalle($calle);
 
-    // Insertar dirección y obtener su ID
-    $id_direccion = $direccionModel->insertDireccion($id_calle, $codigo_postal, $numero, $descripcion_casa, $id_barrio);
-
     // Obtener el usuario actual desde la sesión
     $user = session('user');
     $id_user = $user->id_user;
+
+    // Insertar dirección y obtener su ID
+    $id_direccion = $direccionModel->insertDireccion($id_calle, $codigo_postal,$id_user, $numero, $descripcion_casa, $id_barrio);
+
+ 
 
     // Obtener información de la compra desde las sesiones
     $id_producto = session()->get('id_producto');
