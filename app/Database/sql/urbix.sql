@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2023 a las 22:10:25
+-- Tiempo de generación: 29-11-2023 a las 20:35:40
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -33,6 +33,13 @@ CREATE TABLE `barrio` (
   `barrio` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `barrio`
+--
+
+INSERT INTO `barrio` (`id_barrio`, `id_ciudad`, `barrio`) VALUES
+(51, 51, 'ssdf');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +50,13 @@ CREATE TABLE `calle` (
   `id_calle` int(11) NOT NULL,
   `calle` varchar(75) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `calle`
+--
+
+INSERT INTO `calle` (`id_calle`, `calle`) VALUES
+(16, 'sfdsf');
 
 -- --------------------------------------------------------
 
@@ -69,6 +83,13 @@ CREATE TABLE `ciudad` (
   `ciudad` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`id_ciudad`, `id_prov`, `ciudad`) VALUES
+(51, 51, 'fdsfdsfds');
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +104,13 @@ CREATE TABLE `compras` (
   `total_c` int(11) NOT NULL,
   `fecha_compra` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id_compras`, `id_user`, `id_metodo_pago`, `id_direccion_casa`, `total_c`, `fecha_compra`) VALUES
+(50, 3, 1, 51, 150, '2023-11-29 19:33:30');
 
 -- --------------------------------------------------------
 
@@ -99,6 +127,13 @@ CREATE TABLE `detalle_compra` (
   `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+--
+-- Volcado de datos para la tabla `detalle_compra`
+--
+
+INSERT INTO `detalle_compra` (`id_dcompra`, `id_compras`, `id_producto`, `cantidad`, `precio_unitario`, `subtotal`) VALUES
+(60, 50, 38, 1, 150, 150);
+
 -- --------------------------------------------------------
 
 --
@@ -109,10 +144,18 @@ CREATE TABLE `direccion_ca` (
   `id_direccion_casa` int(11) NOT NULL,
   `id_barrio` int(11) NOT NULL,
   `id_calle` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `codigo_postal` int(11) NOT NULL,
   `numero` int(11) NOT NULL,
   `descripcion_casa` varchar(175) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `direccion_ca`
+--
+
+INSERT INTO `direccion_ca` (`id_direccion_casa`, `id_barrio`, `id_calle`, `id_user`, `codigo_postal`, `numero`, `descripcion_casa`) VALUES
+(51, 51, 16, 3, 32423, 32424, 'sfdsf');
 
 -- --------------------------------------------------------
 
@@ -142,6 +185,13 @@ CREATE TABLE `pais` (
   `id_pais` int(11) NOT NULL,
   `pais` varchar(65) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `pais`
+--
+
+INSERT INTO `pais` (`id_pais`, `pais`) VALUES
+(51, 'fssf');
 
 -- --------------------------------------------------------
 
@@ -195,6 +245,13 @@ CREATE TABLE `provincia` (
   `id_pais` int(11) NOT NULL,
   `provincia` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `provincia`
+--
+
+INSERT INTO `provincia` (`id_prov`, `id_pais`, `provincia`) VALUES
+(51, 51, 'fsdffdsf');
 
 -- --------------------------------------------------------
 
@@ -332,43 +389,43 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `barrio`
 --
 ALTER TABLE `barrio`
-  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_barrio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `calle`
 --
 ALTER TABLE `calle`
-  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_calle` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=224;
+  MODIFY `id_carrito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
 
 --
 -- AUTO_INCREMENT de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
-  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_compras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_compra`
 --
 ALTER TABLE `detalle_compra`
-  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id_dcompra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion_ca`
 --
 ALTER TABLE `direccion_ca`
-  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_direccion_casa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `metodo_pago`
@@ -380,7 +437,7 @@ ALTER TABLE `metodo_pago`
 -- AUTO_INCREMENT de la tabla `pais`
 --
 ALTER TABLE `pais`
-  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_pais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
@@ -392,7 +449,7 @@ ALTER TABLE `productos`
 -- AUTO_INCREMENT de la tabla `provincia`
 --
 ALTER TABLE `provincia`
-  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo`
