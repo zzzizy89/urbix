@@ -51,7 +51,7 @@
 				</div>
 
 				<div class="links">
-					<a href="#" target="_blank">forgot your password?</a>
+					
 					<a href="<?= base_url(" register ");?>">sign up</a>
 				</div>
 				<input type="submit" value="Login">

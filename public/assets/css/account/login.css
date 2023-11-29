@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+/* TODO: root section starts here */
+
 :root {
 	--color-primary: #0D1117;
 	--color-secondary: #f9f9f9;
@@ -6,8 +7,17 @@
 	--color-terciary: #30353d;
 	--color-terciary-translucent: #30353d97;
 	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
 	--color-main: rgb(57, 239, 12);
+	--color-pure: #ffffff;
+	--color-impure: #000000;
 }
+
+
+/* TODO: root section ends here */
+
+
+/* ? tipografias section starts here */
 
 @font-face {
 	font-family: "Mars Model";
@@ -89,6 +99,14 @@
 	src: url("../fonts/Akira.otf") format("truetype");
 }
 
+@font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+
+/* ? tipografias section ends here */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -97,11 +115,13 @@
 	font-weight: 400;
 }
 
+/* * HTML BODY section starts here */
+
 html,
 body {
 	min-height: 100vh;
 	width: 100%;
-	background: var(--color-primary);
+	background: var(--color-pure);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -111,14 +131,19 @@ body {
 	flex-wrap: nowrap;
 }
 
+/* ? Dark-Mode Body */
 
-/* Estilo para el contenedor de la alerta */
+body.dark-mode {
+	background: var(--color-primary);
+}
+
 
 .alert {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20%;
 	padding: 10px;
 	text-align: center;
 	z-index: 1000;
@@ -126,22 +151,33 @@ body {
 }
 
 
-/* Estilo para los mensajes de éxito */
-
 .alert-success {
+	align-items: center;
+	justify-content: center;
 	background-color: #dff0d8;
 	border: 1px solid #d6e9c6;
+	font-family: "nothing";
 	color: #3c763d;
+	border-radius: 10px;
+	width: 100%;
+	height: 2vh;
+	font-size: 1vw;
 }
-
-
-/* Estilo para los mensajes de error */
 
 .alert-error {
+	align-items: center;
+	justify-content: center;
 	background-color: #f2dede;
+	width: 100%;
+	height: 2vh;
+	font-size: 1vw;
+	font-family: "nothing";
 	border: 1px solid #ebccd1;
 	color: #a94442;
+	border-radius: 10px;
 }
+
+/* * HTML BODY section ends here */
 
 .close-button {
 	position: absolute;
@@ -149,7 +185,7 @@ body {
 	left: 5px;
 	width: 20px;
 	height: 20px;
-	color: #fff;
+	color: var(--color-pure);
 	font-size: 10px;
 	font-weight: bold;
 	display: flex;
@@ -162,7 +198,7 @@ body {
 
 .close-button a {
 	text-decoration: none;
-	color: #fff;
+	color: var(--color-pure);
 	font-size: 20px;
 }
 
@@ -177,8 +213,7 @@ body {
 .form {
 	position: absolute;
 	inset: 2px;
-	background-color: var(--color-terciary);
-	border-radius: 10px;
+	background-color: var(--color-impure);
 	padding: 30px;
 	display: flex;
 	justify-content: space-evenly;
@@ -189,10 +224,10 @@ body {
 h2 {
 	font-size: 32px;
 	font-weight: 900;
-	color: #f8f8f8;
+	color: var(--color-main2);
 	letter-spacing: 2.5px;
 	text-align: center;
-	font-family: "PIGARNOS-NEUE-Regular";
+	font-family: "nothing";
 }
 
 .form-inputs {
@@ -212,19 +247,19 @@ h2 {
 	height: 100%;
 	padding: 10px 30px;
 	outline: none;
-	background-color: var(--color-secondary2);
+	background-color: var(--color-terciary);
 	border: none;
-	border-bottom: 1px solid var(--color-primary);
-	color: var(--color-main);
+	border-bottom: 1px solid var(--color-pure);
+	color: var(--color-main2);
 	font-size: 16px;
 	transition: .5s;
-	font-family: "PIGARNOS-NEUE-Regular";
+	font-family: "nothing";
 }
 
 .form-label input:focus {
 	border-radius: 10px;
-	background-color: var(--color-main);
-	color: var(--color-primary);
+	background-color: var(--color-main2);
+	color: var(--color-pure);
 }
 
 .links {
@@ -235,13 +270,13 @@ h2 {
 
 .links a {
 	text-decoration: none;
-	color: #777;
+	color: var(--color-terciary);
 	transition: .5s;
-	font-family: "PIGARNOS-NEUE-Regular";
+	font-family: "nothing";
 }
 
 .links a:first-child:hover {
-	color: var(--color-main);
+	color: var(--color-main2);
 }
 
 .links a:nth-child(2) {
@@ -249,16 +284,17 @@ h2 {
 }
 
 input[type="submit"] {
-	background-color: var(--color-primary);
+	background-color: var(--color-pure);
 	padding: 15px;
-	border-radius: 10px;
+	outline: none;
+	border: none;
 	cursor: pointer;
 	transition: .5s;
-	font-family: "PIGARNOS-NEUE-Regular";
-	color: var(--color-secondary2);
+	font-family: "nothing";
+	color: var(--color-impure);
 }
 
 input[type="submit"]:hover {
-	background-color: #000;
-	color: #fff;
+	background-color: var(--color-terciary);
+	color: var(--color-pure);
 }
