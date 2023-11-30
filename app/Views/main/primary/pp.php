@@ -250,7 +250,7 @@
 
   <!-- script para el Nav -->
 <script>
-			$(document).ready(function() {
+		$(document).ready(function() {
     var t1 = new TimelineMax({ paused: true });
 
     t1.to(".nav-container", 1, {
@@ -275,10 +275,18 @@
     );
 
     t1.reverse();
+
     $(document).on("click", ".menu-open", function () {
+        // Deshabilitar desplazamiento vertical
+        $("body").css("overflow-y", "hidden");
+
         t1.reversed(!t1.reversed());
     });
+
     $(document).on("click", ".menu-close", function () {
+        // Restablecer desplazamiento vertical
+        $("body").css("overflow-y", "auto");
+
         t1.reversed(!t1.reversed());
     });
 });
