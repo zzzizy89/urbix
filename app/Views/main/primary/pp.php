@@ -246,6 +246,8 @@
    			
    
   </script>
+
+  <!-- script para el Nav -->
 <script>
 			$(document).ready(function() {
     var t1 = new TimelineMax({ paused: true });

@@ -146,6 +146,154 @@ body.dark-mode .cursor {
 
 
 /* * HTML BODY section ends here */
+/* * NAV section starts here */
+.container2 {
+	height: 1vh;
+  }
+  
+  .menu-open {
+	font-family: "nothing";
+	position: absolute;
+	z-index: 100;
+  }
+  
+  /* ? Dark-Mode Menu-Open */
+  
+  body.dark-mode .menu-open {
+	color: var(--color-pure);
+  }
+  
+  .menu-open,
+  .menu-close {
+	position: absolute;
+	top: 0;
+	right: 1vw;
+	padding: 0.5vw;
+	font-size: 1vw;
+	cursor: pointer;
+	z-index: 100;
+	color: var(--color-impure);
+	font-family: "nothing";
+  }
+  
+  .socials {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 40px 100px;
+	z-index: 100;
+  }
+  
+  .socials span {
+	text-transform: uppercase;
+	margin: 0 20px;
+	letter-spacing: 0px;
+	z-index: 100;
+	color: var(--color-impure);
+	font-family: "nothing";
+  }
+  
+  .nav-container {
+	position: fixed;
+	left: -100%;
+	width: 100%;
+	height: 100vh;
+	background: var(--color-main2);
+	z-index: 100;
+  }
+  
+  .menu__item {
+	position: relative;
+	padding: 0 6vw;
+	z-index: 100;
+  
+  }
+  
+  .menu__item-link {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.4s;
+	z-index: 100;
+	color: var(--color-impure);
+	font-family: "nothing";
+  
+  }
+  
+  .menu__item-link::before {
+	all: initial;
+	counter-increment: menu;
+	position: absolute;
+	bottom: 60%;
+	left: 0;
+	pointer-events: none;
+	z-index: 100;
+  }
+  
+  .menu__item-link:hover {
+	transition-duration: 0.1s;
+	opacity: 0;
+	z-index: 100;
+  }
+  
+  .menu {
+	padding: 10vh 0 25vh;
+	--offset: 20vw;
+	--move-initial: calc(-25% + var(--offset));
+	--move-final: calc(-50% + var(--offset));
+	font-size: 7vw;
+	z-index: 100;
+  
+  }
+  
+  .marquee {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 100;
+  }
+  
+  .marquee__inner {
+	width: fit-content;
+	display: flex;
+	position: relative;
+	opacity: 0;
+	transition: all 0.1s;
+	transform: translateX(60px);
+	z-index: 100;
+  
+  }
+  
+  .menu__item-link:hover~.marquee .marquee__inner {
+	opacity: 1;
+	transform: translateX(0px);
+	transition-duration: 0.4s;
+	z-index: 100;
+  
+  }
+  
+  .menu__item-link,
+  .marquee span {
+	white-space: nowrap;
+	font-size: 7vw;
+	padding: 0 1vw;
+	line-height: 1.15;
+	z-index: 100;
+	color: var(--color-pure);
+	font-family: "nothing";
+  }
+  
+  .marquee span {
+	font-style: italic;
+	z-index: 100;
+	color: var(--color-impure);
+	font-family: "nothing";
+  }
+  
+  
+  /* * NAV section ends here */
 
 
 /* * CONTENEDOR section starts here */
@@ -215,9 +363,14 @@ body.dark-mode .item {
 .descp-item {
 	font-family: "nothing";
 	color: var(--color-impure);
-	display: none;
 	font-size: 0.8em;
 	margin-bottom: 10px;
+}
+
+/* ? Dark-Mode Descp-Item */
+
+body.dark-mode .descp-item {
+	color: var(--color-pure);
 }
 
 .precio-item {
@@ -278,7 +431,7 @@ body.dark-mode .item {
 
 .cart-button {
 	position: absolute;
-	margin-top: 10px;
+	margin-top: 5vh;
 	right: 30px;
 	display: flex;
 	align-items: center;
@@ -290,8 +443,29 @@ body.dark-mode .item {
 	transition: background-color 0.3s;
 }
 
+.cart-button2 {
+	position: absolute;
+	margin-top: 10px;
+	right: 6vw;
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+
 .cart-button a {
 	text-decoration: none;
+}
+
+.cart-button2 a {
+	text-decoration: none;
+	font-family: "nothing";
+	color: var(--color-impure);
 }
 
 .cart-button:hover {
