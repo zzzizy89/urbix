@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>home</title>
+  <link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/logo.png');?>">
   <link rel="stylesheet" href="<?php echo base_url('assets/css/front-main/pp.css');?>">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

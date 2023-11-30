@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>intro about</title>
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/logo.png');?>">
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/animation/intro2.css')?>">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>

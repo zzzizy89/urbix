@@ -22,7 +22,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
     <!-- Título de la página -->
-    <title>Catalogo</title>
+    <title>catalogue</title>
+    <link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/logo.png');?>">
   </head>
 
   <body>

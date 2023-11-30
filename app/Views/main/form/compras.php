@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/form/compradir.css');?>">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
-		<title> Realizar Compra</title>
+		<title>urbix</title>
+		<link rel="website icon" type="png" href="<?php echo base_url('assets/css/img/iconos/logo.png');?>">
 	</head>
 	<body>
 		<div class="cursor"></div>
