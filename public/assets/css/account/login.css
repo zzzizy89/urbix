@@ -202,6 +202,13 @@ body.dark-mode {
 	font-size: 20px;
 }
 
+
+/* ? Dark-Mode Close-Button */
+
+body.dark-mode .close-button a {
+	color: var(--color-impure);
+}
+
 .box {
 	position: relative;
 	width: 380px;
@@ -219,6 +226,12 @@ body.dark-mode {
 	justify-content: space-evenly;
 	flex-direction: column;
 	z-index: 10;
+}
+
+/* ? Dark-Mode Form*/
+
+body.dark-mode .form {
+	background-color: var(--color-pure);
 }
 
 h2 {
@@ -256,10 +269,25 @@ h2 {
 	font-family: "nothing";
 }
 
+/* ? Dark-Mode Form-Label Input*/
+
+body.dark-mode .form-label input {
+	background-color: var(--color-terciary);
+	border-bottom: 1px solid var(--color-impure);
+	color: var(--color-main2);
+}
+
 .form-label input:focus {
 	border-radius: 10px;
 	background-color: var(--color-main2);
 	color: var(--color-pure);
+}
+
+/* ? Dark-Mode Form-Label Input:Focus*/
+
+body.dark-mode .form-label input:focus {
+	background-color: var(--color-main2);
+	color: var(--color-impure);
 }
 
 .links {
@@ -294,7 +322,21 @@ input[type="submit"] {
 	color: var(--color-impure);
 }
 
+/* ? Dark-Mode Input type Submit*/
+
+body.dark-mode input[type="submit"] {
+	background-color: var(--color-impure);
+	color: var(--color-pure);
+}
+
 input[type="submit"]:hover {
+	background-color: var(--color-terciary);
+	color: var(--color-pure);
+}
+
+/* ? Dark-Mode Input type Submit:Hover*/
+
+body.dark-mode input[type="submit"]:hover {
 	background-color: var(--color-terciary);
 	color: var(--color-pure);
 }

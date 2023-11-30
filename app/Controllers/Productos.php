@@ -234,7 +234,7 @@ public function desc_producto()
 
     $datos['productos'] = $productos;
     
-    return view('main/catalogo/desc_producto', $datos);
+    return view('main/form/desc_producto', $datos);
 }
 
     

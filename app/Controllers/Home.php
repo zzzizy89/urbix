@@ -83,6 +83,8 @@ class Home extends BaseController
         
     }
 
+
+
     public function contact()
     {
         

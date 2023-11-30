@@ -28,10 +28,7 @@
   <div class="menu-open">menu</div>
 		<div class="nav-container">
 			<div class="menu-close">close</div>
-			<div class="socials">
-				<span>facebook</span>
-				<span>instagram</span>
-			</div>
+		
 			<nav class="menu">
 				<div class="menu__item">
 					<a class="menu__item-link" href="<?php echo base_url('inicio')?>">Home</a>

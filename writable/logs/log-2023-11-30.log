@@ -1,0 +1,154 @@
+INFO - 2023-11-30 00:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 00:02:56 --> Invalid file: "main/catalogo/desc_producto.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('main/catalogo/desc_producto.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/catalogo/desc_producto', [], true)
+ 3 APPPATH\Controllers\Productos.php(237): view('main/catalogo/desc_producto', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-30 00:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-11-30 00:05:08 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:05:42 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:05:43 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:05:43 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:35 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:36 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:40 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-30 00:07:45 --> Undefined variable $producto
+in APPPATH\Views\main\form\desc_producto.php on line 22.
+ 1 APPPATH\Views\main\form\desc_producto.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $producto', 'C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php', 22)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\urbix\\app\\Views\\main\\form\\desc_producto.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('main/form/desc_producto', [], true)
+ 5 APPPATH\Controllers\Productos.php(237): view('main/form/desc_producto', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Productos->desc_producto()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
