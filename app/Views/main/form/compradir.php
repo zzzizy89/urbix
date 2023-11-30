@@ -12,9 +12,6 @@
 	</head>
 	<body>
 
-		<header>
-			<h1>Realizar compra</h1>
-		</header>
 		<div class="user-stats">
 			<p><strong>product:</strong>
 				<?= session('nombre'); ?>
