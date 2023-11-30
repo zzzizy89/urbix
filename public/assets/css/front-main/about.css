@@ -110,13 +110,20 @@
 /* * HTML BODY section starts here */
 html,
 body {
-  background: var(--color-pure);
+  background: var(--color-main2);
   color: var(--color-impure);
   font-family: "Akira";
   margin: 0;
   padding: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+/* ? Dark-Mode Body */
+
+body.dark-mode {
+  background: var(--color-main2);
+  color: var(--color-pure);
 }
 
 /* * HTML BODY section ends here */
@@ -271,14 +278,10 @@ body {
   
   /* * NAV section ends here */
 
-.smooth-scroller {
-  overflow: hidden;
+.section1 {
+ background: var(--color-main2);
 }
 
-.hero-scroller {
-  height: 100% !important;
-  overflow: hidden;
-}
 
 .section {
   position: relative;

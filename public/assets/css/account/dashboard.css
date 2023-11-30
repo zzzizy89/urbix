@@ -8,6 +8,8 @@
 	scroll-behavior: smooth;
 }
 
+/* TODO: root section starts here */
+
 :root {
 	--color-primary: #0D1117;
 	--color-secondary: #f9f9f9;
@@ -15,8 +17,17 @@
 	--color-terciary: #30353d;
 	--color-terciary-translucent: #30353d97;
 	--color-terciary2-translucent: #dbdee497;
+	--color-main2: #d32222;
 	--color-main: rgb(57, 239, 12);
+	--color-pure: #ffffff;
+	--color-impure: #000000;
 }
+
+
+/* TODO: root section ends here */
+
+
+/* ? tipografias section starts here */
 
 @font-face {
 	font-family: "Mars Model";
@@ -98,31 +109,53 @@
 	src: url("../fonts/Akira.otf") format("truetype");
 }
 
+@font-face {
+	font-family: "nothing";
+	src: url("../fonts/nothing.ttf") format("truetype");
+}
+
+
+/* ? tipografias section ends here */
+
+/* * HTML BODY section starts here */
+
 html,
 body {
-	font-family: 'Akira', sans-serif;
+	font-family: 'nothing', sans-serif;
 	background: var(--color-primary);
 }
+
+
+/* * HTML BODY section ends here */
+
+
+
 
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background-color: var(--color-primary);
+	background-color: var(--color-pure);
+}
+
+/* ? Dark-Mode Container */
+
+body.dark-mode .container {
+	background-color: var(--color-impure);
 }
 
 .profile {
 	display: flex;
-	background-color: var(--color-terciary);
-	border-radius: 8px;
+	background-color: var(--color-main2);
+	width: 60%;
 	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile h2 {
 	font-size: 24px;
-	font-family: "Akira";
+	width: 16vw;
+	font-family: "nothing";
 	margin-bottom: 10px;
 	margin-top: 30px;
 	margin-left: 10px;
@@ -132,21 +165,22 @@ body {
 .user-stats {
 	padding: 30px;
 	margin-top: 100px;
-	margin-left: -300px;
+	margin-left: -250px;
+	color: var(--color-secondary);
 }
 
 .user-stats p {
 	text-align: left;
 	margin-bottom: 10px;
-	font-family: "PIGARNOS-NEUE-Regular";
+	font-family: "nothing";
 	color: var(--color-secondary);
 }
 
 .user-stats p strong {
 	text-align: left;
 	margin-bottom: 10px;
-	font-family: "PIGARNOS-NEUE-Regular";
-	color: var(--color-main);
+	font-family: "nothing";
+	color: var(--color-impure);
 }
 
 .user-stats img {
@@ -158,13 +192,25 @@ body {
 .user-menu {
 	flex: 1;
 	padding: 20px;
-	background-color: var(--color-secondary2);
+	background-color: var(--color-impure);
+}
+
+/* ? Dark-Mode User-Menu */
+
+body.dark-mode .user-menu {
+	background-color: var(--color-pure);
 }
 
 .user-menu h2 {
 	font-size: 18px;
 	margin-bottom: 10px;
-	color: var(--color-primary);
+	color: var(--color-pure);
+}
+
+/* ? Dark-Mode User-Menu H2 */
+
+body.dark-mode .user-menu h2 {
+	color: var(--color-impure);
 }
 
 .user-menu form {
@@ -175,8 +221,8 @@ body {
 	display: block;
 	margin-bottom: 8px;
 	font-weight: bold;
-	font-family: "PIGARNOS-NEUE-Regular";
-	color: var(--color-main);
+	font-family: "nothing";
+	color: var(--color-main2);
 }
 
 .user-menu input,
@@ -184,20 +230,18 @@ body {
 	width: 100%;
 	padding: 10px;
 	margin-bottom: 15px;
-	border-radius: 4px;
-	font-family: "PIGARNOS-NEUE-Regular";
+	font-family: "nothing";
 }
 
 .user-menu button {
-	background-color: #4caf50;
+	background-color: var(--color-terciary);
 	color: #fff;
 	padding: 10px 15px;
 	border: none;
-	border-radius: 4px;
 	cursor: pointer;
 	font-size: 16px;
 }
 
 .user-menu button:hover {
-	background-color: #45a049;
+	background-color: var(--color-main2);
 }

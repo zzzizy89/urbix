@@ -95,26 +95,10 @@
 		</div>
         </div>
      <!-- NAV section ends here -->
-    <div class="smooth-scroll">
-      <div class="hero-scroller">
-        <div class="section">
-          <div class="section-wrapper">
-            <div class="content">
-              <h1 class="hero-header h-1">the great</h1>
-              <h1 class="hero-header h-2">outdoors</h1>
-              <h1 class="hero-header h-3">volume</h1>
-            </div>
-            <div class="pin-wrapper">
-              <div class="image-wrapper" id="heroImage">
-                <img
-                  class="image"
-                  src="<?php echo base_url('assets/css/img/front-main/teclado.jpg');?>"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     <div class="section1">
+
+      
+ 
       <div class="section copy">
         <div class="section-wrapper">
           <div class="content">
@@ -124,7 +108,9 @@
           </div>
         </div>
       </div>
+
     </div>
+
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>

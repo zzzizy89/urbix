@@ -8,6 +8,10 @@ $is_admin = (session('user')->rol == 1);
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 		<link rel="stylesheet" href="<?php echo base_url('assets/css/account/dashboard.css');?>">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?php echo base_url('assets/js/cookies/cookies.js'); ?>"></script>
