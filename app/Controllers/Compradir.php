@@ -17,25 +17,30 @@ class Compradir extends Controller
  * Método para mostrar la página principal del proceso de compra.
  */
 public function index()
-{
-    // Verificar si el usuario está autenticado y tiene un ID válido
-    $user = session('user');
+    {
+        $direc = new Direccion_ca();
+        // Verificar si el usuario está autenticado y tiene un ID válido
+        $user = session('user');
 
-    if (!$user || $user->id_user < 1) {
-        // Si no está autenticado, redirigir a la página de inicio de sesión
-        return redirect()->to('login');
-    } else {
-        // Obtener el valor de totalCompra desde la sesión
-        $totalCompra = session()->get('totalCompra');
+        if (!$user || $user->id_user < 1) {
+            // Si no está autenticado, redirigir a la página de inicio de sesión
+            return redirect()->to('login');
+        } else {
+            // Obtener el valor de totalCompra desde la sesión
+            $totalCompra = session()->get('totalCompra');
 
-        // Pasar el valor de totalCompra a la vista
-        $data['totalC'] = $totalCompra;
+            $id_user = $user->id_user;
 
-        // Cargar la vista para la página principal del proceso de compra
-        return view("main/form/compradir", $data);
+            // Obtener los datos del usuario de la base de datos
+            $userData = $direc->getUserData($id_user);
+            // Pasar los valores de totalCompra y userData a la vista
+            $data['totalC'] = $totalCompra;
+            $data['userData'] = $userData;
+
+            // Cargar la vista para la página principal del proceso de compra
+            return view("main/form/compradir", $data);
+        }
     }
-}
-
 
     
 /**

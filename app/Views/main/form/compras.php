@@ -44,8 +44,28 @@
 				</p>
 		</div>
 		<section class="contenedor">
-
 			<!-- Formulario para la información de envío y compra PayPal -->
+			<?php if ($userData) : ?>
+				<label for="selectAddress">Select Address:</label>
+				<select id="selectAddress">
+					<?php
+					$uniqueAddresses = [];
+
+					foreach ($userData as $address) {
+						// Crear una clave única basada en código postal, país y barrio
+						$key = $address['codigo_postal'] . '-' . $address['pais'] . '-' . $address['barrio'];
+
+						// Verificar si la clave ya existe en el array temporal
+						if (!isset($uniqueAddresses[$key])) {
+							// Agregar la dirección al array temporal y generar la opción del select
+							$uniqueAddresses[$key] = $address;
+							echo '<option value="' . $address['id_direccion_casa'] . '">' . $address['barrio'] . '</option>';
+						}
+					}
+					?>
+				</select>
+				<button id="autoFillButton">Auto Fill with Selected Address</button>
+			<?php endif; ?>
 			<div class="informacion-envio">
 				<h2>Shipping Information</h2>
 				<form>
@@ -63,7 +83,6 @@
 					<label for="codigo_postal">postal code:</label>
 					<input type="number" id="codigo_postal" name="codigo_postal" required>
 
-
 					<label for="barrio">neighborhood:</label>
 					<input type="text" id="barrio" name="barrio" required>
 
@@ -78,8 +97,11 @@
 					<div id="paypal-container">
 
 						<div id="paypal-button-conteiner"></div>
-						<a href="<?= base_url('carrito2')?>" type="button" class="boton-cancelar">cancel purchase</a>
+						<a href="<?= base_url('cancelcompradir')?>" type="button" class="boton-cancelar">cancel purchase</a>
 					</div>
+
+
+
 
 
 				</form>
@@ -171,4 +193,35 @@
 		
 		
 	</script>
+
+
+
+
+
+
+<script>
+    // Agrega este script al final de tu archivo
+    $(document).ready(function () {
+        $('#autoFillButton').click(function () {
+            // Obtiene el ID de la dirección seleccionada
+            var selectedAddressId = $('#selectAddress').val();
+
+            // Encuentra la dirección correspondiente en los datos del usuario
+            var selectedAddress = <?= json_encode($userData) ?>.find(function (address) {
+                return address.id_direccion_casa == selectedAddressId;
+            });
+
+            // Llena los campos del formulario con los datos seleccionados
+            $('#pais').val(selectedAddress.pais);
+            $('#provincia').val(selectedAddress.provincia);
+            $('#ciudad').val(selectedAddress.ciudad);
+            $('#codigo_postal').val(selectedAddress.codigo_postal);
+            $('#barrio').val(selectedAddress.barrio);
+            $('#calle').val(selectedAddress.calle);
+            $('#numero').val(selectedAddress.numero);
+            $('#descripcion_casa').val(selectedAddress.descripcion_casa);
+        });
+    });
+</script>
+
 </html>

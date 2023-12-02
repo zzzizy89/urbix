@@ -41,6 +41,7 @@ public function index()
             session()->setFlashdata('message', 'Necesitas productos en el carrito para realizar una compra.');
             return redirect()->to(base_url('carrito2'));
         }
+        $direc = new Direccion_ca();
 
         // Obtener los datos del carrito para la compra
         $data['carritos'] = $carritosModel->datoscarritocompra($id_user);
@@ -48,8 +49,12 @@ public function index()
         // Calcular el total de la compra antes de cargar la vista
         $totalCompra = $this->calcularTotalCompra($id_user);
 
+        $userData = $direc->getUserData($id_user);
+
+
         // Pasar el valor del total de la compra a la vista
         $data['totalC'] = $totalCompra;
+        $data['userData'] = $userData;
 
         // Cargar la vista "compras" con el valor del total de la compra
         return view('main/form/compras', $data);
