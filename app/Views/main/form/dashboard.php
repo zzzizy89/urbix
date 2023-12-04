@@ -45,7 +45,7 @@ $is_admin = (session('user')->rol == 1);
 						<textarea id="new-bio" name="new_bio" rows="4"></textarea>
 						<label for="profile-image">Profile Image:</label>
 						<input type="file" id="profile-image" name="profile_image">
-						<button type="submit">Change Username, Bio, and Profile Image</button>
+						<button type="submit">Change Username, Bio,Profile Image</button>
 					</form>
 
 					<!-- Botón "Listar Periféricos" solo para el administrador con el correo electrónico 'admin@example.com' -->
@@ -56,14 +56,20 @@ $is_admin = (session('user')->rol == 1);
 					<?php endif; ?>
 					<?php if ($is_admin): ?>
 					<div class="btn-box btns1">
-						<a href="<?= base_url('control_compras/')?>"><button class="btn btn-success" type="button">control compras</button></a>
+						<a href="<?= base_url('gencompras/')?>"><button class="btn btn-success" type="button">control compras</button></a>
 					</div><br>
 					<?php endif; ?>
 
 					<!-- Resto de tus botones -->
 					<div class="btn-box btns">
+						<a href="<?= base_url('compras') ?>"><button type="submit" class="btn">Mis compras</button></a>
+					</div> <br>
+					
+					<div class="btn-box btns">
 						<a href="<?= base_url('intro_inicio') ?>"><button type="submit" class="btn">Inicio</button></a>
 					</div> <br>
+
+					
 
 					<div class="btn-box btns">
 						<a href="<?= base_url('logout') ?>"><button type="submit" class="btn">Logout</button></a>

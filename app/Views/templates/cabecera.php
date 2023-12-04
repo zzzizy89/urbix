@@ -61,6 +61,12 @@ if (session()->has('user')) {
 					<li class="btn-box btns">
 						<a class="nav-link" href="<?= base_url('listar') ?>">Listar Periféricos</a>
 					</li>
+
+					<li class="btn-box btns">
+
+						<a class="nav-link" href="<?= base_url('gencompras/')?>">Control Compras</a>
+					</li>
+
 					<?php else: ?>
 					<li class="nav-item">
 						<a class="nav-link" href="<?= base_url('intro_dashboard') ?>">Dashboard</a>

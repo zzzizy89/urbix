@@ -13,18 +13,15 @@
 <body>
 
     <div class="container mt-4">
-        <h1 class="mb-4">Detalle de Compras</h1>
+        <h1 class="mb-4">Control de Compras</h1>
+        <a href="<?= base_url('control_compras/')?>"><button class="btn btn-success" type="button">Detalle compras</button></a>
 
         <?php if (!empty($compra)): ?>
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
                         <th>Usuario</th>
-                        <th>Producto</th>
-                        <th>Tipo</th>
-                        <th>Cantidad</th>
-                        <th>PrecioU</th>
-                        <th>Subtotal</th>
+                        <th>total</th>
                         <th>Fecha compra</th>
                         <!-- <th>Total de Compra</th> -->
                     </tr>
@@ -34,13 +31,8 @@
                         <tr>
                             <?php if ($item): ?>
                                 <td><?= $item->email_usuario ?></td>
-                                <td><?= $item->nombre_producto ?></td>
-                                <td><?= $item->tipo_prod ?></td>
-                                <td><?= $item->cantidad ?></td>
-                                <td>$<?= $item->precio_unitario ?></td>
-                                <td>$<?= $item->subtotal ?></td>
+                                <td>$<?= $item->total_compra ?></td> 
                                 <td><?= $item->fecha_compra ?></td>
-                                <!-- <td> //$item->total_compra </td> -->
                             <?php else: ?>
                                 <td colspan="7">No hay datos de compras para mostrar.</td>
                             <?php endif; ?>

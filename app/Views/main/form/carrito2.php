@@ -52,10 +52,10 @@ if (!empty($message)) {
 						</td>
 
 						<td>
-							<?php echo number_format($car['precio'], 2, ',', '.'); ?>
+							$<?php echo number_format($car['precio'], 2); ?>
 						</td>
 						<td>
-							<?php echo number_format($car['precio'] * $car['cantidad'], 2, ',', '.'); ?>
+							$<?php echo number_format($car['precio'] * $car['cantidad'], 2); ?>
 						</td>
 						<td>
 							<a href="<?= base_url('carrito2/eliminarcar/'.$car['id_carrito'])?>" class="btn btn-danger" type="button">Eliminar</a>

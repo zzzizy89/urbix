@@ -108,6 +108,9 @@ $routes->get('cancelcompradir/', 'Compradir::cancelcompradir');
 
 //Control de compras
 $routes->get('control_compras/', 'Controlcompras::index');
+$routes->get('gencompras/', 'Controlcompras::gencompras');
+$routes->get('compras/', 'Controlcompras::usercompras');
+
 
 /*
  * --------------------------------------------------------------------

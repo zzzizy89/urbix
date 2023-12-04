@@ -13,13 +13,12 @@
 <body>
 
     <div class="container mt-4">
-        <h1 class="mb-4">Detalle de Compras</h1>
+        <h1 class="mb-4">Mis Compras</h1>
 
         <?php if (!empty($compra)): ?>
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th>Usuario</th>
                         <th>Producto</th>
                         <th>Tipo</th>
                         <th>Cantidad</th>
@@ -33,7 +32,6 @@
                     <?php foreach ($compra as $item): ?>
                         <tr>
                             <?php if ($item): ?>
-                                <td><?= $item->email_usuario ?></td>
                                 <td><?= $item->nombre_producto ?></td>
                                 <td><?= $item->tipo_prod ?></td>
                                 <td><?= $item->cantidad ?></td>
