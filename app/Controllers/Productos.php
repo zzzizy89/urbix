@@ -222,22 +222,6 @@ public function catalogo()
     return view('main/catalogo/catalogo', $datos);
 }
 
-/**
- * Función para mostrar la descripción de un producto.
- *
- * @return mixed
- */
-public function desc_producto()
-{
-    $producto = new Producto();
-    $productos = $producto->productotipo();
-
-    $datos['productos'] = $productos;
-    
-    return view('main/form/desc_producto', $datos);
-}
-
-    
     
 }
  

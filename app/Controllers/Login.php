@@ -55,14 +55,6 @@ public function do_login()
 }
 
 
-
-    public function logout()
-    {
-        session_destroy();
-
-       
-    }
-
     
 }
 

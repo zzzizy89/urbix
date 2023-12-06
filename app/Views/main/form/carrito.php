@@ -151,7 +151,7 @@
 
             <!-- Visualización de información del producto -->
             <span class="titulo-item"><?php echo $producto['nombre']; ?></span>
-            <a href="<?php echo base_url('desc_producto')?>"><img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item"></a>            
+            <img src="<?php echo base_url('uploads/' . $producto['imagen']); ?>" alt="Imagen del teclado" class="img-item">              
             <span class="descp-item"><?php echo $producto['descripcion_prod']; ?></span>
             <span class="precio-item">$<?php echo number_format($producto['precio'], 2); ?></span>            
 

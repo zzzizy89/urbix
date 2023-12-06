@@ -67,11 +67,11 @@ if (session()->has('user')) {
 						<a class="nav-link" href="<?= base_url('gencompras/')?>">Control Compras</a>
 					</li>
 
-					<?php else: ?>
+					<?php endif;?>
 					<li class="nav-item">
 						<a class="nav-link" href="<?= base_url('intro_dashboard') ?>">Dashboard</a>
 					</li>
-					<?php endif; ?>
+				
 
 				</ul>
 			</div>

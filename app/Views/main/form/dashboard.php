@@ -53,13 +53,11 @@ $is_admin = (session('user')->rol == 1);
 					<div class="btn-box btns1">
 						<a href="<?= base_url('listar') ?>"><button type="submit" class="btn">Listar Periféricos</button></a>
 					</div><br>
-					<?php endif; ?>
-					<?php if ($is_admin): ?>
 					<div class="btn-box btns1">
 						<a href="<?= base_url('gencompras/')?>"><button class="btn btn-success" type="button">control compras</button></a>
 					</div><br>
 					<?php endif; ?>
-
+				
 					<!-- Resto de tus botones -->
 					<div class="btn-box btns">
 						<a href="<?= base_url('compras') ?>"><button type="submit" class="btn">Mis compras</button></a>
