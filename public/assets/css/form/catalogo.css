@@ -112,6 +112,7 @@
 
 html,
 body {
+	overflow-x: hidden;
 	min-height: 125%;
 	font-family: 'Arial', sans-serif;
 	margin: 0;

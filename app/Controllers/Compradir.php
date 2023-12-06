@@ -21,25 +21,33 @@ public function index()
         $direc = new Direccion_ca();
         // Verificar si el usuario está autenticado y tiene un ID válido
         $user = session('user');
+        $compra = session('totalCompra');
 
         if (!$user || $user->id_user < 1) {
             // Si no está autenticado, redirigir a la página de inicio de sesión
             return redirect()->to('login');
-        } else {
-            // Obtener el valor de totalCompra desde la sesión
-            $totalCompra = session()->get('totalCompra');
+        } 
+            // verifica si la session esta vacia
+             if(!$compra)
+                 {
+                 return redirect()->back()->withInput();
+            }else
+                {
+                    // Obtener el valor de totalCompra desde la sesión
+                    $totalCompra = session()->get('totalCompra');
 
-            $id_user = $user->id_user;
+                    $id_user = $user->id_user;
 
-            // Obtener los datos del usuario de la base de datos
-            $userData = $direc->getUserData($id_user);
-            // Pasar los valores de totalCompra y userData a la vista
-            $data['totalC'] = $totalCompra;
-            $data['userData'] = $userData;
+                    // Obtener los datos del usuario de la base de datos
+                    $userData = $direc->getUserData($id_user);
+                    // Pasar los valores de totalCompra y userData a la vista
+                    $data['totalC'] = $totalCompra;
+                    $data['userData'] = $userData;
 
-            // Cargar la vista para la página principal del proceso de compra
-            return view("main/form/compradir", $data);
-        }
+                    // Cargar la vista para la página principal del proceso de compra
+
+                    return view("main/form/compradir", $data);
+                }
     }
 
     
