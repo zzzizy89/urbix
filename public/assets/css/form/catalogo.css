@@ -112,7 +112,7 @@
 
 html,
 body {
-	height: 125%;
+	min-height: 125%;
 	font-family: 'Arial', sans-serif;
 	margin: 0;
 	padding: 0;
