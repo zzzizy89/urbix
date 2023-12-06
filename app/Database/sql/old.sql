@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2023 a las 14:33:53
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.1.17
+-- Tiempo de generación: 30-11-2023 a las 04:07:24
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -76,7 +76,7 @@ CREATE TABLE `carrito` (
 --
 
 INSERT INTO `carrito` (`id_carrito`, `id_user`, `id_producto`, `cantidad`) VALUES
-(225, 3, 40, 15);
+(225, 3, 40, 1);
 
 -- --------------------------------------------------------
 
@@ -108,7 +108,7 @@ CREATE TABLE `compras` (
   `id_user` int(11) NOT NULL,
   `id_metodo_pago` int(11) NOT NULL,
   `id_direccion_casa` int(11) NOT NULL,
-  `total_c` decimal(12,2) NOT NULL,
+  `total_c` int(11) NOT NULL,
   `fecha_compra` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -117,7 +117,7 @@ CREATE TABLE `compras` (
 --
 
 INSERT INTO `compras` (`id_compras`, `id_user`, `id_metodo_pago`, `id_direccion_casa`, `total_c`, `fecha_compra`) VALUES
-(50, 3, 1, 51, 150.00, '2023-11-29 19:33:30');
+(50, 3, 1, 51, 150, '2023-11-29 19:33:30');
 
 -- --------------------------------------------------------
 
@@ -130,8 +130,8 @@ CREATE TABLE `detalle_compra` (
   `id_compras` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `precio_unitario` decimal(12,2) NOT NULL,
-  `subtotal` decimal(12,2) NOT NULL
+  `precio_unitario` int(11) NOT NULL,
+  `subtotal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -139,7 +139,7 @@ CREATE TABLE `detalle_compra` (
 --
 
 INSERT INTO `detalle_compra` (`id_dcompra`, `id_compras`, `id_producto`, `cantidad`, `precio_unitario`, `subtotal`) VALUES
-(60, 50, 38, 1, 150.00, 150.00);
+(60, 50, 38, 1, 150, 150);
 
 -- --------------------------------------------------------
 
@@ -304,8 +304,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `perfil`, `name`, `email`, `bio`, `password`, `created_at`, `rol`) VALUES
-(3, '1701313482_0188a9f0c433c92a1992.gif', 'Admin', '1@admin', 'soy admin', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', 1),
-(13, '', 'test', 'test@gmail.com', '', '$2y$10$7F3AnV6DvZrMBCl.7JJ6eO.PVbV8qrx6s.7HoQ5C2aRNGf9CRjBQ.', '2023-12-06 12:55:25', 0);
+(3, '1701313482_0188a9f0c433c92a1992.gif', 'Admin', '1@admin', 'soy admin', '$2y$10$Bp9uTakfhLhZwsRDB65Yd.QAUh5uAS4jEs8FvatYe/d36qahUkWRK', '0000-00-00 00:00:00', 1);
 
 --
 -- Índices para tablas volcadas
@@ -469,7 +468,7 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
