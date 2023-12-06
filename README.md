@@ -11,9 +11,8 @@ Navega por nuestra amplia gama de productos de alta calidad:
 - **Ratones:** Encuentra ratones precisos y cómodos para llevar tus habilidades de juego al siguiente nivel.
 
 - **Auriculares:** Sumérgete en el mundo del sonido envolvente con nuestra selección de auriculares con calidad de estudio.
-
-- **Ropa Urbix:** Pronto lanzaremos nuestra colección exclusiva de ropa urbana que combina estilo y comodidad.
-
+  
+- etc.
 ## Sobre Urbix
 
 Urbix es la plataforma detrás de nuestra amplia gama de productos. Aquí puedes explorar nuestros productos disponibles y realizar compras de forma segura. Hemos desarrollado esta plataforma utilizando tecnologías web modernas para garantizar una experiencia fluida y segura para nuestros clientes.
@@ -28,7 +27,7 @@ Urbix es la plataforma detrás de nuestra amplia gama de productos. Aquí puedes
 ### Tecnologías Utilizadas
 
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** PHP
+- **Backend:** PHP,JavaScript
 - **Base de Datos:** MySQL
 - **Servidor Local:** XAMPP
 - **Integración de Pagos:** PayPal API
