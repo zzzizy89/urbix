@@ -25,7 +25,7 @@ Urbix es la plataforma detrás de nuestra amplia gama de productos. Aquí puedes
 - Realiza compras seguras utilizando PayPal.
 
 ### Tecnologías Utilizadas
-
+- **Framework:** Codeigniter 4
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** PHP,JavaScript
 - **Base de Datos:** MySQL
