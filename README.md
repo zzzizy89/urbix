@@ -1,63 +1,41 @@
-# Bienvenido a Urbix - Tu Tienda de Periféricos
+# Urbix - Tienda E-commerce de Periféricos
 
-¡Gracias por visitar Urbix! Somos tu destino de confianza para todo lo relacionado con periféricos, desde teclados y ratones hasta auriculares de alta calidad. Pronto también estaremos ofreciendo ropa con nuestra marca exclusiva. En Urbix, nos esforzamos por brindarte la mejor experiencia de compra en línea para tus necesidades tecnológicas y de estilo personal.
+Urbix es una tienda en línea especializada en la venta de periféricos para computadoras. Este proyecto ofrece a los usuarios una plataforma para explorar y adquirir una variedad de productos, así como funcionalidades de autenticación para usuarios y administradores, gestión de catálogo y CRUD para el panel de administración.
 
-## Catálogo de Productos
+## Tecnologías Utilizadas
 
-Navega por nuestra amplia gama de productos de alta calidad:
-
-- **Teclados:** Descubre una variedad de teclados ergonómicos, mecánicos y retroiluminados para mejorar tu experiencia de escritura y juego.
-
-- **Ratones:** Encuentra ratones precisos y cómodos para llevar tus habilidades de juego al siguiente nivel.
-
-- **Auriculares:** Sumérgete en el mundo del sonido envolvente con nuestra selección de auriculares con calidad de estudio.
-  
-- etc.
-## Sobre Urbix
-
-Urbix es la plataforma detrás de nuestra amplia gama de productos. Aquí puedes explorar nuestros productos disponibles y realizar compras de forma segura. Hemos desarrollado esta plataforma utilizando tecnologías web modernas para garantizar una experiencia fluida y segura para nuestros clientes.
-
-### Características de Urbix
-
-- Explora una amplia gama de productos disponibles.
-- Inicia sesión o regístrate como cliente para acceder a funciones adicionales.
-- Funcionalidad de administrador para gestionar productos y usuarios.
-- Realiza compras seguras utilizando PayPal.
-
-### Tecnologías Utilizadas
-- **Framework:** Codeigniter 4
+- **Framework:** CodeIgniter 4
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Backend:** PHP,JavaScript
+- **Backend:** PHP, JavaScript
 - **Base de Datos:** MySQL
 - **Servidor Local:** XAMPP
 - **Integración de Pagos:** PayPal API
 
 ## Creadores
 
-Urbix ha sido desarrollado por nuestro talentoso equipo:
-
 - Tiago Comba
 - Ezequiel Monteverde
 
-## Instalación y Uso
+## Instalación
 
-¡Si deseas explorar nuestra plataforma Urbix localmente, aquí tienes cómo hacerlo:
+Para utilizar Urbix en tu entorno local, sigue estos pasos:
 
 1. Clona este repositorio en tu máquina local.
-2. Configura la base de datos utilizando MySQL y XAMPP.
-3. Abre el archivo `config.php` y ajusta las configuraciones de conexión a la base de datos.
-4. Ejecuta la aplicación utilizando un servidor web compatible con PHP.
+2. Configura tu entorno de servidor local utilizando XAMPP.
+3. Importa la base de datos incluida en el directorio `database`.
+4. Configura la conexión a la base de datos en el archivo `app/Config/Database.php`.
+5. Inicia tu servidor local y asegúrate de que Apache y MySQL estén en funcionamiento.
+6. Abre el navegador y accede a la URL de tu servidor local.
 
 ## Contribuciones
 
-En Urbix, valoramos y apreciamos las contribuciones de la comunidad. Si tienes ideas para mejorar nuestra plataforma o te gustaría colaborar, no dudes en hacerlo:
+¡Las contribuciones son bienvenidas! Si deseas contribuir a Urbix, por favor sigue estos pasos:
 
-- Crea un fork de nuestro repositorio.
-- Realiza tus cambios y mejoras.
-- Envía tus pull requests para que podamos revisarlos y fusionarlos.
+1. Haz un fork del repositorio.
+2. Crea una rama con una descripción clara de tu función o arreglo.
+3. Realiza tus cambios y asegúrate de seguir las pautas de codificación.
+4. Haz un pull request a la rama principal del repositorio.
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
-
-¡Esperamos que disfrutes explorando nuestros productos y utilizando Urbix! Si tienes alguna pregunta, sugerencia o necesitas ayuda, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a encontrar los mejores periféricos y productos de estilo urbano.
+Este proyecto está bajo la licencia [MIT](LICENSE).
