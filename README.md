@@ -2,7 +2,7 @@
 
 Urbix es una tienda en línea especializada en la venta de periféricos para computadoras. Este proyecto ofrece a los usuarios una plataforma para explorar y adquirir una variedad de productos, así como funcionalidades de autenticación para usuarios y administradores, gestión de catálogo y CRUD para el panel de administración.
 <p align="center">
-  <img src="showcase/final-urbix.gif" alt="urbix" width="400" height="300">
+  <img src="showcase/final-urbix.gif" alt="urbix" width="800" height="300">
 </p>
 
 ## Tecnologías Utilizadas
