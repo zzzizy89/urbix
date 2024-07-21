@@ -1,44 +1,47 @@
-# Urbix - Tienda E-commerce de Periféricos
+## Preview
 
-Urbix es una tienda en línea especializada en la venta de periféricos para computadoras. Este proyecto ofrece a los usuarios una plataforma para explorar y adquirir una variedad de productos, así como funcionalidades de autenticación para usuarios y administradores, gestión de catálogo y CRUD para el panel de administración.
 <p align="center">
   <img src="showcase/final-urbix.gif" alt="urbix" width="800" height="300">
 </p>
 
-## Tecnologías Utilizadas
+## Urbix - E-commerce Store for Computer Peripherals
+
+Urbix is an online store specializing in the sale of computer peripherals. This project provides users with a platform to explore and purchase a variety of products, along with authentication features for users and administrators, catalog management, and CRUD operations for the admin panel.
+
+### Technologies Used
 
 - **Framework:** CodeIgniter 4
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** PHP, JavaScript
-- **Base de Datos:** MySQL
-- **Servidor Local:** XAMPP
-- **Integración de Pagos:** PayPal API
+- **Database:** MySQL
+- **Local Server:** XAMPP
+- **Payment Integration:** PayPal API
 
-## Creadores
+### Creators
 
 - Tiago Comba
 - Ezequiel Monteverde
 
-## Instalación
+### Installation
 
-Para utilizar Urbix en tu entorno local, sigue estos pasos:
+To use Urbix in your local environment, follow these steps:
 
-1. Clona este repositorio en tu máquina local.
-2. Configura tu entorno de servidor local utilizando XAMPP.
-3. Importa la base de datos incluida en el directorio `database`.
-4. Configura la conexión a la base de datos en el archivo `app/Config/Database.php`.
-5. Inicia tu servidor local y asegúrate de que Apache y MySQL estén en funcionamiento.
-6. Abre el navegador y accede a la URL de tu servidor local.
+1. Clone this repository to your local machine.
+2. Set up your local server environment using XAMPP.
+3. Import the database included in the `database` directory.
+4. Configure the database connection in the `app/Config/Database.php` file.
+5. Start your local server and ensure Apache and MySQL are running.
+6. Open your browser and access the URL of your local server.
 
-## Contribuciones
+### Contributions
 
-¡Las contribuciones son bienvenidas! Si deseas contribuir a Urbix, por favor sigue estos pasos:
+Contributions are welcome! If you'd like to contribute to Urbix, please follow these steps:
 
-1. Haz un fork del repositorio.
-2. Crea una rama con una descripción clara de tu función o arreglo.
-3. Realiza tus cambios y asegúrate de seguir las pautas de codificación.
-4. Haz un pull request a la rama principal del repositorio.
+1. Fork the repository.
+2. Create a branch with a clear description of your feature or fix.
+3. Make your changes and ensure they adhere to the coding guidelines.
+4. Make a pull request to the main branch of the repository.
 
-## Licencia
+### License
 
-Este proyecto está bajo la licencia [MIT](LICENSE).
+This project is licensed under the MIT License.
